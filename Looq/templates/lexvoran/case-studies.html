@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Studies — LEXVORAN</title>
+  <meta name="description" content="Careful preparation, strategic thinking and clear priorities: selected demo matters from LEXVORAN.">
+  <link rel="preload" href="./assets/fonts/bodoni-moda-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip bg-cream font-sans text-ink antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-[13px] focus:text-cream">Skip to content</a>
+  <header class="sticky top-0 z-40 border-b border-line bg-cream" data-header>
+    <div class="flex h-[72px] items-center justify-between px-5 lg:h-20 lg:px-10">
+      <a href="./" class="logo text-ink" aria-label="LEXVORAN home">LEXVORAN</a>
+      <nav class="hidden items-center gap-[22px] lg:flex" aria-label="Main">
+          <a href="./" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Home</a>
+          <a href="about" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Our Firm</a>
+          <a href="practice-areas" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Practice Areas</a>
+          <a href="case-studies" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-ink" aria-current="page">Case Studies</a>
+          <a href="attorneys" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Attorneys</a>
+          <a href="blog" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Insights</a>
+          <a href="contact" class="text-[13px] font-medium transition-colors duration-300 hover:text-ink text-muted">Contact</a>
+      </nav>
+      <a href="contact" class="btn btn-primary max-lg:hidden">Book a Consultation</a>
+      <button type="button" class="menu-icon -mr-2 flex size-11 flex-col items-center justify-center gap-[6px] lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-button>
+        <span class="block h-px w-[22px] bg-ink"></span>
+        <span class="block h-px w-[22px] bg-ink"></span>
+      </button>
+    </div>
+    <div class="menu-panel lg:hidden">
+      <div id="mobile-menu" class="overflow-hidden">
+        <nav class="flex flex-col items-start gap-[2px] px-5 pt-1 pb-6" aria-label="Mobile">
+            <a href="./" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Home</a>
+            <a href="about" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Our Firm</a>
+            <a href="practice-areas" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Practice Areas</a>
+            <a href="case-studies" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-ink" aria-current="page">Case Studies</a>
+            <a href="attorneys" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Attorneys</a>
+            <a href="blog" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Insights</a>
+            <a href="contact" class="font-serif text-[24px] leading-[1.35] transition-colors hover:text-ink text-muted">Contact</a>
+          <a href="contact" class="btn btn-primary mt-4">Book a Consultation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="pt-12 pb-20 md:pt-16 md:pb-24 lg:pt-[72px] lg:pb-[120px]" aria-labelledby="page-title">
+      <div class="mx-auto w-full max-w-[1200px] px-5 md:px-8 lg:px-10">
+        <div class="flex items-center justify-between border-b border-line pb-5" data-reveal style="--rise: 40px;"><p class="t-label text-ink">Selected Matters</p><p class="t-label text-muted">(04)</p></div>
+        <h1 id="page-title" class="t-h1 mt-10 max-w-[980px] text-ink lg:mt-12" data-reveal style="--rise: 40px; --delay: 100ms">Careful preparation. Strategic thinking. Clear priorities.</h1>
+        <div class="mt-8 md:ml-auto md:w-[460px] lg:mt-12" data-reveal style="--rise: 40px; --delay: 200ms"><p class="text-[16px] leading-[1.65] text-muted max-w-[430px]">Every matter is different. Our focus is to understand the facts, identify the central issues, and build a strategy aligned with the client’s objectives.</p></div>
+      </div>
+    </section>
+
+    <section class="pb-20 md:pb-[104px] lg:pb-32" aria-label="Case studies">
+      <div class="mx-auto w-full max-w-[1200px] px-5 md:px-8 lg:px-10">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-3" data-reveal style="--rise: 32px;">
+          <label for="case-filter" class="t-label text-muted">Filter by category</label>
+          <select id="case-filter" class="select-pill" data-case-filter>
+            <option value="all">All</option>
+            <option value="business">Business &amp; Commercial</option>
+            <option value="property">Property</option>
+            <option value="employment">Employment</option>
+            <option value="personal">Personal Matters</option>
+          </select>
+          <p class="sr-only" role="status" data-filter-status></p>
+        </div>
+        <ul class="mt-10 grid gap-x-10 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <li data-reveal style="--rise: 64px;" data-category="business"><a href="commercial-contract-dispute" class="zoom tint group block">
+            <div class="aspect-[347/239] overflow-hidden bg-sand"><img src="./assets/images/case-commercial.webp" alt="Two colleagues reviewing and signing documents at a table" width="900" height="620" loading="lazy" class="size-full object-cover"></div>
+            <div class="mt-5 flex items-center justify-between gap-4"><span class="t-label text-ink">Business &amp; Commercial</span><span class="t-label text-muted">(Demo case)</span></div>
+            <h3 class="t-h4 mt-4 text-ink">Commercial Contract Dispute</h3>
+            <p class="mt-3 line-clamp-3 text-[14px] leading-[1.6] text-muted">A business client sought advice after a disagreement over contract scope and delivery. LEXVORAN reviewed the documents, mapped the disputed terms, and helped the client assess resolution options.</p>
+          </a></li>
+          <li data-reveal style="--rise: 64px; --delay: 80ms" data-category="property"><a href="property-transaction-review" class="zoom tint group block">
+            <div class="aspect-[347/239] overflow-hidden bg-sand"><img src="./assets/images/case-property.webp" alt="A team gathered in an open office for a briefing" width="900" height="620" loading="lazy" class="size-full object-cover"></div>
+            <div class="mt-5 flex items-center justify-between gap-4"><span class="t-label text-ink">Property</span><span class="t-label text-muted">(Demo case)</span></div>
+            <h3 class="t-h4 mt-4 text-ink">Property Transaction Review</h3>
+            <p class="mt-3 line-clamp-3 text-[14px] leading-[1.6] text-muted">A client requested legal review before entering a property transaction. The team identified questions requiring clarification and helped organize the review process.</p>
+          </a></li>
+          <li data-reveal style="--rise: 64px; --delay: 160ms" data-category="employment"><a href="workplace-policy-matter" class="zoom tint group block">
+            <div class="aspect-[347/239] overflow-hidden bg-sand"><img src="./assets/images/case-workplace.webp" alt="Colleagues taking notes around a wooden table" width="900" height="620" loading="lazy" class="size-full object-cover"></div>
+            <div class="mt-5 flex items-center justify-between gap-4"><span class="t-label text-ink">Employment</span><span class="t-label text-muted">(Demo case)</span></div>
+            <h3 class="t-h4 mt-4 text-ink">Workplace Policy Matter</h3>
+            <p class="mt-3 line-clamp-3 text-[14px] leading-[1.6] text-muted">An employer sought guidance on updating internal policies and documentation. The work focused on understanding obligations and improving clarity.</p>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-sand py-20 md:py-[104px] lg:py-32" aria-labelledby="approach-title">
+      <div class="mx-auto w-full max-w-[1200px] px-5 md:px-8 lg:px-10">
+        <div class="flex flex-col gap-5" data-reveal><p class="t-label text-muted">Our case approach</p><h2 id="approach-title" class="t-h2 max-w-[640px]">Four steps behind every matter we take on.</h2></div>
+        <div class="mt-14">
+        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="value-card bg-olive flex flex-col px-7 pt-7 pb-8 " data-reveal style="--rise: 40px;">
+            <p class="t-h3 text-sage">01</p>
+            <div class="mt-11"><h3 class="t-h4 text-bone">Understand the record</h3><p class="mt-[10px] text-[14px] leading-[1.6] text-muted !text-sage">Documents, dates, and correspondence come first.</p></div>
+          </li>
+          <li class="value-card is-light bg-sand flex flex-col px-7 pt-7 pb-8 " data-reveal style="--rise: 40px; --delay: 80ms">
+            <p class="t-h3 text-muted">02</p>
+            <div class="mt-11"><h3 class="t-h4 text-ink">Identify the legal questions</h3><p class="mt-[10px] text-[14px] leading-[1.6] text-muted ">We isolate the issues that decide the outcome.</p></div>
+          </li>
+          <li class="value-card is-light bg-sand flex flex-col px-7 pt-7 pb-8 " data-reveal style="--rise: 40px; --delay: 160ms">
+            <p class="t-h3 text-muted">03</p>
+            <div class="mt-11"><h3 class="t-h4 text-ink">Evaluate risk and options</h3><p class="mt-[10px] text-[14px] leading-[1.6] text-muted ">Each route is weighed against your objectives.</p></div>
+          </li>
+          <li class="value-card is-light bg-sand flex flex-col px-7 pt-7 pb-8 " data-reveal style="--rise: 40px; --delay: 240ms">
+            <p class="t-h3 text-muted">04</p>
+            <div class="mt-11"><h3 class="t-h4 text-ink">Communicate a clear strategy</h3><p class="mt-[10px] text-[14px] leading-[1.6] text-muted ">You know the plan, the reasons, and the next step.</p></div>
+          </li>
+        </ul>
+        </div>
+        <div class="mt-14 flex flex-col gap-3 border border-dashed border-muted/70 px-8 py-7 md:flex-row md:gap-10" data-reveal style="--rise: 32px;"><p class="t-label shrink-0 text-ink">Publishing note</p><p class="text-[14px] leading-[1.6] text-muted">Do not add dollar values, verdicts, settlement amounts, client names, or claims of success unless verified, approved for publication, and legally appropriate.</p></div>
+      </div>
+    </section>
+
+    <section class="bg-olive py-20 md:py-[104px] lg:py-32 text-bone" aria-labelledby="cta-title">
+      <div class="mx-auto w-full max-w-[1200px] px-5 md:px-8 lg:px-10 grid gap-10 lg:grid-cols-[1fr_340px] lg:items-center lg:gap-20" data-reveal>
+        <div class="flex flex-col gap-5"><p class="t-label text-sage">Case review</p><h2 id="cta-title" class="t-h2 max-w-[600px]">Have a matter you would like to discuss?</h2></div>
+        <div class="flex flex-col items-start gap-6"><p class="text-[16px] leading-[1.65] text-muted !text-sage">Share a brief overview and we can identify an appropriate next step.</p><a href="contact" class="btn btn-light">Request a Case Review</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-olive px-5 pt-20 pb-10 text-sage md:px-10 md:pt-24">
+    <div class="grid gap-14 lg:grid-cols-[1fr_auto_auto_auto] lg:gap-x-20">
+      <div class="flex flex-col items-start gap-7">
+        <p class="t-h3 max-w-[380px] text-bone">Legal counsel with clarity and purpose.</p>
+        <a href="contact" class="btn btn-ghost">Speak with Our Team</a>
+      </div>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-12 md:contents">
+        <nav aria-label="Footer"><h2 class="t-label">Navigation</h2><ul class="mt-5 flex flex-col gap-[10px] text-[14px] leading-[1.5]"><li><a href="about" class="transition-colors duration-300 hover:text-bone ">Our Firm</a></li><li><a href="practice-areas" class="transition-colors duration-300 hover:text-bone ">Practice Areas</a></li><li><a href="case-studies" class="transition-colors duration-300 hover:text-bone text-bone" aria-current="page">Case Studies</a></li><li><a href="attorneys" class="transition-colors duration-300 hover:text-bone ">Attorneys</a></li><li><a href="blog" class="transition-colors duration-300 hover:text-bone ">Insights</a></li><li><a href="careers" class="transition-colors duration-300 hover:text-bone ">Careers</a></li><li><a href="contact" class="transition-colors duration-300 hover:text-bone ">Contact</a></li></ul></nav>
+        <nav aria-label="Legal"><h2 class="t-label">Legal</h2><ul class="mt-5 flex flex-col gap-[10px] text-[14px] leading-[1.5]"><li><a href="privacy-policy" class="transition-colors duration-300 hover:text-bone ">Privacy Policy</a></li><li><a href="terms-of-use" class="transition-colors duration-300 hover:text-bone ">Terms of Use</a></li><li><a href="disclaimer" class="transition-colors duration-300 hover:text-bone ">Disclaimer</a></li><li><a href="faqs" class="transition-colors duration-300 hover:text-bone ">Help &amp; FAQs</a></li></ul></nav>
+      </div>
+      <div><h2 class="t-label">Contact</h2><ul class="mt-5 flex flex-col gap-[10px] text-[14px] leading-[1.5]"><li><a href="mailto:hello@lexvoran.example" class="transition-colors duration-300 hover:text-bone">hello@lexvoran.example</a></li><li><a href="tel:+12125550148" class="transition-colors duration-300 hover:text-bone">+1 (212) 555-0148</a></li><li class="text-bone">120 Madison Avenue, Suite 800</li><li class="text-bone">New York, NY 10016</li></ul></div>
+    </div>
+    <svg class="mt-[72px] block h-auto w-full text-bone/90" viewBox="0 0 1360 176" role="img" aria-label="LEXVORAN"><text x="0" y="170" fill="currentColor" font-family="Bodoni Moda, Didot, serif" font-size="243" textLength="1360" lengthAdjust="spacing">LEXVORAN</text></svg>
+    <div class="mt-[72px] flex flex-col gap-3 border-t border-line-dark pt-6 md:flex-row md:justify-between">
+      <p class="t-label">© <span data-year>2026</span> LEXVORAN. Demo brand and details; replace before launch.</p>
+      <p class="t-label">General information only. Not legal advice.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sermons — Stillwater Church</title>
+  <meta name="description" content="Search every Stillwater talk by topic, series, speaker or Bible passage.">
+  <meta name="theme-color" content="#f6f0e5">
+  <link rel="preload" href="./assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-paper focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="wrap">
+      <div class="header-row">
+        <a href="./" class="logo" aria-label="Stillwater Church home"><svg viewBox="0 0 26 34" fill="none" aria-hidden="true"><path d="M1.500 32.500V13a11.500 11.500 0 0 1 23 0v19.500z" stroke="currentColor" stroke-width="1.700"/><circle cx="13" cy="17" r="4.400" fill="#e6ab45"/><path d="M1.500 24.500h23M6 28.500h14" stroke="currentColor" stroke-width="1.700" stroke-linecap="round"/></svg><span>Stillwater</span></a>
+        <nav class="hidden min-[68rem]:block" aria-label="Main"><ul class="flex items-center gap-1"><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">About<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.500 4.500 3.500 3.500 3.500-3.500"/></svg></button><div class="dropdown"><ul><li><a href="about">Our story</a></li><li><a href="beliefs">What we believe</a></li><li><a href="team">Our team</a></li><li><a href="contact">Contact</a></li></ul></div></li><li><a class="nav-item" href="sermons" aria-current="page">Sermons</a></li><li><a class="nav-item" href="events">Events</a></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">Get involved<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.500 4.500 3.500 3.500 3.500-3.500"/></svg></button><div class="dropdown"><ul><li><a href="ministries">All ministries</a></li><li><a href="kids">Kids</a></li><li><a href="students">Students</a></li><li><a href="groups">Small groups</a></li><li><a href="serve">Serve</a></li><li><a href="care">Care and support</a></li></ul></div></li><li><a class="nav-item" href="prayer">Prayer</a></li><li><a class="nav-item" href="give">Give</a></li></ul></nav>
+        <div class="flex items-center gap-2">
+          <a href="visit" class="btn btn-gold hidden !min-h-[44px] !px-5 !text-[16px] sm:inline-flex">Plan a visit</a>
+          <button type="button" class="grid size-11 place-items-center min-[68rem]:hidden" data-menu-button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="burger"><i></i><i></i></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-panel min-[68rem]:hidden" id="mobile-menu">
+      <nav class="wrap" aria-label="Mobile">
+        <a href="visit" class="btn btn-gold mb-5 w-full">Plan a visit</a>
+        <ul><li class="rule-row py-4"><p class="eyebrow">About</p><ul class="mt-2 grid grid-cols-2 gap-x-4"><li><a class="block py-2 text-[19px]" href="about">Our story</a></li><li><a class="block py-2 text-[19px]" href="beliefs">What we believe</a></li><li><a class="block py-2 text-[19px]" href="team">Our team</a></li><li><a class="block py-2 text-[19px]" href="contact">Contact</a></li></ul></li><li class="rule-row"><a class="block py-3 font-serif text-[32px] leading-tight" href="sermons">Sermons</a></li><li class="rule-row"><a class="block py-3 font-serif text-[32px] leading-tight" href="events">Events</a></li><li class="rule-row py-4"><p class="eyebrow">Get involved</p><ul class="mt-2 grid grid-cols-2 gap-x-4"><li><a class="block py-2 text-[19px]" href="ministries">All ministries</a></li><li><a class="block py-2 text-[19px]" href="kids">Kids</a></li><li><a class="block py-2 text-[19px]" href="students">Students</a></li><li><a class="block py-2 text-[19px]" href="groups">Small groups</a></li><li><a class="block py-2 text-[19px]" href="serve">Serve</a></li><li><a class="block py-2 text-[19px]" href="care">Care and support</a></li></ul></li><li class="rule-row"><a class="block py-3 font-serif text-[32px] leading-tight" href="prayer">Prayer</a></li><li class="rule-row"><a class="block py-3 font-serif text-[32px] leading-tight" href="give">Give</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="wrap grid items-end gap-8 pb-14 pt-10 md:grid-cols-[1fr_auto] lg:pt-16">
+      <div class="pb-2">
+        <p class="eyebrow" data-reveal>Sermons</p>
+        <h1 class="h-lg mt-4 max-w-[13em]" data-reveal style="--d:80ms">Words for <em>the week.</em></h1>
+        <p class="lede mt-6 max-w-[38em]" data-reveal style="--d:160ms">Listen on the drive, read the notes, or take the questions to your small group.</p>
+      </div>
+      <div class="arch h-[260px] w-[184px] justify-self-start md:h-[360px] md:w-[254px]" data-arch><img src="./assets/images/arch-hills.svg" alt="A stained-glass arch of green hills under a bright sky" width="254" height="360" fetchpriority="high"></div>
+    </section>
+    <section class="bg-paper-2 py-16 lg:py-20">
+      <div class="wrap">
+        <h2 class="h-md" data-reveal>Series</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <a href="sermons?series=songs#library" class="glass-card" data-reveal><span class="cover"><img src="./assets/images/glass-flame.svg" alt="" width="800" height="500" loading="lazy" ></span><h3 class="h-sm mt-4">Songs for Hard Days</h3><p class="mt-1 text-[16px] text-muted">Praying the Psalms when words run out.</p></a><a href="sermons?series=kingdom#library" class="glass-card" data-reveal><span class="cover"><img src="./assets/images/glass-hills.svg" alt="" width="800" height="500" loading="lazy" ></span><h3 class="h-sm mt-4">The Upside-Down Kingdom</h3><p class="mt-1 text-[16px] text-muted">Walking slowly through the Sermon on the Mount.</p></a><a href="sermons?series=ruth#library" class="glass-card" data-reveal><span class="cover"><img src="./assets/images/glass-wheat.svg" alt="" width="800" height="500" loading="lazy" ></span><h3 class="h-sm mt-4">Ordinary Faithful</h3><p class="mt-1 text-[16px] text-muted">What the book of Ruth says about small, steady love.</p></a>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap" id="library">
+      <div class="grid gap-4 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div class="field"><label for="s-search">Search</label><input id="s-search" type="search" placeholder="Try “grief”, “Psalm 23” or “peace”" data-library-search></div>
+        <div class="field"><label for="s-series">Series</label><select id="s-series" data-library-series><option value="all">All series</option><option value="songs">Songs for Hard Days</option><option value="kingdom">The Upside-Down Kingdom</option><option value="ruth">Ordinary Faithful</option></select></div>
+        <div class="field"><label for="s-speaker">Speaker</label><select id="s-speaker" data-library-speaker><option value="all">All speakers</option><option value="hannah">Rev. Hannah Okafor</option><option value="daniel">Daniel Reyes</option><option value="ruth">Ruth Adeyemi</option></select></div>
+      </div>
+      <p class="mt-6 text-[16px] text-muted" role="status" data-library-status></p>
+      <div class="mt-6 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3" data-library>
+        <article data-sermon data-series="songs" data-speaker="hannah" ><a href="beside-still-waters" class="glass-card"><span class="cover"><img src="./assets/images/glass-water.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">Songs for Hard Days · Psalm 23</p><h3 class="h-sm mt-1">Beside Still Waters</h3><p class="sr-only">Rest is not a reward for finishing everything. In Psalm 23 the shepherd makes the sheep lie down, long before the valley has been crossed.</p><p class="mt-1 text-[15px] text-muted">Rev. Hannah Okafor · November 1, 2026</p></a></article><article data-sermon data-series="songs" data-speaker="ruth" ><a href="how-long" class="glass-card"><span class="cover"><img src="./assets/images/glass-flame.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">Songs for Hard Days · Psalm 13</p><h3 class="h-sm mt-1">How Long?</h3><p class="sr-only">The Bible gives us permission to complain to God. Psalm 13 moves from protest to trust in six short verses, and it does not hurry.</p><p class="mt-1 text-[15px] text-muted">Ruth Adeyemi · October 25, 2026</p></a></article><article data-sermon data-series="songs" data-speaker="hannah" ><a href="be-still" class="glass-card"><span class="cover"><img src="./assets/images/glass-dawn.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">Songs for Hard Days · Psalm 46</p><h3 class="h-sm mt-1">Be Still</h3><p class="sr-only">The most quoted line in Psalm 46 is spoken in the middle of war and falling mountains. Stillness here is not a quiet morning. It is courage.</p><p class="mt-1 text-[15px] text-muted">Rev. Hannah Okafor · October 18, 2026</p></a></article><article data-sermon data-series="kingdom" data-speaker="hannah" ><a href="blessed-are-those-who-mourn" class="glass-card"><span class="cover"><img src="./assets/images/glass-bloom.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">The Upside-Down Kingdom · Matthew 5:1–12</p><h3 class="h-sm mt-1">Blessed Are Those Who Mourn</h3><p class="sr-only">Jesus begins his best-known sermon by calling people blessed whom nobody else would. Grief, he says, is not a sign that God has left.</p><p class="mt-1 text-[15px] text-muted">Rev. Hannah Okafor · September 27, 2026</p></a></article><article data-sermon data-series="kingdom" data-speaker="daniel" ><a href="the-peacemakers" class="glass-card"><span class="cover"><img src="./assets/images/glass-hills.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">The Upside-Down Kingdom · Matthew 5:9</p><h3 class="h-sm mt-1">The Peacemakers</h3><p class="sr-only">Keeping the peace and making peace are different things. One avoids the hard conversation, and the other walks toward it.</p><p class="mt-1 text-[15px] text-muted">Daniel Reyes · September 20, 2026</p></a></article><article data-sermon data-series="kingdom" data-speaker="ruth" ><a href="consider-the-birds" class="glass-card"><span class="cover"><img src="./assets/images/glass-dawn.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">The Upside-Down Kingdom · Matthew 6:25–34</p><h3 class="h-sm mt-1">Consider the Birds</h3><p class="sr-only">Jesus prescribes something surprising for anxiety: go outside and pay attention. Worry shrinks when we notice how much we are not holding up.</p><p class="mt-1 text-[15px] text-muted">Ruth Adeyemi · September 13, 2026</p></a></article><article data-sermon data-series="ruth" data-speaker="hannah" ><a href="where-you-go" class="glass-card"><span class="cover"><img src="./assets/images/glass-wheat.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">Ordinary Faithful · Ruth 1</p><h3 class="h-sm mt-1">Where You Go</h3><p class="sr-only">Ruth’s promise is often read at weddings, but she says it to her mother-in-law on a road out of famine and loss. Faithfulness begins in unglamorous places.</p><p class="mt-1 text-[15px] text-muted">Rev. Hannah Okafor · August 23, 2026</p></a></article><article data-sermon data-series="ruth" data-speaker="daniel" ><a href="under-whose-wings" class="glass-card"><span class="cover"><img src="./assets/images/glass-bloom.svg" alt="" width="800" height="500" loading="lazy" ></span><p class="mt-4 text-[15px] text-muted">Ordinary Faithful · Ruth 2</p><h3 class="h-sm mt-1">Under Whose Wings</h3><p class="sr-only">Boaz prays that God will shelter Ruth, then leaves extra grain in her path. Sometimes we are the answer to the prayers we pray.</p><p class="mt-1 text-[15px] text-muted">Daniel Reyes · August 16, 2026</p></a></article>
+      </div>
+      <div class="py-12 text-center" data-library-empty hidden><p class="h-sm">Nothing found.</p><button type="button" class="link-arrow mt-3" data-library-reset>Clear the search</button></div>
+    </section>
+  </main>
+  <footer>
+    <div class="sunset" aria-hidden="true"></div>
+    <div class="on-night bg-night pb-8 text-paper">
+      <div class="wrap">
+        <p class="h-lg" data-reveal>See you <em>Sunday.</em></p>
+        <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+          <div>
+            <h2 class="eyebrow">Gather with us</h2>
+            <p class="mt-3 text-[19px]">Sundays at 9:00 and 11:00 am</p>
+            <p class="text-moon"><a class="underline underline-offset-4 hover:text-gold" href="https://www.google.com/maps/search/?api=1&amp;query=118+Mill+Lane+Ashford+Falls">118 Mill Lane, Ashford Falls</a></p>
+            <p class="mt-3 text-moon"><a class="hover:text-gold" href="tel:+15550100142">(555) 010-0142</a><br><a class="hover:text-gold" href="mailto:hello@stillwater.example">hello@stillwater.example</a></p>
+          </div>
+          <div><h2 class="eyebrow">New here</h2><ul class="mt-3 grid gap-1.5 text-moon"><li><a class="hover:text-gold" href="visit">Plan a visit</a></li><li><a class="hover:text-gold" href="about">Our story</a></li><li><a class="hover:text-gold" href="beliefs">What we believe</a></li><li><a class="hover:text-gold" href="team">Our team</a></li></ul></div>
+          <div><h2 class="eyebrow">Grow</h2><ul class="mt-3 grid gap-1.5 text-moon"><li><a class="hover:text-gold" href="sermons">Sermons</a></li><li><a class="hover:text-gold" href="watch">Watch online</a></li><li><a class="hover:text-gold" href="groups">Small groups</a></li><li><a class="hover:text-gold" href="events">Events</a></li></ul></div>
+          <div><h2 class="eyebrow">Connect</h2><ul class="mt-3 grid gap-1.5 text-moon"><li><a class="hover:text-gold" href="prayer">Ask for prayer</a></li><li><a class="hover:text-gold" href="care">Care and support</a></li><li><a class="hover:text-gold" href="give">Give</a></li><li><a class="hover:text-gold" href="contact">Contact</a></li></ul></div>
+        </div>
+        <div class="mt-14 flex flex-col gap-5 border-t border-paper/20 pt-6 text-[15px] text-moon md:flex-row md:items-center md:justify-between">
+          <p>© <span data-year>2026</span> Stillwater Church. <a class="underline underline-offset-3" href="privacy">Privacy</a> · <a class="underline underline-offset-3" href="terms">Terms</a></p>
+          <div class="flex gap-1">
+            <a class="grid size-11 place-items-center hover:text-gold" href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.700" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8" fill="currentColor"/></svg></a>
+            <a class="grid size-11 place-items-center hover:text-gold" href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M14 8.500V6.700c0-.9.600-1.200 1.100-1.200H17V2h-2.600C11.500 2 10 4 10 6.300v2.200H7.500V12H10v10h4V12h2.700l.4-3.500z"/></svg></a>
+            <a class="grid size-11 place-items-center hover:text-gold" href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 7.500a3 3 0 0 0-2-2.100C18.300 5 12 5 12 5s-6.300 0-8 .4a3 3 0 0 0-2 2.100A30 30 0 0 0 2 12c0 1.500.1 3 .4 4.500a3 3 0 0 0 2 2.100c1.700.4 8 .4 8 .4s6.300 0 8-.4a3 3 0 0 0 2-2.100c.3-1.500.4-3 .4-4.500s-.1-3-.4-4.500zM10 15V9l5.200 3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

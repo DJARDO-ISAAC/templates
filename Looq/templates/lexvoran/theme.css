@@ -1,0 +1,334 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("../assets/fonts/bodoni-moda-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@theme {
+  /* Breakpoints match the original: tablet from 810px, desktop from 1200px */
+  --breakpoint-md: 50.625rem;
+  --breakpoint-lg: 75rem;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+
+  --color-cream: #f2efe6;
+  --color-sand: #e9e5d8;
+  --color-olive: #3a3c2b;
+  --color-ink: #1c1c17;
+  --color-muted: #6e6b60;
+  --color-sage: #a9a793;
+  --color-bone: #eeebdf;
+  --color-line: #d3cebf;
+  --color-line-dark: #55573f;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-cream);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  .bg-olive :focus-visible,
+  footer :focus-visible {
+    outline-color: var(--color-bone);
+  }
+}
+
+/* Type scale: phone / tablet (810px) / desktop (1200px), measured from the original */
+@utility t-display {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  @variant md { font-size: 76px; }
+  @variant lg { font-size: 104px; }
+}
+@utility t-h1 {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  @variant md { font-size: 64px; }
+  @variant lg { font-size: 84px; }
+}
+@utility t-h2 {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  @variant md { font-size: 50px; }
+  @variant lg { font-size: 64px; }
+}
+@utility t-h3 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  @variant md { font-size: 30px; }
+  @variant lg { font-size: 36px; }
+}
+@utility t-h4 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.25;
+  @variant md { font-size: 22px; }
+  @variant lg { font-size: 24px; }
+}
+@utility t-lead {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  @variant md { font-size: 21px; }
+  @variant lg { font-size: 24px; }
+}
+@utility t-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@layer components {
+  /* Wordmark in the header */
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.2em;
+  }
+
+  /* Pill buttons. The dot stretches into a dash on hover. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 46px;
+    padding: 0 28px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex: none;
+    border-radius: 999px;
+    background: currentColor;
+    transition: width 0.35s var(--ease-out-soft);
+  }
+  .btn:hover::before,
+  .btn:focus-visible::before {
+    width: 22px;
+  }
+  .btn-primary { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-cream); }
+  .btn-primary:hover { background: var(--color-olive); border-color: var(--color-olive); }
+  .btn-outline { border-color: var(--color-ink); color: var(--color-ink); }
+  .btn-outline:hover { background: var(--color-ink); color: var(--color-cream); }
+  .btn-light { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); }
+  .btn-ghost { border-color: var(--color-sage); color: var(--color-bone); }
+  .btn-ghost:hover { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); }
+
+  /* Text link with a short rule that runs the full width on hover */
+  .text-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .text-link::after {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.45s var(--ease-out-soft);
+  }
+  .text-link:hover::after,
+  .text-link:focus-visible::after {
+    width: 100%;
+  }
+
+  /* Photo zoom on hover; .tint photos start partly desaturated, .mono photos fully */
+  .zoom img {
+    transition: transform 0.6s var(--ease-out-soft), filter 0.45s ease;
+  }
+  .zoom:hover img,
+  .zoom:focus-visible img { transform: scale(var(--zoom, 1.05)); }
+  .zoom.tint img { filter: grayscale(0.35); }
+  .zoom.mono img { filter: grayscale(1); }
+  .zoom.tint:hover img,
+  .zoom.mono:hover img,
+  .zoom.tint:focus-visible img,
+  .zoom.mono:focus-visible img { filter: grayscale(0); }
+
+  /* Practice list row: tints and pads in on hover */
+  .list-row {
+    transition: background-color 0.35s ease, padding 0.4s var(--ease-out-soft);
+  }
+  .list-row:hover,
+  .list-row:focus-visible {
+    background: var(--color-sand);
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* On sand sections the hover lifts to cream so it stays visible */
+  .list-row-sand:hover,
+  .list-row-sand:focus-visible {
+    background: var(--color-cream);
+  }
+
+  /* Form fields */
+  .field {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid var(--color-line);
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-size: 14px;
+    transition: border-color 0.25s ease;
+  }
+  .field::placeholder { color: var(--color-muted); opacity: 0.8; }
+  .field:hover { border-color: var(--color-sage); }
+  .field:focus { border-color: var(--color-ink); outline: none; }
+  .select,
+  .select-pill {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%236e6b60' stroke-width='1.2'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+  .select-pill {
+    height: 46px;
+    min-width: 280px;
+    padding-left: 18px;
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.25s ease;
+  }
+  .select-pill:hover { border-color: var(--color-sage); }
+
+  /* Value cards: the light ones turn cream on hover */
+  .value-card {
+    transition: background-color 0.35s ease;
+  }
+  .value-card.is-light:hover {
+    background: var(--color-cream);
+  }
+
+  /* FAQ accordion */
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s var(--ease-out-soft);
+  }
+  [data-open] > .faq-panel {
+    grid-template-rows: 1fr;
+  }
+  .faq-icon path:last-child {
+    transform-origin: center;
+    transition: transform 0.35s var(--ease-out-soft);
+  }
+  [data-open] .faq-icon path:last-child {
+    transform: rotate(90deg);
+  }
+
+  /* Mobile menu: the header grows to reveal the links and pushes the page down */
+  .menu-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s var(--ease-out-soft);
+  }
+  .menu-open .menu-panel {
+    grid-template-rows: 1fr;
+  }
+  .menu-icon span {
+    transition: transform 0.3s var(--ease-out-soft);
+  }
+  .menu-open .menu-icon span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .menu-open .menu-icon span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+  /* Long-form article copy */
+  .prose-lex {
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .prose-lex h2 {
+    margin: 28px 0 14px;
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    @variant lg { font-size: 36px; }
+  }
+  .prose-lex p { margin-bottom: 14px; }
+  .prose-lex ul { margin: 0 0 14px; padding-left: 18px; list-style: disc; }
+  .prose-lex li { margin-bottom: 2px; }
+}
+
+/* Reveals: content rises (--rise, default 48px) and fades in. The easing is the spring the
+   original uses, sampled into linear(): half done at ~110ms, settled by ~750ms. main.js adds
+   .is-revealed; until then the element is hidden from the first paint, so nothing flashes. */
+[data-reveal] {
+  transition-property: opacity, transform;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition-timing-function: linear(0, 0.15 3%, 0.29 6.5%, 0.37 10%, 0.49 14%, 0.59 18%, 0.67 22.5%, 0.75 27%, 0.8 31%, 0.83 35%, 0.865 39%, 0.89 43%, 0.91 46.5%, 0.93 50%, 0.945 54%, 0.965 60%, 0.98 69%, 0.99 76%, 0.996 86%, 1);
+  transition-delay: var(--delay, 0ms);
+}
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not(.is-revealed) {
+    opacity: 0;
+    transform: translateY(var(--rise, 48px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btn::before,
+  .text-link::after,
+  .zoom img,
+  .list-row,
+  .value-card,
+  .faq-panel,
+  .menu-panel,
+  .menu-icon span {
+    transition: none !important;
+  }
+}

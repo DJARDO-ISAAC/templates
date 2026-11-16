@@ -1,0 +1,51 @@
+<a class="visually-hidden-focusable tpl-skip" href="#main">Skip to content</a>
+<div class="tpl-progress" aria-hidden="true"><span class="tpl-progress-bar"></span></div>
+
+<header class="tpl-header fixed-top" data-header>
+  <div class="tpl-topbar">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between gap-3">
+      <p class="mb-0 small">
+        <span class="tpl-dot" aria-hidden="true"></span>
+        Admissions open for <strong>{{ site.academicYear }}</strong>: KG 1 to JHS 3
+        <span class="d-none d-sm-inline">· Term 1 begins {{ site.term1Start }}</span>
+      </p>
+      <ul class="list-unstyled d-none d-md-flex align-items-center gap-4 mb-0 small">
+        <li><a class="tpl-topbar-link" href="tel:{{ site.phoneHref }}"><svg class="tpl-icon-sm" aria-hidden="true"><use href="#i-phone"/></svg>{{ site.phone }}</a></li>
+        <li><a class="tpl-topbar-link" href="mailto:{{ site.email }}"><svg class="tpl-icon-sm" aria-hidden="true"><use href="#i-mail"/></svg>{{ site.email }}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg tpl-nav" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html" aria-label="{{ site.name }} home">
+        <svg class="tpl-logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="12" class="tpl-logo-bg"/>
+          <path d="M12 28V12l16 16V12" fill="none" class="tpl-logo-line" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="2.6" class="tpl-logo-dot"/>
+        </svg>
+        <span class="tpl-logo-text">{{ site.shortName }}<small>Academy · {{ site.city }}</small></span>
+      </a>
+
+      <button class="navbar-toggler tpl-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="./news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="./calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row gap-2 pt-3 pt-lg-0">
+          <button type="button" class="btn btn-outline-dark tpl-btn-sm" data-bs-toggle="modal" data-bs-target="#tourModal">Book a tour</button>
+          <a class="btn btn-primary tpl-btn-sm tpl-btn-arrow" href="./admissions.html#apply">Apply now <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

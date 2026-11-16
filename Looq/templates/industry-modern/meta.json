@@ -1,0 +1,10 @@
+{
+  "slug": "industry-modern",
+  "name": "Industry Modern",
+  "industry": "manufacturing",
+  "type": "website",
+  "pages": ["index.html", "about.html", "services.html", "service-detail.html", "projects.html", "project-detail.html", "contact.html", "error-404.html"],
+  "tags": ["light", "corporate", "industrial", "engineering", "manufacturing", "minimal", "orange-accent", "multi-page"],
+  "description": "Clean, modern redesign of the Industry manufacturing site: white and graphite with a safety-orange accent, Inter and IBM Plex Mono, large rounded photography, a project index with cursor previews, counters, a Canada office map, tabs, filters and a sticky service sidebar.",
+  "tailwindVersion": "4.x"
+}

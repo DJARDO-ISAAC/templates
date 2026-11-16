@@ -1,0 +1,65 @@
+<div class="modal fade" id="tourModal" tabindex="-1" aria-labelledby="tourModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content tpl-modal">
+      <div class="row g-0">
+        <div class="col-md-5 d-none d-md-block">
+          <img class="tpl-modal-img" src="https://images.pexels.com/photos/9424263/pexels-photo-9424263.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="" width="700" height="900" loading="lazy">
+        </div>
+        <div class="col-md-7">
+          <div class="p-4 p-lg-5">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <span class="tpl-eyebrow">Visit {{ site.shortName }}</span>
+                <h2 class="tpl-h3 mb-0" id="tourModalLabel">Book a school tour</h2>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="needs-validation" action="{{ site.forms.tour }}" method="POST" novalidate data-form data-success="#tourSuccess" data-reset-on="#tourModal">
+              <input type="hidden" name="_subject" value="School tour request">
+              <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="tourName">Parent / guardian name</label>
+                  <input class="form-control" id="tourName" name="name" type="text" autocomplete="name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="tourPhone">Phone</label>
+                  <input class="form-control" id="tourPhone" name="phone" type="tel" autocomplete="tel" placeholder="024 000 0000" required>
+                  <div class="invalid-feedback">Please enter a phone number.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="tourEmail">Email <span class="tpl-text-mute">(optional)</span></label>
+                  <input class="form-control" id="tourEmail" name="email" type="email" autocomplete="email">
+                  <div class="invalid-feedback">Please check the email address.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="tourClass">Class of interest</label>
+                  <select class="form-select" id="tourClass" name="class" required>
+                    <option value="">Choose…</option>
+                    <!-- include:class-options.html -->
+                  </select>
+                  <div class="invalid-feedback">Please choose a class.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="tourDate">Preferred date</label>
+                  <input class="form-control" id="tourDate" name="date" type="date" required data-min-today>
+                  <div class="invalid-feedback">Please choose a date from today onwards.</div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary w-100 tpl-btn-arrow" type="submit">Request my visit <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                  <p class="tpl-form-error" data-form-error hidden role="alert">Sorry, we couldn't send your request. Please try again or call {{ site.phone }}.</p>
+                </div>
+              </div>
+            </form>
+            <div class="tpl-form-success" id="tourSuccess" hidden tabindex="-1">
+              <span class="tpl-float-icon tpl-bg-primary"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+              <h3 class="tpl-h3">Thank you. We'll be in touch.</h3>
+              <p class="tpl-text-mute mb-0">Our admissions team will call you within one working day to confirm your visit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

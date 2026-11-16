@@ -1,0 +1,169 @@
+<section class="tpl-section tpl-builder-wrap" id="bowl" aria-labelledby="bowlTitle">
+  <div class="container position-relative">
+    <div class="row align-items-end gy-3 mb-5">
+      <div class="col-lg-6">
+        <h2 class="tpl-h2 mb-0" id="bowlTitle">Order for pickup</h2>
+      </div>
+      <div class="col-lg-6">
+        <p class="tpl-lead mb-0">Build your bowl, then send it to the kitchen on WhatsApp. We'll confirm and have it ready in about 20 minutes.</p>
+      </div>
+    </div>
+
+    <div class="tpl-builder" data-builder data-wa="{{ site.whatsappHref }}" data-shop="{{ site.name }}">
+      <div class="row g-4 g-xl-5">
+        <!-- Illustration -->
+        <div class="col-lg-5">
+          <div class="tpl-bowl-stage">
+            <svg class="tpl-bowl" viewBox="0 0 400 330" role="img" aria-labelledby="bowlSvgTitle">
+              <title id="bowlSvgTitle">Illustration of your bowl</title>
+              <ellipse cx="200" cy="300" rx="150" ry="18" class="tpl-bowl-shadow"/>
+              <g class="tpl-bowl-steam" aria-hidden="true">
+                <path d="M150 70c-12-14 12-22 0-38s10-20 0-30"/>
+                <path d="M200 60c-12-14 12-22 0-38s10-20 0-30"/>
+                <path d="M250 70c-12-14 12-22 0-38s10-20 0-30"/>
+              </g>
+              <path d="M50 150 A150 40 0 0 1 350 150" class="tpl-bowl-rim-back"/>
+              <ellipse cx="200" cy="154" rx="140" ry="32" class="tpl-bowl-soup" data-soup-fill/>
+              <ellipse cx="170" cy="146" rx="60" ry="9" class="tpl-bowl-sheen"/>
+
+              <!-- Starches -->
+              <g class="tpl-layer" data-layer="starch:fufu">
+                <ellipse cx="200" cy="136" rx="72" ry="46" fill="#f4ead3"/>
+                <ellipse cx="180" cy="118" rx="30" ry="12" fill="#fffaf0" opacity=".8"/>
+              </g>
+              <g class="tpl-layer" data-layer="starch:banku">
+                <ellipse cx="165" cy="140" rx="50" ry="36" fill="#e7dec6"/>
+                <ellipse cx="238" cy="142" rx="46" ry="33" fill="#ded3b8"/>
+                <ellipse cx="152" cy="126" rx="18" ry="7" fill="#f6f0e0"/>
+              </g>
+              <g class="tpl-layer" data-layer="starch:kenkey">
+                <rect x="118" y="108" width="84" height="56" rx="28" fill="#c9b27c"/>
+                <rect x="200" y="112" width="80" height="52" rx="26" fill="#bba26a"/>
+                <path d="M130 120q30 10 64 0M130 134q30 10 64 0M130 148q30 10 64 0M210 124q28 9 60 0M210 138q28 9 60 0M210 152q28 9 60 0" stroke="#8f7744" stroke-width="2.5" fill="none"/>
+              </g>
+              <g class="tpl-layer" data-layer="starch:omotuo">
+                <circle cx="168" cy="134" r="38" fill="#fbf8f0"/>
+                <circle cx="236" cy="138" r="34" fill="#f3efe4"/>
+                <circle cx="156" cy="122" r="10" fill="#fff"/>
+              </g>
+              <g class="tpl-layer" data-layer="starch:ampesi">
+                <rect x="128" y="118" width="60" height="38" rx="12" fill="#ebc562" transform="rotate(-12 158 137)"/>
+                <rect x="186" y="112" width="64" height="40" rx="12" fill="#f1d58b" transform="rotate(8 218 132)"/>
+                <rect x="238" y="128" width="46" height="30" rx="10" fill="#e3b54a"/>
+              </g>
+
+              <!-- Proteins -->
+              <g class="tpl-layer" data-layer="protein:goat"><rect x="96" y="148" width="30" height="22" rx="9" fill="#7a3e1d"/><rect x="118" y="160" width="26" height="18" rx="8" fill="#8b4a24"/></g>
+              <g class="tpl-layer" data-layer="protein:chicken"><path d="M262 150c14-10 34-6 38 6s-8 22-22 20l-10 8-6-6 6-8c-8-6-12-14-6-20z" fill="#c77b3a"/><circle cx="252" cy="184" r="5" fill="#f5e6c8"/></g>
+              <g class="tpl-layer" data-layer="protein:beef"><rect x="140" y="166" width="28" height="18" rx="7" fill="#5c2a14"/><rect x="232" y="168" width="26" height="16" rx="7" fill="#6b3218"/></g>
+              <g class="tpl-layer" data-layer="protein:tilapia"><path d="M236 172c22-18 64-18 82 0-18 18-60 18-82 0z" fill="#8a8578"/><path d="M318 172l18-12v24z" fill="#77725f"/><circle cx="250" cy="169" r="3.5" fill="#1c1410"/><path d="M262 166q14 6 30 0" stroke="#6d685b" stroke-width="2" fill="none"/></g>
+              <g class="tpl-layer" data-layer="protein:smokedfish"><path d="M84 168c14-10 40-10 52 0-12 10-38 10-52 0z" fill="#6e4a26"/><path d="M136 168l10-7v14z" fill="#5a3b1c"/></g>
+              <g class="tpl-layer" data-layer="protein:snails"><circle cx="300" cy="150" r="13" fill="#9c7a52"/><path d="M300 150m-7 0a7 7 0 1 0 7-7" stroke="#5c4428" stroke-width="2.5" fill="none"/><circle cx="276" cy="164" r="10" fill="#8a6a44"/></g>
+              <g class="tpl-layer" data-layer="protein:akrantie"><rect x="172" y="170" width="30" height="16" rx="7" fill="#4a2a1a"/><rect x="196" y="176" width="24" height="14" rx="6" fill="#3d2215"/></g>
+              <g class="tpl-layer" data-layer="protein:wele"><rect x="108" y="138" width="34" height="9" rx="4.5" fill="#d9c3a0" transform="rotate(-18 125 142)"/><rect x="286" y="136" width="30" height="8" rx="4" fill="#cfb68e" transform="rotate(14 301 140)"/></g>
+              <g class="tpl-layer" data-layer="protein:egg"><ellipse cx="292" cy="140" rx="16" ry="12" fill="#fff"/><circle cx="292" cy="140" r="6" fill="#f4b41a"/></g>
+
+              <!-- Pepper -->
+              <g class="tpl-layer" data-layer="pepper:medium"><circle cx="120" cy="150" r="3" fill="#b3200e"/><circle cx="280" cy="160" r="3" fill="#b3200e"/><circle cx="250" cy="146" r="2.5" fill="#d8361b"/></g>
+              <g class="tpl-layer" data-layer="pepper:hot"><circle cx="110" cy="158" r="3.5" fill="#b3200e"/><circle cx="140" cy="146" r="3" fill="#d8361b"/><circle cx="300" cy="166" r="3.5" fill="#b3200e"/><circle cx="268" cy="152" r="3" fill="#d8361b"/><circle cx="210" cy="178" r="3" fill="#b3200e"/><circle cx="330" cy="152" r="3" fill="#d8361b"/></g>
+
+              <!-- Bowl front (enamel) -->
+              <path d="M350 150 A150 40 0 0 1 50 150" class="tpl-bowl-rim-front"/>
+              <path d="M52 156c8 82 66 128 148 128s140-46 148-128c-28 22-86 32-148 32S80 178 52 156z" class="tpl-bowl-body"/>
+              <g class="tpl-bowl-flowers" aria-hidden="true">
+                <circle cx="130" cy="232" r="11"/><circle cx="200" cy="250" r="13"/><circle cx="270" cy="232" r="11"/>
+                <circle cx="130" cy="232" r="4" class="c"/><circle cx="200" cy="250" r="5" class="c"/><circle cx="270" cy="232" r="4" class="c"/>
+              </g>
+              <path d="M52 156c28 22 86 32 148 32s120-10 148-32" class="tpl-bowl-lip"/>
+            </svg>
+            <p class="tpl-bowl-caption" data-bowl-caption aria-live="polite">Fufu with light soup</p>
+          </div>
+        </div>
+
+        <!-- Choices -->
+        <div class="col-lg-7">
+          <form class="tpl-builder-form" novalidate>
+            <fieldset class="tpl-step">
+              <legend><span>1</span>Starch &amp; soup base</legend>
+              <div class="tpl-choice-grid">
+                <input type="radio" class="btn-check" name="starch" id="st-fufu" value="Fufu" data-key="fufu" data-price="25" checked><label class="tpl-choice" for="st-fufu"><strong>Fufu</strong><small>1 ball · GH₵25</small></label>
+                <input type="radio" class="btn-check" name="starch" id="st-banku" value="Banku" data-key="banku" data-price="20"><label class="tpl-choice" for="st-banku"><strong>Banku</strong><small>2 balls · GH₵20</small></label>
+                <input type="radio" class="btn-check" name="starch" id="st-kenkey" value="Kenkey" data-key="kenkey" data-price="18"><label class="tpl-choice" for="st-kenkey"><strong>Kenkey</strong><small>2 balls · GH₵18</small></label>
+                <input type="radio" class="btn-check" name="starch" id="st-omotuo" value="Omo tuo" data-key="omotuo" data-price="22"><label class="tpl-choice" for="st-omotuo"><strong>Omo tuo</strong><small>Rice balls · GH₵22</small></label>
+                <input type="radio" class="btn-check" name="starch" id="st-ampesi" value="Ampesi" data-key="ampesi" data-price="20"><label class="tpl-choice" for="st-ampesi"><strong>Ampesi</strong><small>Yam &amp; plantain · GH₵20</small></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="tpl-step">
+              <legend><span>2</span>Soup or stew</legend>
+              <div class="tpl-choice-grid tpl-choice-grid--soup">
+                <input type="radio" class="btn-check" name="soup" id="sp-light" value="Light soup" data-color="#d9531e" checked><label class="tpl-choice" for="sp-light"><i class="tpl-swatch tpl-swatch--light"></i><strong>Light soup</strong></label>
+                <input type="radio" class="btn-check" name="soup" id="sp-palm" value="Palm nut soup" data-color="#8e2a12"><label class="tpl-choice" for="sp-palm"><i class="tpl-swatch tpl-swatch--palm"></i><strong>Palm nut</strong></label>
+                <input type="radio" class="btn-check" name="soup" id="sp-groundnut" value="Groundnut soup" data-color="#b8682c"><label class="tpl-choice" for="sp-groundnut"><i class="tpl-swatch tpl-swatch--groundnut"></i><strong>Groundnut</strong></label>
+                <input type="radio" class="btn-check" name="soup" id="sp-abunu" value="Abunuabunu" data-color="#2f4a1f"><label class="tpl-choice" for="sp-abunu"><i class="tpl-swatch tpl-swatch--abunu"></i><strong>Abunuabunu</strong></label>
+                <input type="radio" class="btn-check" name="soup" id="sp-okro" value="Okro stew" data-color="#6e8b3d"><label class="tpl-choice" for="sp-okro"><i class="tpl-swatch tpl-swatch--okro"></i><strong>Okro stew</strong></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="tpl-step">
+              <legend><span>3</span>Meat or fish <small>(choose any)</small></legend>
+              <div class="tpl-choice-grid tpl-choice-grid--3">
+                <input type="checkbox" class="btn-check" name="protein" id="pr-goat" value="Goat" data-key="goat" data-price="30" checked><label class="tpl-choice" for="pr-goat"><strong>Goat</strong><small>+GH₵30</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-chicken" value="Chicken" data-key="chicken" data-price="25"><label class="tpl-choice" for="pr-chicken"><strong>Chicken</strong><small>+GH₵25</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-beef" value="Beef" data-key="beef" data-price="25"><label class="tpl-choice" for="pr-beef"><strong>Beef</strong><small>+GH₵25</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-tilapia" value="Tilapia" data-key="tilapia" data-price="45"><label class="tpl-choice" for="pr-tilapia"><strong>Tilapia</strong><small>+GH₵45</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-smoked" value="Smoked fish" data-key="smokedfish" data-price="20"><label class="tpl-choice" for="pr-smoked"><strong>Smoked fish</strong><small>+GH₵20</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-snails" value="Snails" data-key="snails" data-price="40"><label class="tpl-choice" for="pr-snails"><strong>Snails</strong><small>+GH₵40</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-akrantie" value="Akrantie" data-key="akrantie" data-price="60"><label class="tpl-choice" for="pr-akrantie"><strong>Akrantie</strong><small>Grasscutter · +GH₵60</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-wele" value="Wele" data-key="wele" data-price="10"><label class="tpl-choice" for="pr-wele"><strong>Wele</strong><small>Cow skin · +GH₵10</small></label>
+                <input type="checkbox" class="btn-check" name="protein" id="pr-egg" value="Boiled egg" data-key="egg" data-price="5"><label class="tpl-choice" for="pr-egg"><strong>Egg</strong><small>+GH₵5</small></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="tpl-step">
+              <legend><span>4</span>Pepper &amp; extras</legend>
+              <div class="tpl-pepper" role="radiogroup" aria-label="Pepper level">
+                <input type="radio" class="btn-check" name="pepper" id="pp-mild" value="Mild" data-key="mild"><label class="tpl-pepper-opt" for="pp-mild"><svg aria-hidden="true"><use href="#i-pepper"/></svg> Mild</label>
+                <input type="radio" class="btn-check" name="pepper" id="pp-medium" value="Medium" data-key="medium" checked><label class="tpl-pepper-opt" for="pp-medium"><svg aria-hidden="true"><use href="#i-pepper"/></svg><svg aria-hidden="true"><use href="#i-pepper"/></svg> Medium</label>
+                <input type="radio" class="btn-check" name="pepper" id="pp-hot" value="Ghana hot" data-key="hot"><label class="tpl-pepper-opt" for="pp-hot"><svg aria-hidden="true"><use href="#i-pepper"/></svg><svg aria-hidden="true"><use href="#i-pepper"/></svg><svg aria-hidden="true"><use href="#i-pepper"/></svg> Ghana hot</label>
+              </div>
+              <div class="tpl-choice-grid tpl-choice-grid--3 mt-3">
+                <input type="checkbox" class="btn-check" name="extra" id="ex-ball" value="Extra ball" data-price="10"><label class="tpl-choice" for="ex-ball"><strong>Extra ball</strong><small>+GH₵10</small></label>
+                <input type="checkbox" class="btn-check" name="extra" id="ex-shito" value="Shito" data-price="3"><label class="tpl-choice" for="ex-shito"><strong>Shito</strong><small>+GH₵3</small></label>
+                <input type="checkbox" class="btn-check" name="extra" id="ex-sobolo" value="Sobolo" data-price="10"><label class="tpl-choice" for="ex-sobolo"><strong>Sobolo</strong><small>+GH₵10</small></label>
+              </div>
+            </fieldset>
+
+            <!-- Ticket -->
+            <div class="tpl-ticket" aria-live="polite">
+              <div class="tpl-ticket-head">
+                <span>Your order</span>
+                <div class="tpl-qty" role="group" aria-label="Number of bowls">
+                  <button type="button" class="tpl-qty-btn" data-qty="-1" aria-label="One bowl fewer"><svg aria-hidden="true"><use href="#i-minus"/></svg></button>
+                  <output data-qty-value>1</output>
+                  <button type="button" class="tpl-qty-btn" data-qty="1" aria-label="One bowl more"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+                </div>
+              </div>
+              <ul class="tpl-ticket-lines list-unstyled" data-ticket-lines></ul>
+              <div class="tpl-ticket-total"><span>Total</span><strong data-ticket-total>GH₵ 55</strong></div>
+              <div class="row g-2 align-items-end">
+                <div class="col-sm-6">
+                  <label class="form-label" for="orderName">Your name</label>
+                  <input class="form-control" id="orderName" name="name" type="text" autocomplete="given-name" placeholder="e.g. Kofi">
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="orderMode">How</label>
+                  <select class="form-select" id="orderMode" name="mode">
+                    <option>Pickup</option><option>Eat here</option><option>Delivery (Osu &amp; nearby)</option>
+                  </select>
+                </div>
+              </div>
+              <a class="btn tpl-btn tpl-btn--green w-100 mt-3" href="https://wa.me/{{ site.whatsappHref }}" target="_blank" rel="noopener" data-order-link><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Send order on WhatsApp</a>
+              <p class="tpl-ticket-note">Pay with MoMo or cash when you collect. Prices include your soup.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

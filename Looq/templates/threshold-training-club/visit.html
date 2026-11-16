@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visit — Thres</title>
+  <meta name="description" content="Unit 4, Tannery Wharf, Bristol. Five minutes on foot from the station, along the water. Look for the orange door.">
+  <link rel="preload" href="./assets/fonts/switzer-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip bg-canvas font-sans text-[15.5px] leading-[1.45] text-body antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-[18px] pt-[18px]">
+    <div class="flex items-start justify-between gap-3">
+      <a href="./" class="flex h-[56px] items-center gap-[10px] rounded-full bg-card px-5 text-[22px] font-medium tracking-[-0.03em] text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)]" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+      <nav class="absolute left-1/2 hidden h-[56px] -translate-x-1/2 items-center rounded-full bg-card px-6 shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:flex" aria-label="Main">
+        <ul class="flex items-center gap-[34px] text-[16px] tracking-[-0.01em] text-ink">
+          <li><a href="timetable" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Timetable</a></li>
+          <li><a href="classes" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Classes</a></li>
+          <li><a href="coaches" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Coaches</a></li>
+          <li><a href="membership" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Membership</a></li>
+          <li><a href="journal" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Journal</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="./#book" class="flex h-[56px] items-center gap-[14px] rounded-full bg-ink pr-[6px] pl-5 text-[15px] font-medium text-white max-sm:hidden">First class free<span class="grid size-[42px] place-items-center rounded-full bg-live text-ink"><svg class="size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 10 4M5 4h5v5" /></svg></span></a>
+        <button type="button" class="grid size-[56px] place-items-center rounded-full bg-card text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:hidden" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+          <span class="sr-only">Open menu</span>
+          <svg class="size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-open><path d="M3 7h14M3 13h14" /></svg>
+          <svg class="hidden size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-close><path d="M5 5l10 10M15 5 5 15" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="mt-2 hidden rounded-[26px] bg-card p-3 shadow-[0_16px_40px_rgb(13_13_14/0.12)] lg:hidden" aria-label="Mobile">
+      <ul class="flex flex-col text-[18px] tracking-[-0.02em] text-ink">
+        <li><a href="timetable" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Timetable</a></li>
+        <li><a href="classes" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Classes</a></li>
+        <li><a href="coaches" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Coaches</a></li>
+        <li><a href="membership" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Membership</a></li>
+        <li><a href="journal" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Journal</a></li>
+        <li class="pt-2"><a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 w-full">First class free</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-[110px] lg:pt-[140px]">
+    <section aria-labelledby="visit-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Visit</p>
+          <h1 id="visit-title" class="mt-5 text-ink text-[44px] leading-[1] font-medium tracking-[-0.06em] sm:text-[60px] lg:text-[76px]">Unit 4, Tannery Wharf.<br><span class="text-faint">Look for the orange door.</span></h1>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Five minutes on foot from the station, along the water. The door is the only colourful thing on the street, and it is usually open.</p>
+      </div>
+      <div class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-[1fr_605px]">
+        <div class="tint overflow-hidden rounded-[26px]"><img src="./assets/images/visit.webp" alt="A member training at a heavy bag" width="788" height="560" fetchpriority="high" class="photo h-[320px] w-full object-cover sm:h-[560px]"></div>
+        <div class="flex flex-col gap-3">
+          <dl class="rounded-[26px] bg-card px-6 py-3 text-[16px] sm:px-[30px]">
+            <div class="grid grid-cols-[96px_1fr] gap-4 border-b border-line py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Find us</dt><dd class="text-ink">Unit 4, Tannery Wharf, Bristol BS1 6QH</dd></div>
+            <div class="grid grid-cols-[96px_1fr] gap-4 border-b border-line py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Weekdays</dt><dd class="text-ink">06:00 to 21:00</dd></div>
+            <div class="grid grid-cols-[96px_1fr] gap-4 border-b border-line py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Saturday</dt><dd class="text-ink">08:00 to 14:00</dd></div>
+            <div class="grid grid-cols-[96px_1fr] gap-4 border-b border-line py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Sunday</dt><dd class="text-ink">Closed. Rest.</dd></div>
+            <div class="grid grid-cols-[96px_1fr] gap-4 border-b border-line py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Write</dt><dd class="text-ink"><a href="mailto:hello@thres.club" class="hover:underline">hello@thres.club</a></dd></div>
+            <div class="grid grid-cols-[96px_1fr] gap-4  py-[18px] sm:grid-cols-[116px_1fr]"><dt class="text-[14.5px] text-muted">Call</dt><dd class="text-ink"><a href="tel:+441174960182" class="hover:underline">0117 496 0182</a></dd></div>
+          </dl>
+          <a href="https://www.openstreetmap.org/search?query=Tannery%20Wharf%20Bristol" class="inline-flex h-[42px] items-center justify-center rounded-full bg-ink px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-night-2 h-[50px] w-full" rel="noopener">Open in maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="ways-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Getting here</p>
+          <h2 id="ways-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Three ways<br><span class="text-faint">to the door.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">However you arrive, come fifteen minutes early the first time.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-3">
+        <li class="flex min-h-[250px] flex-col justify-between gap-10 rounded-[26px] bg-card p-6 sm:p-7" data-reveal>
+          <p class="text-[14.5px] text-muted">On foot</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Five minutes from the station</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-body">Leave by the river exit, turn left along the water and keep going until you smell coffee.</p></div>
+        </li>
+        <li class="flex min-h-[250px] flex-col justify-between gap-10 rounded-[26px] bg-card p-6 sm:p-7" data-reveal>
+          <p class="text-[14.5px] text-muted">By bike</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Racks at the door</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-body">Twelve covered spaces outside and a pump on the wall. Bring your own lock.</p></div>
+        </li>
+        <li class="flex min-h-[250px] flex-col justify-between gap-10 rounded-[26px] bg-card p-6 sm:p-7" data-reveal>
+          <p class="text-[14.5px] text-muted">By car</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Park across the bridge</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-body">The public car park on Lime Kiln Road is three minutes away. The first two hours are free before 08:00.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="px-[18px] pt-[100px] pb-[18px] lg:pt-[120px]" aria-labelledby="ask-title">
+      <div class="glow-left on-dark grid gap-10 rounded-[26px] px-6 py-12 text-white sm:px-[48px] sm:py-[56px] lg:grid-cols-[1fr_440px]">
+        <div>
+          <p class="text-[14.5px] text-white/60">Write to us</p>
+          <h2 id="ask-title" class="mt-5 text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Ask a coach<br><span class="text-white/45">anything.</span></h2>
+          <p class="mt-6 max-w-[420px] text-[17px] leading-[1.45] text-white/75 lg:text-[19px]">Injuries, nerves, shift patterns, whether you are fit enough to start. A coach reads every message and answers within a working day.</p>
+        </div>
+        <form class="rounded-[26px] bg-card p-6 text-ink sm:p-8" data-form>
+          <h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em]">Send a message</h3>
+          <div class="mt-6 flex flex-col gap-[10px]">
+            <label for="msg-name" class="sr-only">Your name</label>
+              <input id="msg-name" name="msg-name" type="text" autocomplete="name" required placeholder="Your name" class="h-[56px] w-full rounded-[16px] bg-canvas px-4 text-[15.5px] text-ink placeholder:text-muted focus:outline-2 focus:outline-ink ">
+            <label for="msg-email" class="sr-only">Email address</label>
+              <input id="msg-email" name="msg-email" type="email" autocomplete="email" required placeholder="Email address" class="h-[56px] w-full rounded-[16px] bg-canvas px-4 text-[15.5px] text-ink placeholder:text-muted focus:outline-2 focus:outline-ink ">
+            <label for="msg-text" class="sr-only">What would you like to know?</label>
+            <textarea id="msg-text" name="msg-text" rows="5" required placeholder="What would you like to know?" class="h-[128px] w-full resize-y rounded-[16px] bg-canvas px-4 py-3 text-[15.5px] text-ink placeholder:text-muted focus:outline-2 focus:outline-ink"></textarea>
+            <button type="submit" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-1 h-[52px] w-full">Send message</button>
+          </div>
+          <p class="mt-5 hidden rounded-[16px] bg-live-soft px-4 py-3 text-[15.5px] text-ink" role="status" data-form-success>Thanks. A coach will answer within a working day.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-[18px] pb-[18px]">
+    <div class="rounded-[26px] bg-card px-6 pt-12 pb-6 sm:px-[48px]">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto]">
+        <div>
+          <a href="./" class="inline-flex items-center gap-[10px] text-[22px] font-medium tracking-[-0.03em] text-ink" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+          <p class="mt-4 max-w-[330px] text-[15.5px] leading-[1.45] text-body">A heart-rate training club in a tannery warehouse by the water. Coaching the number on the wall since 2019.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 sm:gap-x-[52px]">
+          <nav aria-label="Train">
+            <h2 class="text-[14.5px] text-muted">Train</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="timetable" class="transition-opacity hover:opacity-60">Timetable</a></li>
+              <li><a href="classes#zones" class="transition-opacity hover:opacity-60">The five zones</a></li>
+              <li><a href="classes" class="transition-opacity hover:opacity-60">Classes</a></li>
+              <li><a href="coaches" class="transition-opacity hover:opacity-60">Coaches</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Club">
+            <h2 class="text-[14.5px] text-muted">Club</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="membership" class="transition-opacity hover:opacity-60">Membership</a></li>
+              <li><a href="studio" class="transition-opacity hover:opacity-60">The studio</a></li>
+              <li><a href="journal" class="transition-opacity hover:opacity-60">Journal</a></li>
+              <li><a href="visit" class="transition-opacity hover:opacity-60">Visit</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow">
+            <h2 class="text-[14.5px] text-muted">Follow</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="#" class="transition-opacity hover:opacity-60">Instagram</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">Strava</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">YouTube</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Small print">
+            <h2 class="text-[14.5px] text-muted">Small print</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="privacy" class="transition-opacity hover:opacity-60">Privacy</a></li>
+              <li><a href="terms" class="transition-opacity hover:opacity-60">Terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="@container mt-10 overflow-hidden lg:mt-6" aria-hidden="true"><span class="-ml-[0.029em] block text-[43.2cqw] leading-[0.78] font-medium tracking-[-0.075em] whitespace-nowrap text-ink">Thres</span></p>
+      <div class="mt-10 flex flex-col justify-between gap-2 border-t border-line pt-5 text-[13.5px] text-muted sm:flex-row">
+        <p>© <span data-year>2026</span> Thres Training Club</p>
+        <p>Thres, a Framer template by Ajoy</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

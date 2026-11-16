@@ -1,0 +1,10 @@
+{
+  "slug": "industry",
+  "name": "Industry",
+  "industry": "manufacturing",
+  "type": "website",
+  "pages": ["index.html", "about.html", "services.html", "service-detail.html", "projects.html", "project-detail.html", "contact.html"],
+  "tags": ["light", "corporate", "industrial", "engineering", "multi-page", "cut-corners"],
+  "description": "Multi-page manufacturing and engineering company site in navy and pale blue-grey, with cut-corner shapes, Chakra Petch headings and photo-led sections.",
+  "tailwindVersion": "4.x"
+}

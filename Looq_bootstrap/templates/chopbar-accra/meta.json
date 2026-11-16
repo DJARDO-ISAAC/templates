@@ -1,0 +1,17 @@
+{
+  "slug": "chopbar-accra",
+  "name": "Abusua Pot Chop Bar",
+  "industry": "restaurant",
+  "tags": [
+    "ghanaian",
+    "chop-bar",
+    "restaurant",
+    "editorial",
+    "photo-led",
+    "condensed-type",
+    "whatsapp-ordering",
+    "interactive"
+  ],
+  "description": "An editorial, photo-led site for a Ghanaian chop bar: full-bleed firewood hero, condensed signage type, a daily 'today at the pot' board, house-dish menu lists and a build-your-bowl tool that sends orders on WhatsApp.",
+  "bootstrapVersion": "5.3.x"
+}

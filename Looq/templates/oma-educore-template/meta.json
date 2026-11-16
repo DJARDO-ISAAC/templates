@@ -1,0 +1,10 @@
+{
+  "slug": "oma-educore-template",
+  "name": "Educore",
+  "industry": "education",
+  "type": "landing-page",
+  "pages": ["index.html", "privacy-policy.html", "terms-and-conditions.html", "404.html"],
+  "tags": ["online-course", "ui-ux", "education", "landing-page", "purple-accent", "black-and-grey", "carousel", "marquee"],
+  "description": "Online course landing page in black, warm grey and violet, with a sliding student carousel, curriculum and pricing card, review grid, instructor profile, community wall and FAQ.",
+  "tailwindVersion": "4.x"
+}

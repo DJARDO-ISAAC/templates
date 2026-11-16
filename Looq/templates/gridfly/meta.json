@@ -1,0 +1,9 @@
+{
+  "slug": "gridfly",
+  "name": "GridFly",
+  "industry": "construction",
+  "type": "landing-page",
+  "tags": ["one-page", "construction", "orange-accent", "black-and-stone", "pricing", "faq", "marquee"],
+  "description": "One-page construction and renovation site with a sketched hero, orange accents on black and warm stone, project showcase, pricing, reviews marquee, service-area map and estimate form.",
+  "tailwindVersion": "4.x"
+}

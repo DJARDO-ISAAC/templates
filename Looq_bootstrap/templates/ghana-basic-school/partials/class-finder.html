@@ -1,0 +1,86 @@
+<!-- ============ CLASS FINDER ============ -->
+<section class="tpl-section tpl-bg-paper" id="finder">
+  <div class="container">
+    <div class="row align-items-center gy-5 gx-xl-5">
+      <div class="col-lg-5">
+        <span class="tpl-eyebrow" data-reveal>Class finder</span>
+        <h2 class="tpl-h2" data-reveal>Which class is <em>right</em> for your child?</h2>
+        <p class="tpl-text-mute" data-reveal>Answer three quick questions. We'll suggest the right class for 2026/27 based on GES age guidelines and tell you what admission looks like from there.</p>
+        <ul class="tpl-checklist" data-reveal>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Takes under a minute</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Based on age on 1 September 2026</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Final placement after a friendly assessment</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="tpl-finder" data-finder data-reveal>
+          <div class="tpl-finder-head">
+            <span class="tpl-finder-label">Question <span data-finder-current>01</span> / 03</span>
+            <div class="progress tpl-finder-progress" role="progressbar" aria-label="Class finder progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+              <div class="progress-bar" data-finder-bar></div>
+            </div>
+          </div>
+
+          <form novalidate>
+            <fieldset class="tpl-finder-step" data-step="1">
+              <legend>How old will your child be on 1 September 2026?</legend>
+              <div class="tpl-chip-grid">
+                <input type="radio" class="btn-check" name="age" id="age-4" value="4"><label class="btn tpl-chip" for="age-4">4</label>
+                <input type="radio" class="btn-check" name="age" id="age-5" value="5"><label class="btn tpl-chip" for="age-5">5</label>
+                <input type="radio" class="btn-check" name="age" id="age-6" value="6"><label class="btn tpl-chip" for="age-6">6</label>
+                <input type="radio" class="btn-check" name="age" id="age-7" value="7"><label class="btn tpl-chip" for="age-7">7</label>
+                <input type="radio" class="btn-check" name="age" id="age-8" value="8"><label class="btn tpl-chip" for="age-8">8</label>
+                <input type="radio" class="btn-check" name="age" id="age-9" value="9"><label class="btn tpl-chip" for="age-9">9</label>
+                <input type="radio" class="btn-check" name="age" id="age-10" value="10"><label class="btn tpl-chip" for="age-10">10</label>
+                <input type="radio" class="btn-check" name="age" id="age-11" value="11"><label class="btn tpl-chip" for="age-11">11</label>
+                <input type="radio" class="btn-check" name="age" id="age-12" value="12"><label class="btn tpl-chip" for="age-12">12</label>
+                <input type="radio" class="btn-check" name="age" id="age-13" value="13"><label class="btn tpl-chip" for="age-13">13</label>
+                <input type="radio" class="btn-check" name="age" id="age-14" value="14"><label class="btn tpl-chip" for="age-14">14</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="tpl-finder-step" data-step="2" hidden>
+              <legend>Where is your child learning right now?</legend>
+              <div class="tpl-option-list">
+                <input type="radio" class="btn-check" name="from" id="from-none" value="none"><label class="btn tpl-option" for="from-none"><strong>Not in school yet</strong><span>Starting KG or Basic 1</span></label>
+                <input type="radio" class="btn-check" name="from" id="from-gh" value="gh"><label class="btn tpl-option" for="from-gh"><strong>Another Ghanaian basic school</strong><span>Public or private, GES curriculum</span></label>
+                <input type="radio" class="btn-check" name="from" id="from-intl" value="intl"><label class="btn tpl-option" for="from-intl"><strong>International or overseas school</strong><span>British, American, IB or another system</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="tpl-finder-step" data-step="3" hidden>
+              <legend>What matters most to you this year?</legend>
+              <div class="tpl-option-list tpl-option-list--2">
+                <input type="radio" class="btn-check" name="focus" id="focus-lit" value="literacy"><label class="btn tpl-option" for="focus-lit"><svg aria-hidden="true"><use href="#i-book"/></svg><strong>Reading &amp; numeracy</strong></label>
+                <input type="radio" class="btn-check" name="focus" id="focus-stem" value="stem"><label class="btn tpl-option" for="focus-stem"><svg aria-hidden="true"><use href="#i-flask"/></svg><strong>Science &amp; technology</strong></label>
+                <input type="radio" class="btn-check" name="focus" id="focus-lang" value="languages"><label class="btn tpl-option" for="focus-lang"><svg aria-hidden="true"><use href="#i-globe"/></svg><strong>Languages &amp; the arts</strong></label>
+                <input type="radio" class="btn-check" name="focus" id="focus-bece" value="bece"><label class="btn tpl-option" for="focus-bece"><svg aria-hidden="true"><use href="#i-award"/></svg><strong>Exam readiness</strong></label>
+              </div>
+            </fieldset>
+
+            <div class="tpl-finder-result" data-finder-result hidden tabindex="-1">
+              <span class="tpl-eyebrow">Our recommendation</span>
+              <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                <h3 class="tpl-finder-class mb-0" data-result-class>Basic 4</h3>
+                <span class="badge rounded-pill tpl-badge-soft" data-result-phase>Upper Primary</span>
+              </div>
+              <p class="mb-3" data-result-text></p>
+              <ul class="tpl-checklist tpl-checklist--sm mb-4" data-result-list></ul>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary tpl-btn-arrow" href="./admissions.html#apply" data-result-cta>Start application <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <button type="button" class="btn btn-link tpl-text-ink" data-finder-restart>Start over</button>
+              </div>
+            </div>
+
+            <div class="tpl-finder-nav" data-finder-nav>
+              <button type="button" class="btn btn-outline-dark" data-finder-prev disabled>Back</button>
+              <button type="button" class="btn btn-primary tpl-btn-arrow" data-finder-next disabled><span data-finder-next-label>Next</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </form>
+          <p class="visually-hidden" aria-live="polite" data-finder-live></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

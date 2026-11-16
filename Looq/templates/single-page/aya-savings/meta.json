@@ -1,0 +1,31 @@
+{
+  "slug": "single-page/aya-savings",
+  "name": "Aya Savings & Loans",
+  "industry": "banking",
+  "type": "landing-page",
+  "pages": [
+    "index.html"
+  ],
+  "tags": [
+    "one-page",
+    "banking",
+    "savings",
+    "loans",
+    "fintech",
+    "ghana",
+    "pre-launch",
+    "waitlist",
+    "blue",
+    "white",
+    "gradient",
+    "product-mockup",
+    "features",
+    "rates",
+    "timeline",
+    "testimonials",
+    "faq",
+    "form"
+  ],
+  "description": "Pre-launch landing page for a fictional Ghanaian savings and loans company: a glowing blue hero with an isometric vault, a white waitlist form, feature grid, passbook app mockup, indicative rate board, launch timeline, founding-member quotes, FAQ and a full-width founding-list CTA.",
+  "tailwindVersion": "4.x"
+}

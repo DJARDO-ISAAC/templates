@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HomeCare — Send care home. See it land. | Sankofa Bank</title>
+  <meta name="description" content="HomeCare is a Sankofa Bank account for Ghanaians abroad. Pay a verified caregiver, rent or school fees — with escrow protection and a receipt for every cedi. Join the waitlist.">
+  <meta name="theme-color" content="#0d1a30">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/public-sans-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:title" content="HomeCare — Send care home. See it land.">
+  <meta property="og:description" content="A Sankofa Bank account for Ghanaians abroad: verified caregivers, protected payments and a receipt for every cedi.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GH">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "HomeCare",
+    "description": "A Sankofa Bank account for Ghanaians abroad to pay verified caregivers, rent and school fees, with escrow protection and receipts.",
+    "provider": {
+      "@type": "BankOrCreditUnion",
+      "name": "Sankofa Bank",
+      "areaServed": ["Ghana", "United Kingdom", "United States", "Canada", "European Union"]
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Ghanaians living abroad and their families at home"
+    },
+    "category": "Diaspora banking and care payments"
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 13.5c-2.7-4.2-8.2-5.7-12.6-3.2-4.9 2.8-5.7 9.4-1.7 13.2 3.5 3.3 9.3 2.5 11.3-1.7 1.8-3.7-.8-7.6-4.7-7.3-3.3.2-5.2 4-3.2 6.5 1.5 1.9 4.4 1.6 5.4-.5"/>
+      <circle cx="29.5" cy="10.5" r="1.6" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h16M14 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 17 17 7M8 7h9v9"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m4 12 5 5L20 6"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M3 7h18M3 12h18M3 17h18"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M12 5v14M5 12h14"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/>
+      <path d="m9 11.5 2 2 4-4"/>
+    </symbol>
+    <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <circle cx="9" cy="11" r="2"/>
+      <path d="M6 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4M14 10h4M14 13h4"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="10" width="16" height="10" rx="2"/>
+      <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="8" r="3"/>
+      <path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5M16 5.5a3 3 0 0 1 0 5.8M17 15c2.4.4 4 2 4 5"/>
+    </symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="5" width="19" height="14" rx="2"/>
+      <path d="M2.5 9.5h19M6 15h4"/>
+    </symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/>
+      <path d="M9 8h6M9 12h6"/>
+    </symbol>
+    <symbol id="i-graph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 20V4M4 20h16"/>
+      <path d="m7 15 4-4 3 3 5-6"/>
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/>
+      <circle cx="12" cy="12" r="2.5"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.5 6.5a5 5 0 0 0-7.1 0L12 7.9l-1.4-1.4a5 5 0 1 0-7.1 7.1L12 22l8.5-8.4a5 5 0 0 0 0-7.1Z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3.5 2"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-4-2-2 2a15 15 0 0 1-6-6l2-2-2-4Z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="2.6"/>
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z"/>
+    </symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m3 9 9-5 9 5M4 9h16M6 9v8M10 9v8M14 9v8M18 9v8M3 20h18"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="HomeCare by Sankofa Bank — home">
+        <span class="brand-mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+        <span class="brand-text">
+          <strong>HomeCare</strong>
+          <span>by Sankofa Bank</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#caregivers">Caregivers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="#waitlist">Join the waitlist</a>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+    <nav aria-label="Mobile">
+      <a href="#how">How it works <span>01</span></a>
+      <a href="#caregivers">Caregivers <span>02</span></a>
+      <a href="#pricing">Pricing <span>03</span></a>
+      <a href="#faq">FAQ <span>04</span></a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <p>Launching in Accra, Kumasi and Cape Coast, then London and Toronto.</p>
+      <a class="btn btn-primary btn-lg btn-block" href="#waitlist">Join the waitlist</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow"><b><span class="dot"></span>Coming soon</b> Sankofa Bank · Accra</p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="line">Send care home.</span>
+            <span class="line">See it <em>land.</em></span>
+          </h1>
+          <p class="hero-lede">One account for the people who look after your family in Ghana. Pay a <strong>verified caregiver</strong>, the rent, school fees and the light bill — from London, Toronto or Berlin, with a receipt for every cedi.</p>
+
+          <div class="waitlist-wrap hero-form" data-waitlist>
+            <form class="waitlist" data-waitlist-form novalidate>
+              <label class="sr-only" for="hero-email">Email address</label>
+              <input id="hero-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required aria-describedby="hero-form-error">
+              <button class="btn btn-primary" type="submit">
+                Join the waitlist
+                <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </button>
+            </form>
+            <p class="form-error" id="hero-form-error" role="alert">Please enter a valid email address.</p>
+            <p class="waitlist-note"><span class="dot"></span>2,400+ families and caregivers on the list. One email when your invite is ready.</p>
+            <div class="waitlist-success" role="status">
+              <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+              <div>
+                <strong>You're on the list.</strong>
+                <span>We'll email you when invites open in your country.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-proof">
+            <div class="avatars" aria-hidden="true">
+              <span class="avatar">KA</span>
+              <span class="avatar">EA</span>
+              <span class="avatar">AB</span>
+            </div>
+            <p><strong>Built with caregivers</strong> in Accra, Kumasi and Cape Coast.</p>
+          </div>
+        </div>
+
+        <div class="hero-stage">
+          <figure class="hero-photo">
+            <img src="./assets/images/caregiver.jpg" alt="Akosua Boateng, a verified HomeCare caregiver in Kumasi" width="900" height="1200" fetchpriority="high">
+            <span class="hero-tag"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Ghana Card verified</span>
+          </figure>
+
+          <div class="float-card rent-card">
+            <span class="mini-label">Rent · Accra</span>
+            <div class="mini-title">December <span class="mini-status"><span class="dot"></span>In escrow</span></div>
+            <div class="mini-amount">GHS 2,400</div>
+            <div class="mini-status">Releases 1 Dec · verified landlord</div>
+          </div>
+
+          <div class="float-card salary-card">
+            <div class="salary-head">
+              <span class="brand-mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+              <span>Sankofa · Care salary</span>
+              <span class="mini-status is-paid" style="margin-left:auto"><span class="dot"></span>Paid</span>
+            </div>
+            <div class="salary-name">
+              <span class="salary-avatar">AB</span>
+              <div>
+                <strong>Akosua Boateng</strong>
+                <span>Caregiver · Kumasi</span>
+              </div>
+            </div>
+            <div class="salary-amount">
+              <strong>GHS 1,800</strong>
+              <span><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>On time</span>
+            </div>
+            <div class="receipt-line"><svg class="icon" aria-hidden="true"><use href="#i-receipt"/></svg>Receipt sent to Kofi A. in London + 2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Trust and regulation">
+      <div class="shell trust-inner">
+        <p class="trust-label">Built on rails Ghana already trusts</p>
+        <div class="trust-items">
+          <span class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg>Bank of Ghana licensed</span>
+          <span class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-id"/></svg>Ghana Card verification</span>
+          <span class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>GhIPSS &amp; Mobile Money</span>
+          <span class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Escrow by Sankofa</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">The last mile</p>
+            <h2 class="section-title" id="why-title">Money crosses the ocean. Meaning gets lost on the way.</h2>
+          </div>
+          <p class="section-aside">Three things go wrong between a kind intention and a paid caregiver. HomeCare is built around each one.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card" data-reveal>
+            <div class="problem-top">
+              <span class="problem-num">01</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+            </div>
+            <h3>You send. Then you guess.</h3>
+            <p>The transfer lands. Whether it became rent, medicine or a new phone is another matter. Asking feels like distrust.</p>
+          </article>
+          <article class="problem-card" data-reveal data-delay="1">
+            <div class="problem-top">
+              <span class="problem-num">02</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            </div>
+            <h3>Care work has no paperwork.</h3>
+            <p>A good caregiver can look after a parent for years with no contract, no payslip and no proof of the work she does.</p>
+          </article>
+          <article class="problem-card" data-reveal data-delay="2">
+            <div class="problem-top">
+              <span class="problem-num">03</span>
+              <span class="problem-icon"><svg class="icon" aria-hidden="true"><use href="#i-graph"/></svg></span>
+            </div>
+            <h3>Every month starts at zero.</h3>
+            <p>No salary record means no credit history. The people who hold families together cannot borrow for a fridge or a market stall.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2 class="section-title" id="how-title">Four steps. Then it runs itself.</h2>
+          </div>
+          <p class="section-aside">Set it up once from abroad. Change the plan, pause a payment or add a need from your phone.</p>
+        </div>
+        <div class="how-grid">
+          <article class="how-step" data-reveal>
+            <span class="how-num">01</span>
+            <h3>Open your account</h3>
+            <p>Sign up with your Ghana Card, passport or resident ID. Fund in GBP, USD, EUR or CAD.</p>
+            <span class="how-meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5 minutes</span>
+          </article>
+          <article class="how-step" data-reveal data-delay="1">
+            <span class="how-num">02</span>
+            <h3>Add your people</h3>
+            <p>Invite family at home and the caregiver. We verify everyone before a cedi can move.</p>
+            <button class="how-link" type="button" data-dialog-open="verify-dialog">What we check <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </article>
+          <article class="how-step" data-reveal data-delay="2">
+            <span class="how-num">03</span>
+            <h3>Set the plan</h3>
+            <p>Salary on the 28th. Rent on the 1st. School fees each term. Escrow holds each amount until its date.</p>
+            <span class="how-meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>10 minutes</span>
+          </article>
+          <article class="how-step" data-reveal data-delay="3">
+            <span class="how-num">04</span>
+            <h3>Fund and follow</h3>
+            <p>Top up from abroad. Every release lands in the shared ledger with a PDF receipt.</p>
+            <span class="how-meta"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg>Ongoing</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">What's inside</p>
+            <h2 class="section-title" id="features-title">A care account, not another transfer.</h2>
+          </div>
+          <p class="section-aside">The rails are a bank's. The details are built for families — and for the people doing the caring.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card" data-reveal>
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <h3>Escrow by default</h3>
+            <p>Money waits for its date or for your confirmation. If the care doesn't happen, it comes back.</p>
+          </article>
+          <article class="feature-card" data-reveal data-delay="1">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>People, verified</h3>
+            <p>Ghana Card, references, police check and a skills interview before anyone is listed.</p>
+          </article>
+          <article class="feature-card" data-reveal data-delay="2">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <h3>Salary accounts</h3>
+            <p>Caregivers get a Sankofa account, debit card and savings pot. Paid in their own name, on time.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>One shared ledger</h3>
+            <p>Family in Accra and family in Manchester see the same balance, schedule and history.</p>
+          </article>
+          <article class="feature-card" data-reveal data-delay="1">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-receipt"/></svg></span>
+            <h3>Receipts that hold up</h3>
+            <p>PDF receipts with the FX rate — for landlords, schools, visas and your own peace of mind.</p>
+          </article>
+          <article class="feature-card feature-card--navy" data-reveal data-delay="2">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-graph"/></svg></span>
+            <h3>Credit that travels</h3>
+            <p>Twelve months of salary history becomes a credit file a caregiver can borrow against.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="caregivers" id="caregivers" aria-labelledby="caregivers-title">
+      <div class="shell caregivers-grid">
+        <div data-reveal>
+          <p class="eyebrow">For caregivers</p>
+          <h2 class="section-title" id="caregivers-title">A real job. Not a favour.</h2>
+          <p class="caregivers-copy">Care work is skilled work. HomeCare gives caregivers a contract, a salary account, paid leave and a record of every month they show up.</p>
+          <ul class="care-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Paid on the same day, every month</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Sick pay and micro-insurance from day one</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>A savings pot that earns while it waits</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>A verified reference that follows them</li>
+          </ul>
+          <blockquote class="care-quote">
+            <p>“Before, I was paid when they remembered. Now the money comes on the 28th and I can plan.”</p>
+            <cite>Akosua Boateng · Caregiver, Kumasi</cite>
+          </blockquote>
+        </div>
+
+        <div class="salary-panel" data-reveal data-delay="1">
+          <div class="salary-sheet">
+            <div class="salary-sheet-head">
+              <div class="salary-sheet-brand">
+                <span class="brand-mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+                <span>Caregiver salary account</span>
+              </div>
+              <span class="salary-sheet-month">Nov 2026</span>
+            </div>
+            <div class="salary-sheet-person">
+              <span class="salary-sheet-avatar">AB</span>
+              <div>
+                <strong>Akosua Boateng</strong>
+                <span>Caregiver · Kumasi</span>
+              </div>
+            </div>
+            <div class="salary-sheet-total">
+              <span class="mini-label">November salary</span>
+              <strong>GHS 1,800.00</strong>
+              <small><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Released 28 Nov · 09:02 GMT</small>
+            </div>
+            <div class="salary-rows">
+              <div class="salary-row"><span>Base salary</span><strong>GHS 1,800.00</strong></div>
+              <div class="salary-row"><span>Savings pot</span><strong class="is-mint">+ GHS 180.00</strong></div>
+              <div class="salary-row"><span>Micro-insurance</span><strong class="is-mint">Covered</strong></div>
+              <div class="salary-row"><span>Credit file</span><strong>Month 8 of 12</strong></div>
+            </div>
+            <p class="salary-sheet-foot">Receipt sent to Kofi A. (London) and 2 other family members.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial" aria-labelledby="testimonial-title">
+      <div class="shell testimonial-grid">
+        <div data-reveal>
+          <p class="eyebrow">From the pilot</p>
+          <blockquote id="testimonial-title">My mother says the nurse has come. I see the receipt <em>before she finishes the sentence.</em></blockquote>
+          <div class="testimonial-attr">
+            <span class="avatar-lg">EA</span>
+            <div>
+              <strong>Efua A.</strong>
+              <span>Pilot family · London</span>
+            </div>
+          </div>
+          <div class="testimonial-stats">
+            <div class="testimonial-stat"><strong>£240</strong><span>Monthly plan</span></div>
+            <div class="testimonial-stat"><strong>2</strong><span>People cared for</span></div>
+            <div class="testimonial-stat"><strong>14</strong><span>Receipts this year</span></div>
+          </div>
+        </div>
+        <div class="testimonial-photo" data-reveal data-delay="1">
+          <img src="./assets/images/diaspora.jpg" alt="Efua A., a HomeCare pilot member in London" width="800" height="900" loading="lazy">
+          <span class="photo-tag"><span class="dot"></span>Caring for her mother in Cape Coast</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bank" id="bank" aria-labelledby="bank-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">A note from the bank</p>
+            <h2 class="section-title" id="bank-title">A bank can do more than move money.</h2>
+          </div>
+          <p class="section-aside">A note from the team building HomeCare inside Sankofa Bank.</p>
+        </div>
+        <div class="bank-grid">
+          <article class="letter" data-reveal>
+            <div class="letter-head">
+              <div class="letter-brand">
+                <span class="brand-mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+                <div>
+                  <strong>Sankofa Bank</strong>
+                  <span>Diaspora Banking</span>
+                </div>
+              </div>
+              <span class="letter-date">Ridge, Accra<br>10 November 2026</span>
+            </div>
+            <div class="letter-body">
+              <p>To the families who send home,</p>
+              <p>For thirty years, Ghanaians abroad have trusted Sankofa with the money they send home. We have moved it safely. We have not always made it visible.</p>
+              <p>HomeCare is our answer to a simpler question: can a bank do more than deliver the money? Can it make sure the caregiver is paid, the rent is settled, and the family abroad can see it happen?</p>
+              <p>We are building it with caregivers, families and regulators in the room. Not as a favour to the diaspora, but as infrastructure for a country that depends on you.</p>
+            </div>
+            <div class="letter-sign">
+              <span class="sig">Adwoa Mensah</span>
+              <strong>Adwoa Mensah</strong>
+              <span>Head of Diaspora Banking, Sankofa Bank</span>
+            </div>
+          </article>
+
+          <aside class="stat-panel" data-reveal data-delay="1">
+            <div>
+              <span class="mini-label">The number behind HomeCare</span>
+              <div class="stat-number">US$4.6bn</div>
+              <p class="stat-caption">sent home to Ghana each year.</p>
+            </div>
+            <p class="stat-copy">World Bank estimates. Most of it arrives without a receipt. <em>HomeCare is the last mile made visible.</em></p>
+            <span class="stat-foot">Source: World Bank remittance estimates</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="shell">
+        <div class="pricing-head" data-reveal>
+          <div>
+            <p class="eyebrow">Pricing</p>
+            <h2 class="section-title" id="pricing-title">Pay for the account. Not for the love.</h2>
+            <p class="section-aside mt-4">Every plan includes escrow, verification and receipts. The 1.5% funding fee is capped at $25 per top-up.</p>
+          </div>
+          <div class="billing-wrap">
+            <div class="billing-toggle" role="group" aria-label="Billing period">
+              <button class="billing-btn is-active" type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+              <button class="billing-btn" type="button" data-billing="yearly" aria-pressed="false">Yearly</button>
+            </div>
+            <span class="billing-save">2 months free</span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card" data-reveal>
+            <h3 class="price-name">Essential</h3>
+            <p class="price-desc">One plan, one caregiver. For families starting small.</p>
+            <div class="price-line">
+              <span class="price-amount" data-price data-monthly="$0" data-yearly="$0">$0</span>
+              <span class="price-period" data-period>/month</span>
+            </div>
+            <ul class="price-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 care plan</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>1 verified caregiver</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Escrow and PDF receipts</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Shared read-only dashboard</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Email support</li>
+            </ul>
+            <a class="btn btn-ghost" href="#waitlist">Join the waitlist</a>
+          </article>
+
+          <article class="price-card price-card--featured" data-reveal data-delay="1">
+            <span class="price-badge">Most families choose this</span>
+            <h3 class="price-name">Family</h3>
+            <p class="price-desc">For the household you actually run, across several needs.</p>
+            <div class="price-line">
+              <span class="price-amount" data-price data-monthly="$4" data-yearly="$40">$4</span>
+              <span class="price-period" data-period>/month</span>
+            </div>
+            <ul class="price-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Up to 3 care plans</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>3 caregivers and family members</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Caregiver salary account</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Shared dashboard with actions</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Priority WhatsApp support</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>72-hour replacement guarantee</li>
+            </ul>
+            <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
+          </article>
+
+          <article class="price-card" data-reveal data-delay="2">
+            <h3 class="price-name">Diaspora Plus</h3>
+            <p class="price-desc">For extended family, several homes and more than one country.</p>
+            <div class="price-line">
+              <span class="price-amount" data-price data-monthly="$9" data-yearly="$90">$9</span>
+              <span class="price-period" data-period>/month</span>
+            </div>
+            <ul class="price-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Unlimited care plans</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Multi-currency funding</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Dedicated care line</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Annual verification report</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Credit-building reports</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>First access in new corridors</li>
+            </ul>
+            <a class="btn btn-ghost" href="#waitlist">Join the waitlist</a>
+          </article>
+        </div>
+        <p class="price-foot">Prices in USD. Pay by card or bank transfer. Cancel any time. Funding fee 1.5%, capped at $25 per top-up. Annual plans are billed once and include two months free.</p>
+
+        <aside class="calc" aria-labelledby="calc-title" data-reveal>
+          <div>
+            <h3 id="calc-title">What does care cost to send?</h3>
+            <p class="calc-copy">Move the slider to your monthly care budget. We'll show the funding fee and your plan — no surprises at the end.</p>
+            <div class="calc-control">
+              <div class="calc-control-head">
+                <label for="calc-budget">Monthly care budget</label>
+                <output class="calc-value" id="calc-budget-value" for="calc-budget">$850</output>
+              </div>
+              <input class="calc-range" id="calc-budget" type="range" min="100" max="3000" step="50" value="850" aria-describedby="calc-note">
+              <div class="calc-scale"><span>$100</span><span>$3,000</span></div>
+            </div>
+            <div class="calc-plan">
+              <label for="calc-plan">HomeCare plan</label>
+              <select class="calc-select" id="calc-plan">
+                <option value="0">Essential — $0</option>
+                <option value="4" selected>Family — $4/month</option>
+                <option value="9">Diaspora Plus — $9/month</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-breakdown">
+            <span class="mini-label">Your monthly total</span>
+            <div class="calc-rows">
+              <div class="calc-row"><span>Care budget</span><strong id="calc-budget-row">$850.00</strong></div>
+              <div class="calc-row"><span>Funding fee (1.5%)</span><strong id="calc-fee-row">$12.75</strong></div>
+              <div class="calc-row"><span id="calc-plan-label">Family plan</span><strong id="calc-plan-row">$4.00</strong></div>
+            </div>
+            <div class="calc-total"><span>Total this month</span><strong id="calc-total">$866.75</strong></div>
+            <p class="calc-note" id="calc-note">The 1.5% funding fee is capped at $25 per top-up.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="shell faq-grid">
+        <div class="faq-left" data-reveal>
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title" id="faq-title">Questions, answered plainly.</h2>
+          <p class="section-aside mt-4">Still unsure? Write to <a href="mailto:care@homecare.gh" style="font-weight:800;color:var(--color-coral-deep)">care@homecare.gh</a> and a human replies within one working day.</p>
+          <div class="faq-contact">
+            <p><strong>Prefer to talk?</strong><br>Book a 20-minute call with the diaspora team. No sales script, just answers.</p>
+            <p class="mt-2"><a href="mailto:care@homecare.gh?subject=HomeCare%20call">Request a call →</a></p>
+          </div>
+        </div>
+
+        <div class="faq-list" data-reveal data-delay="1">
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+              Is HomeCare a bank account or a transfer service?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <div class="faq-a-inner">Both, in one. It is a Sankofa Bank account you fund from abroad. The difference is what happens after the money lands: it is held for a named care plan and released to a verified person or landlord.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+              How are caregivers verified?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <div class="faq-a-inner">Ghana Card and face match, two employer references, a police criminal-record check, a skills interview and an address visit. Checks are repeated every 12 months. <a href="#verify-dialog" data-dialog-open="verify-dialog">See the full checklist</a>.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+              What happens if the care doesn't happen?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <div class="faq-a-inner">Escrow releases only when the date arrives or the family confirms delivery. If a caregiver does not show, the payment pauses and our care line finds a replacement within 72 hours.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+              Can I pay rent and school fees too?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <div class="faq-a-inner">Yes. Add a landlord, school or utility account as a payee. HomeCare verifies the account name before the first release, and every payment produces a receipt you can forward.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+              Which countries can fund an account?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <div class="faq-a-inner">Launch is open to residents of the UK, US, Canada, Germany and the Netherlands, funding in GBP, USD, CAD and EUR. More corridors follow after launch.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
+              Is my family's data private?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
+              <div class="faq-a-inner">Yes. Caregivers and family members see only their own plan. You control who sees what, and every access is logged. HomeCare is designed to Ghana's Data Protection Act and GDPR.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7">
+              When does it launch?
+              <span class="faq-icon"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7">
+              <div class="faq-a-inner">Early access begins in Accra, Kumasi and Cape Coast in Q1 2027, then London and Toronto. Waitlist members get invites in the order they joined.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="waitlist-section" id="waitlist" aria-labelledby="waitlist-title">
+      <div class="shell">
+        <div class="waitlist-panel" data-reveal>
+          <div>
+            <p class="eyebrow">Early access</p>
+            <h2 class="waitlist-title" id="waitlist-title">Be first when HomeCare opens.</h2>
+            <p class="waitlist-lede">We're opening in Accra, Kumasi and Cape Coast first, then London and Toronto. Join the list and we'll send one email when your invite is ready.</p>
+
+            <div class="waitlist-wrap waitlist-dark-form" data-waitlist>
+              <form class="waitlist waitlist--dark" data-waitlist-form novalidate>
+                <label class="sr-only" for="waitlist-email">Email address</label>
+                <input id="waitlist-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required aria-describedby="waitlist-form-error">
+                <label class="sr-only" for="waitlist-country">Country</label>
+                <select id="waitlist-country" name="country">
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>Germany</option>
+                  <option>Netherlands</option>
+                  <option>Ghana</option>
+                  <option>Other</option>
+                </select>
+                <button class="btn btn-primary" type="submit">
+                  Join the waitlist
+                  <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </button>
+              </form>
+              <p class="form-error" id="waitlist-form-error" role="alert">Please enter a valid email address.</p>
+              <p class="waitlist-note"><span class="dot"></span>No spam. No product updates you didn't ask for.</p>
+              <div class="waitlist-success" role="status">
+                <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+                <div>
+                  <strong>You're on the list.</strong>
+                  <span>We'll email you when invites open in your country. Invites go out in the order we receive them.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="perks">
+            <span class="mini-label">Waitlist members get</span>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Founding pricing locked for 12 months</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Priority caregiver matching</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>A 20-minute onboarding call</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>First invites in London and Toronto</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="HomeCare by Sankofa Bank — back to top">
+            <span class="brand-mark"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+            <span class="brand-text">
+              <strong>HomeCare</strong>
+              <span>by Sankofa Bank</span>
+            </span>
+          </a>
+          <p class="footer-tagline">Send care home. See it land.</p>
+          <p class="footer-contact">Ridge, Accra, Ghana<br><a href="mailto:care@homecare.gh">care@homecare.gh</a> · +233 30 000 0000</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#caregivers">For caregivers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#bank">About Sankofa</a></li>
+            <li><a href="#bank">Diaspora banking</a></li>
+            <li><a href="#caregivers">Careers</a></li>
+            <li><a href="mailto:press@homecare.gh">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="mailto:care@homecare.gh?subject=Privacy">Privacy</a></li>
+            <li><a href="mailto:care@homecare.gh?subject=Terms">Terms</a></li>
+            <li><a href="mailto:care@homecare.gh?subject=Safeguarding">Safeguarding</a></li>
+            <li><a href="mailto:care@homecare.gh?subject=Complaint">Complaints</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="disclaimer">© 2026 Sankofa Bank. HomeCare is a fictional product created as a design concept. Sankofa Bank is not a real bank and this page is not an offer of banking services.</p>
+        <div class="footer-legal">
+          <a href="#top">Back to top</a>
+          <span>Made in Accra</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="dialog" id="verify-dialog" aria-labelledby="verify-title">
+    <div class="dialog-card">
+      <button class="dialog-close" type="button" aria-label="Close dialog" data-dialog-close>
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <span class="dialog-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+      <h2 class="dialog-title" id="verify-title">What we check before a caregiver is listed</h2>
+      <p class="dialog-lede">Verification is the product. Every caregiver goes through the same six steps — and again every 12 months.</p>
+      <ol class="verify-list">
+        <li>
+          <span class="verify-num">01</span>
+          <div><strong>Identity</strong><p>Ghana Card, face match and a check against the national register.</p></div>
+        </li>
+        <li>
+          <span class="verify-num">02</span>
+          <div><strong>References</strong><p>Two previous employers contacted by our care team, not by the caregiver.</p></div>
+        </li>
+        <li>
+          <span class="verify-num">03</span>
+          <div><strong>Police record</strong><p>A criminal-record check issued within the last 90 days.</p></div>
+        </li>
+        <li>
+          <span class="verify-num">04</span>
+          <div><strong>Skills interview</strong><p>A care lead assesses cooking, hygiene, first aid and communication.</p></div>
+        </li>
+        <li>
+          <span class="verify-num">05</span>
+          <div><strong>Home visit</strong><p>We visit the caregiver's address and confirm it with a utility bill.</p></div>
+        </li>
+        <li>
+          <span class="verify-num">06</span>
+          <div><strong>Contract and account</strong><p>Signed terms, a Sankofa salary account and safeguarding training.</p></div>
+        </li>
+      </ol>
+      <p class="dialog-note">If any step fails, the caregiver is not listed. Families can see the status of every check, but never another family's details.</p>
+      <div class="dialog-actions">
+        <button class="btn btn-ghost" type="button" data-dialog-close>Close</button>
+        <a class="btn btn-primary" href="#waitlist" data-dialog-close>Join the waitlist <svg class="icon icon--arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

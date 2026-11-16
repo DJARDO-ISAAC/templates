@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campaigns | Tamarind</title>
+  <meta name="description" content="Six open campaigns for school meals, clean water, learning and child health. Pick one, and see exactly what it costs.">
+  <meta name="theme-color" content="#0e3b2e">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/bricolage-grotesque-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-mari focus:px-4 focus:py-2 focus:font-bold focus:text-ink">Skip to content</a>
+  <div class="topbar on-dark hidden md:block">
+    <div class="wrap flex h-10 items-center justify-between gap-6">
+      <p class="flex items-center gap-2"><span class="inline-block size-4 text-mari"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-5.500-7.500-9-7.500-12a7.500 7.500 0 0 1 15 0c0 3-2.500 6.500-7.500 12z"/><circle cx="12" cy="9" r="2.500"/></svg></span>44 Orchard Row, Ashbury &nbsp;·&nbsp; <a class="hover:text-cream" href="mailto:hello@tamarind.example">hello@tamarind.example</a></p>
+      <p class="flex items-center gap-5"><span class="hidden lg:inline">87¢ of every dollar reaches programs</span><a class="font-bold text-mari hover:text-cream" href="impact">See the accounts</a></p>
+    </div>
+  </div>
+  <header class="site-header" data-header>
+    <div class="wrap relative">
+      <div class="bar">
+        <a href="./" class="logo" aria-label="Tamarind home"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#f7b52b"/><path d="M20 34V19" stroke="#0e3b2e" stroke-width="2.6" stroke-linecap="round"/><path d="M20 21c-4.500 0-7.500-2-8.500-6 4.200-.6 7.500.8 8.500 6zM20 25c4.800 0 8-2.200 9-6.400-4.500-.6-8 1-9 6.400zM20 16c-2.200-2.400-2.500-5.200-.2-8.500 2.700 3 2.700 5.800.2 8.500z" fill="#0e3b2e"/></svg><span>Tamarind</span></a>
+        <nav class="hidden min-[66rem]:block" aria-label="Main"><ul class="flex items-center"><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">About<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.500 4.500 3.500 3.500 3.500-3.500"/></svg></button><div class="dropdown"><ul><li><a href="about">Our story</a></li><li><a href="impact">Impact and accounts</a></li><li><a href="team">Our team</a></li><li><a href="stories">Stories</a></li><li><a href="faq">Questions</a></li></ul></div></li><li><a class="nav-item" href="campaigns" aria-current="page">Campaigns</a></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">Get involved<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.500 4.500 3.500 3.500 3.500-3.500"/></svg></button><div class="dropdown"><ul><li><a href="volunteer">Volunteer</a></li><li><a href="events">Events</a></li><li><a href="appeal">This winter's appeal</a></li><li><a href="donate?freq=monthly">Monthly giving</a></li></ul></div></li><li><a class="nav-item" href="news">News</a></li><li><a class="nav-item" href="shop">Shop</a></li><li><a class="nav-item" href="contact">Contact</a></li></ul></nav>
+        <div class="flex items-center gap-2">
+          <button type="button" class="round-btn" data-open-search aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+          <button type="button" class="round-btn" data-open-cart aria-label="Open your bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l1 13H4zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" data-cart-count hidden>0</span></button>
+          <a href="donate" class="btn btn-mari btn-sm hidden sm:inline-flex"><svg class="beat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21C3 15 1 10 2.500 6.500 4.300 2.500 9.500 2.500 12 6.500c2.500-4 7.700-4 9.500 0C23 10 21 15 12 21z"/></svg>Donate</a>
+          <button type="button" class="round-btn min-[66rem]:hidden" data-menu-button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="burger"><i></i><i></i></span></button>
+        </div>
+      </div>
+      <div class="mobile-panel min-[66rem]:hidden" id="mobile-menu">
+        <nav aria-label="Mobile">
+          <ul><li class="border-b-2 border-line py-3"><p class="text-[.85rem] font-bold text-pers-2">About</p><ul class="mt-1 grid grid-cols-2 gap-x-3"><li><a class="block py-2 font-semibold leading-snug" href="about">Our story</a></li><li><a class="block py-2 font-semibold leading-snug" href="impact">Impact and accounts</a></li><li><a class="block py-2 font-semibold leading-snug" href="team">Our team</a></li><li><a class="block py-2 font-semibold leading-snug" href="stories">Stories</a></li><li><a class="block py-2 font-semibold leading-snug" href="faq">Questions</a></li></ul></li><li class="border-b-2 border-line"><a class="block py-3 font-display text-[1.3rem] font-bold" href="campaigns">Campaigns</a></li><li class="border-b-2 border-line py-3"><p class="text-[.85rem] font-bold text-pers-2">Get involved</p><ul class="mt-1 grid grid-cols-2 gap-x-3"><li><a class="block py-2 font-semibold leading-snug" href="volunteer">Volunteer</a></li><li><a class="block py-2 font-semibold leading-snug" href="events">Events</a></li><li><a class="block py-2 font-semibold leading-snug" href="appeal">This winter's appeal</a></li><li><a class="block py-2 font-semibold leading-snug" href="donate?freq=monthly">Monthly giving</a></li></ul></li><li class="border-b-2 border-line"><a class="block py-3 font-display text-[1.3rem] font-bold" href="news">News</a></li><li class="border-b-2 border-line"><a class="block py-3 font-display text-[1.3rem] font-bold" href="shop">Shop</a></li><li class="border-b-2 border-line"><a class="block py-3 font-display text-[1.3rem] font-bold" href="contact">Contact</a></li></ul>
+          <a href="donate" class="btn btn-pers mt-4 w-full"><svg class="beat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21C3 15 1 10 2.500 6.500 4.300 2.500 9.500 2.500 12 6.500c2.500-4 7.700-4 9.500 0C23 10 21 15 12 21z"/></svg>Donate now</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="-mt-[84px]">
+
+<section class="on-dark relative overflow-hidden rounded-b-[36px] bg-leaf pb-16 pt-[136px] text-cream md:rounded-b-[56px] md:pb-24 md:pt-[172px]">
+  <div class="sway pointer-events-none absolute -left-8 bottom-[-40px] w-[120px] text-leaf-2 md:w-[170px]"><svg class="" viewBox="0 0 150 360" fill="currentColor" aria-hidden="true"><ellipse cx="40.5" cy="341.0" rx="34.5" ry="7.5" transform="rotate(24 75.0 346.0)"/><ellipse cx="109.5" cy="341.0" rx="34.5" ry="7.5" transform="rotate(-24 75.0 346.0)"/><ellipse cx="44.5" cy="304.8" rx="32.4" ry="7.2" transform="rotate(24 76.9 309.8)"/><ellipse cx="109.3" cy="304.8" rx="32.4" ry="7.2" transform="rotate(-24 76.9 309.8)"/><ellipse cx="48.5" cy="268.6" rx="30.3" ry="6.9" transform="rotate(24 78.8 273.6)"/><ellipse cx="109.0" cy="268.6" rx="30.3" ry="6.9" transform="rotate(-24 78.8 273.6)"/><ellipse cx="52.2" cy="232.3" rx="28.2" ry="6.7" transform="rotate(24 80.4 237.3)"/><ellipse cx="108.5" cy="232.3" rx="28.2" ry="6.7" transform="rotate(-24 80.4 237.3)"/><ellipse cx="55.6" cy="196.1" rx="26.1" ry="6.4" transform="rotate(24 81.6 201.1)"/><ellipse cx="107.7" cy="196.1" rx="26.1" ry="6.4" transform="rotate(-24 81.6 201.1)"/><ellipse cx="58.6" cy="159.9" rx="24.0" ry="6.1" transform="rotate(24 82.5 164.9)"/><ellipse cx="106.5" cy="159.9" rx="24.0" ry="6.1" transform="rotate(-24 82.5 164.9)"/><ellipse cx="61.1" cy="123.7" rx="21.8" ry="5.8" transform="rotate(24 83.0 128.7)"/><ellipse cx="104.8" cy="123.7" rx="21.8" ry="5.8" transform="rotate(-24 83.0 128.7)"/><ellipse cx="63.2" cy="87.4" rx="19.7" ry="5.6" transform="rotate(24 82.9 92.4)"/><ellipse cx="102.7" cy="87.4" rx="19.7" ry="5.6" transform="rotate(-24 82.9 92.4)"/><ellipse cx="64.8" cy="51.2" rx="17.6" ry="5.3" transform="rotate(24 82.4 56.2)"/><ellipse cx="100.0" cy="51.2" rx="17.6" ry="5.3" transform="rotate(-24 82.4 56.2)"/><ellipse cx="65.9" cy="15.0" rx="15.5" ry="5.0" transform="rotate(24 81.5 20.0)"/><ellipse cx="97.0" cy="15.0" rx="15.5" ry="5.0" transform="rotate(-24 81.5 20.0)"/><path d="M75 360C79 251.99999999999997 85 144 79 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+  <div class="wrap relative grid items-center gap-10 lg:grid-cols-[1.35fr_1fr]">
+    <div>
+      <nav aria-label="Breadcrumb" class="hero-line text-[.94rem] text-cream/75"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-mari" href="./">Home</a></li><li aria-hidden="true">/</li><li><span aria-current="page">Campaigns</span></li></ol></nav>
+      <h1 class="h-xl hero-line mt-5 !text-[clamp(2.4rem,5.200vw,4.4rem)]" style="--i:1">Pick a campaign, and see what it costs</h1>
+      <p class="lede hero-line mt-5 max-w-[60ch] text-cream/85" style="--i:2">Together these six have raised $193,850 so far. Each page lists the full budget and what has happened to date.</p>
+      
+    </div>
+    <div class="relative hidden h-[330px] lg:block"><div class="capsule capsule-mari hero-cap absolute left-1/2 top-1/2 -ml-[110px] -mt-[190px] h-[380px] w-[220px]" style="--tilt:16deg" data-parallax="0.05"><img src="./assets/images/stone-well.jpg" alt="A stone well with a small wooden roof" width="1280" height="860" loading="lazy" fetchpriority="high"></div></div>
+  </div>
+</section>
+<section class="sec"><div class="wrap">
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Filter campaigns" data-filter-group="#campaign-list"><button type="button" class="chip" data-filter="all" aria-pressed="true">All</button><button type="button" class="chip" data-filter="food" aria-pressed="false">Food</button><button type="button" class="chip" data-filter="health" aria-pressed="false">Health</button><button type="button" class="chip" data-filter="learning" aria-pressed="false">Learning</button><button type="button" class="chip" data-filter="water" aria-pressed="false">Water</button></div>
+    <p class="font-semibold text-muted" data-filter-count aria-live="polite">6 results</p>
+  </div>
+  <div id="campaign-list" class="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3"><div data-tags="food" data-reveal style="--d:0ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/cooks-stirring.jpg" alt="Two cooks in uniform stirring a large pot over an outdoor fire" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#fde1d3;color:#b83414">Food</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="hot-lunch-sena-valley">A hot lunch for every pupil in Sena Valley</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">Twenty-two schools, one simple promise: nobody learns long division on an empty stomach.</p>
+    <div class="meter mt-5" style="--v:74%" role="img" aria-label="74 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$48,200</strong> raised</span><span class="text-muted">of $65,000</span></p>
+  </div></article></div><div data-tags="water" data-reveal style="--d:90ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/stone-well.jpg" alt="A stone-walled well with a small wooden roof beside a dirt path" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#cfe8df;color:#17533f">Water</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="twelve-wells-amara-hills">Twelve wells for the Amara Hills</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">Each well costs $8,000, serves about 300 families and is run by a committee the village elects.</p>
+    <div class="meter mt-5" style="--v:74%" role="img" aria-label="74 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$71,400</strong> raised</span><span class="text-muted">of $96,000</span></p>
+  </div></article></div><div data-tags="learning" data-reveal style="--d:180ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/classroom-low.jpg" alt="A bright classroom with a low curved table, small chairs and shelves of materials" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#d5e9f2;color:#1b6a8c">Learning</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="reading-corners-okoro-flats">Reading corners for Okoro Flats</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">Shelves, 400 books in the home language and a child librarian in each of forty classrooms.</p>
+    <div class="meter mt-5" style="--v:62%" role="img" aria-label="62 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$18,650</strong> raised</span><span class="text-muted">of $30,000</span></p>
+  </div></article></div><div data-tags="health" data-reveal style="--d:270ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/health-outreach.jpg" alt="Health workers meeting with people on plastic chairs inside an open-sided clinic tent" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#fbecd0;color:#a8690a">Health</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="clinic-days-tessel-coast">Clinic days on the Tessel Coast</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">Nurses visit each school every term for growth checks, vaccinations and deworming.</p>
+    <div class="meter mt-5" style="--v:65%" role="img" aria-label="65 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$33,900</strong> raised</span><span class="text-muted">of $52,000</span></p>
+  </div></article></div><div data-tags="water" data-reveal style="--d:360ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/handwashing.jpg" alt="A child in a checked school dress washing hands at a tap fitted to a water container" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#cfe8df;color:#17533f">Water</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="soap-and-taps">Soap and taps at every school</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">A tap, a basin and a year of soap costs $60 a school. It is the cheapest medicine we know.</p>
+    <div class="meter mt-5" style="--v:68%" role="img" aria-label="68 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$12,300</strong> raised</span><span class="text-muted">of $18,000</span></p>
+  </div></article></div><div data-tags="food" data-reveal style="--d:450ms"><article class="card relative">
+  <div class="card-img"><img src="./assets/images/vegetable-basket.jpg" alt="A wire basket full of fresh peppers, squash and tomatoes" width="1280" height="860" loading="lazy" ><span class="tag absolute left-4 top-4 z-[2]" style="background:#fde1d3;color:#b83414">Food</span></div>
+  <div class="flex flex-1 flex-col p-6">
+    <h3 class="h-sm"><a class="stretched" href="school-kitchen-gardens">Kitchen gardens that feed the school</a></h3>
+    <p class="mt-2 flex-1 text-[.98rem] text-muted">Greens, beans and squash grown by pupils and parents, straight into the lunch pot.</p>
+    <div class="meter mt-5" style="--v:39%" role="img" aria-label="39 percent funded"><i></i></div>
+    <p class="mt-3 flex items-baseline justify-between gap-3 text-[.95rem]"><span><strong class="font-display text-[1.15rem]">$9,400</strong> raised</span><span class="text-muted">of $24,000</span></p>
+  </div></article></div></div>
+</div></section>
+<section class="px-3 md:px-5"><div class="on-dark rounded-[36px] bg-leaf py-16 text-center text-cream md:rounded-[56px] md:py-20"><div class="wrap" data-reveal><h2 class="h-lg">Would you rather we choose?</h2><p class="lede mx-auto mt-3 max-w-[52ch] text-cream/85">A gift to our general fund goes wherever the need is greatest that month.</p><div class="mt-7 flex justify-center"><a href="donate" class="btn btn-mari"><svg class="beat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21C3 15 1 10 2.500 6.500 4.300 2.500 9.500 2.500 12 6.500c2.500-4 7.700-4 9.500 0C23 10 21 15 12 21z"/></svg>Give where needed</a></div></div></div></section>
+<div class="h-[clamp(64px,9vw,120px)]"></div>
+
+  </main>
+  <footer class="on-dark relative mt-0 overflow-hidden bg-leaf pb-28 pt-16 text-cream md:pb-10 md:pt-24">
+    <div class="sway pointer-events-none absolute -right-8 -top-6 w-[150px] text-leaf-2 md:w-[230px]"><svg class="" viewBox="0 0 150 380" fill="currentColor" aria-hidden="true"><ellipse cx="40.5" cy="361.0" rx="34.5" ry="7.5" transform="rotate(24 75.0 366.0)"/><ellipse cx="109.5" cy="361.0" rx="34.5" ry="7.5" transform="rotate(-24 75.0 366.0)"/><ellipse cx="44.1" cy="326.4" rx="32.6" ry="7.3" transform="rotate(24 76.7 331.4)"/><ellipse cx="109.3" cy="326.4" rx="32.6" ry="7.3" transform="rotate(-24 76.7 331.4)"/><ellipse cx="47.7" cy="291.8" rx="30.7" ry="7.0" transform="rotate(24 78.4 296.8)"/><ellipse cx="109.1" cy="291.8" rx="30.7" ry="7.0" transform="rotate(-24 78.4 296.8)"/><ellipse cx="51.1" cy="257.2" rx="28.8" ry="6.8" transform="rotate(24 79.9 262.2)"/><ellipse cx="108.7" cy="257.2" rx="28.8" ry="6.8" transform="rotate(-24 79.9 262.2)"/><ellipse cx="54.3" cy="222.6" rx="26.9" ry="6.5" transform="rotate(24 81.2 227.6)"/><ellipse cx="108.1" cy="222.6" rx="26.9" ry="6.5" transform="rotate(-24 81.2 227.6)"/><ellipse cx="57.1" cy="188.0" rx="25.0" ry="6.3" transform="rotate(24 82.1 193.0)"/><ellipse cx="107.1" cy="188.0" rx="25.0" ry="6.3" transform="rotate(-24 82.1 193.0)"/><ellipse cx="59.6" cy="153.4" rx="23.1" ry="6.0" transform="rotate(24 82.7 158.4)"/><ellipse cx="105.9" cy="153.4" rx="23.1" ry="6.0" transform="rotate(-24 82.7 158.4)"/><ellipse cx="61.8" cy="118.8" rx="21.2" ry="5.8" transform="rotate(24 83.0 123.8)"/><ellipse cx="104.2" cy="118.8" rx="21.2" ry="5.8" transform="rotate(-24 83.0 123.8)"/><ellipse cx="63.5" cy="84.2" rx="19.3" ry="5.5" transform="rotate(24 82.9 89.2)"/><ellipse cx="102.2" cy="84.2" rx="19.3" ry="5.5" transform="rotate(-24 82.9 89.2)"/><ellipse cx="64.9" cy="49.6" rx="17.4" ry="5.3" transform="rotate(24 82.3 54.6)"/><ellipse cx="99.8" cy="49.6" rx="17.4" ry="5.3" transform="rotate(-24 82.3 54.6)"/><ellipse cx="65.9" cy="15.0" rx="15.5" ry="5.0" transform="rotate(24 81.5 20.0)"/><ellipse cx="97.0" cy="15.0" rx="15.5" ry="5.0" transform="rotate(-24 81.5 20.0)"/><path d="M75 380C79 266 85 152 79 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+    <div class="wrap relative">
+      <div class="grid items-end gap-8 lg:grid-cols-[1.3fr_1fr]">
+        <div data-reveal><p class="h-lg">Plant something that <em class="not-italic text-mari">outlasts us.</em></p></div>
+        <form data-form="reset" class="max-w-[460px] lg:justify-self-end" data-reveal>
+          <p class="mb-3 font-semibold">A short, honest update every three months. Good news and bad.</p>
+          <div class="field"><label class="sr-only" for="news-email">Email address</label><div class="flex flex-wrap gap-2"><input id="news-email" name="news-email" class="input min-w-0 flex-1 basis-[210px]" type="email" required placeholder="you@example.com" autocomplete="email"><button class="btn btn-mari" type="submit">Sign up</button></div></div>
+          <p class="note mt-3" data-form-msg hidden>Thanks. Your first update arrives next quarter.</p>
+        </form>
+      </div>
+      <div class="mt-14 grid gap-10 border-t-2 border-leaf-2 pt-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div>
+          <a href="./" class="logo !text-cream" aria-label="Tamarind home"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#f7b52b"/><path d="M20 34V19" stroke="#0e3b2e" stroke-width="2.6" stroke-linecap="round"/><path d="M20 21c-4.500 0-7.500-2-8.500-6 4.200-.6 7.500.8 8.500 6zM20 25c4.800 0 8-2.200 9-6.400-4.500-.6-8 1-9 6.400zM20 16c-2.200-2.400-2.500-5.200-.2-8.500 2.700 3 2.700 5.800.2 8.500z" fill="#0e3b2e"/></svg><span>Tamarind</span></a>
+          <p class="mt-4 max-w-[34ch] text-cream/80">A children's charity working with four communities on food, health, learning and water. Registered 501(c)(3), EIN 00-0000000.</p>
+          <ul class="mt-5 flex gap-2">
+            <li><a class="grid size-11 place-items-center rounded-full bg-leaf-2 transition-colors hover:bg-mari hover:text-ink" href="https://facebook.com" aria-label="Facebook"><span class="block size-5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.500V6.700c0-.9.600-1.200 1.100-1.200H17V2h-2.600C11.500 2 10 4 10 6.300v2.200H7.500V12H10v10h4V12h2.700l.4-3.500z"/></svg></span></a></li><li><a class="grid size-11 place-items-center rounded-full bg-leaf-2 transition-colors hover:bg-mari hover:text-ink" href="https://instagram.com" aria-label="Instagram"><span class="block size-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8" fill="currentColor"/></svg></span></a></li><li><a class="grid size-11 place-items-center rounded-full bg-leaf-2 transition-colors hover:bg-mari hover:text-ink" href="https://youtube.com" aria-label="YouTube"><span class="block size-5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 7.500a3 3 0 0 0-2-2.100C18.300 5 12 5 12 5s-6.300 0-8 .4a3 3 0 0 0-2 2.100A30 30 0 0 0 2 12c0 1.500.1 3 .4 4.500a3 3 0 0 0 2 2.100c1.700.4 8 .4 8 .4s6.300 0 8-.4a3 3 0 0 0 2-2.100c.3-1.500.4-3 .4-4.500s-.1-3-.4-4.500zM10 15V9l5.200 3z"/></svg></span></a></li>
+          </ul>
+        </div>
+        <div><h2 class="font-display text-[1.1rem] font-bold text-mari">Our work</h2><ul class="mt-3 grid gap-1"><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="campaigns">Campaigns</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="impact">Impact and accounts</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="stories">Stories</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="news">News</a></li></ul></div><div><h2 class="font-display text-[1.1rem] font-bold text-mari">Get involved</h2><ul class="mt-3 grid gap-1"><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="donate">Donate</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="volunteer">Volunteer</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="events">Events</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="shop">Shop</a></li></ul></div><div><h2 class="font-display text-[1.1rem] font-bold text-mari">Tamarind</h2><ul class="mt-3 grid gap-1"><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="about">Our story</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="team">Team</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="faq">Questions</a></li><li><a class="inline-block py-1 text-cream/90 transition-colors hover:text-mari" href="contact">Contact</a></li></ul></div>
+      </div>
+      <div class="mt-12 flex flex-wrap justify-between gap-3 border-t-2 border-leaf-2 pt-6 text-[.92rem] text-cream/70">
+        <p>© 2026 Tamarind Children's Fund. All rights reserved.</p>
+        <p class="flex gap-5"><a class="hover:text-cream" href="privacy">Privacy</a><a class="hover:text-cream" href="terms">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+  <div class="give-bar" data-give-bar><a href="donate" class="btn btn-pers w-full shadow-xl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21C3 15 1 10 2.500 6.500 4.300 2.500 9.500 2.500 12 6.500c2.500-4 7.700-4 9.500 0C23 10 21 15 12 21z"/></svg>Donate to Tamarind</a></div>
+  <div class="scrim" data-search-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-box">
+      <div class="flex items-center gap-2"><label class="sr-only" for="site-search">Search the site</label><input id="site-search" class="input flex-1" type="search" placeholder="Search campaigns, events, news..." data-search-input autocomplete="off"><button type="button" class="round-btn" data-close-layer aria-label="Close search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+      <div class="mt-3" data-search-results aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="scrim" data-cart-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your bag">
+    <div class="drawer">
+      <div class="flex items-center justify-between border-b-2 border-line p-5"><h2 class="h-md">Your bag</h2><button type="button" class="round-btn" data-close-layer aria-label="Close your bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+      <div class="flex-1 overflow-y-auto px-5" data-cart-lines></div>
+      <div class="border-t-2 border-line p-5" data-cart-actions hidden>
+        <div data-cart-totals></div>
+        <div class="mt-4 grid grid-cols-2 gap-2"><a class="btn btn-line btn-sm" href="cart">View bag</a><a class="btn btn-pers btn-sm" href="checkout">Checkout</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

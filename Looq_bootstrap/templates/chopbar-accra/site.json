@@ -1,0 +1,47 @@
+{
+  "name": "Abusua Pot",
+  "kind": "Chop Bar",
+  "tagline": "Firewood soups, hand-pounded fufu, family prices.",
+  "since": "1998",
+  "auntie": "Auntie Adwoa",
+  "city": "Accra",
+  "address": "Abusua Pot, 7 Oxford Street lane, Osu, Accra",
+  "landmark": "Behind the big neem tree, opposite the blue church gate",
+  "gps": "GA-000-0000",
+  "phone": "+233 00 000 0000",
+  "phoneHref": "+233000000000",
+  "whatsapp": "+233 00 000 0000",
+  "whatsappHref": "233000000000",
+  "email": "hello@abusuapot.com.gh",
+  "hours": {
+    "weekdays": "Mon–Sat · 7:00am – 9:00pm",
+    "sunday": "Sunday · 12:00pm – 8:00pm",
+    "fufu": "Fufu from 11:00am, until the pot is empty",
+    "open": "07:00",
+    "close": "21:00",
+    "sunOpen": "12:00",
+    "sunClose": "20:00",
+    "fufuFrom": "11:00"
+  },
+  "payments": {
+    "momoName": "Abusua Pot",
+    "momoMerchantId": "000000"
+  },
+  "delivery": {
+    "bolt": "https://food.bolt.eu/",
+    "glovo": "https://glovoapp.com/"
+  },
+  "social": {
+    "instagram": "https://instagram.com/",
+    "tiktok": "https://tiktok.com/",
+    "facebook": "https://facebook.com/"
+  },
+  "forms": {
+    "catering": "https://formspree.io/f/YOUR_FORM_ID",
+    "contact": "https://formspree.io/f/YOUR_FORM_ID"
+  },
+  "map": {
+    "embed": "https://www.openstreetmap.org/export/embed.html?bbox=-0.1880%2C5.5480%2C-0.1680%2C5.5630&layer=mapnik&marker=5.5555%2C-0.1780",
+    "link": "https://www.openstreetmap.org/?mlat=5.5555&mlon=-0.1780#map=17/5.5555/-0.1780"
+  }
+}

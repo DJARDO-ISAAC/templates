@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coaches — Thres</title>
+  <meta name="description" content="Four coaches, each with a zone they could talk about all day. One of them is on the floor in every class.">
+  <link rel="preload" href="./assets/fonts/switzer-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip bg-canvas font-sans text-[15.5px] leading-[1.45] text-body antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-[18px] pt-[18px]">
+    <div class="flex items-start justify-between gap-3">
+      <a href="./" class="flex h-[56px] items-center gap-[10px] rounded-full bg-card px-5 text-[22px] font-medium tracking-[-0.03em] text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)]" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+      <nav class="absolute left-1/2 hidden h-[56px] -translate-x-1/2 items-center rounded-full bg-card px-6 shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:flex" aria-label="Main">
+        <ul class="flex items-center gap-[34px] text-[16px] tracking-[-0.01em] text-ink">
+          <li><a href="timetable" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Timetable</a></li>
+          <li><a href="classes" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Classes</a></li>
+          <li><a href="coaches" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live" aria-current="page">Coaches</a></li>
+          <li><a href="membership" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Membership</a></li>
+          <li><a href="journal" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Journal</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="./#book" class="flex h-[56px] items-center gap-[14px] rounded-full bg-ink pr-[6px] pl-5 text-[15px] font-medium text-white max-sm:hidden">First class free<span class="grid size-[42px] place-items-center rounded-full bg-live text-ink"><svg class="size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 10 4M5 4h5v5" /></svg></span></a>
+        <button type="button" class="grid size-[56px] place-items-center rounded-full bg-card text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:hidden" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+          <span class="sr-only">Open menu</span>
+          <svg class="size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-open><path d="M3 7h14M3 13h14" /></svg>
+          <svg class="hidden size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-close><path d="M5 5l10 10M15 5 5 15" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="mt-2 hidden rounded-[26px] bg-card p-3 shadow-[0_16px_40px_rgb(13_13_14/0.12)] lg:hidden" aria-label="Mobile">
+      <ul class="flex flex-col text-[18px] tracking-[-0.02em] text-ink">
+        <li><a href="timetable" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Timetable</a></li>
+        <li><a href="classes" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Classes</a></li>
+        <li><a href="coaches" class="block rounded-[16px] px-4 py-3 hover:bg-canvas" aria-current="page">Coaches</a></li>
+        <li><a href="membership" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Membership</a></li>
+        <li><a href="journal" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Journal</a></li>
+        <li class="pt-2"><a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 w-full">First class free</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-[110px] lg:pt-[140px]">
+    <section aria-labelledby="coaches-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Coaches</p>
+          <h1 id="coaches-title" class="mt-5 text-ink text-[44px] leading-[1] font-medium tracking-[-0.06em] sm:text-[60px] lg:text-[76px]">Coached by people,<br><span class="text-faint">not playlists.</span></h1>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Four coaches, each with a zone they could talk about all day. One of them is on the floor in every class, watching the wall so you do not have to.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+        <li data-reveal>
+          <a href="coach-mara-oyelaran" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-mara.webp" alt="Portrait of Mara Oyelaran" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 4</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h2 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Mara Oyelaran</h2>
+                <span class="mt-1 block text-[14.5px] text-white/70">Head coach, strength</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Former 400 metre runner. Will notice your heart rate before you do.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-tomas-brandt" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-tomas.webp" alt="Tomas Brandt in profile" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 5</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h2 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Tomas Brandt</h2>
+                <span class="mt-1 block text-[14.5px] text-white/70">Conditioning</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Rowed for his country, now rows next to you. Counts down, never up.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-ines-varga" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-ines.webp" alt="Portrait of Ines Varga" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 1</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h2 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Ines Varga</h2>
+                <span class="mt-1 block text-[14.5px] text-white/70">Mobility and recovery</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Physiotherapist by training. Believes the easy days are where it happens.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-jonah-achebe" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-jonah.webp" alt="Portrait of Jonah Achebe" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 2</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h2 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Jonah Achebe</h2>
+                <span class="mt-1 block text-[14.5px] text-white/70">Run club</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Marathoner, pacer, optimist. Has never once left anyone behind.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="rules-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">How we coach</p>
+          <h2 id="rules-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Three rules<br><span class="text-faint">we do not bend.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">They are on the wall by the door, in smaller type than the heart rates.</p>
+      </div>
+      <ol class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-3">
+        <li class="flex min-h-[300px] flex-col justify-between rounded-[26px] p-6 sm:p-7 bg-card" data-reveal>
+          <p class="text-[13.5px] text-muted">01</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Easy means easy</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-body">If the plan says Base, we will slow you down. Out loud, if we have to.</p></div>
+        </li>
+        <li class="flex min-h-[300px] flex-col justify-between rounded-[26px] p-6 sm:p-7 on-dark bg-night" data-reveal>
+          <p class="text-[13.5px] text-white/60">02</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-white">The number decides</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-white/60">Not how you look, not how the person next to you is doing. Your heart rate, on your scale.</p></div>
+        </li>
+        <li class="flex min-h-[300px] flex-col justify-between rounded-[26px] p-6 sm:p-7 bg-card" data-reveal>
+          <p class="text-[13.5px] text-muted">03</p>
+          <div><h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Nobody trains alone</h3><p class="mt-3 text-[15.5px] leading-[1.45] text-body">Twelve people, one coach, every class. We know your name and your last re-test.</p></div>
+        </li>
+      </ol>
+    </section>
+
+<section class="px-[18px] pt-[100px] pb-[18px] lg:pt-[120px]" aria-labelledby="cta-title">
+      <div class="glow on-dark flex flex-col justify-between gap-10 rounded-[26px] px-6 py-12 sm:px-[48px] sm:py-[56px] lg:flex-row lg:items-end" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-white/60">First class</p>
+          <h2 id="cta-title" class="mt-5 text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px] text-white">Your first class<br><span class="text-white/40">is on us.</span></h2>
+          <p class="mt-6 max-w-[420px] text-[17px] leading-[1.45] text-white/70 lg:text-[19px]">Come fifteen minutes early. We fit a strap, find your maximum with a short ramp test and show you round. Then you train.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95">Book a free first class</a>
+          <a href="timetable" class="inline-flex h-[42px] items-center justify-center rounded-full border border-white/20 px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-white/10">See the timetable</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-[18px] pb-[18px]">
+    <div class="rounded-[26px] bg-card px-6 pt-12 pb-6 sm:px-[48px]">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto]">
+        <div>
+          <a href="./" class="inline-flex items-center gap-[10px] text-[22px] font-medium tracking-[-0.03em] text-ink" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+          <p class="mt-4 max-w-[330px] text-[15.5px] leading-[1.45] text-body">A heart-rate training club in a tannery warehouse by the water. Coaching the number on the wall since 2019.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 sm:gap-x-[52px]">
+          <nav aria-label="Train">
+            <h2 class="text-[14.5px] text-muted">Train</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="timetable" class="transition-opacity hover:opacity-60">Timetable</a></li>
+              <li><a href="classes#zones" class="transition-opacity hover:opacity-60">The five zones</a></li>
+              <li><a href="classes" class="transition-opacity hover:opacity-60">Classes</a></li>
+              <li><a href="coaches" class="transition-opacity hover:opacity-60">Coaches</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Club">
+            <h2 class="text-[14.5px] text-muted">Club</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="membership" class="transition-opacity hover:opacity-60">Membership</a></li>
+              <li><a href="studio" class="transition-opacity hover:opacity-60">The studio</a></li>
+              <li><a href="journal" class="transition-opacity hover:opacity-60">Journal</a></li>
+              <li><a href="visit" class="transition-opacity hover:opacity-60">Visit</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow">
+            <h2 class="text-[14.5px] text-muted">Follow</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="#" class="transition-opacity hover:opacity-60">Instagram</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">Strava</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">YouTube</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Small print">
+            <h2 class="text-[14.5px] text-muted">Small print</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="privacy" class="transition-opacity hover:opacity-60">Privacy</a></li>
+              <li><a href="terms" class="transition-opacity hover:opacity-60">Terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="@container mt-10 overflow-hidden lg:mt-6" aria-hidden="true"><span class="-ml-[0.029em] block text-[43.2cqw] leading-[0.78] font-medium tracking-[-0.075em] whitespace-nowrap text-ink">Thres</span></p>
+      <div class="mt-10 flex flex-col justify-between gap-2 border-t border-line pt-5 text-[13.5px] text-muted sm:flex-row">
+        <p>© <span data-year>2026</span> Thres Training Club</p>
+        <p>Thres, a Framer template by Ajoy</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

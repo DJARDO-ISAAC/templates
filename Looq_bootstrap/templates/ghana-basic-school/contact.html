@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GH" class="no-js">
+<head>
+<!-- include:head.html title="Contact us" description="Visit, call, email or WhatsApp Nyansa Hill Academy in Accra. Office hours, directions, school bus routes and a contact form." -->
+</head>
+<body>
+<!-- include:icons.html -->
+<!-- include:header.html -->
+
+  <main id="main">
+<!-- include:page-hero.html crumb="Contact" eyebrow="Contact us" title="We'd love to <em>hear from you.</em>" lead="Questions about admissions, fees or transport? Call, send a WhatsApp message or use the form, and we'll reply within one working day." -->
+
+    <section class="tpl-section pt-4" aria-label="Ways to reach us">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 g-lg-4">
+          <div class="col"><a class="tpl-contact-card" href="tel:{{ site.phoneHref }}" data-reveal><svg aria-hidden="true"><use href="#i-phone"/></svg><strong>Call the office</strong><span>{{ site.phone }}</span></a></div>
+          <div class="col"><a class="tpl-contact-card tpl-d-1" href="https://wa.me/{{ site.whatsappHref }}" target="_blank" rel="noopener" data-reveal><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><strong>WhatsApp</strong><span>{{ site.whatsapp }}</span></a></div>
+          <div class="col"><a class="tpl-contact-card tpl-d-2" href="mailto:{{ site.email }}" data-reveal><svg aria-hidden="true"><use href="#i-mail"/></svg><strong>Email</strong><span>{{ site.email }}</span></a></div>
+          <div class="col"><div class="tpl-contact-card tpl-d-3" data-reveal><svg aria-hidden="true"><use href="#i-clock"/></svg><strong>Office hours</strong><span>{{ site.officeHours }}</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tpl-section tpl-bg-paper" aria-labelledby="contactFormTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-7">
+            <div class="tpl-form-card" data-reveal>
+              <h2 class="tpl-h3" id="contactFormTitle">Send us a message</h2>
+              <form class="needs-validation" action="{{ site.forms.contact }}" method="POST" novalidate data-form data-success="#contactSuccess">
+                <input type="hidden" name="_subject" value="Website enquiry">
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cName">Your name</label>
+                    <input class="form-control" id="cName" name="name" type="text" autocomplete="name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cPhone">Phone</label>
+                    <input class="form-control" id="cPhone" name="phone" type="tel" autocomplete="tel" pattern="[0-9+ ()-]{9,}" required>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cEmail">Email</label>
+                    <input class="form-control" id="cEmail" name="email" type="email" autocomplete="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cTopic">Topic</label>
+                    <select class="form-select" id="cTopic" name="topic" required>
+                      <option value="">Choose…</option><option>Admissions</option><option>Fees &amp; payment</option><option>School bus</option><option>Current pupil</option><option>Jobs at the school</option><option>Something else</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a topic.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cMessage">Message</label>
+                    <textarea class="form-control" id="cMessage" name="message" rows="5" minlength="10" required></textarea>
+                    <div class="invalid-feedback">Please write a short message (at least 10 characters).</div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary btn-lg tpl-btn-arrow" type="submit">Send message <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                    <p class="tpl-form-error" data-form-error hidden role="alert">Sorry, we couldn't send your message. Please try again or call {{ site.phone }}.</p>
+                  </div>
+                </div>
+              </form>
+              <div class="tpl-form-success" id="contactSuccess" hidden tabindex="-1">
+                <span class="tpl-float-icon tpl-bg-primary"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+                <h3 class="tpl-h3">Message sent. Thank you!</h3>
+                <p class="tpl-text-mute mb-0">We'll reply within one working day.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="tpl-map" data-reveal>
+              <iframe src="{{ site.map.embed }}" title="Map showing the location of {{ site.name }}" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
+            <div class="tpl-info-card mt-4" data-reveal>
+              <svg aria-hidden="true"><use href="#i-pin"/></svg>
+              <div><strong>{{ site.address }}</strong><p>GhanaPost GPS: <span class="tpl-mono">{{ site.gps }}</span><br><a href="{{ site.map.link }}" target="_blank" rel="noopener">Open in maps</a></p></div>
+            </div>
+            <div class="tpl-info-card mt-3" data-reveal>
+              <svg aria-hidden="true"><use href="#i-bus"/></svg>
+              <div><strong>School bus routes</strong><p>East Legon · Adenta · Spintex · Tema Communities 1–25 · Sakumono. A trained attendant rides on every bus.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- include:footer.html -->
+</body>
+</html>

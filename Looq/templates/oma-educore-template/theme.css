@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #ededed;
+  --color-ink: #0f0f0f;
+  --color-body: #484848;
+  --color-muted: #6e6e6e;
+  --color-soft: #dbdbdb;
+  --color-line: #d7d7d7;
+  --color-panel: #1b1b1b;
+  --color-brand: #5e41e4;
+  --color-brand-soft: #c7cbfe;
+  --color-star: #f5b400;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Purple section label: "Why Educore?" */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 60px;
+    background: var(--color-brand);
+    color: #fff;
+    font-size: 16px;
+  }
+
+  /* The small square arrow inside every CTA */
+  .cta-arrow {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    border-radius: 4px;
+  }
+
+  /* Marquees: main.js duplicates the items once, the track slides by half its width */
+  .marquee-track {
+    --gap: 60px;
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+  }
+  .marquee-track.is-running {
+    animation: marquee var(--speed, 40s) linear infinite;
+  }
+  .marquee-track.is-running[data-direction="reverse"] {
+    animation-direction: reverse;
+  }
+
+  /* Hero carousel: the active card is bright, the neighbours dim */
+  .hero-track {
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .hero-card {
+    transition: opacity 0.8s ease;
+    opacity: 0.35;
+  }
+  .hero-card[data-active] {
+    opacity: 1;
+  }
+
+  /* FAQ accordion */
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
+  }
+  [data-open] > .faq-panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  [data-open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Scroll reveals: each section's content rises 150px and fades in */
+  [data-reveal] {
+    transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  [data-reveal].reveal-pending {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  /* "Zero to hero" card: the two named cursors drift around the canvas */
+  .cursor-a {
+    animation: cursor-a 6s ease-in-out infinite;
+  }
+  .cursor-b {
+    animation: cursor-b 7s ease-in-out infinite;
+  }
+
+  /* Bottom CTA: student avatars bob gently */
+  .bob {
+    animation: bob 5s ease-in-out infinite alternate;
+    animation-delay: calc(var(--i, 0) * -0.8s);
+  }
+
+  /* Live video card: soft pulse on the call window */
+  .speaking {
+    animation: speaking 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+@keyframes cursor-a {
+  0%, 100% { translate: 0 0; }
+  35% { translate: 46px -22px; }
+  70% { translate: 18px 26px; }
+}
+@keyframes cursor-b {
+  0%, 100% { translate: 0 0; }
+  40% { translate: -52px 18px; }
+  75% { translate: -14px -24px; }
+}
+@keyframes bob {
+  from { translate: 0 -5px; }
+  to { translate: 0 7px; }
+}
+@keyframes speaking {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(94 65 228 / 0); }
+  50% { box-shadow: 0 0 0 4px rgb(94 65 228 / 0.35); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-track,
+  .hero-card,
+  .faq-panel,
+  .faq-icon,
+  [data-reveal] {
+    transition: none !important;
+  }
+  .cursor-a,
+  .cursor-b,
+  .bob,
+  .speaking {
+    animation: none !important;
+  }
+}
+
+/* Faded left and right edges (a utility so it can take the sm: variant) */
+@utility fade-x {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 300" role="img" aria-hidden="true"><rect width="248" height="300" fill="#fbecd0"/>
+  <path d="M78 196c-12-60-8-140 46-140s58 80 44 140c-8-4-14-10-14-20V112c-16-4-30-12-36-24-4 12-14 20-24 24v64c0 10-8 16-16 20z" fill="#6b3f22"/>
+  <path d="M34 300c0-58 40-84 90-84s90 26 90 84z" fill="#17533f"/><path d="M104 180h40v42c0 12-40 12-40 0z" fill="#e3b593"/><path d="M104 200c10 12 30 12 40 0v12c-12 10-28 10-40 0z" fill="#000" opacity=".12"/>
+  <ellipse cx="124" cy="126" rx="42" ry="52" fill="#e3b593"/><circle cx="82" cy="130" r="8" fill="#e3b593"/><circle cx="166" cy="130" r="8" fill="#e3b593"/>
+  <path d="M84 112c10-4 20-12 24-24 6 12 20 20 36 24 8-34-10-52-24-52s-42 14-36 52z" fill="#6b3f22"/>
+  
+  <circle cx="108" cy="128" r="4" fill="#17261f"/><circle cx="140" cy="128" r="4" fill="#17261f"/><path d="M100 115c4-3 10-3 14 0M134 115c4-3 10-3 14 0" stroke="#17261f" stroke-opacity=".7" stroke-width="2.600" stroke-linecap="round" fill="none"/>
+  <path d="M110 152c8 8 20 8 28 0" stroke="#17261f" stroke-width="3" stroke-linecap="round" fill="none"/></svg>

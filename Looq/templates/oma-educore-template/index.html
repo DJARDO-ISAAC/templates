@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Educore – Online Course Template</title>
+  <meta name="description" content="Master UI design from scratch: a step-by-step online course with hands-on projects, mentorship and a certificate.">
+  <link rel="preload" href="./assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body id="top" class="overflow-x-clip bg-canvas font-sans text-ink antialiased">
+  <header class="sticky top-0 z-50 px-4 pt-4 sm:px-[60px] sm:pt-5" data-header>
+    <div class="mx-auto w-full max-w-[1280px] rounded-[8px] bg-white p-3 sm:p-4">
+      <div class="flex items-center justify-between gap-4">
+        <a href="#top" class="flex items-center gap-2 text-[24px] leading-none font-medium tracking-[-0.02em] text-ink" aria-label="Educore home"><svg class="size-[26px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 8.5l11 5.5 9-4.5V16h2V8.5z"/><path d="M5 12.6V16c0 1.9 3.1 3.5 7 3.5s7-1.6 7-3.5v-3.4l-7 3.5z"/></svg>Educore</a>
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex gap-5 text-[14px] text-black">
+            <li><a href="#overview" class="transition-opacity hover:opacity-60">Overview</a></li>
+            <li><a href="#curriculum" class="transition-opacity hover:opacity-60">Curriculum</a></li>
+            <li><a href="#instructor" class="transition-opacity hover:opacity-60">Instructor</a></li>
+            <li><a href="#testimonials" class="transition-opacity hover:opacity-60">Testimonials</a></li>
+            <li><a href="#pricing" class="transition-opacity hover:opacity-60">Pricing</a></li>
+            <li><a href="#faq" class="transition-opacity hover:opacity-60">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <span class="max-sm:hidden"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a></span>
+          <button type="button" class="grid size-11 place-items-center rounded-[8px] text-ink lg:hidden" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+            <span class="sr-only">Open menu</span>
+            <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" data-menu-open><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <svg class="hidden size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" data-menu-close><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="hidden pt-3 lg:hidden" aria-label="Mobile">
+        <ul class="flex flex-col text-[16px] text-ink">
+          <li><a href="#overview" class="block border-b border-black/5 py-3">Overview</a></li>
+          <li><a href="#curriculum" class="block border-b border-black/5 py-3">Curriculum</a></li>
+          <li><a href="#instructor" class="block border-b border-black/5 py-3">Instructor</a></li>
+          <li><a href="#testimonials" class="block border-b border-black/5 py-3">Testimonials</a></li>
+          <li><a href="#pricing" class="block border-b border-black/5 py-3">Pricing</a></li>
+          <li><a href="#faq" class="block border-b border-black/5 py-3">FAQ</a></li>
+        </ul>
+        <div class="pt-3"><a href="#pricing" class="flex justify-center h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="-mt-[80px] sm:-mt-[100px]">
+    <!-- Hero -->
+    <section class="overflow-hidden bg-black pt-[140px] pb-16 text-white sm:pt-[180px] sm:pb-20" aria-labelledby="hero-title">
+      <div class="mx-auto w-full max-w-[1280px] px-5 sm:px-[60px] xl:pr-0 xl:pl-[30px]">
+        <div class="grid items-center gap-12 lg:grid-cols-[480px_1fr] lg:gap-[40px]">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-[#2a2a2a] p-1 pr-3 text-[14px] text-white/90"><span class="rounded-full bg-brand-soft px-2 py-[2px] text-[#3b3c4b]">New</span>Registrations are now open!</p>
+            <h1 id="hero-title" class="mt-5 text-[44px] leading-[1.1] font-semibold sm:text-[62px]">Master UI Design From Scratch</h1>
+            <p class="mt-6 text-[18px] leading-[1.5] text-soft">The only design course you need to be among top 1% designers The only design course you need to be among</p>
+            <div class="mt-7"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap  [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+            <ul class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[16px] text-soft">
+              <li class="flex items-center gap-[6px]"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m17 10 5-3v10l-5-3z"/></svg>ONLINE</li>
+              <li class="flex items-center gap-[6px]"><svg class="size-[18px] text-white" viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="2" fill="currentColor"/><path d="m5 10.3 3 3L15 6.5" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>HANDS-ON</li>
+              <li class="flex items-center gap-[6px]"><svg class="size-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7.5 5-2.5 5 2.5-1.5-7.5" stroke-linejoin="round"/></svg>CERTIFICATE</li>
+            </ul>
+          </div>
+          <div class="overflow-hidden sm:fade-x" aria-roledescription="carousel" aria-label="Students" data-hero-carousel>
+            <ul class="hero-track flex gap-[10px] will-change-transform" data-hero-track>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-2.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Erin Rhiel Madsen<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fuk"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fuk)"><rect width="16" height="16" fill="#25386f"/><path d="M0 0l16 16M16 0 0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l16 16M16 0 0 16" stroke="#cf2337" stroke-width="1.2"/><path d="M8 0v16M0 8h16" stroke="#fff" stroke-width="4.4"/><path d="M8 0v16M0 8h16" stroke="#cf2337" stroke-width="2.4"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Junior designer @ Facebook</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-3.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Jakob Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fus"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fus)"><rect width="16" height="16" fill="#fff"/><path d="M0 1h16M0 4.4h16M0 7.8h16M0 11.2h16M0 14.6h16" stroke="#c9283e" stroke-width="1.7"/><rect width="8" height="8.6" fill="#2b3a75"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">UI designer @ Microsoft</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-1.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Aspen Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fng"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fng)"><rect width="16" height="16" fill="#fff"/><rect width="5.4" height="16" fill="#1d8f4e"/><rect x="10.6" width="5.4" height="16" fill="#1d8f4e"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Visual Designer @ Netfix</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]">
+                <img src="./assets/images/hero-2.webp" alt="Portrait of Erin Rhiel Madsen" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Erin Rhiel Madsen<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fuk"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fuk)"><rect width="16" height="16" fill="#25386f"/><path d="M0 0l16 16M16 0 0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l16 16M16 0 0 16" stroke="#cf2337" stroke-width="1.2"/><path d="M8 0v16M0 8h16" stroke="#fff" stroke-width="4.4"/><path d="M8 0v16M0 8h16" stroke="#cf2337" stroke-width="2.4"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Junior designer @ Facebook</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]">
+                <img src="./assets/images/hero-3.webp" alt="Portrait of Jakob Geidt" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Jakob Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fus"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fus)"><rect width="16" height="16" fill="#fff"/><path d="M0 1h16M0 4.4h16M0 7.8h16M0 11.2h16M0 14.6h16" stroke="#c9283e" stroke-width="1.7"/><rect width="8" height="8.6" fill="#2b3a75"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">UI designer @ Microsoft</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]">
+                <img src="./assets/images/hero-1.webp" alt="Portrait of Aspen Geidt" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Aspen Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fng"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fng)"><rect width="16" height="16" fill="#fff"/><rect width="5.4" height="16" fill="#1d8f4e"/><rect x="10.6" width="5.4" height="16" fill="#1d8f4e"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Visual Designer @ Netfix</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-2.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Erin Rhiel Madsen<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fuk"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fuk)"><rect width="16" height="16" fill="#25386f"/><path d="M0 0l16 16M16 0 0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l16 16M16 0 0 16" stroke="#cf2337" stroke-width="1.2"/><path d="M8 0v16M0 8h16" stroke="#fff" stroke-width="4.4"/><path d="M8 0v16M0 8h16" stroke="#cf2337" stroke-width="2.4"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Junior designer @ Facebook</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-3.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Jakob Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fus"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fus)"><rect width="16" height="16" fill="#fff"/><path d="M0 1h16M0 4.4h16M0 7.8h16M0 11.2h16M0 14.6h16" stroke="#c9283e" stroke-width="1.7"/><rect width="8" height="8.6" fill="#2b3a75"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">UI designer @ Microsoft</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-1.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Aspen Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fng"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fng)"><rect width="16" height="16" fill="#fff"/><rect width="5.4" height="16" fill="#1d8f4e"/><rect x="10.6" width="5.4" height="16" fill="#1d8f4e"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Visual Designer @ Netfix</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-2.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Erin Rhiel Madsen<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fuk"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fuk)"><rect width="16" height="16" fill="#25386f"/><path d="M0 0l16 16M16 0 0 16" stroke="#fff" stroke-width="3.2"/><path d="M0 0l16 16M16 0 0 16" stroke="#cf2337" stroke-width="1.2"/><path d="M8 0v16M0 8h16" stroke="#fff" stroke-width="4.4"/><path d="M8 0v16M0 8h16" stroke="#cf2337" stroke-width="2.4"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Junior designer @ Facebook</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-3.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Jakob Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fus"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fus)"><rect width="16" height="16" fill="#fff"/><path d="M0 1h16M0 4.4h16M0 7.8h16M0 11.2h16M0 14.6h16" stroke="#c9283e" stroke-width="1.7"/><rect width="8" height="8.6" fill="#2b3a75"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">UI designer @ Microsoft</span></span>
+              </li>
+              <li class="hero-card relative h-[380px] w-[322px] shrink-0 sm:h-[413px] sm:w-[284px] overflow-hidden rounded-[16px] bg-[#111]" aria-hidden="true">
+                <img src="./assets/images/hero-1.webp" alt="" width="284" height="413" class="absolute inset-0 size-full object-cover">
+                <span class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/70 to-transparent" aria-hidden="true"></span>
+                <span class="absolute bottom-5 left-5"><span class="flex items-center gap-2 text-[16px] text-white">Aspen Geidt<svg class="size-4 rounded-full" viewBox="0 0 16 16" aria-hidden="true"><clipPath id="fng"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#fng)"><rect width="16" height="16" fill="#fff"/><rect width="5.4" height="16" fill="#1d8f4e"/><rect x="10.6" width="5.4" height="16" fill="#1d8f4e"/></g></svg></span><span class="mt-1 block text-[14px] text-soft">Visual Designer @ Netfix</span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-16 sm:mt-[90px]">
+          <p class="text-[16px] text-muted">FEATURED ON</p>
+          <div class="fade-x mt-5 overflow-hidden" aria-label="Featured on hues, Rise, Sitemark, Product. and PinPoint">
+            <ul class="marquee-track items-center text-white" style="--speed: 26s; --gap: 50px" data-marquee aria-hidden="true">
+            <li class="shrink-0"><svg class="h-[32px] w-[110px] !h-[41px] !w-auto" viewBox="0 0 110 32" aria-label="hues" role="img"><circle cx="9" cy="20" r="7" fill="currentColor"/><path d="M14 6a8 8 0 0 1 8 8h-8z" fill="currentColor"/><path d="M14 16h8v5a8 8 0 0 1-8 8z" fill="currentColor" opacity=".8"/><text x="28" y="25" fill="currentColor" font-family="Inter, sans-serif" font-size="25" font-weight="500" letter-spacing="-1">hues</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[100px] !h-[41px] !w-auto" viewBox="0 0 100 32" aria-label="Rise" role="img"><path d="M2 4h7v24H2zM11 10h7v18h-7zM20 4h7v8h-7zM20 14h7v14h-7z" fill="currentColor"/><text x="32" y="26" fill="currentColor" font-family="Inter, sans-serif" font-size="25" font-weight="800" letter-spacing="-1">Rise</text></svg></li>
+            <li class="shrink-0"><svg class="h-[30px] w-[118px] !h-[41px] !w-auto" viewBox="0 0 118 30" aria-label="Sitemark" role="img"><path d="M11 3v24M3 7l16 16M3 23 19 7M1 15h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><text x="26" y="22" fill="currentColor" font-family="Inter, sans-serif" font-size="20" font-weight="700" letter-spacing="-.5">Sitemark</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[118px] !h-[41px] !w-auto" viewBox="0 0 118 32" aria-label="Product." role="img"><rect x="2" y="7" width="20" height="22" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="7" r="5" fill="currentColor"/><text x="30" y="26" fill="currentColor" font-family="Inter, sans-serif" font-size="21" font-weight="700" letter-spacing="-.5">Product.</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[120px] !h-[41px] !w-auto" viewBox="0 0 120 32" aria-label="PinPoint" role="img"><circle cx="14" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="14" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="14" cy="16" r="1.8" fill="currentColor"/><text x="31" y="23" fill="currentColor" font-family="Inter, sans-serif" font-size="20" font-weight="600" letter-spacing="-.4">PinPoint</text></svg></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="px-5 pt-16 pb-[50px] sm:px-10 sm:pt-[100px]" aria-labelledby="overview-title">
+      <div class="mx-auto w-full max-w-[1280px]">
+        <div class="grid gap-10 lg:grid-cols-3 lg:gap-6" data-reveal>
+          <div>
+            <h2 id="overview-title" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">The only design course you need to be among top 1% designers</h2>
+            <div class="mt-8"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap  [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+            <ul class="mt-8 flex flex-col gap-4 pl-[10px] text-[16px] leading-[1.5] text-body">
+              <li class="flex gap-2"><svg class="mt-[2px] size-5 shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#0f0f0f"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Learn design principles from research to creating functional interfaces.</li>
+              <li class="flex gap-2"><svg class="mt-[2px] size-5 shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#0f0f0f"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Build real-world projects using tools like Figma and Adobe XD.</li>
+              <li class="flex gap-2"><svg class="mt-[2px] size-5 shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#0f0f0f"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Develop skills for UI/UX roles, including prototyping and testing.</li>
+              <li class="flex gap-2"><svg class="mt-[2px] size-5 shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#0f0f0f"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Get expert feedback to refine your work.</li>
+            </ul>
+          </div>
+          <img src="./assets/images/overview.webp" alt="Designer sketching wireframes on paper" width="411" height="520" loading="lazy" class="h-[420px] w-full rounded-[16px] object-cover lg:h-[520px]">
+          <ul class="flex flex-col gap-8">
+            <li><span class="grid size-8 place-items-center rounded-full bg-brand"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7l4 4v12H7z M14 4v4h4M9.5 12h6M9.5 15.5h4" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3 class="mt-4 text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Online Learning</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">Engage in interactive, real-time sessions led by industry experts, ensuring in-depth understanding and instant feedback.</p></li>
+            <li><span class="grid size-8 place-items-center rounded-full bg-brand"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6 4 10l8 4 6-3v4.5M7 12v3.5c0 1.2 2.2 2.3 5 2.3s5-1.1 5-2.3V12" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></span><h3 class="mt-4 text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Hands-on Projects</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">Apply your skills to real-world scenarios with practical assignments designed to enhance learning and portfolio building.</p></li>
+            <li><span class="grid size-8 place-items-center rounded-full bg-brand"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="4.5" fill="none" stroke="#fff" stroke-width="1.6"/><path d="m9 9.5-2-4.5M15 9.5l2-4.5M10 5h4" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="m11 14 1-1v3" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg></span><h3 class="mt-4 text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Dedicated Mentorship</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">Receive personalized guidance and support from experienced mentors to help you navigate challenges and achieve your learning goals.</p></li>
+          </ul>
+        </div>
+        <div class="relative mt-16 overflow-hidden rounded-[16px] bg-black sm:mt-20" data-reveal>
+          <img src="./assets/images/video-poster.webp" alt="Course trailer: designing app screens in a UI design tool" width="1280" height="706" loading="lazy" class="aspect-[1280/706] w-full object-cover opacity-90">
+          <span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" aria-hidden="true"></span>
+          <span class="absolute top-1/2 left-1/2 grid h-[54px] w-[68px] -translate-1/2 place-items-center rounded-[14px] bg-black/85 text-white" aria-hidden="true"><svg class="ml-1 size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5Z"/></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="px-5 pt-10 pb-20 sm:px-10" aria-labelledby="why-title">
+      <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+        <div class="text-center"><p class="pill">Why Educore?</p><h2 id="why-title" class="mt-6 text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Why you should choose us</h2></div>
+        <ul class="mt-12 grid gap-x-[60px] gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-[60px]">
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="10" rx="1.5" fill="none" stroke="#5e41e4" stroke-width="1.6"/><circle cx="12" cy="12" r="2.2" fill="none" stroke="#5e41e4" stroke-width="1.6"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">High Paying</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">UI Design is a lucrative career path that will offer you competitive pay and great benefits.</p></div></li>
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 16 5-5 3 3 7-7M14 7h5v5" fill="none" stroke="#5e41e4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Growth Opportunities</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">Start as a junior designer and quickly progress to Lead roles, Senior roles, and beyond.</p></div></li>
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 3 9.5l9 4.5 9-4.5zM6.5 11.5v3.8c0 1.3 2.5 2.7 5.5 2.7s5.5-1.4 5.5-2.7v-3.8" fill="none" stroke="#5e41e4" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 5l14 14" stroke="#5e41e4" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">No Degree Needed</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">It requires no college degree but instead rewards people who work hard and grow in their craft.</p></div></li>
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9h-5v-5h-6v5H4z" fill="none" stroke="#5e41e4" stroke-width="1.6" stroke-linejoin="round"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Work From Home</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">Remote work is on the rise, and UI &amp; UX designers are leading the charge.</p></div></li>
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8.5a4 4 0 1 1-8 0c0-2 1-3 2-4 0 1.5 1 2.5 2 2.5 0-2.5 0-4.5 0-7z" fill="none" stroke="#5e41e4" stroke-width="1.6" stroke-linejoin="round"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">In Demand</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">You will be in high demand from tech giants to startups, guaranteeing versatile job opportunities.</p></div></li>
+          <li class="flex gap-4"><span class="grid size-8 shrink-0 place-items-center rounded-full bg-[#f2f2f4]"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="#5e41e4" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="#5e41e4" stroke-width="1.6"/><circle cx="12" cy="12" r="1" fill="#5e41e4"/></svg></span><div><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Make an Impact</h3><p class="mt-2 text-[16px] leading-[1.5] text-body">A sense of accomplishment from impacting the people who use the products you design.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="p-2" aria-labelledby="curriculum-title">
+      <div class="rounded-[16px] bg-black px-3 py-16 text-white sm:px-10 sm:py-[88px]">
+        <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+          <div class="text-center"><p class="pill">Curriculum</p><h2 id="curriculum-title" class="mt-4 text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">What you’ll learn in this course</h2></div>
+          <div id="pricing" class="mt-12 grid scroll-mt-28 gap-5 lg:grid-cols-[618px_1fr]">
+            <ol class="flex flex-col gap-[10px] self-start">
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 1: Foundations of Design</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 2: Research &amp; Wireframing</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 3: Prototyping &amp; Interaction</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 4: Advanced Concepts</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 5: Career Skills</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+              <li class="flex items-center justify-between gap-4 rounded-[8px] bg-panel px-4 py-[17px]"><div><h3 class="text-[18px] leading-[1.4] font-semibold tracking-[-0.0125em] sm:text-[20px]">Module 6: Building a Professional Portfolio</h3><p class="mt-[2px] text-[16px] text-[#ededed]">6 hours, 1 project, 3 resources</p></div><svg class="size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></li>
+            </ol>
+            <div class="flex flex-col gap-3 rounded-[20px] bg-white p-3 text-ink">
+              <div class="rounded-[12px] bg-brand px-5 py-6 text-white">
+                <p class="text-[20px] font-semibold tracking-[-0.0125em]">Course</p>
+                <p class="mt-4 text-[60px] leading-none font-semibold tracking-[-0.02em]">$99</p>
+                <p class="mt-2 text-[14px] text-[#ededed]">2 days left at this price</p>
+              </div>
+              <div class="rounded-[12px] border border-line bg-canvas p-4">
+                <h3 class="max-w-[320px] text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Design Mastery: The Ultimate UI/UX Bootcamp by James Martinez</h3>
+                <p class="mt-2 text-[16px] leading-[1.5] text-body">Transform your creativity into career-ready skills with Nathan Myles' step-by-step guide to mastering UI/UX design.</p>
+                <div class="mt-4 flex -space-x-2"><img src="./assets/images/person-03.webp" alt="" width="32" height="32" loading="lazy" class="size-8 rounded-full border-2 border-canvas object-cover"><img src="./assets/images/person-06.webp" alt="" width="32" height="32" loading="lazy" class="size-8 rounded-full border-2 border-canvas object-cover"><img src="./assets/images/person-09.webp" alt="" width="32" height="32" loading="lazy" class="size-8 rounded-full border-2 border-canvas object-cover"><span class="grid size-8 place-items-center rounded-full border-2 border-canvas bg-white text-[12px] text-body">4K+</span></div>
+              </div>
+              <p class="mt-1 text-[12px] font-medium tracking-[0.02em] text-muted">WHAT’S INCLUDED</p>
+              <ul class="flex flex-col gap-3 text-[16px] text-body">
+                <li class="flex items-center gap-2 px-2"><svg class="size-[18px] shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#5e41e4"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>62 hours on-demand video</li>
+                <li class="flex items-center gap-2 px-2"><svg class="size-[18px] shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#5e41e4"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Access on mobile and TV</li>
+                <li class="flex items-center gap-2 px-2"><svg class="size-[18px] shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#5e41e4"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Full lifetime access</li>
+                <li class="flex items-center gap-2 px-2"><svg class="size-[18px] shrink-0" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#5e41e4"/><path d="m6 10.3 2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Certificate of completion</li>
+              </ul>
+              <a href="#pricing" class="mt-1 flex h-12 items-center justify-center gap-[10px] rounded-[8px] bg-ink text-[14px] text-white transition-colors hover:bg-black">Enroll Now<span class="cta-arrow bg-white text-ink"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="px-5 py-20 sm:px-10" aria-labelledby="reviews-title">
+      <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+        <div class="mx-auto max-w-[600px] text-center">
+          <p class="pill">Reviews</p>
+          <h2 id="reviews-title" class="mt-6 text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Our Alumni work at companies like Google, Nike, and Duolingo</h2>
+          <p class="mt-6 text-[16px] leading-[1.5] text-muted">Our alumni of students means everything to us and we're grateful to have placed designers in Nasa, Google, Revolut and more amazing teams around the world</p>
+          <div class="mt-6"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+        </div>
+        <div class="fade-x mt-12 overflow-hidden" aria-label="Where our alumni work">
+          <ul class="marquee-track items-center text-ink" style="--speed: 26s; --gap: 64px" data-marquee aria-hidden="true">
+            <li class="shrink-0"><svg class="h-[32px] w-[120px] !h-[36px] !w-auto" viewBox="0 0 120 32" aria-label="PinPoint" role="img"><circle cx="14" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="14" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="14" cy="16" r="1.8" fill="currentColor"/><text x="31" y="23" fill="currentColor" font-family="Inter, sans-serif" font-size="20" font-weight="600" letter-spacing="-.4">PinPoint</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[118px] !h-[36px] !w-auto" viewBox="0 0 118 32" aria-label="Product." role="img"><rect x="2" y="7" width="20" height="22" rx="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="7" r="5" fill="currentColor"/><text x="30" y="26" fill="currentColor" font-family="Inter, sans-serif" font-size="21" font-weight="700" letter-spacing="-.5">Product.</text></svg></li>
+            <li class="shrink-0"><svg class="h-[30px] w-[118px] !h-[36px] !w-auto" viewBox="0 0 118 30" aria-label="Sitemark" role="img"><path d="M11 3v24M3 7l16 16M3 23 19 7M1 15h20" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><text x="26" y="22" fill="currentColor" font-family="Inter, sans-serif" font-size="20" font-weight="700" letter-spacing="-.5">Sitemark</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[100px] !h-[36px] !w-auto" viewBox="0 0 100 32" aria-label="Rise" role="img"><path d="M2 4h7v24H2zM11 10h7v18h-7zM20 4h7v8h-7zM20 14h7v14h-7z" fill="currentColor"/><text x="32" y="26" fill="currentColor" font-family="Inter, sans-serif" font-size="25" font-weight="800" letter-spacing="-1">Rise</text></svg></li>
+            <li class="shrink-0"><svg class="h-[32px] w-[110px] !h-[36px] !w-auto" viewBox="0 0 110 32" aria-label="hues" role="img"><circle cx="9" cy="20" r="7" fill="currentColor"/><path d="M14 6a8 8 0 0 1 8 8h-8z" fill="currentColor"/><path d="M14 16h8v5a8 8 0 0 1-8 8z" fill="currentColor" opacity=".8"/><text x="28" y="25" fill="currentColor" font-family="Inter, sans-serif" font-size="25" font-weight="500" letter-spacing="-1">hues</text></svg></li>
+          </ul>
+        </div>
+        <ul class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">The hands-on projects and real-world examples gave me the confidence to tackle complex design challenges. Educore made all the difference in my career pivot.</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-01.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Sarah Johnson</span><span class="block text-[14px] text-body">Senior Product Designer @ Google</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">The course broke down complex concepts into actionable lessons. I landed a freelance gig within weeks of completing it. Thank you, Educore!</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-02.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Amina Yusuf</span><span class="block text-[14px] text-body">Visual Designer @ Adobe</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">What sets Educore apart is its focus on outcomes. I built a professional portfolio and got hired within three months. Best investment I've ever made!</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-03.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">David Nguyen</span><span class="block text-[14px] text-body">UX Researcher @ Amazon</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">“The course broke down complex concepts into actionable lessons. I landed a freelance gig within weeks of completing it. Thank you, Educore!”</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-02.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Amina Yusuf</span><span class="block text-[14px] text-body">Visual Designer @ Adobe</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">“Educore doesn’t just teach design—it teaches you how to think like a designer. I loved the curriculum, the projects, and the community support.”</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-04.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Olivia Martinez</span><span class="block text-[14px] text-body">Creative Director @ Apple</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">“I’ve taken many courses, but Educore stands out. The balance of theory and practice, plus the mentorship, is unparalleled. I highly recommend it!”</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-10.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Jason Patel</span><span class="block text-[14px] text-body">Product Manager @ Meta</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">What sets Educore apart is its focus on outcomes. I built a professional portfolio and got hired within three months. Best investment I've ever made!</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-05.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Lila Anderson</span><span class="block text-[14px] text-body">Design Lead @ IBM</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">“Thanks to Educore, I transitioned from a non-design background to a Senior UX role. The course structure and support were game-changers.”</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-09.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Michael Zheng</span><span class="block text-[14px] text-body">Senior UX Designer @ LinkedIn</span></span></figcaption></figure></li>
+          <li class="rounded-[8px] bg-white p-8"><figure class="flex h-full flex-col gap-5"><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><blockquote class="text-[16px] leading-[1.5] text-body">“This course gave me the skills and portfolio I needed to stand out. Within a month, I received multiple interview calls.”</blockquote><figcaption class="mt-auto flex items-center gap-3"><img src="./assets/images/person-08.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full object-cover"><span><span class="block text-[16px] text-ink">Priya Desai</span><span class="block text-[14px] text-body">Experience Designer @ Salesforce</span></span></figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Instructor -->
+    <section id="instructor" class="p-2" aria-labelledby="instructor-title">
+      <div class="rounded-[16px] bg-black px-5 py-16 text-white sm:px-10 sm:py-[88px]">
+        <div class="mx-auto w-full max-w-[1280px] grid gap-10 lg:grid-cols-2" data-reveal>
+          <img src="./assets/images/instructor.webp" alt="James Martinez, course instructor" width="620" height="612" loading="lazy" class="aspect-[620/612] w-full rounded-[16px] object-cover">
+          <div>
+            <h2 id="instructor-title" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Meet James Martinez</h2>
+            <p class="mt-6 text-[18px] leading-[1.5] text-[#ededed]">James Martinez is a seasoned UI/UX designer and educator with over a decade of experience creating intuitive, user-centered designs for top global brands.</p>
+            <p class="mt-5 text-[18px] leading-[1.5] text-[#ededed]">Passionate about teaching, James has guided thousands of students toward mastering the craft of UI/UX design, combining practical techniques with industry insights.</p>
+            <ul class="mt-6 flex flex-col gap-3 text-[16px]">
+              <li class="flex items-center gap-3 pl-2"><svg class="size-5 text-brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg>4.5 Instructor Rating</li>
+              <li class="flex items-center gap-3 pl-2"><svg class="size-5 text-brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.7"/><path d="M2.5 19a6.5 6.5 0 0 1 13 0zM15.5 19a5 5 0 0 0-1.6-3.7 5 5 0 0 1 7.6 3.7z"/></svg>316,195 Students</li>
+              <li class="flex items-center gap-3 pl-2"><svg class="size-5 text-brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 6 4.5Z"/></svg>5 Courses</li>
+            </ul>
+            <div class="mt-8 border-t border-white/15 pt-4">
+              <p class="text-[12px] font-medium tracking-[0.02em] text-muted">BRANDS EDUCATED</p>
+              <ul class="mt-4 flex flex-wrap items-center gap-x-14 gap-y-4 text-white" aria-label="Brands educated"><li><svg class="h-[28px] w-[124px]" viewBox="0 0 124 28" role="img" aria-label="logoipsum"><g fill="currentColor"><rect x="2" y="9" width="5" height="5" rx="2.5"/><rect x="9" y="4" width="5" height="5" rx="2.5"/><rect x="9" y="14" width="5" height="5" rx="2.5"/><rect x="16" y="9" width="5" height="5" rx="2.5"/><rect x="2" y="19" width="5" height="5" rx="2.5"/><rect x="16" y="19" width="5" height="5" rx="2.5"/></g><text x="28" y="20" fill="currentColor" font-family="Inter, sans-serif" font-size="17" font-weight="700" letter-spacing="-.4">logoipsum</text></svg></li><li><svg class="h-[34px] w-[124px]" viewBox="0 0 124 34" role="img" aria-label="logoipsum"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="15" cy="16" r="13"/><circle cx="15" cy="16" r="8.5"/><circle cx="15" cy="16" r="4"/></g><text x="34" y="21" fill="currentColor" font-family="Inter, sans-serif" font-size="17" font-weight="600" letter-spacing="-.4">logoipsum</text><text x="104" y="31" fill="currentColor" font-family="Inter, sans-serif" font-size="7">.com</text></svg></li><li><svg class="h-[30px] w-[124px]" viewBox="0 0 124 30" role="img" aria-label="logoipsum"><circle cx="14" cy="15" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M7 20c3-9 8-11 14-10M7 14c4-6 8-6 13-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><text x="32" y="21" fill="currentColor" font-family="Inter, sans-serif" font-size="17" font-weight="700" letter-spacing="-.4">logoipsum</text></svg></li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="px-5 py-20 sm:px-10" aria-labelledby="stats-title">
+      <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+        <div class="mx-auto max-w-[440px] text-center">
+          <h2 id="stats-title" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Enroll now and become a UI/UX Design Pro!</h2>
+          <p class="mt-4 text-[16px] leading-[1.5] text-muted">Say goodbye to endless Googling and scattered tutorials. In just 30 days, you'll transform from a beginner</p>
+          <div class="mt-4"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+        </div>
+        <ul class="mt-10 grid gap-4 lg:grid-cols-3">
+          <li class="rounded-[12px] bg-white p-2">
+            <div class="relative grid h-[280px] place-items-center overflow-hidden rounded-[6px] bg-black" aria-hidden="true">
+              <div class="speaking relative h-[210px] w-[80%] overflow-hidden rounded-[8px] bg-white">
+                <div class="flex gap-1 p-2"><span class="size-[7px] rounded-full bg-[#ff5f57]"></span><span class="size-[7px] rounded-full bg-[#febc2e]"></span><span class="size-[7px] rounded-full bg-[#28c840]"></span></div>
+                <img src="./assets/images/call.webp" alt="" width="320" height="220" loading="lazy" class="absolute inset-x-[12px] top-[22px] bottom-[34px] w-[calc(100%-24px)] rounded-[6px] object-cover">
+              </div>
+              <div class="absolute inset-x-0 bottom-0 flex h-[44px] items-center justify-center gap-2 bg-white/10 backdrop-blur-md">
+                <span class="grid size-7 place-items-center rounded-full bg-white text-ink"><svg class="size-4" viewBox="0 0 24 24"><rect x="5" y="8" width="10" height="8" rx="1.5" fill="currentColor"/><path d="m15 11 4-2.5v7L15 13z" fill="currentColor"/></svg></span><span class="grid size-7 place-items-center rounded-full bg-white text-ink"><svg class="size-4" viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="9" y="9" width="6" height="6" fill="currentColor"/></svg></span><span class="grid size-7 place-items-center rounded-full bg-white text-ink"><svg class="size-4" viewBox="0 0 24 24"><rect x="10" y="4" width="4" height="10" rx="2" fill="currentColor"/><path d="M7 11a5 5 0 0 0 10 0M12 16v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              </div>
+            </div>
+            <div class="px-2 pt-4 pb-4"><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Live video courses</h3><p class="mt-2 text-[14px] leading-[1.5] text-body">Interactive, real-time lessons with expert instructors to deepen your understanding.</p></div>
+          </li>
+          <li class="rounded-[12px] bg-white p-2">
+            <div class="relative h-[280px] overflow-hidden rounded-[6px] bg-black" aria-hidden="true">
+              <div class="absolute inset-x-[14%] top-5 bottom-0 rounded-t-[10px] bg-white p-3">
+                <div class="flex items-center justify-between"><div class="flex gap-1"><span class="size-[7px] rounded-full bg-[#ff5f57]"></span><span class="size-[7px] rounded-full bg-[#febc2e]"></span><span class="size-[7px] rounded-full bg-[#28c840]"></span></div><div class="flex gap-2 text-[#aaa]"><span class="size-3 rounded-full border border-current"></span><span class="size-3 rounded-[3px] border border-current"></span><span class="size-3 rounded-[3px] border border-current"></span></div></div>
+                <div class="mt-5 h-[50px] rounded-[6px] bg-[#ededed]"></div>
+                <div class="mt-3 ml-8 h-[34px] rounded-[6px] bg-[#ededed]"></div>
+                <div class="absolute right-3 bottom-4 left-3 flex items-center gap-2"><span class="size-4 rounded-[4px] border border-[#bbb]"></span><span class="h-[6px] w-16 rounded-full bg-[#e3e3e3]"></span><span class="ml-auto rounded-full bg-ink px-3 py-1 text-[10px] text-white">Invite</span></div>
+              </div>
+              <img src="./assets/images/person-02.webp" alt="" width="40" height="40" loading="lazy" class="absolute top-[62px] right-[18%] size-9 rounded-full border-2 border-white object-cover">
+              <img src="./assets/images/person-03.webp" alt="" width="40" height="40" loading="lazy" class="absolute top-[150px] left-[20%] size-9 rounded-full border-2 border-white object-cover">
+              <span class="cursor-a absolute top-[118px] left-[12%] flex items-start"><span class="mt-3 rounded-full bg-[#fbbd23] px-3 py-[3px] text-[11px] text-ink">Paityn</span><svg class="-ml-1 size-4 text-[#fbbd23]" viewBox="0 0 16 16" fill="currentColor"><path d="M14 2 2 7l5 2 2 5z"/></svg></span>
+              <span class="cursor-b absolute top-[150px] right-[16%] flex items-start"><svg class="-mr-1 size-4 text-[#c9b8ff]" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2l12 5-5 2-2 5z"/></svg><span class="mt-3 rounded-full bg-[#ddd2ff] px-3 py-[3px] text-[11px] text-ink">Randy</span></span>
+            </div>
+            <div class="px-2 pt-4 pb-4"><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Zero to hero</h3><p class="mt-2 text-[14px] leading-[1.5] text-body">A complete, step-by-step journey designed to take you from beginner to advanced.</p></div>
+          </li>
+          <li class="rounded-[12px] bg-white p-2">
+            <div class="relative h-[280px] overflow-hidden rounded-[6px] bg-black" aria-hidden="true">
+              <div class="absolute inset-x-[12%] top-5 bottom-0 overflow-hidden rounded-t-[10px] bg-white">
+                <div class="flex items-center justify-between p-3"><div class="flex gap-1"><span class="size-[7px] rounded-full bg-[#ff5f57]"></span><span class="size-[7px] rounded-full bg-[#febc2e]"></span><span class="size-[7px] rounded-full bg-[#28c840]"></span></div><div class="flex gap-2 text-[#aaa]"><span class="size-3 rounded-full border border-current"></span><span class="size-3 rounded-[3px] border border-current"></span><span class="size-3 rounded-[3px] border border-current"></span></div></div>
+                <div class="flex gap-2 px-3 pt-1"><img src="./assets/images/person-04.webp" alt="" width="28" height="28" loading="lazy" class="size-7 rounded-full object-cover"><div><p class="text-[13px] font-medium text-ink">Maria <span class="text-[10px] font-normal text-[#999]">4 mins ago</span></p><p class="mt-[2px] text-[13px] text-body">Do you need some help?</p></div></div>
+                <div class="mt-4 flex gap-2 px-3"><img src="./assets/images/person-10.webp" alt="" width="28" height="28" loading="lazy" class="size-7 rounded-full object-cover"><div><p class="text-[13px] font-medium text-ink">Wilson <span class="text-[10px] font-normal text-[#999]">1 min ago</span></p><p class="mt-[2px] text-[13px] text-body">Yes, please!</p></div></div>
+                <div class="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-[#f2f2f2] px-3 py-2"><img src="./assets/images/person-09.webp" alt="" width="24" height="24" loading="lazy" class="size-6 rounded-full object-cover"><span class="text-[12px] text-[#999]">Reply</span></div>
+              </div>
+            </div>
+            <div class="px-2 pt-4 pb-4"><h3 class="text-[20px] leading-[1.4] font-semibold tracking-[-0.0125em]">Thriving Community</h3><p class="mt-2 text-[14px] leading-[1.5] text-body">Join a network of passionate designers, collaborate, get feedback, and grow together.</p></div>
+          </li>
+        </ul>
+        <dl class="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div class="flex flex-col gap-4 rounded-[12px] bg-white p-6"><dd class="text-[32px] leading-[1.1] font-semibold sm:text-[40px]">30+</dd><dt class="order-last text-[18px] text-muted">exercises</dt></div>
+          <div class="flex flex-col gap-4 rounded-[12px] bg-white p-6"><dd class="text-[32px] leading-[1.1] font-semibold sm:text-[40px]">150+</dd><dt class="order-last text-[18px] text-muted">lessons</dt></div>
+          <div class="flex flex-col gap-4 rounded-[12px] bg-white p-6"><dd class="text-[32px] leading-[1.1] font-semibold sm:text-[40px]">600+</dd><dt class="order-last text-[18px] text-muted">hours</dt></div>
+          <div class="flex flex-col gap-4 rounded-[12px] bg-white p-6"><dd class="text-[32px] leading-[1.1] font-semibold sm:text-[40px]">Lifetime</dd><dt class="order-last text-[18px] text-muted">access</dt></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="relative overflow-hidden bg-white px-5 py-20 sm:px-10" aria-labelledby="community-title">
+      <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+        <div class="mx-auto max-w-[500px] text-center">
+          <p class="pill">Community</p>
+          <h2 id="community-title" class="mt-4 text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Connect with designers from 150+ countries</h2>
+          <p class="mt-4 text-[16px] leading-[1.5] text-muted">It’s your gateway to a career in design. With Educore, you’ll gain the skills, confidence, and portfolio to stand out in the competitive world of UI/UX design.</p>
+          <div class="mt-4"><a href="#" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Join community<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a></div>
+        </div>
+        <div class="fade-x mt-12 flex flex-col gap-[10px] overflow-hidden" aria-label="Community members">
+          <ul class="marquee-track" style="--gap: 10px; --speed: 50s" data-marquee>
+            <li><img src="./assets/images/person-01.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-02.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-03.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-04.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-05.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-06.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-07.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-08.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+          </ul>
+          <ul class="marquee-track" style="--gap: 10px; --speed: 50s" data-marquee data-direction="reverse">
+            <li><img src="./assets/images/person-09.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-10.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-11.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-12.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-13.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-14.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-15.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+            <li><img src="./assets/images/person-16.webp" alt="" width="152" height="160" decoding="async" class="h-[160px] w-[152px] rounded-[7px] object-cover"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[176px] bg-gradient-to-b from-transparent to-white" aria-hidden="true"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="px-5 py-20 sm:px-10 sm:py-[88px]" aria-labelledby="faq-title">
+      <div class="mx-auto w-full max-w-[1280px]" data-reveal>
+        <div class="mx-auto max-w-[500px] text-center">
+          <h2 id="faq-title" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Frequently asked questions</h2>
+          <p class="mt-4 text-[16px] leading-[1.5] text-muted">It’s your gateway to a career in design. With Educore, you’ll gain the skills, confidence, and portfolio to stand out in the competitive world of UI/UX design.</p>
+          <div class="mt-4"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center gap-[10px] rounded-[8px] bg-brand px-5 text-[14px] text-white transition-[filter] hover:brightness-110">Enroll Now<span class="cta-arrow bg-white text-brand"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+        </div>
+        <div class="mx-auto mt-12 max-w-[922px]">
+          <div class="border-b border-line" data-faq-item>
+            <h3><button type="button" id="faq-q1" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] leading-[1.5] font-semibold" aria-expanded="false" aria-controls="faq-a1">Who is this course for?<svg class="faq-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button></h3>
+            <div id="faq-a1" class="faq-panel" role="region" aria-labelledby="faq-q1"><div class="overflow-hidden"><p class="pb-5 text-[16px] leading-[1.5] text-body">This course is designed for aspiring designers, freelancers, and professionals looking to enhance their design skills. Whether you're a beginner or have some experience, our step-by-step modules will guide you to success.</p></div></div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3><button type="button" id="faq-q2" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] leading-[1.5] font-semibold" aria-expanded="false" aria-controls="faq-a2">How long do I have access to the course?<svg class="faq-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button></h3>
+            <div id="faq-a2" class="faq-panel" role="region" aria-labelledby="faq-q2"><div class="overflow-hidden"><p class="pb-5 text-[16px] leading-[1.5] text-body">You will have lifetime access to the course materials. This means you can revisit lessons, assignments, and resources anytime in the future without worrying about expiry.</p></div></div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3><button type="button" id="faq-q3" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] leading-[1.5] font-semibold" aria-expanded="false" aria-controls="faq-a3">Which tools will I need for this course?<svg class="faq-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button></h3>
+            <div id="faq-a3" class="faq-panel" role="region" aria-labelledby="faq-q3"><div class="overflow-hidden"><p class="pb-5 text-[16px] leading-[1.5] text-body">You will primarily need Figma and Adobe XD. These are industry-standard tools for UI/UX design, and the course includes hands-on projects and assignments that use them extensively.</p></div></div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3><button type="button" id="faq-q4" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] leading-[1.5] font-semibold" aria-expanded="false" aria-controls="faq-a4">What kind of projects will work on?<svg class="faq-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button></h3>
+            <div id="faq-a4" class="faq-panel" role="region" aria-labelledby="faq-q4"><div class="overflow-hidden"><p class="pb-5 text-[16px] leading-[1.5] text-body">You will work on real-world projects that simulate actual design scenarios. These projects cover foundational design principles, research and wireframing, prototyping and interaction design, advanced UI/UX concepts, and building a professional portfolio.</p></div></div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3><button type="button" id="faq-q5" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[16px] leading-[1.5] font-semibold" aria-expanded="false" aria-controls="faq-a5">Is there a refund policy?<svg class="faq-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></button></h3>
+            <div id="faq-a5" class="faq-panel" role="region" aria-labelledby="faq-q5"><div class="overflow-hidden"><p class="pb-5 text-[16px] leading-[1.5] text-body">For refund-related queries, they recommend contacting their support via <a href="mailto:hello@educore.com" class="text-brand hover:underline">hello@educore.com</a>.</p></div></div>
+          </div>
+          <p class="mt-12 text-center text-[18px]">Have more questions? Let us know: <a href="mailto:hello@educore.com" class="text-brand hover:underline">hello@educore.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="p-2 pb-0" aria-labelledby="cta-title">
+      <div class="relative overflow-hidden rounded-[16px] bg-brand text-white">
+        <div class="mx-auto w-full max-w-[1280px] grid items-center lg:grid-cols-[602px_1fr] lg:gap-[60px]">
+          <div class="relative z-10 px-6 py-16 sm:px-10 lg:py-20 lg:pl-[60px]">
+            <h2 id="cta-title" class="text-[32px] leading-[1.1] font-semibold tracking-[-0.01em] sm:text-[40px]">Start Your UI/UX Design Journey Today!</h2>
+            <p class="mt-3 text-[18px] leading-[1.5] text-white/90">Join thousands of aspiring designers and gain the skills to create stunning, user-friendly designs. Don’t wait—your design career starts here!</p>
+            <div class="mt-5"><div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap  [&>a]:justify-center"><a href="#pricing" class="inline-flex h-12 items-center rounded-[8px] bg-white gap-[10px] px-5 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">Enroll Now<span class="cta-arrow bg-ink text-white"><svg class="size-[14px]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a><a href="#curriculum" class="inline-flex h-12 items-center rounded-[8px] bg-white px-4 text-[14px] text-ink transition-colors hover:bg-[#f5f5f5]">See Curriculum</a></div></div>
+          </div>
+          <div class="relative h-[300px] lg:h-[382px]" aria-hidden="true">
+            <svg class="absolute top-0 right-0 h-[480px] w-[360px] text-white/15" viewBox="0 0 360 480" fill="none" stroke="currentColor" stroke-width="14"><circle cx="300" cy="300" r="140"/><circle cx="300" cy="300" r="220"/></svg>
+            <img src="./assets/images/person-06.webp" alt="" width="46" height="46" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:8%;top:13%;width:46px;height:46px;--i:0">
+            <img src="./assets/images/person-02.webp" alt="" width="72" height="72" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:30%;top:4%;width:72px;height:72px;--i:1">
+            <img src="./assets/images/person-03.webp" alt="" width="56" height="56" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:52%;top:14%;width:56px;height:56px;--i:2">
+            <img src="./assets/images/person-04.webp" alt="" width="42" height="42" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:76%;top:8%;width:42px;height:42px;--i:3">
+            <img src="./assets/images/person-05.webp" alt="" width="40" height="40" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:90%;top:22%;width:40px;height:40px;--i:4">
+            <img src="./assets/images/person-09.webp" alt="" width="56" height="56" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:12%;top:38%;width:56px;height:56px;--i:5">
+            <img src="./assets/images/person-10.webp" alt="" width="40" height="40" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:36%;top:40%;width:40px;height:40px;--i:6">
+            <img src="./assets/images/person-01.webp" alt="" width="72" height="72" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:66%;top:36%;width:72px;height:72px;--i:7">
+            <img src="./assets/images/person-07.webp" alt="" width="46" height="46" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:86%;top:46%;width:46px;height:46px;--i:8">
+            <img src="./assets/images/person-08.webp" alt="" width="46" height="46" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:6%;top:66%;width:46px;height:46px;--i:9">
+            <img src="./assets/images/person-03.webp" alt="" width="66" height="66" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:28%;top:62%;width:66px;height:66px;--i:10">
+            <img src="./assets/images/person-06.webp" alt="" width="58" height="58" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:52%;top:68%;width:58px;height:58px;--i:11">
+            <img src="./assets/images/person-02.webp" alt="" width="50" height="50" loading="lazy" class="bob absolute rounded-full border-[3px] border-white/25 object-cover" style="left:80%;top:72%;width:50px;height:50px;--i:12">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-2 pb-2">
+    <div class="rounded-[16px] bg-black px-5 py-16 text-white sm:px-10 sm:py-[88px]">
+      <div class="mx-auto w-full max-w-[1280px] grid gap-14 lg:grid-cols-[1fr_auto] lg:gap-[92px]">
+        <div>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex -space-x-2">
+              <img src="./assets/images/person-03.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full border-2 border-black object-cover"><img src="./assets/images/person-06.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full border-2 border-black object-cover"><img src="./assets/images/person-09.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full border-2 border-black object-cover"><img src="./assets/images/person-10.webp" alt="" width="40" height="40" loading="lazy" class="size-10 rounded-full border-2 border-black object-cover">
+              <span class="grid size-10 place-items-center rounded-full border-2 border-black bg-white text-[14px] font-medium text-[#080808]">4K+</span>
+            </div>
+            <div><div class="flex gap-[6px] text-star" role="img" aria-label="Rated 5 out of 5"><svg class="size-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg><svg class="size-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.6 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></div><p class="mt-1 text-[14px] text-[#ededed]">Join 4000+ Students</p></div>
+          </div>
+          <a href="#top" class="mt-12 flex w-fit items-center gap-2 text-[22px] font-medium tracking-[-0.02em]" aria-label="Educore home"><svg class="size-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 8.5l11 5.5 9-4.5V16h2V8.5z"/><path d="M5 12.6V16c0 1.9 3.1 3.5 7 3.5s7-1.6 7-3.5v-3.4l-7 3.5z"/></svg>Educore</a>
+          <p class="mt-6 max-w-[300px] text-[18px] leading-[1.5]">Here’s everything you need to know before you start your journey with Educore.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-12 sm:grid-cols-3 sm:gap-x-[100px]">
+          <nav aria-labelledby="f-links"><h2 id="f-links" class="text-[18px] text-brand-soft">Links</h2><ul class="mt-6 flex flex-col gap-4 text-[16px]"><li><a href="#overview" class="transition-opacity hover:opacity-70">Overview</a></li><li><a href="#curriculum" class="transition-opacity hover:opacity-70">Curriculum</a></li><li><a href="#instructor" class="transition-opacity hover:opacity-70">Instructor</a></li><li><a href="#testimonials" class="transition-opacity hover:opacity-70">Testimonials</a></li><li><a href="#pricing" class="transition-opacity hover:opacity-70">Pricing</a></li><li><a href="#faq" class="transition-opacity hover:opacity-70">FAQs</a></li></ul></nav>
+          <nav aria-labelledby="f-legal"><h2 id="f-legal" class="text-[18px] text-brand-soft">Legal</h2><ul class="mt-6 flex flex-col gap-4 text-[16px]"><li><a href="404" class="transition-opacity hover:opacity-70">404</a></li><li><a href="privacy-policy" class="transition-opacity hover:opacity-70">Privacy Policy</a></li><li><a href="terms-and-conditions" class="transition-opacity hover:opacity-70">Terms</a></li></ul></nav>
+          <nav aria-labelledby="f-social"><h2 id="f-social" class="text-[18px] text-brand-soft">Socials</h2><ul class="mt-6 flex flex-col gap-4 text-[16px]">
+            <li><a href="#" class="flex items-center gap-2 transition-opacity hover:opacity-70"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="currentColor"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#000" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#000"/></svg>Instagram</a></li>
+            <li><a href="#" class="flex items-center gap-2 transition-opacity hover:opacity-70"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h5l13 18h-5zM3.5 21 10 14M20.5 3 14 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>X (Twitter)</a></li>
+            <li><a href="#" class="flex items-center gap-2 transition-opacity hover:opacity-70"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v12.2a3.2 3.2 0 1 1-3.2-3.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M14 3c.5 2.7 2.3 4.5 5 4.9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Tiktok</a></li>
+            <li><a href="#" class="flex items-center gap-2 transition-opacity hover:opacity-70"><svg class="size-5" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3.5" fill="currentColor"/><path d="m10 9 5 3-5 3z" fill="#000"/></svg>Youtube</a></li>
+          </ul></nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

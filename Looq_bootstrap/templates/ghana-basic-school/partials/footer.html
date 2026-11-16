@@ -1,0 +1,88 @@
+<footer class="tpl-footer tpl-bg-dark">
+  <div class="tpl-kente" aria-hidden="true"></div>
+  <div class="container">
+    <div class="tpl-newsletter">
+      <div class="row align-items-center gy-3">
+        <div class="col-lg-6">
+          <h2 class="tpl-h3 text-white mb-1">Get the termly newsletter</h2>
+          <p class="tpl-text-soft mb-0">Term dates, events and school news. One email a month, no spam.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="tpl-newsletter-form" action="{{ site.forms.newsletter }}" method="POST" novalidate data-form data-success="#newsletterSuccess">
+            <input type="hidden" name="_subject" value="Newsletter sign-up">
+            <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input class="form-control" id="newsletterEmail" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn-secondary" type="submit">Subscribe</button>
+            <p class="tpl-form-error" data-form-error hidden role="alert">Please enter a valid email address.</p>
+          </form>
+          <p class="tpl-newsletter-success mb-0" id="newsletterSuccess" hidden tabindex="-1"><svg aria-hidden="true"><use href="#i-check"/></svg> Thank you. You're on the list.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-5 tpl-footer-top">
+      <div class="col-lg-4">
+        <a class="d-inline-flex align-items-center gap-2 mb-3 text-white" href="./index.html" aria-label="{{ site.name }} home">
+          <svg class="tpl-logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="12" class="tpl-logo-bg tpl-logo-bg--light"/>
+            <path d="M12 28V12l16 16V12" fill="none" class="tpl-logo-line" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="2.6" class="tpl-logo-dot"/>
+          </svg>
+          <span class="tpl-logo-text">{{ site.shortName }}<small>Academy · {{ site.city }}</small></span>
+        </a>
+        <p class="tpl-text-soft">A GES-approved basic school for KG 1 to JHS 3. {{ site.tagline }}</p>
+        <ul class="list-unstyled d-flex gap-2 mb-0">
+          <li><a class="tpl-social" href="{{ site.social.facebook }}" aria-label="Facebook" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.instagram }}" aria-label="Instagram" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.x }}" aria-label="X" rel="noopener"><svg aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.youtube }}" aria-label="YouTube" rel="noopener"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.linkedin }}" aria-label="LinkedIn" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="tpl-footer-title">School</h2>
+        <ul class="tpl-footer-links">
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./academics.html">Academics</a></li>
+          <li><a href="./about.html#staff">Our teachers</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./news.html">News</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="tpl-footer-title">Parents</h2>
+        <ul class="tpl-footer-links">
+          <li><a href="./admissions.html">Admissions</a></li>
+          <li><a href="./admissions.html#fees">Fees &amp; payment</a></li>
+          <li><a href="./calendar.html">Term dates</a></li>
+          <li><a href="./index.html#finder">Class finder</a></li>
+          <li><a href="./admissions.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-4">
+        <h2 class="tpl-footer-title">Visit us</h2>
+        <ul class="tpl-footer-contact">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><a href="./contact.html">{{ site.address }}</a></li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></li>
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Office: {{ site.officeHours }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tpl-footer-bottom">
+      <p class="mb-0">© {{ build.year }} {{ site.name }}. All rights reserved. · <a href="./privacy.html">Privacy policy</a></p>
+      <p class="mb-0">{{ site.gesReg }} · {{ site.membership }}</p>
+    </div>
+  </div>
+</footer>
+
+<div class="tpl-floating">
+  <a class="tpl-to-top" href="#main" aria-label="Back to top" data-to-top><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="tpl-whatsapp" href="https://wa.me/{{ site.whatsappHref }}?text=Hello%2C%20I%27d%20like%20to%20ask%20about%20admissions." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span>Chat with us</span>
+  </a>
+</div>
+
+<!-- include:tour-modal.html -->

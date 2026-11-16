@@ -1,0 +1,4 @@
+/* Layout helpers for the component previews only. Not part of the contract. */
+.pv { padding: var(--space-6); }
+.pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.pv-stack { display: grid; gap: var(--space-4); }

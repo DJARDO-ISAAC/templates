@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink: #172423;
+  --color-accent: #e99f69;
+  --color-accent-dark: #d8884f;
+  --color-cream: #fdf5f0;
+  --color-line: rgb(23 36 35 / 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Dark banners: a faint grid of lines fading out towards the edges */
+  .grid-lines {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 83px 83px;
+    background-position: center center;
+    -webkit-mask-image: radial-gradient(ellipse 30% 60% at 50% 50%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(ellipse 30% 60% at 50% 50%, #000 30%, transparent 100%);
+  }
+
+  /* Marquees: main.js duplicates the items once, the track slides by half its width */
+  .marquee-track {
+    --gap: 0px;
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+  }
+  .marquee-track.is-running {
+    animation: marquee var(--speed, 40s) linear infinite;
+  }
+
+  /* Reveals, on load and on scroll: content fades in while sliding 100px up, from the left or right,
+     zooming down from --from, or growing from nothing ("pop"). The easing is the spring the original
+     uses, sampled into linear(); half done at ~260ms, settled by ~1.3s. main.js adds .is-revealed. */
+  [data-reveal] {
+    transition-property: opacity, transform;
+    transition-duration: 1.3s;
+    transition-timing-function: cubic-bezier(0.3, 0.6, 0.1, 1);
+    transition-timing-function: linear(0, 0.013 2.2%, 0.03 4.5%, 0.087 6.7%, 0.161 9.1%, 0.24 11.2%, 0.36 15.6%, 0.435 18%, 0.508 20.2%, 0.603 25%, 0.708 29.6%, 0.787 34.2%, 0.834 38.8%, 0.882 43.5%, 0.917 48.4%, 0.947 54.8%, 0.967 61.3%, 0.979 67.8%, 0.99 76.8%, 0.995 86.2%, 0.998 95.5%, 1);
+    transition-delay: var(--delay, 0ms);
+  }
+  /* Hidden from the first paint, so content on screen at load animates in without a flash */
+  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    [data-reveal]:not(.is-revealed) {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    [data-reveal="left"]:not(.is-revealed) {
+      transform: translateX(-100px);
+    }
+    [data-reveal="right"]:not(.is-revealed) {
+      transform: translateX(100px);
+    }
+    [data-reveal="zoom"]:not(.is-revealed) {
+      transform: scale(var(--from, 1.1));
+    }
+    [data-reveal="pop"]:not(.is-revealed) {
+      transform: translateY(100px) scale(0);
+    }
+  }
+
+  /* FAQ accordion */
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
+  }
+  [data-open] > .faq-panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  [data-open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Image zoom on hover inside cards */
+  .zoom img {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .zoom:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Long-form article and service copy */
+  .prose-law {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--color-ink);
+  }
+  .prose-law h2,
+  .prose-law h3,
+  .prose-law h4 {
+    margin: 36px 0 18px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+  }
+  .prose-law > :first-child {
+    margin-top: 0;
+  }
+  .prose-law p {
+    margin-bottom: 18px;
+  }
+  .prose-law ul,
+  .prose-law ol {
+    margin: 0 0 18px;
+    padding-left: 22px;
+  }
+  .prose-law ul {
+    list-style: disc;
+  }
+  .prose-law ol {
+    list-style: decimal;
+  }
+  .prose-law li {
+    margin-bottom: 12px;
+  }
+  .prose-law li p {
+    margin: 0;
+  }
+  .prose-law strong {
+    font-weight: 700;
+  }
+  .prose-law a {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal],
+  .faq-panel,
+  .faq-icon,
+  .zoom img {
+    transition: none !important;
+  }
+}

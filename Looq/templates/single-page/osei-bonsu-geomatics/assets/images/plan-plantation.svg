@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t3">
+  <title id="t3">Topographic boundary plan of a cocoa plantation with contour lines and a river</title>
+  <rect width="800" height="600" fill="#f4eddf"/>
+
+  <!-- contour lines -->
+  <g fill="none" stroke="#b08d57" stroke-width="1" opacity=".65">
+    <path d="M-20 120c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 170c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 220c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 270c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 320c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 370c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 420c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 470c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 520c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+    <path d="M-20 570c120-40 190 30 300 6s170-86 300-52 180 54 260 20"/>
+  </g>
+
+  <!-- river -->
+  <path d="M610-20c-30 96 26 132-12 218s-76 112-52 208 54 132 30 214" fill="none" stroke="#4f7b6d" stroke-width="10" opacity=".5"/>
+  <path d="M610-20c-30 96 26 132-12 218s-76 112-52 208 54 132 30 214" fill="none" stroke="#f4eddf" stroke-width="3" opacity=".8"/>
+
+  <!-- boundary -->
+  <path d="M112 104 508 76l174 148-38 264-286 52-232-116Z" fill="#b08d57" opacity=".1"/>
+  <path d="M112 104 508 76l174 148-38 264-286 52-232-116Z" fill="none" stroke="#1b3a2c" stroke-width="2.4" stroke-dasharray="18 7"/>
+  <g fill="#f4eddf" stroke="#b4542a" stroke-width="2">
+    <circle cx="112" cy="104" r="5"/><circle cx="508" cy="76" r="5"/><circle cx="682" cy="224" r="5"/><circle cx="644" cy="488" r="5"/><circle cx="358" cy="540" r="5"/><circle cx="126" cy="424" r="5"/>
+  </g>
+
+  <!-- survey points -->
+  <g fill="#1b3a2c">
+    <circle cx="240" cy="180" r="2.4"/><circle cx="360" cy="146" r="2.4"/><circle cx="478" cy="190" r="2.4"/><circle cx="560" cy="290" r="2.4"/><circle cx="430" cy="330" r="2.4"/><circle cx="300" cy="286" r="2.4"/><circle cx="206" cy="352" r="2.4"/><circle cx="352" cy="420" r="2.4"/><circle cx="512" cy="414" r="2.4"/><circle cx="250" cy="470" r="2.4"/>
+  </g>
+
+  <!-- tree symbols -->
+  <g fill="none" stroke="#1b3a2c" stroke-width="1" opacity=".55">
+    <circle cx="210" cy="208" r="7"/><circle cx="268" cy="236" r="7"/><circle cx="330" cy="198" r="7"/><circle cx="392" cy="244" r="7"/><circle cx="454" cy="208" r="7"/><circle cx="516" cy="246" r="7"/>
+    <circle cx="232" cy="330" r="7"/><circle cx="296" cy="372" r="7"/><circle cx="360" cy="342" r="7"/><circle cx="424" cy="382" r="7"/><circle cx="488" cy="346" r="7"/><circle cx="552" cy="388" r="7"/>
+  </g>
+
+  <!-- spot heights -->
+  <g fill="#6c7a6f" font-family="ui-monospace, monospace" font-size="8">
+    <text x="248" y="176">218.4</text><text x="486" y="186">224.1</text><text x="438" y="326">231.7</text><text x="358" y="416">226.3</text><text x="258" y="466">212.9</text>
+  </g>
+
+  <!-- north arrow -->
+  <g transform="translate(724 84)">
+    <circle r="24" fill="none" stroke="#1b3a2c" stroke-width="1"/>
+    <path d="M0-17 7 8 0 3-7 8Z" fill="#1b3a2c"/>
+    <text y="-31" text-anchor="middle" fill="#1b3a2c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700">N</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(112 520)" font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect width="190" height="58" fill="#f4eddf" stroke="#1b3a2c" stroke-width="1"/>
+    <path d="M12 18h34" stroke="#1b3a2c" stroke-width="2" stroke-dasharray="7 4"/>
+    <text x="56" y="21" fill="#1b3a2c" font-size="9">Survey boundary</text>
+    <path d="M12 34h34" stroke="#b08d57" stroke-width="1"/>
+    <text x="56" y="37" fill="#1b3a2c" font-size="9">Contour · 10 m interval</text>
+    <path d="M12 50h34" stroke="#4f7b6d" stroke-width="4"/>
+    <text x="56" y="53" fill="#1b3a2c" font-size="9">River / watercourse</text>
+  </g>
+
+  <!-- title block -->
+  <g transform="translate(500 505)" font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect width="214" height="76" fill="#f4eddf" stroke="#1b3a2c" stroke-width="1.2"/>
+    <text x="14" y="23" fill="#1b3a2c" font-size="11" font-weight="700" letter-spacing="1.4">BOUNDARY &amp; TOPO</text>
+    <text x="14" y="40" fill="#1b3a2c" font-size="10">Kwahu Ridge · 380 ha</text>
+    <text x="14" y="55" fill="#6c7a6f" font-size="9">Scale 1:5 000 · 42 points</text>
+    <text x="14" y="68" fill="#6c7a6f" font-size="9">Osei-Bonsu Geomatics · 2023</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<footer class="tpl-footer">
+  <div class="container">
+    <div class="row gy-5 tpl-footer-top">
+      <div class="col-lg-5">
+        <p class="tpl-footer-sign">{{ site.name }}</p>
+        <p class="tpl-footer-tagline">{{ site.kind }} in Osu since {{ site.since }}. {{ site.tagline }}</p>
+        <ul class="list-unstyled d-flex gap-2 mb-0">
+          <li><a class="tpl-social" href="{{ site.social.instagram }}" aria-label="Instagram" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.tiktok }}" aria-label="TikTok" rel="noopener"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+          <li><a class="tpl-social" href="{{ site.social.facebook }}" aria-label="Facebook" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="tpl-footer-title">Eat</h2>
+        <ul class="tpl-footer-links">
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./index.html#today">Today's pots</a></li>
+          <li><a href="./menu.html#bowl">Order online</a></li>
+          <li><a href="./catering.html">Catering</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <h2 class="tpl-footer-title">About</h2>
+        <ul class="tpl-footer-links">
+          <li><a href="./story.html">Our story</a></li>
+          <li><a href="./index.html#first-time">First time?</a></li>
+          <li><a href="./visit.html#faq">FAQ</a></li>
+          <li><a href="./visit.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h2 class="tpl-footer-title">Visit</h2>
+        <ul class="tpl-footer-contact">
+          <li>{{ site.address }}<br><span>{{ site.landmark }}</span></li>
+          <li>{{ site.hours.weekdays }}<br>{{ site.hours.sunday }}</li>
+          <li><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tpl-footer-bottom">
+      <p class="mb-0">© {{ build.year }} {{ site.name }}. MoMo merchant: {{ site.payments.momoName }} ({{ site.payments.momoMerchantId }})</p>
+      <p class="mb-0"><a href="./visit.html#contact">Contact</a> · <a href="./visit.html#faq">FAQ</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="tpl-floating">
+  <a class="tpl-to-top" href="#main" aria-label="Back to top" data-to-top><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="tpl-whatsapp" href="https://wa.me/{{ site.whatsappHref }}?text=Hello%2C%20I%27d%20like%20to%20order." target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+</div>

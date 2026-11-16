@@ -1,0 +1,23 @@
+{
+  "slug": "manya-krobo",
+  "name": "Manya Krobo Rural Bank",
+  "industry": "banking",
+  "type": "website",
+  "tags": [
+    "bank",
+    "rural-bank",
+    "community-bank",
+    "ghana",
+    "finance",
+    "loans",
+    "savings",
+    "branch-finder",
+    "calculator",
+    "investors",
+    "accessible",
+    "multi-page",
+    "client"
+  ],
+  "description": "Full website for Manya Krobo Rural Bank PLC, rebuilt from a UI/UX audit of the live site. Covers every account, loan and insurance product on one product template, a branch finder with open-now status, loan and susu calculators, an online account-opening flow, investor relations with dated AGM notices and sized report downloads, news, gallery with a lightbox, complaints, security and legal pages. All bank facts live in _build/bank.mjs, and ?review=1 highlights every figure still to confirm.",
+  "tailwindVersion": "4.x"
+}

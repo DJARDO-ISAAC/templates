@@ -1,0 +1,39 @@
+{
+  "slug": "single-page/kwan-consulting",
+  "name": "Kwan Consulting",
+  "industry": "professional-services",
+  "type": "landing-page",
+  "archetype": [
+    "A",
+    "B"
+  ],
+  "pages": [
+    "index.html"
+  ],
+  "tags": [
+    "one-page",
+    "consulting-firm",
+    "business-setup",
+    "market-entry",
+    "diaspora",
+    "ghana",
+    "accra",
+    "corporate",
+    "rounded",
+    "lime",
+    "royal-blue",
+    "forest-green",
+    "hero-slider",
+    "service-cards",
+    "service-modal",
+    "package",
+    "testimonial",
+    "lead-magnet",
+    "faq",
+    "consultation-form",
+    "whatsapp",
+    "dialog"
+  ],
+  "description": "Corporate one-page site for an Accra business consulting firm serving entrepreneurs, SMEs, Ghanaians abroad and foreign investors: an inset full-bleed hero with three rotating headlines and tabs, lime pill buttons with arrow circles, a who-we-are trio, eight photo service cards that open a detail modal (what is included, who it is for, timeline and starting price), a Ghana Launch Package with a promo card, a royal-blue approach band with glass cards, a photo banner, a testimonial beside a lime starter-guide card, a centred FAQ, a consultation form and a royal-blue footer. Layout inspired by lumincoreconsult.com; brand, copy, photos and code are original.",
+  "tailwindVersion": "4.x"
+}

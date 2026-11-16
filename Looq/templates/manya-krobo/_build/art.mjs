@@ -1,0 +1,65 @@
+// Icons and the logo mark. The mark is a vector redraw of the bank's logo; replace it with the official artwork when supplied.
+const S = (inner, extra = '') => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"${extra}>${inner}</svg>`
+const st = (d, w = 2) => S(`<path d="${d}" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`)
+
+// ringTop / ringBottom come from bank.mjs so a renamed bank gets a matching ring
+export const logoMark = (ringTop, ringBottom = 'BANK', cls = 'logo-mark') => `<svg class="${cls}" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><path id="lm-top" d="M19.500 84A46.500 46.500 0 1 1 100.500 84"/></defs><path d="M30.300 96.400A47 47 0 1 1 89.700 96.400" fill="none" stroke="currentColor" stroke-width="22"/><path d="M24 108A56 56 0 0 0 96 108" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="60" cy="58" r="35.500" fill="#fff" stroke="currentColor" stroke-width="1.500"/><text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="${ringTop.length > 17 ? 11 : 12.400}" fill="#fff" letter-spacing=".2"><textPath href="#lm-top" startOffset="50%" text-anchor="middle">${ringTop}</textPath></text><text x="60" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="1.200">${ringBottom}</text><g transform="rotate(16 60 58)" fill="#fff" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M59 31C75 34 81 66 63 87 45 84 39 41 59 31Z" stroke-width="3.200"/><path d="M66 37C71 50 71 68 66 82" fill="none" stroke-width="2"/><path d="M67 43l3-2M69 50l3-2M70 57l3-2M70 64l3-2M69 71l3-2M67 77l3-2" stroke-width="1.400"/></g></svg>`
+
+// The cowrie on its own, used as a large faint watermark
+export const cowrie = `<svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><g transform="rotate(16 60 58)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M59 6C90 12 102 74 66 112 30 106 20 26 59 6Z" stroke-width="6"/><path d="M71 18C80 44 80 80 71 104" stroke-width="4"/><path d="M73 30l6-3M76 44l6-3M77 58l6-3M77 72l6-3M76 86l6-3M73 98l6-3" stroke-width="3"/></g></svg>`
+
+export const ic = {
+  arrow: st('M5 12h14M13 6l6 6-6 6'),
+  ne: st('M7 17 17 7M8 7h9v9'),
+  chev: st('m6 9 6 6 6-6', 2.400),
+  back: st('m15 18-6-6 6-6', 2.400),
+  next: st('m9 18 6-6-6-6', 2.400),
+  close: st('M6 6l12 12M18 6 6 18', 2.200),
+  plus: st('M12 5v14M5 12h14', 2.200),
+  check: st('m5 12.500 4.500 4.500L19 7', 2.600),
+  search: st('m20 20-4.200-4.200M17 10.500a6.500 6.500 0 1 1-13 0 6.500 6.500 0 0 1 13 0Z'),
+  phone: st('M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z'),
+  wa: st('M4 20l1.200-4A8 8 0 1 1 8 18.800L4 20Zm5-11c0 3.500 2.500 6 6 6l1-1.800-2-1-1 1c-1-.4-2-1.400-2.300-2.300l1-1-1-2L9 9Z', 1.700),
+  mail: st('M4 6h16v12H4zM4 7l8 6 8-6'),
+  pin: st('M12 21s-7-6.200-7-11.500a7 7 0 0 1 14 0C19 14.800 12 21 12 21Zm0-9a2.500 2.500 0 1 0 0-5 2.500 2.500 0 0 0 0 5Z'),
+  clock: st('M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'),
+  dir: st('M12 3 21 12l-9 9-9-9 9-9Zm-2 11v-2a1 1 0 0 1 1-1h4m-2-2 2 2-2 2'),
+  user: st('M20 21v-1.500a4.500 4.500 0 0 0-4.500-4.500h-7A4.500 4.500 0 0 0 4 19.500V21M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z'),
+  users: st('M16 19v-1.500a3.500 3.500 0 0 0-3.500-3.500h-5A3.500 3.500 0 0 0 4 17.500V19M10 10.500a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm10 8.500v-1.500a3.500 3.500 0 0 0-2.500-3.300M15 4.700a3 3 0 0 1 0 5.700'),
+  piggy: st('M19 10c1 .5 2 1.500 2 3v1h-2l-1 2.500V19h-3v-1.500h-4V19H8v-2C6 16 5 14 5 12a6 6 0 0 1 6-6h3c2 0 3.500.8 4.500 2M3 11c0 1 .7 1.600 2 1.600M15 10h.01'),
+  coins: st('M8 7c0 1.100 2.200 2 5 2s5-.9 5-2-2.200-2-5-2-5 .9-5 2Zm0 0v4c0 1.100 2.200 2 5 2s5-.9 5-2V7m-10 4c-2.800 0-5 .9-5 2v4c0 1.100 2.200 2 5 2s5-.9 5-2m-10-4c0 1.100 2.200 2 5 2'),
+  bag: st('M5 8h14l-1 12H6L5 8Zm4 0V6.500a3 3 0 0 1 6 0V8'),
+  school: st('M3 9l9-5 9 5-9 5-9-5Zm4 2.300V16c0 1.700 2.200 3 5 3s5-1.300 5-3v-4.700M21 9v6'),
+  tree: st('M12 21v-7M8 14h8M12 3a5 5 0 0 0-5 5c0 1 .3 2 .8 2.700A3.500 3.500 0 0 0 9 17h6a3.500 3.500 0 0 0 1.200-6.300c.5-.7.800-1.700.800-2.700a5 5 0 0 0-5-5Z'),
+  chart: st('M4 20V10M10 20V4M16 20v-7M22 20H2'),
+  shield: st('M12 21s-8-3.500-8-10V5l8-3 8 3v6c0 6.500-8 10-8 10Zm-3-9.500 2 2 4-4'),
+  car: st('M5 17h14M5 17v2M19 17v2M4 13l2-5.500A2 2 0 0 1 7.900 6h8.200a2 2 0 0 1 1.900 1.500L20 13M4 13h16v4H4v-4Zm3 2h.01M17 15h.01'),
+  fire: st('M12 21c-4 0-7-2.700-7-6.500C5 10 9 8 9 4c3 1.500 4.500 4 4.500 6 1-.5 1.700-1.700 1.800-3C17.500 9 19 11.500 19 14.500 19 18.300 16 21 12 21Z'),
+  heart: st('M12 20s-7-4.400-9-9a4.800 4.800 0 0 1 9-3 4.800 4.800 0 0 1 9 3c-2 4.600-9 9-9 9Z'),
+  dove: st('M4 18c4 0 7-2 8-6l2-6 3 1-1 3 4 1-4 3c-1 4-5 6-10 6l-2-2Z'),
+  briefcase: st('M4 8h16v11H4zM9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M4 13h16'),
+  store: st('M4 10v10h16V10M3 6l2-3h14l2 3v1.500a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0Z'),
+  gift: st('M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7C9 7 7.500 3.500 9.500 3 11 2.600 12 5 12 7Zm0 0c3 0 4.500-3.500 2.500-4-1.500-.4-2.500 2-2.500 4Z'),
+  cal: st('M4 6h16v14H4zM4 10h16M8 3v4M16 3v4'),
+  card: st('M3 6h18v12H3zM3 10h18M7 15h3'),
+  wallet: st('M4 7h15a1 1 0 0 1 1 1v11H5a1 1 0 0 1-1-1V7Zm0 0 12-3v3M16 13h.01'),
+  mobile: st('M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 15h2'),
+  send: st('M4 12 20 4l-4 16-4-6-8-2Zm8 2 8-10'),
+  doc: st('M6 3h8l4 4v14H6V3Zm8 0v4h4M9 12h6M9 16h6'),
+  download: st('M12 4v11m0 0-4-4m4 4 4-4M5 20h14'),
+  calc: st('M6 3h12v18H6zM9 7h6M9 11h.01M12 11h.01M15 11h.01M9 14h.01M12 14h.01M15 14h.01M9 17h.01M12 17h.01M15 17h.01'),
+  percent: st('M19 5 5 19M7 8.500a1.500 1.500 0 1 0 0-3 1.500 1.500 0 0 0 0 3Zm10 10a1.500 1.500 0 1 0 0-3 1.500 1.500 0 0 0 0 3Z'),
+  info: st('M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-5v-4m0-4h.01'),
+  alert: st('M12 9v4m0 4h.01M10.300 3.900 2.400 18a2 2 0 0 0 1.700 3h15.800a2 2 0 0 0 1.700-3L13.700 3.900a2 2 0 0 0-3.400 0Z'),
+  lock: st('M6 11h12v10H6zM8 11V7a4 4 0 0 1 8 0v4'),
+  image: st('M4 5h16v14H4zM4 15l4-4 5 5 3-3 4 4M15 9h.01'),
+  news: st('M5 5h12v14H6a1 1 0 0 1-1-1V5Zm12 4h2v9a1 1 0 0 1-2 0M8 9h6M8 12h6M8 15h4'),
+  building: st('M4 21V8l8-5 8 5v13M4 21h16M8 21v-6h8v6M9 11h.01M15 11h.01'),
+  scale: st('M12 4v16M5 20h14M6 8l-3 6a3 3 0 0 0 6 0L6 8Zm12 0-3 6a3 3 0 0 0 6 0l-3-6ZM6 8h12M12 4l-2 2h4l-2-2'),
+  play: S('<path d="M8 5.500v13l10.500-6.500Z" fill="currentColor"/>'),
+  apple: S('<path fill="currentColor" d="M16.400 12.700c0-2.400 2-3.500 2-3.600-1.100-1.600-2.800-1.800-3.400-1.800-1.400-.2-2.800.8-3.500.8-.7 0-1.800-.8-3-.8-1.600 0-3 .9-3.800 2.300-1.600 2.800-.4 7 1.200 9.300.8 1.100 1.700 2.400 2.900 2.300 1.200 0 1.600-.7 3-.7s1.800.7 3 .7c1.300 0 2-1.100 2.800-2.300.9-1.300 1.200-2.500 1.300-2.600-.1 0-2.500-.9-2.500-3.600ZM14.100 5.600c.6-.8 1.100-1.900 1-3-.9 0-2.100.6-2.700 1.400-.6.700-1.100 1.800-1 2.900 1 .1 2.100-.5 2.700-1.300Z"/>'),
+  gplay: S('<path fill="currentColor" d="M4 3.300v17.400c0 .4.400.6.700.4L14 12 4.700 2.900c-.3-.2-.7 0-.7.4Zm11 9.700 2.700 2.700-11 6.300L15 13Zm0-2L6.700 2l11 6.300L15 11Zm5.500 2.100c.6-.4.600-1.300 0-1.700l-2.200-1.300L15.500 12l2.800 2.800 2.200-1.300Z"/>'),
+  fb: st('M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z', 1.900),
+  x: st('M4 4l16 16M20 4 4 20', 2),
+  li: st('M4 9h4v11H4zM6 6.500a1.500 1.500 0 1 0 0-3 1.500 1.500 0 0 0 0 3ZM11 9h4v1.600c.6-1 1.800-1.800 3.400-1.800 2.200 0 3.600 1.400 3.600 4.200V20h-4v-6c0-1.400-.6-2-1.700-2-1.200 0-1.800.8-1.800 2.200V20h-4V9Z', 1.600),
+}

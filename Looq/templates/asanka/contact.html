@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find us | Asanka</title>
+  <meta name="description" content="Asanka, 18 Akwaaba Lane, off Oxford Street, Osu, Accra. Opening hours, phone, WhatsApp and directions.">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/big-shoulders-display-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/onest-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="wrap relative">
+      <div class="bar">
+        <a href="./" class="logo" aria-label="Asanka home"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="24" fill="#c8401c"/><path d="M9 23h30a15 13 0 0 1-30 0Z" fill="#f7eedc"/><path d="M13.500 26.500c3 5 18 5 21 0M16 31c3 2.600 13 2.600 16 0" fill="none" stroke="#c8401c" stroke-width="1.600" stroke-linecap="round"/><rect x="26.500" y="8" width="5" height="18" rx="2.500" transform="rotate(28 29 17)" fill="#f2b134"/><path d="M15 18c-1.600-2 1.600-3.500 0-5.500M20 17.500c-1.600-2 1.600-3.500 0-5.500" fill="none" stroke="#f7eedc" stroke-width="1.800" stroke-linecap="round"/></svg><span>Asanka</span></a>
+        <nav class="hidden lg:block" aria-label="Main"><ul class="flex items-center"><li><a class="nav-item" href="menu">Menu</a></li><li><a class="nav-item" href="recipes">Recipes</a></li><li><a class="nav-item" href="pantry">Pantry</a></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false" data-current>Visit<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="dropdown"><ul><li><a href="book">Book a table</a></li><li><a href="classes">Classes & suppers</a></li><li><a href="catering">Catering</a></li><li><a href="gift-cards">Gift cards</a></li><li><a href="contact">Find us</a></li></ul></div></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">Our story<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="dropdown"><ul><li><a href="about">About Asanka</a></li><li><a href="food-guide">Ghanaian food guide</a></li><li><a href="careers">Careers</a></li><li><a href="faq">Questions</a></li></ul></div></li></ul></nav>
+        <div class="flex items-center gap-2">
+          <p class="open-pill hidden xl:inline-flex" data-open-status><i></i><span>Open daily from 07:00</span></p>
+          <button type="button" class="round-btn" data-open-search aria-label="Search the site"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m20 20-4.200-4.200M17 10.500a6.500 6.500 0 1 1-13 0 6.500 6.500 0 0 1 13 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="round-btn" data-open-cart aria-label="Open your order"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6.500a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="cart-count" data-cart-count hidden>0</span></button>
+          <a href="menu" class="btn btn-palm btn-sm hidden sm:inline-flex"><span>Order now</span></a>
+          <button type="button" class="round-btn lg:hidden" data-menu-button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="burger"><i></i><i></i></span></button>
+        </div>
+      </div>
+      <div class="mobile-panel lg:hidden" id="mobile-menu">
+        <nav aria-label="Mobile">
+          <ul><li><a class="m-link" href="menu"><span class="m-num">01</span>Menu</a></li><li><a class="m-link" href="recipes"><span class="m-num">02</span>Recipes</a></li><li><a class="m-link" href="pantry"><span class="m-num">03</span>Pantry</a></li><li class="m-group"><p class="m-label">Visit</p><ul class="grid grid-cols-2 gap-x-4"><li><a class="m-sub" href="book">Book a table</a></li><li><a class="m-sub" href="classes">Classes & suppers</a></li><li><a class="m-sub" href="catering">Catering</a></li><li><a class="m-sub" href="gift-cards">Gift cards</a></li><li><a class="m-sub" href="contact">Find us</a></li></ul></li><li class="m-group"><p class="m-label">Our story</p><ul class="grid grid-cols-2 gap-x-4"><li><a class="m-sub" href="about">About Asanka</a></li><li><a class="m-sub" href="food-guide">Ghanaian food guide</a></li><li><a class="m-sub" href="careers">Careers</a></li><li><a class="m-sub" href="faq">Questions</a></li></ul></li></ul>
+          <div class="mt-5 grid grid-cols-2 gap-2"><a href="menu" class="btn btn-palm btn-sm"><span>Order now</span></a><a href="book" class="btn btn-line btn-sm"><span>Book a table</span></a></div>
+          <p class="open-pill mt-4" data-open-status><i></i><span>Open daily from 07:00</span></p>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+<section class="on-dark page-hero">
+  <div class="wrap relative grid items-center gap-10 ">
+    <div class="relative z-[2]">
+      <nav aria-label="Breadcrumb" class="hero-line text-[.94rem] text-cream/70"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-gold" href="./">Home</a></li><li aria-hidden="true">/</li><li><span aria-current="page">Find us</span></li></ol></nav>
+      <p class="eyebrow hero-line mt-6" style="--i:1">Osu, Accra</p>
+      <h1 class="d-xl hero-line mt-4" style="--i:1">Find us</h1>
+      <p class="lede hero-line mt-6 max-w-[58ch] text-cream/80" style="--i:2">Down the side road off Oxford Street, look for the green gate and follow the smell of light soup.</p>
+      
+    </div>
+    
+  </div>
+  <div class="kente absolute inset-x-0 bottom-0" aria-hidden="true"></div>
+</section>
+<section class="sec"><div class="wrap grid gap-10 lg:grid-cols-[1.1fr_1fr]">
+  <div class="grid gap-6">
+    <div class="bowl-soft overflow-hidden" data-reveal><svg viewBox="0 0 600 420" class="map-art" role="img" aria-label="Sketch map: Asanka is on Akwaaba Lane, a side road off Oxford Street in Osu, near the Danquah Circle end"><rect width="600" height="420" fill="#efe0c4"/><g stroke="#fffaf0" stroke-linecap="round" fill="none"><path d="M60-10 120 430" stroke-width="26"/><path d="M-10 120 610 170" stroke-width="18"/><path d="M-10 330 610 300" stroke-width="14"/><path d="M300 160 330 430" stroke-width="12"/><path d="M450 170 470 430" stroke-width="10"/></g><path d="M300 160 330 430" stroke="#c8401c" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/><g font-family="Onest, sans-serif" font-size="15" font-weight="700" fill="#6b5648"><text x="132" y="60" transform="rotate(84 132 60)">Oxford Street</text><text x="380" y="150" transform="rotate(5 380 150)">Ring Road East</text><text x="350" y="330">Akwaaba Lane</text><text x="40" y="404">Danquah Circle ↓</text></g><g transform="translate(316 238)"><circle r="34" fill="#c8401c" opacity=".18" class="map-pulse"/><path d="M0 18s-18-15-18-28a18 18 0 0 1 36 0c0 13-18 28-18 28Z" fill="#c8401c"/><circle cy="-10" r="7" fill="#fffaf0"/></g></svg></div>
+    <div class="grid gap-4 sm:grid-cols-2"><div class="panel !p-5" data-reveal style="--d:0ms"><span class="block size-6 text-palm"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.200-7-11.500a7 7 0 0 1 14 0C19 14.800 12 21 12 21Zm0-9a2.500 2.500 0 1 0 0-5 2.500 2.500 0 0 0 0 5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="mt-3 font-bold">Address</p><p class="mt-1">18 Akwaaba Lane, off Oxford Street, Osu, Accra<br><span class="text-muted">GhanaPost GA-018-0000</span></p></div><div class="panel !p-5" data-reveal style="--d:60ms"><span class="block size-6 text-palm"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="mt-3 font-bold">Call</p><p class="mt-1"><a class="underline decoration-gold decoration-2 underline-offset-4" href="tel:+233300000000">+233 30 000 0000</a></p></div><div class="panel !p-5" data-reveal style="--d:120ms"><span class="block size-6 text-palm"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1.200-4A8 8 0 1 1 8 18.800L4 20Zm5-11c0 3.500 2.500 6 6 6l1-1.800-2-1-1 1c-1-.4-2-1.400-2.300-2.300l1-1-1-2L9 9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="mt-3 font-bold">WhatsApp</p><p class="mt-1"><a class="underline decoration-gold decoration-2 underline-offset-4" href="https://wa.me/233200000000">+233 20 000 0000</a></p></div><div class="panel !p-5" data-reveal style="--d:180ms"><span class="block size-6 text-palm"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p class="mt-3 font-bold">Email</p><p class="mt-1"><a class="underline decoration-gold decoration-2 underline-offset-4" href="mailto:hello@asanka.example">hello@asanka.example</a></p></div></div>
+  </div>
+  <div class="grid gap-6 self-start">
+    <div class="panel"><div class="flex flex-wrap items-center justify-between gap-3"><h2 class="d-sm">Opening hours</h2><p class="open-pill" data-open-status><i></i><span>Open daily from 07:00</span></p></div><ul class="hours mt-4 hours-light" data-hours><li data-day="1"><span>Monday</span><span>07:00 to 22:00</span></li><li data-day="2"><span>Tuesday</span><span>07:00 to 22:00</span></li><li data-day="3"><span>Wednesday</span><span>07:00 to 22:00</span></li><li data-day="4"><span>Thursday</span><span>07:00 to 22:00</span></li><li data-day="5"><span>Friday</span><span>07:00 to 23:00</span></li><li data-day="6"><span>Saturday</span><span>07:00 to 23:00</span></li><li data-day="0"><span>Sunday</span><span>12:00 to 21:00</span></li></ul></div>
+    <form class="panel grid gap-4" data-form="validate" novalidate>
+      <h2 class="d-sm">Send a message</h2>
+      <label class="field"><span>Name</span><input class="input" name="name" required autocomplete="name"></label>
+      <label class="field"><span>Email</span><input class="input" name="email" type="email" required autocomplete="email"></label>
+      <label class="field"><span>About</span><select class="input" name="topic" data-topic><option value="general">A question</option><option value="order">An order</option><option value="classes">Classes and private events</option><option value="press">Press</option><option value="stock">Stocking our shito</option></select></label>
+      <label class="field"><span>Message</span><textarea class="input" name="message" required></textarea></label>
+      <button class="btn btn-palm" type="submit"><span>Send</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      <p class="note" data-form-msg hidden role="status">Medaase. We reply within a day, usually much sooner.</p>
+    </form>
+  </div>
+</div></section>
+
+  </main>
+  <footer class="on-dark relative overflow-hidden bg-cocoa text-cream">
+    <div class="kente " aria-hidden="true"></div>
+    <div class="wrap pt-16 md:pt-24">
+      <div class="grid items-end gap-10 lg:grid-cols-[1.2fr_1fr]">
+        <div data-reveal><p class="d-lg">Hungry? <span class="text-gold">The pot is on.</span></p><p class="mt-4 max-w-[46ch] text-cream/75">One short email a month: the next supper, the new pot of the day, and a recipe from the kitchen.</p></div>
+        <form class="lg:justify-self-end lg:w-full lg:max-w-[460px]" data-form="reset" novalidate data-reveal>
+          <label class="sr-only" for="news-email">Email address</label>
+          <div class="field"><div class="news-field"><input id="news-email" name="email" class="input" type="email" required placeholder="you@example.com" autocomplete="email"><button class="btn btn-gold btn-sm" type="submit"><span>Sign up</span></button></div></div>
+          <p class="note mt-3" data-form-msg hidden role="status">Medaase! Thank you. Your first email comes at the start of next month.</p>
+        </form>
+      </div>
+      <div class="mt-16 grid gap-10 border-t border-cream/15 pt-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.25fr]">
+        <div>
+          <p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Find us</p>
+          <address class="mt-3 not-italic text-cream/85">18 Akwaaba Lane, off Oxford Street<br>Osu, Accra, Ghana<br><span class="text-cream/60">GhanaPost GA-018-0000</span></address>
+          <p class="mt-4 grid gap-1"><a class="foot-link" href="tel:+233300000000">+233 30 000 0000</a><a class="foot-link" href="mailto:hello@asanka.example">hello@asanka.example</a></p>
+          <ul class="mt-5 flex gap-2"><li><a class="social" href="https://instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM12 15.500a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7ZM17 7h.01" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://tiktok.com" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3v11.500a3.500 3.500 0 1 1-3.500-3.500M14 3c.5 2.800 2.300 4.500 5 4.700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://wa.me/233200000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1.200-4A8 8 0 1 1 8 18.800L4 20Zm5-11c0 3.500 2.500 6 6 6l1-1.800-2-1-1 1c-1-.4-2-1.400-2.300-2.300l1-1-1-2L9 9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ul>
+        </div>
+        <div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Eat</p><ul class="mt-3 grid gap-1"><li><a class="foot-link" href="menu">Menu</a></li><li><a class="foot-link" href="menu">Order for pickup</a></li><li><a class="foot-link" href="pantry">Pantry</a></li><li><a class="foot-link" href="gift-cards">Gift cards</a></li></ul></div><div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Visit</p><ul class="mt-3 grid gap-1"><li><a class="foot-link" href="book">Book a table</a></li><li><a class="foot-link" href="classes">Classes & suppers</a></li><li><a class="foot-link" href="catering">Catering</a></li><li><a class="foot-link" href="contact">Contact</a></li></ul></div>
+        <div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Opening hours</p><ul class="hours mt-3" data-hours><li data-day="1"><span>Monday</span><span>07:00 to 22:00</span></li><li data-day="2"><span>Tuesday</span><span>07:00 to 22:00</span></li><li data-day="3"><span>Wednesday</span><span>07:00 to 22:00</span></li><li data-day="4"><span>Thursday</span><span>07:00 to 22:00</span></li><li data-day="5"><span>Friday</span><span>07:00 to 23:00</span></li><li data-day="6"><span>Saturday</span><span>07:00 to 23:00</span></li><li data-day="0"><span>Sunday</span><span>12:00 to 21:00</span></li></ul><p class="mt-3 text-[.9rem] text-cream/60">Accra time. The kitchen closes 30 minutes earlier.</p></div>
+      </div>
+      <div class="foot-word" aria-hidden="true"><span>Asanka</span><span class="foot-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="5"><circle cx="32" cy="32" r="28"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="8"/></g></svg></span></div>
+      <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-cream/15 py-6 text-[.92rem] text-cream/65">
+        <p>© 2026 Asanka Kitchen. Pounded in Osu.</p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1"><a class="foot-link" href="about">About</a><a class="foot-link" href="faq">Questions</a><a class="foot-link" href="careers">Careers</a><a class="foot-link" href="credits">Photo credits</a><a class="foot-link" href="privacy">Privacy</a><a class="foot-link" href="terms">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+  <div class="order-bar" data-order-bar><a href="menu" class="btn btn-palm w-full"><span>Order for pickup or delivery</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6.500a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+  <div class="scrim" data-search-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-box">
+      <div class="flex items-center gap-2"><label class="sr-only" for="site-search">Search the site</label><input id="site-search" class="input flex-1" type="search" placeholder="Search dishes, recipes, the food guide..." data-search-input autocomplete="off"><button type="button" class="round-btn" data-close-layer aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      <div class="mt-3" data-search-results aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="scrim" data-cart-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your order">
+    <div class="drawer">
+      <div class="flex items-center justify-between gap-4 border-b border-line p-5"><h2 class="d-sm">Your order</h2><button type="button" class="round-btn" data-close-layer aria-label="Close your order"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      <div class="flex-1 overflow-y-auto px-5" data-cart-lines></div>
+      <div class="border-t border-line p-5" data-cart-actions hidden>
+        <div data-cart-totals></div>
+        <a class="btn btn-palm mt-4 w-full" href="order"><span>Go to checkout</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

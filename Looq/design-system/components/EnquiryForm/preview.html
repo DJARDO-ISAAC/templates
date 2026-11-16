@@ -1,0 +1,25 @@
+<!-- @dsCard group="Forms" height=760 subtitle="data-form · .form-grid · .field · .choices · .check · .hp · success" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Preview</title></head>
+<body>
+<div class="pv" style="max-width:720px"><div class="form-card">
+  <form data-form novalidate>
+    <input type="hidden" name="source_page" value="home">
+    <div class="hp" aria-hidden="true"><label for="f-website">Leave empty</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+    <div class="form-grid">
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" class="input" name="name" autocomplete="name" required><p class="err" id="f-name-error" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v5m0 3.5v.5M12 3l9.5 17h-19L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Please tell us your name.</p></div>
+      <div class="field"><label for="f-phone">Phone or WhatsApp</label><input id="f-phone" class="input" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="024 000 0000" required><p class="err" id="f-phone-error" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v5m0 3.5v.5M12 3l9.5 17h-19L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enter a number we can reach you on.</p></div>
+      <div class="field"><label for="f-email">Email <span class="opt">optional</span></label><input id="f-email" class="input" name="email" type="email" autocomplete="email"><p class="err" id="f-email-error" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v5m0 3.5v.5M12 3l9.5 17h-19L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Enter an email like name@business.com.</p></div>
+      <div class="field"><label for="f-service">What do you need?</label><select id="f-service" class="input" name="service" required data-service-select><option value="">Choose one</option><option value="registration">Registration</option><option value="business-plan">Business plan</option><option value="not-sure">I’m not sure yet</option></select><p class="err" id="f-service-error" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8v5m0 3.5v.5M12 3l9.5 17h-19L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Choose an option. “Not sure” is fine.</p></div>
+      <div class="field full"><label for="f-msg">Tell us more <span class="opt">optional</span></label><textarea id="f-msg" class="input" name="message" rows="3"></textarea></div>
+      <fieldset class="field full"><legend>How should we reply?</legend><div class="choices"><label class="choice"><input type="radio" name="reply" value="whatsapp" checked><span>WhatsApp</span></label><label class="choice"><input type="radio" name="reply" value="phone"><span>Phone call</span></label><label class="choice"><input type="radio" name="reply" value="email"><span>Email</span></label></div></fieldset>
+      <label class="check full"><input type="checkbox" name="updates" value="yes"><span>Send me occasional updates. You can stop them at any time.</span></label>
+    </div>
+    <div class="form-foot"><button class="btn btn-brand" type="submit">Request a free consultation</button><p class="hint">We only use your details to reply. <button type="button" class="text-link" data-open-dialog="privacy">Privacy notice</button></p></div>
+    <p class="form-msg" data-form-msg role="alert" hidden>Please check the highlighted fields.</p>
+  </form>
+  <div class="form-success" data-form-success hidden tabindex="-1"><span class="success-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="d-sm">Thank you<span data-success-name></span>. We’ve got your message.</h3><p>We’ll reply within one working day. Urgent? Call or WhatsApp <a class="text-link" href="tel:+233245550187">024 555 0187</a>.</p></div>
+</div></div>
+</body>
+</html>

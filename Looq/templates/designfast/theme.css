@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #000000;
+  --color-surface: #0f0f0f;
+  --color-surface-hi: #141414;
+  --color-raised: #1f1f1f;
+  --color-raised-hi: #2a2a2a;
+  --color-chip: #202020;
+  --color-line: rgb(255 255 255 / 0.07);
+  --color-ink: #ffffff;
+  --color-soft: #b4b4b4;
+  --color-muted: #959595;
+  --color-faint: #5c5c5c;
+  --color-brand: #0f7fcb;
+  --color-brand-deep: #0868ad;
+  --color-navy: #121a24;
+  --color-navy-deep: #0e1218;
+  --color-live: #1fb141;
+  --color-star: #ffcc4a;
+  --color-pie-green: #8fd12b;
+  --color-pie-orange: #f6a314;
+  --color-pie-blue: #2f7cf0;
+  --color-silver: #8c8c8c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Silver gradient headline text */
+  .silver-heading {
+    background: linear-gradient(180deg, var(--color-ink) 0%, #d6d6d6 40%, var(--color-silver) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-brand {
+    background: linear-gradient(180deg, var(--color-brand) 0%, var(--color-brand-deep) 100%);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
+    transition: filter 0.2s ease;
+  }
+  .btn-brand:hover {
+    filter: brightness(1.12);
+  }
+
+  .surface {
+    background: linear-gradient(180deg, var(--color-surface-hi) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-line);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.04);
+  }
+  .surface-navy {
+    background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-deep) 100%);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05);
+  }
+
+  /* Round icon medallion */
+  .medallion {
+    background: radial-gradient(circle at 50% 30%, #1c1c1c 0%, #0c0c0c 70%);
+    border: 1px solid var(--color-line);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 10px 30px rgb(0 0 0 / 0.6);
+  }
+
+  /* Perspective grid floor behind the hero and CTA */
+  .grid-floor {
+    position: absolute;
+    inset: 0 -50%;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 90px 90px;
+    background-position: center bottom;
+    transform: perspective(420px) rotateX(62deg);
+    transform-origin: center bottom;
+    -webkit-mask-image: radial-gradient(ellipse 45% 70% at 50% 100%, #000 10%, transparent 75%);
+    mask-image: radial-gradient(ellipse 45% 70% at 50% 100%, #000 10%, transparent 75%);
+  }
+  .floor-glow {
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    width: 70%;
+    height: 80%;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse at center bottom, rgb(255 255 255 / 0.09), transparent 65%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+    mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  }
+
+  /* Horizontal fade on marquee edges */
+  .fade-x {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  }
+
+  /* Marquee: main.js duplicates the children, the track slides by half its width */
+  .marquee-track {
+    --gap: 30px;
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+  }
+  .marquee-track.is-running {
+    animation: marquee var(--speed, 40s) linear infinite;
+  }
+  .marquee-track.is-running[data-direction="reverse"] {
+    animation-direction: reverse;
+  }
+
+  .bar {
+    background: linear-gradient(180deg, #0b74bd 0%, #064e82 55%, rgb(6 40 70 / 0) 100%);
+  }
+  .pie {
+    background: conic-gradient(var(--color-pie-green) 0 25%, var(--color-pie-orange) 25% 37%, var(--color-pie-blue) 37% 100%);
+    box-shadow: inset 0 -6px 12px rgb(0 0 0 / 0.35), inset 0 6px 10px rgb(255 255 255 / 0.35), 0 12px 24px rgb(0 0 0 / 0.6);
+  }
+
+  /* Scroll reveal: main.js adds .reveal-pending only to elements below the fold */
+  [data-reveal] {
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.9s ease;
+  }
+  .reveal-pending {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+  }
+
+  /* FAQ accordion */
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+  }
+  [data-open] > .faq-panel {
+    grid-template-rows: 1fr;
+    margin-top: -10px;
+    opacity: 1;
+  }
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  [data-open] .faq-icon {
+    transform: rotate(90deg);
+  }
+
+  /* Testimonial slides stacked in one grid cell */
+  .slide {
+    grid-area: 1 / 1;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s;
+  }
+  .slide:not([data-active]) {
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal],
+  .faq-panel,
+  .faq-icon,
+  .slide,
+  .btn-brand {
+    transition: none !important;
+  }
+}

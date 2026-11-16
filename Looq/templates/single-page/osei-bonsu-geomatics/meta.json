@@ -1,0 +1,23 @@
+{
+  "slug": "single-page/osei-bonsu-geomatics",
+  "name": "Osei-Bonsu Geomatics",
+  "industry": "land-surveying",
+  "type": "landing-page",
+  "pages": ["index.html"],
+  "tags": [
+    "one-page",
+    "surveying",
+    "land",
+    "ghana",
+    "editorial",
+    "dark",
+    "cream",
+    "brass",
+    "serif",
+    "marquee",
+    "dialog",
+    "form"
+  ],
+  "description": "Editorial one-page site for a licensed Ghanaian land surveyor: deep forest green and cream with brass accents, a framed portrait, three capability columns, a client marquee, eight illustrated sector tiles, plan thumbnails, credentials, a validated enquiry form and native dialogs.",
+  "tailwindVersion": "4.x"
+}

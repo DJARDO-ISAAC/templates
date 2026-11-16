@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thres. Heart-rate training club</title>
+  <meta name="description" content="Every day at Thres has a heart-rate zone and a class built for it. Open a day, see the session, and book your place.">
+  <link rel="preload" href="./assets/fonts/switzer-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip bg-canvas font-sans text-[15.5px] leading-[1.45] text-body antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-[18px] pt-[18px]">
+    <div class="flex items-start justify-between gap-3">
+      <a href="./" class="flex h-[56px] items-center gap-[10px] rounded-full bg-card px-5 text-[22px] font-medium tracking-[-0.03em] text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)]" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+      <nav class="absolute left-1/2 hidden h-[56px] -translate-x-1/2 items-center rounded-full bg-card px-6 shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:flex" aria-label="Main">
+        <ul class="flex items-center gap-[34px] text-[16px] tracking-[-0.01em] text-ink">
+          <li><a href="timetable" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Timetable</a></li>
+          <li><a href="classes" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Classes</a></li>
+          <li><a href="coaches" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Coaches</a></li>
+          <li><a href="membership" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Membership</a></li>
+          <li><a href="journal" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Journal</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="./#book" class="flex h-[56px] items-center gap-[14px] rounded-full bg-ink pr-[6px] pl-5 text-[15px] font-medium text-white max-sm:hidden">First class free<span class="grid size-[42px] place-items-center rounded-full bg-live text-ink"><svg class="size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 10 4M5 4h5v5" /></svg></span></a>
+        <button type="button" class="grid size-[56px] place-items-center rounded-full bg-card text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:hidden" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+          <span class="sr-only">Open menu</span>
+          <svg class="size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-open><path d="M3 7h14M3 13h14" /></svg>
+          <svg class="hidden size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-close><path d="M5 5l10 10M15 5 5 15" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="mt-2 hidden rounded-[26px] bg-card p-3 shadow-[0_16px_40px_rgb(13_13_14/0.12)] lg:hidden" aria-label="Mobile">
+      <ul class="flex flex-col text-[18px] tracking-[-0.02em] text-ink">
+        <li><a href="timetable" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Timetable</a></li>
+        <li><a href="classes" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Classes</a></li>
+        <li><a href="coaches" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Coaches</a></li>
+        <li><a href="membership" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Membership</a></li>
+        <li><a href="journal" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Journal</a></li>
+        <li class="pt-2"><a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 w-full">First class free</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-[110px] lg:pt-[140px]">
+    <!-- Hero -->
+    <section aria-labelledby="hero-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-8 lg:grid-cols-[1fr_330px] lg:gap-16">
+        <div>
+          <p class="inline-flex h-[30px] items-center gap-2 rounded-full bg-card px-3 text-[14px] text-body"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-today-zone>Thursday is a Zone 1 day</span></p>
+          <h1 id="hero-title" class="mt-5 text-ink text-[44px] leading-[1] font-medium tracking-[-0.06em] sm:text-[60px] lg:text-[76px]">Train by heart,<br><span class="text-faint">not by guesswork.</span></h1>
+        </div>
+        <div>
+          <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Every day at Thres has a heart-rate zone and a class built for it. Open a day, see the session, and book your place.</p>
+          <div class="mt-7 flex flex-wrap gap-2">
+            <a href="#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-ink px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-night-2 h-[50px] px-6">Book a first class</a>
+            <a href="#zones" class="inline-flex h-[42px] items-center justify-center rounded-full border border-ink/15 px-5 text-[14.5px] font-medium text-ink transition-colors hover:bg-card h-[50px] px-6">How zones work</a>
+          </div>
+        </div>
+      </div>
+      <div class="px-[18px] mt-10 lg:mt-[44px]">
+        <ul class="week" aria-label="This week's classes" data-week>
+          <li class="day" data-day="0" data-zone="3">
+            <img src="./assets/images/class-strength.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="eager">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Monday: Strength circuit, Zone 3, 07:00" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Mon</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 3</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Strength circuit</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">07:00</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Monday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 3 <span class="text-white/50">·</span> Tempo</p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Strength circuit</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">07:00 <span class="text-white/50">·</span> 45 minutes <span class="text-white/50">·</span> with Mara Oyelaran</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="3">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-strength-circuit" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-day="1" data-zone="2">
+            <img src="./assets/images/class-engine.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="eager">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Tuesday: Engine: row and ride, Zone 2, 18:30" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Tue</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 2</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Engine: row and ride</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">18:30</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Tuesday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 2 <span class="text-white/50">·</span> Base</p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Engine: row and ride</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">18:30 <span class="text-white/50">·</span> 45 minutes <span class="text-white/50">·</span> with Tomas Brandt</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="2">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-engine-row-and-ride" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-day="2" data-zone="4">
+            <img src="./assets/images/class-thres.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="eager">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Wednesday: Thres intervals, Zone 4, 18:30" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Wed</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 4</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Thres intervals</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">18:30</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Wednesday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 4 <span class="text-white/50">·</span> Thres <span class="text-white/50">·</span> <span class="text-live">4 places left</span></p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Thres intervals</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">18:30 <span class="text-white/50">·</span> 45 minutes <span class="text-white/50">·</span> with Mara Oyelaran</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="4">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-thres-intervals" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-day="3" data-zone="1">
+            <img src="./assets/images/class-mobility.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="eager">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Thursday: Mobility and breath, Zone 1, 12:15" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Thu</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 1</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Mobility and breath</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">12:15</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Thursday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 1 <span class="text-white/50">·</span> Recover</p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Mobility and breath</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">12:15 <span class="text-white/50">·</span> 40 minutes <span class="text-white/50">·</span> with Ines Varga</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="1">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-mobility-and-breath" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-day="4" data-zone="5">
+            <img src="./assets/images/class-max.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="lazy">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Friday: Max: bag and sled, Zone 5, 06:30" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Fri</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 5</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Max: bag and sled</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">06:30</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Friday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 5 <span class="text-white/50">·</span> Max</p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Max: bag and sled</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">06:30 <span class="text-white/50">·</span> 30 minutes <span class="text-white/50">·</span> with Tomas Brandt</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="5">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-max-bag-and-sled" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-day="5" data-zone="2">
+            <img src="./assets/images/class-run.webp" alt="" width="540" height="450" class="day-photo photo absolute inset-0 size-full object-cover opacity-80" loading="lazy">
+            <span class="day-shade pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/40" aria-hidden="true"></span>
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Saturday: Long run club, Zone 2, 09:00" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Sat</span>
+              <span class="mt-[2px] text-[12.5px] whitespace-nowrap text-white/70 max-sm:text-[11px]">Zone 2</span>
+              <span class="day-title mt-auto text-[16px] font-medium tracking-[-0.01em]">Long run club</span>
+              <span class="day-time mt-5 text-[13.5px] text-white/85">09:00</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-3">
+                <p class="inline-flex h-[36px] items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span><span data-day-label>Saturday</span></p>
+                <div class="flex gap-2">
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Previous day" data-day-prev><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: scaleX(-1)"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                  <button type="button" class="grid size-[36px] place-items-center rounded-full border border-white/25 bg-white/10 backdrop-blur transition-colors hover:bg-white/25" aria-label="Next day" data-day-next><svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg></button>
+                </div>
+              </div>
+              <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p class="text-[14.5px] text-white/85">Zone 2 <span class="text-white/50">·</span> Base</p>
+                  <h3 class="mt-2 text-[30px] leading-[1.05] font-medium tracking-[-0.05em] sm:text-[40px]">Long run club</h3>
+                  <p class="mt-3 text-[14.5px] text-white/85">09:00 <span class="text-white/50">·</span> 70 minutes <span class="text-white/50">·</span> with Ines Varga</p>
+                </div>
+                <div class="shrink-0 sm:text-right">
+                  <p class="text-[13.5px] text-white/70">Target heart rate</p>
+                  <p class="mt-1"><span class="text-[48px] leading-none font-medium tracking-[-0.05em]" data-target-hr="2">—</span> <span class="text-[14.5px] text-white/70">bpm</span></p>
+                  <a href="class-long-run-club" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-3">Book this class</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="day" data-rest data-day="6">
+            <button type="button" class="day-shut absolute inset-0 flex flex-col items-center px-2 pt-[22px] pb-[22px] text-center" aria-label="Sunday, rest day" aria-expanded="false" data-day-toggle>
+              <span class="text-[16px] font-medium">Sun</span>
+              <span class="day-title mt-auto text-[16px] text-muted">Rest. You earned it.</span>
+            </button>
+            <div class="day-body absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
+              <p class="text-[14.5px] text-muted">Sunday</p>
+              <div>
+                <p class="text-[40px] leading-[1] font-medium tracking-[-0.05em] sm:text-[56px]">Rest. You earned it.</p>
+                <p class="mt-4 text-[15.5px] text-body">The floor opens again at 06:00 on Monday. Next class: Engine: row and ride.</p>
+                <a href="class-engine-row-and-ride" class="inline-flex h-[42px] items-center justify-center rounded-full bg-ink px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-night-2 mt-6">See Monday's class</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About the studio -->
+    <section class="px-[18px] pt-[100px] lg:pt-[140px]" aria-labelledby="about-title">
+      <div class="grid gap-3 lg:grid-cols-2">
+        <div class="flex flex-col justify-between gap-16 rounded-[26px] bg-card px-6 py-8 sm:px-9 lg:min-h-[448px]" data-reveal>
+          <p class="text-[14.5px] text-muted">About the studio</p>
+          <div>
+            <h2 id="about-title" class="text-[30px] leading-[1.1] font-medium tracking-[-0.05em] text-ink sm:text-[40px]">We coach the number on the wall, <span class="text-faint">not the one on the scale.</span></h2>
+            <p class="mt-6 max-w-[430px] text-[16px] leading-[1.5] text-body">Thres opened in a tannery warehouse in 2019 with twelve chest straps and one idea: train at the right effort and the rest follows. Six years on, the straps have multiplied. The idea has not changed.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="flex flex-col justify-between gap-10 rounded-[26px] bg-card p-6 sm:p-7" data-reveal>
+            <p class="text-[64px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[76px]" data-count="26">26</p>
+            <p class="text-[15.5px] text-body">classes a week, from six in the morning</p>
+          </div>
+          <div class="flex flex-col justify-between gap-10 rounded-[26px] bg-card p-6 sm:p-7" data-reveal>
+            <p class="text-[64px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[76px]" data-count="12">12</p>
+            <p class="text-[15.5px] text-body">people in a class, at the very most</p>
+          </div>
+          <div class="col-span-2 flex flex-col justify-between gap-10 rounded-[26px] bg-live p-6 text-ink sm:p-7" data-reveal>
+            <div class="flex justify-between text-[14.5px]"><p>The room right now</p><p class="font-medium" data-room-zone>Zone 1</p></div>
+            <p class="max-w-[400px] text-[24px] leading-[1.1] font-medium tracking-[-0.04em] sm:text-[28px]">Open a day above or pick a zone below, and this follows. The wall over the training floor does the same.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The five zones -->
+    <section id="zones" class="px-[18px] scroll-mt-24 pt-[100px] lg:pt-[120px]" aria-labelledby="zones-title">
+      <div class="on-dark relative overflow-hidden rounded-[26px] bg-night text-white" data-zones>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-full opacity-60 sm:w-[64%] sm:opacity-100" aria-hidden="true">
+          <img src="./assets/images/zones.webp" alt="" width="900" height="760" loading="lazy" class="photo size-full object-cover object-[50%_30%]">
+          <span class="absolute inset-0 bg-gradient-to-r from-night via-night/40 to-night/10"></span>
+          <span class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent"></span>
+        </div>
+        <div class="relative px-6 pt-12 pb-10 sm:px-[48px] sm:pt-[56px]">
+          <p class="text-[14.5px] text-white/60">The five zones</p>
+          <h2 id="zones-title" class="mt-5 text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">One honest number.<br><span class="text-white/45">Five ways to use it.</span></h2>
+          <p class="mt-6 max-w-[440px] text-[17px] leading-[1.42] text-white/75 lg:text-[19px]">Your heart rate tells the truth about how hard you are working. We put it on the wall, read it with you, and coach you to the right zone for the day.</p>
+
+          <div class="mt-16 flex flex-col-reverse justify-between gap-10 lg:mt-[110px] lg:flex-row lg:items-end">
+            <div class="inline-flex w-fit flex-wrap items-center gap-4 rounded-full border border-white/15 bg-white/[0.06] py-2 pr-5 pl-5 text-[15.5px] backdrop-blur">
+              <span class="text-white/75">Your age</span>
+              <span class="flex items-center gap-1 rounded-full bg-card p-[5px] text-ink">
+                <button type="button" class="grid size-[26px] place-items-center rounded-full bg-canvas text-[16px] leading-none hover:bg-faint/40" aria-label="Younger by one year" data-age-down>−</button>
+                <output class="w-[34px] text-center text-[15.5px] font-medium" aria-live="polite" data-age>34</output>
+                <button type="button" class="grid size-[26px] place-items-center rounded-full bg-canvas text-[16px] leading-none hover:bg-faint/40" aria-label="Older by one year" data-age-up>+</button>
+              </span>
+              <span class="text-white/75">Max heart rate <span class="text-white" data-max>186</span> bpm</span>
+            </div>
+            <div class="lg:text-right" aria-live="polite">
+              <p><span class="text-[72px] leading-[0.85] font-normal tracking-[-0.06em] sm:text-[120px] lg:text-[136px]" data-range>93–112</span> <span class="text-[19px] text-white/60">bpm</span></p>
+              <p class="mt-4 text-[15.5px] text-white/70"><span data-zone-label>Zone 1</span> <span class="text-white/40">·</span> <span data-zone-line>easy enough to talk in full sentences</span></p>
+            </div>
+          </div>
+
+          <div class="relative mt-12 border-t border-white/20">
+            <span class="zone-fill absolute -top-px left-0 h-[3px] w-[19.6%] bg-live" aria-hidden="true" data-zone-fill></span>
+            <span class="zone-dot absolute -top-[11px] left-[10%] grid size-[22px] -translate-x-1/2 place-items-center rounded-full bg-live" aria-hidden="true" data-zone-dot><span class="size-[8px] rounded-full bg-white"></span></span>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-6 pt-6 sm:grid-cols-5" role="group" aria-label="Pick a zone">
+              <button type="button" class="zone-col text-left transition-colors hover:text-white" aria-pressed="true" data-zone-pick="1">
+                <span class="flex items-baseline justify-between gap-2"><span class="text-[17px]">Recover</span><span class="text-[13.5px] tabular-nums" data-zone-range="1"></span></span>
+                <span class="mt-1 block text-[13.5px] opacity-70">Walks, breath work, mobility</span>
+              </button>
+              <button type="button" class="zone-col text-left transition-colors hover:text-white" aria-pressed="false" data-zone-pick="2">
+                <span class="flex items-baseline justify-between gap-2"><span class="text-[17px]">Base</span><span class="text-[13.5px] tabular-nums" data-zone-range="2"></span></span>
+                <span class="mt-1 block text-[13.5px] opacity-70">Long, easy, conversational</span>
+              </button>
+              <button type="button" class="zone-col text-left transition-colors hover:text-white" aria-pressed="false" data-zone-pick="3">
+                <span class="flex items-baseline justify-between gap-2"><span class="text-[17px]">Tempo</span><span class="text-[13.5px] tabular-nums" data-zone-range="3"></span></span>
+                <span class="mt-1 block text-[13.5px] opacity-70">Steady and a little uncomfortable</span>
+              </button>
+              <button type="button" class="zone-col text-left transition-colors hover:text-white" aria-pressed="false" data-zone-pick="4">
+                <span class="flex items-baseline justify-between gap-2"><span class="text-[17px]">Thres</span><span class="text-[13.5px] tabular-nums" data-zone-range="4"></span></span>
+                <span class="mt-1 block text-[13.5px] opacity-70">Hard, but you can hold it</span>
+              </button>
+              <button type="button" class="zone-col text-left transition-colors hover:text-white" aria-pressed="false" data-zone-pick="5">
+                <span class="flex items-baseline justify-between gap-2"><span class="text-[17px]">Max</span><span class="text-[13.5px] tabular-nums" data-zone-range="5"></span></span>
+                <span class="mt-1 block text-[13.5px] opacity-70">Short, sharp, everything</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="classes-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Classes</p>
+          <h2 id="classes-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Six classes.<br><span class="text-faint">Every one has a zone.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Easy days stay easy and hard days earn the name. Pick by how you want to feel when you walk out.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3">
+        <li data-reveal>
+          <a href="class-strength-circuit" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-strength.webp" alt="Member setting up for a barbell lift" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 3 <span class="text-faint">·</span> <span class="text-muted">Tempo</span></span><span class="text-muted">45 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Strength circuit</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Barbells, kettlebells and carries across six stations. Steady effort, clean movement, no ego.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="class-engine-row-and-ride" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-engine.webp" alt="Bikes and weights on a quiet training floor" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 2 <span class="text-faint">·</span> <span class="text-muted">Base</span></span><span class="text-muted">45 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Engine: row and ride</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Long, easy intervals on the rower and the bike. The class that makes every other class feel lighter.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="class-thres-intervals" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-thres.webp" alt="Member squatting a loaded barbell" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 4 <span class="text-faint">·</span> <span class="text-muted">Thres</span></span><span class="text-muted">45 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Thres intervals</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Three rounds held just under your limit. Hard to love, impossible to argue with.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="class-mobility-and-breath" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-mobility.webp" alt="Member stretching on a mat" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 1 <span class="text-faint">·</span> <span class="text-muted">Recover</span></span><span class="text-muted">40 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Mobility and breath</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Slow stretching, breath work and time on the floor. Your heart rate drops, and so do your shoulders.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="class-max-bag-and-sled" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-max.webp" alt="Two members boxing on pads" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 5 <span class="text-faint">·</span> <span class="text-muted">Max</span></span><span class="text-muted">30 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Max: bag and sled</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Short, loud and over quickly. Sprints, sled pushes and heavy bag rounds with full recovery between.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="class-long-run-club" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-run.webp" alt="Runners in motion against the sky" width="440" height="260" loading="lazy" class="photo h-[220px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[260px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-8">
+              <span class="flex items-center justify-between text-[13.5px]"><span class="text-ink">Zone 2 <span class="text-faint">·</span> <span class="text-muted">Base</span></span><span class="text-muted">70 min</span></span>
+              <h3 class="mt-5 text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Long run club</h3>
+              <span class="mt-3 block text-[15.5px] leading-[1.45] text-body">Eight easy kilometres along the harbour at a pace you can talk through. Coffee afterwards.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <a href="timetable" class="inline-flex h-[42px] items-center justify-center rounded-full bg-ink px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-night-2 h-[50px] px-6">See this week's timetable</a>
+        <a href="classes" class="inline-flex h-[42px] items-center justify-center rounded-full border border-ink/15 px-5 text-[14.5px] font-medium text-ink transition-colors hover:bg-card h-[50px] px-6">All classes</a>
+      </div>
+    </section>
+
+    <!-- Inside a class -->
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="inside-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Inside a class</p>
+          <h2 id="inside-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Forty-five minutes,<br><span class="text-faint">five gears.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">The clock walks round the room and the lights follow it. Whatever is on lights up, so you always know where you are and what comes next.</p>
+      </div>
+      <div class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-4 lg:grid-rows-2" data-class-clock>
+        <div class="tint relative flex min-h-[420px] flex-col justify-between overflow-hidden rounded-[26px] bg-night p-6 text-white lg:row-span-2">
+          <img src="./assets/images/inside-class.webp" alt="Members working the battle ropes" width="345" height="612" loading="lazy" class="photo absolute inset-0 size-full object-cover opacity-80">
+          <span class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" aria-hidden="true"></span>
+          <p class="relative inline-flex h-[36px] w-fit items-center gap-2 rounded-full bg-card px-3 text-[14.5px] text-ink"><span class="relative grid size-[11px] place-items-center rounded-full bg-live/25" aria-hidden="true"><span class="size-[6px] rounded-full bg-live"></span></span>On now <span class="text-faint">·</span> <span data-clock-step>Warm up</span></p>
+          <div class="relative">
+            <p class="text-[14.5px] text-white/70">Station work, three rounds</p>
+            <p class="mt-2 text-[34px] leading-[1.05] font-medium tracking-[-0.05em]">Sled, ropes, bike. Repeat.</p>
+            <p class="mt-6 text-right text-[48px] leading-none font-normal tracking-[-0.04em] tabular-nums" aria-label="Time left in class" data-clock-time>45:00</p>
+          </div>
+        </div>
+        <div class="step flex min-h-[220px] flex-col justify-between rounded-[26px] bg-card p-6" data-step>
+          <div>
+            <div class="flex justify-between text-[13.5px] text-muted"><span>01</span><span>Zone 2</span></div>
+            <div class="mt-3 flex items-baseline justify-between gap-3"><h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Warm up</h3><span class="text-[14.5px] text-muted">8 min</span></div>
+          </div>
+          <p class="mt-8 text-[15.5px] leading-[1.45] text-body">Easy rowing and openers. Your heart rate climbs into Base and stays there.</p>
+        </div>
+        <div class="step flex min-h-[220px] flex-col justify-between rounded-[26px] bg-card p-6" data-step>
+          <div>
+            <div class="flex justify-between text-[13.5px] text-muted"><span>02</span><span>Zone 3</span></div>
+            <div class="mt-3 flex items-baseline justify-between gap-3"><h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Build</h3><span class="text-[14.5px] text-muted">12 min</span></div>
+          </div>
+          <p class="mt-8 text-[15.5px] leading-[1.45] text-body">Strength sets at a steady Tempo. You could talk, but you would rather not.</p>
+        </div>
+        <div class="step flex min-h-[220px] flex-col justify-between rounded-[26px] bg-card p-6" data-step>
+          <div>
+            <div class="flex justify-between text-[13.5px] text-muted"><span>03</span><span>Zone 4</span></div>
+            <div class="mt-3 flex items-baseline justify-between gap-3"><h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Hold</h3><span class="text-[14.5px] text-muted">15 min</span></div>
+          </div>
+          <p class="mt-8 text-[15.5px] leading-[1.45] text-body">The work. Three rounds at Thres with a coach on every station.</p>
+        </div>
+        <div class="step flex min-h-[220px] flex-col justify-between rounded-[26px] bg-card p-6" data-step>
+          <div>
+            <div class="flex justify-between text-[13.5px] text-muted"><span>04</span><span>Zone 5</span></div>
+            <div class="mt-3 flex items-baseline justify-between gap-3"><h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Peak</h3><span class="text-[14.5px] text-muted">4 min</span></div>
+          </div>
+          <p class="mt-8 text-[15.5px] leading-[1.45] text-body">Four all-out efforts. Thirty seconds on, thirty seconds off.</p>
+        </div>
+        <div class="step flex min-h-[220px] flex-col justify-between rounded-[26px] bg-card p-6" data-step>
+          <div>
+            <div class="flex justify-between text-[13.5px] text-muted"><span>05</span><span>Zone 1</span></div>
+            <div class="mt-3 flex items-baseline justify-between gap-3"><h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Come down</h3><span class="text-[14.5px] text-muted">6 min</span></div>
+          </div>
+          <p class="mt-8 text-[15.5px] leading-[1.45] text-body">Walk, breathe, stretch. We watch the number fall together.</p>
+        </div>
+        <div class="on-dark flex min-h-[220px] flex-col justify-between rounded-[26px] bg-night p-6 text-white">
+          <p class="text-[14.5px] text-white/60">A whole class</p>
+          <p><span class="text-[64px] leading-none font-normal tracking-[-0.05em]">45</span> <span class="text-[16px] text-white/60">minutes</span></p>
+          <a href="#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 w-fit">Try one free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="coaches-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Coaches</p>
+          <h2 id="coaches-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Coached by people,<br><span class="text-faint">not playlists.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Four coaches, each with a zone they could talk about all day. One of them is on the floor in every class, watching the wall so you do not have to.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+        <li data-reveal>
+          <a href="coach-mara-oyelaran" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-mara.webp" alt="Portrait of Mara Oyelaran" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 4</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Mara Oyelaran</h3>
+                <span class="mt-1 block text-[14.5px] text-white/70">Head coach, strength</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Former 400 metre runner. Will notice your heart rate before you do.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-tomas-brandt" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-tomas.webp" alt="Tomas Brandt in profile" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 5</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Tomas Brandt</h3>
+                <span class="mt-1 block text-[14.5px] text-white/70">Conditioning</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Rowed for his country, now rows next to you. Counts down, never up.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-ines-varga" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-ines.webp" alt="Portrait of Ines Varga" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 1</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Ines Varga</h3>
+                <span class="mt-1 block text-[14.5px] text-white/70">Mobility and recovery</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Physiotherapist by training. Believes the easy days are where it happens.</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="coach-jonah-achebe" class="group block">
+            <span class="relative block overflow-hidden rounded-[26px] bg-night">
+              <img src="./assets/images/coach-jonah.webp" alt="Portrait of Jonah Achebe" width="345" height="420" loading="lazy" class="photo h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[420px]">
+              <span class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true"></span>
+              <span class="absolute top-[18px] left-[22px] rounded-full bg-card px-3 py-[6px] text-[13.5px] text-ink">Home zone 2</span>
+              <span class="absolute bottom-[20px] left-[22px] text-white">
+                <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em]">Jonah Achebe</h3>
+                <span class="mt-1 block text-[14.5px] text-white/70">Run club</span>
+              </span>
+            </span>
+            <span class="mt-5 block px-[6px] text-[15.5px] leading-[1.45] text-body">Marathoner, pacer, optimist. Has never once left anyone behind.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Members -->
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="members-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Members</p>
+          <h2 id="members-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Proof you <span class="text-faint">can count.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">We do not do before and after photos. We do before and after numbers, and members are welcome to keep theirs to themselves.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-2">
+        <li class="rounded-[26px] bg-card px-6 py-8 sm:px-9" data-reveal>
+          <figure>
+            <p class="text-[14.5px] text-muted">Resting heart rate</p>
+            <p class="mt-5 flex items-baseline gap-5" aria-label="From 71 to 58 bpm">
+              <span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-faint sm:text-[64px]" aria-hidden="true">71</span>
+              <svg class="size-5 self-center text-faint" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5" /></svg>
+              <span aria-hidden="true"><span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[64px]" data-count="58">58</span><span class="ml-1 text-[16px] text-muted">bpm</span></span>
+            </p>
+            <blockquote class="mt-8 text-[24px] leading-[1.15] font-medium tracking-[-0.04em] text-ink sm:text-[28px]">I stopped guessing. Six months in, my resting heart rate is lower than it was at twenty-five.</blockquote>
+            <figcaption class="mt-7 flex items-center gap-4">
+              <img src="./assets/images/member-priya.webp" alt="" width="46" height="46" loading="lazy" class="photo size-[46px] rounded-full object-cover">
+              <span class="text-[14.5px] leading-[1.45]"><span class="block font-medium text-ink">Priya Raman</span><span class="text-muted">Member since 2024</span></span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="rounded-[26px] bg-card px-6 py-8 sm:px-9" data-reveal>
+          <figure>
+            <p class="text-[14.5px] text-muted">Ten kilometre time</p>
+            <p class="mt-5 flex items-baseline gap-5" aria-label="From 58 to 49 min">
+              <span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-faint sm:text-[64px]" aria-hidden="true">58</span>
+              <svg class="size-5 self-center text-faint" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5" /></svg>
+              <span aria-hidden="true"><span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[64px]" data-count="49">49</span><span class="ml-1 text-[16px] text-muted">min</span></span>
+            </p>
+            <blockquote class="mt-8 text-[24px] leading-[1.15] font-medium tracking-[-0.04em] text-ink sm:text-[28px]">Turns out I was doing every session too hard. Slowing down is what finally made me faster.</blockquote>
+            <figcaption class="mt-7 flex items-center gap-4">
+              <img src="./assets/images/member-daniel.webp" alt="" width="46" height="46" loading="lazy" class="photo size-[46px] rounded-full object-cover">
+              <span class="text-[14.5px] leading-[1.45]"><span class="block font-medium text-ink">Daniel Okafor</span><span class="text-muted">Member since 2023</span></span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="rounded-[26px] bg-card px-6 py-8 sm:px-9" data-reveal>
+          <figure>
+            <p class="text-[14.5px] text-muted">Nights of good sleep a week</p>
+            <p class="mt-5 flex items-baseline gap-5" aria-label="From 3 to 6 nights">
+              <span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-faint sm:text-[64px]" aria-hidden="true">3</span>
+              <svg class="size-5 self-center text-faint" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5" /></svg>
+              <span aria-hidden="true"><span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[64px]" data-count="6">6</span><span class="ml-1 text-[16px] text-muted">nights</span></span>
+            </p>
+            <blockquote class="mt-8 text-[24px] leading-[1.15] font-medium tracking-[-0.04em] text-ink sm:text-[28px]">I came for the bag class and stayed for Thursdays. I sleep properly for the first time in years.</blockquote>
+            <figcaption class="mt-7 flex items-center gap-4">
+              <img src="./assets/images/member-leila.webp" alt="" width="46" height="46" loading="lazy" class="photo size-[46px] rounded-full object-cover">
+              <span class="text-[14.5px] leading-[1.45]"><span class="block font-medium text-ink">Leila Haddad</span><span class="text-muted">Member since 2025</span></span>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="rounded-[26px] bg-card px-6 py-8 sm:px-9" data-reveal>
+          <figure>
+            <p class="text-[14.5px] text-muted">Recovery after one minute</p>
+            <p class="mt-5 flex items-baseline gap-5" aria-label="From 18 to 34 bpm">
+              <span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-faint sm:text-[64px]" aria-hidden="true">18</span>
+              <svg class="size-5 self-center text-faint" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5" /></svg>
+              <span aria-hidden="true"><span class="text-[56px] leading-none font-normal tracking-[-0.05em] text-ink sm:text-[64px]" data-count="34">34</span><span class="ml-1 text-[16px] text-muted">bpm</span></span>
+            </p>
+            <blockquote class="mt-8 text-[24px] leading-[1.15] font-medium tracking-[-0.04em] text-ink sm:text-[28px]">The zones sound like a gimmick until you train with them. Now I can feel Zone 2 without looking.</blockquote>
+            <figcaption class="mt-7 flex items-center gap-4">
+              <img src="./assets/images/member-marcus.webp" alt="" width="46" height="46" loading="lazy" class="photo size-[46px] rounded-full object-cover">
+              <span class="text-[14.5px] leading-[1.45]"><span class="block font-medium text-ink">Marcus Lindqvist</span><span class="text-muted">Member since 2022</span></span>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Membership -->
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="membership-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Membership</p>
+          <h2 id="membership-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Three ways in.<br><span class="text-faint">No joining fee.</span></h2>
+        </div>
+        <p class="text-[17px] leading-[1.42] tracking-[-0.012em] text-body lg:text-[19px]">Every membership includes the strap, the ramp test and a coach who knows your numbers. Your first class is free whichever you choose.</p>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-3">
+        <li class="flex flex-col rounded-[26px] px-6 pt-8 pb-8 sm:px-8 bg-card" data-reveal>
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Drop in</h3>
+            
+          </div>
+          <p class="mt-4 min-h-[46px] text-[15.5px] leading-[1.45] text-body">For the weeks that will not sit still.</p>
+          <p class="mt-10 flex items-baseline gap-2"><span class="text-[60px] leading-none font-medium tracking-[-0.06em] text-ink">£18</span><span class="text-[14.5px] text-muted">a class</span></p>
+          <ul class="mt-8 border-t border-line text-[16px]">
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Any class, any day</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Strap and ramp test included</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Book up to seven days ahead</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>No commitment</li>
+          </ul>
+          <a href="./#book" class="mt-auto pt-14"><span class="inline-flex h-[42px] items-center justify-center rounded-full border border-ink/15 px-5 text-[14.5px] font-medium text-ink transition-colors hover:bg-card h-[50px] w-full">Book a class</span></a>
+        </li>
+        <li class="flex flex-col rounded-[26px] px-6 pt-8 pb-8 sm:px-8 on-dark bg-night text-white" data-reveal>
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-white">Three a week</h3>
+            <span class="rounded-full bg-live px-3 py-[6px] text-[13.5px] text-ink">Most members</span>
+          </div>
+          <p class="mt-4 min-h-[46px] text-[15.5px] leading-[1.45] text-white/60">One easy, one steady, one hard. The plan most people keep.</p>
+          <p class="mt-10 flex items-baseline gap-2"><span class="text-[60px] leading-none font-medium tracking-[-0.06em] text-white">£96</span><span class="text-[14.5px] text-white/60">a month</span></p>
+          <ul class="mt-8 border-t border-white/10 text-[16px]">
+            <li class="flex items-center gap-4 border-b border-white/10 text-white py-[14px]"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Twelve classes a month</li>
+            <li class="flex items-center gap-4 border-b border-white/10 text-white py-[14px]"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Zones re-tested every eight weeks</li>
+            <li class="flex items-center gap-4 border-b border-white/10 text-white py-[14px]"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Monthly check-in with your coach</li>
+            <li class="flex items-center gap-4 border-b border-white/10 text-white py-[14px]"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Pause for two months a year</li>
+          </ul>
+          <a href="./#book" class="mt-auto pt-14"><span class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 h-[50px] w-full">Start with a free class</span></a>
+        </li>
+        <li class="flex flex-col rounded-[26px] px-6 pt-8 pb-8 sm:px-8 bg-card" data-reveal>
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-[28px] leading-[1.1] font-medium tracking-[-0.04em] text-ink">Unlimited</h3>
+            
+          </div>
+          <p class="mt-4 min-h-[46px] text-[15.5px] leading-[1.45] text-body">For people who would rather be here than anywhere else.</p>
+          <p class="mt-10 flex items-baseline gap-2"><span class="text-[60px] leading-none font-medium tracking-[-0.06em] text-ink">£129</span><span class="text-[14.5px] text-muted">a month</span></p>
+          <ul class="mt-8 border-t border-line text-[16px]">
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Every class, every day</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Open floor between classes</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Bring a friend on Saturdays</li>
+            <li class="flex items-center gap-4 border-b border-line text-ink py-[14px]"><svg class="size-3 shrink-0 text-ink" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>First place on waiting lists</li>
+          </ul>
+          <a href="./#book" class="mt-auto pt-14"><span class="inline-flex h-[42px] items-center justify-center rounded-full border border-ink/15 px-5 text-[14.5px] font-medium text-ink transition-colors hover:bg-card h-[50px] w-full">Start with a free class</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="px-[18px] pt-[100px] lg:pt-[120px]" aria-labelledby="faq-title">
+      <div class="grid gap-3 lg:grid-cols-[minmax(0,560px)_1fr]">
+        <div class="flex flex-col gap-10" data-reveal>
+          <div class="px-0 sm:px-[18px]">
+            <p class="text-[14.5px] text-muted">Questions</p>
+            <h2 id="faq-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Asked often,<br><span class="text-faint">answered straight.</span></h2>
+            <p class="mt-6 max-w-[380px] text-[17px] leading-[1.42] text-body lg:text-[19px]">If yours is not here, write to us. A coach answers, usually the same day.</p>
+          </div>
+          <dl class="rounded-[26px] bg-card px-6 py-3 text-[16px] sm:px-[30px]">
+            <div class="grid grid-cols-[90px_1fr] gap-4 border-b border-line py-5 sm:grid-cols-[104px_1fr]"><dt class="text-[14.5px] text-muted">Find us</dt><dd class="text-ink">Unit 4, Tannery Wharf, Bristol BS1 6QH</dd></div>
+            <div class="grid grid-cols-[90px_1fr] gap-4 border-b border-line py-5 sm:grid-cols-[104px_1fr]"><dt class="text-[14.5px] text-muted">Open</dt><dd class="text-ink">Monday to Friday, 06:00 to 21:00. Saturday, 08:00 to 14:00.</dd></div>
+            <div class="grid grid-cols-[90px_1fr] gap-4 py-5 sm:grid-cols-[104px_1fr]"><dt class="text-[14.5px] text-muted">Write</dt><dd><a href="mailto:hello@thres.club" class="text-ink hover:underline">hello@thres.club</a></dd></div>
+          </dl>
+        </div>
+        <div class="rounded-[26px] bg-card px-6 py-2 sm:px-[34px]" data-reveal>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q1" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a1">
+                Do I need my own heart-rate monitor?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a1" class="faq-panel" role="region" aria-labelledby="faq-q1">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">No. We lend you a chest strap for every class and it pairs with the screens in the room. If you already own a strap or a watch that broadcasts heart rate, bring it.</p></div>
+            </div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q2" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a2">
+                I'm not fit yet. Will I keep up?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a2" class="faq-panel" role="region" aria-labelledby="faq-q2">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">Zones are personal. Your Zone 4 and your neighbour's Zone 4 feel the same and look completely different, which is the point. Nobody is behind.</p></div>
+            </div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q3" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a3">
+                How many classes a week should I do?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a3" class="faq-panel" role="region" aria-labelledby="faq-q3">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">Most members settle on three: one easy, one steady, one hard. Your coach will help you choose the days in your first week.</p></div>
+            </div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q4" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a4">
+                What happens in my first class?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a4" class="faq-panel" role="region" aria-labelledby="faq-q4">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">Arrive fifteen minutes early. We fit your strap, find your maximum heart rate with a short ramp test and walk you round the room. The class itself is on us.</p></div>
+            </div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q5" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a5">
+                Can I pause or cancel my membership?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a5" class="faq-panel" role="region" aria-labelledby="faq-q5">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">Yes. Pause for up to two months a year, or cancel with thirty days' notice, both from your account. No forms and no phone calls.</p></div>
+            </div>
+          </div>
+          <div class="border-b border-line" data-faq-item>
+            <h3>
+              <button type="button" id="faq-q6" class="flex w-full items-center justify-between gap-6 py-[26px] text-left text-[20px] leading-[1.2] font-medium tracking-[-0.03em] text-ink" aria-expanded="false" aria-controls="faq-a6">
+                Where are you, and is there parking?
+                <span class="grid size-[36px] shrink-0 place-items-center rounded-full bg-canvas"><svg class="faq-icon size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M7 2v10M2 7h10" /></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a6" class="faq-panel" role="region" aria-labelledby="faq-q6">
+              <div class="overflow-hidden"><p class="max-w-[620px] pr-12 pb-[26px] text-[16px] leading-[1.5] text-body">Unit 4, Tannery Wharf, five minutes on foot from the station. There are bike racks at the door and a public car park across the bridge.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book a first class -->
+    <section id="book" class="px-[18px] scroll-mt-24 pt-[100px] pb-[18px] lg:pt-[120px]" aria-labelledby="book-title">
+      <div class="on-dark relative overflow-hidden rounded-[26px] bg-night text-white">
+        <img src="./assets/images/warehouse.webp" alt="" width="1404" height="572" loading="lazy" class="photo absolute inset-0 size-full object-cover opacity-60">
+        <span class="absolute inset-0 bg-gradient-to-r from-night via-night/60 to-night/20" aria-hidden="true"></span>
+        <span class="absolute inset-0 bg-[radial-gradient(60%_90%_at_10%_100%,rgb(255_74_51/0.35),transparent_70%)]" aria-hidden="true"></span>
+        <div class="relative grid gap-10 px-6 py-12 sm:px-[48px] sm:py-[56px] lg:grid-cols-[1fr_440px] lg:items-center">
+          <div>
+            <p class="text-[14.5px] text-white/60">First class</p>
+            <h2 id="book-title" class="mt-5 text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">Your first class<br><span class="text-white/45">is on us.</span></h2>
+            <p class="mt-6 max-w-[420px] text-[17px] leading-[1.45] text-white/75 lg:text-[19px]">Come fifteen minutes early. We fit a strap, find your maximum with a short ramp test and show you round. Then you train.</p>
+            <ul class="mt-8 flex flex-col gap-3 text-[16px]">
+              <li class="flex items-center gap-3"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Strap and ramp test included</li>
+              <li class="flex items-center gap-3"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>Changing rooms, showers and towels</li>
+              <li class="flex items-center gap-3"><svg class="size-3 shrink-0 text-live" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 6.2 2.6 2.6L10 3.4" /></svg>No card needed to book</li>
+            </ul>
+          </div>
+          <form class="rounded-[26px] bg-card p-6 text-ink sm:p-8" data-form>
+            <h3 class="text-[26px] leading-[1.1] font-medium tracking-[-0.04em]">Book a free first class</h3>
+            <p class="mt-2 text-[15.5px] text-body">Tell us who is coming and which day suits.</p>
+            <div class="mt-6 flex flex-col gap-[10px]">
+              <label for="book-name" class="sr-only">Your name</label>
+              <input id="book-name" name="book-name" type="text" autocomplete="name" required placeholder="Your name" class="h-[56px] w-full rounded-[16px] bg-canvas px-4 text-[15.5px] text-ink placeholder:text-muted focus:outline-2 focus:outline-ink ">
+              <label for="book-email" class="sr-only">Email address</label>
+              <input id="book-email" name="book-email" type="email" autocomplete="email" required placeholder="Email address" class="h-[56px] w-full rounded-[16px] bg-canvas px-4 text-[15.5px] text-ink placeholder:text-muted focus:outline-2 focus:outline-ink ">
+              <label for="book-day" class="sr-only">Which day suits you?</label>
+              <div class="relative">
+                <select id="book-day" name="book-day" required class="h-[56px] w-full appearance-none rounded-[16px] bg-canvas px-4 text-[15.5px] text-ink focus:outline-2 focus:outline-ink">
+                  <option value="" selected disabled>Which day suits you?</option>
+                  <option>Monday, strength circuit</option>
+                  <option>Tuesday, row and ride</option>
+                  <option>Wednesday, Thres intervals</option>
+                  <option>Thursday, mobility and breath</option>
+                  <option>Friday, bag and sled</option>
+                  <option>Saturday, long run club</option>
+                </select>
+                <svg class="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 rotate-90 text-ink" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg>
+              </div>
+              <button type="submit" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 mt-1 h-[52px] w-full">Book my free class</button>
+            </div>
+            <p class="mt-5 text-[13.5px] leading-[1.45] text-muted" data-form-note>We reply within a working day. No newsletters unless you ask for them.</p>
+            <p class="mt-5 hidden rounded-[16px] bg-live-soft px-4 py-3 text-[15.5px] text-ink" role="status" data-form-success>Thanks. A coach will be in touch within a working day to confirm your class.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-[18px] pb-[18px]">
+    <div class="rounded-[26px] bg-card px-6 pt-12 pb-6 sm:px-[48px]">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto]">
+        <div>
+          <a href="./" class="inline-flex items-center gap-[10px] text-[22px] font-medium tracking-[-0.03em] text-ink" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+          <p class="mt-4 max-w-[330px] text-[15.5px] leading-[1.45] text-body">A heart-rate training club in a tannery warehouse by the water. Coaching the number on the wall since 2019.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 sm:gap-x-[52px]">
+          <nav aria-label="Train">
+            <h2 class="text-[14.5px] text-muted">Train</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="timetable" class="transition-opacity hover:opacity-60">Timetable</a></li>
+              <li><a href="classes#zones" class="transition-opacity hover:opacity-60">The five zones</a></li>
+              <li><a href="classes" class="transition-opacity hover:opacity-60">Classes</a></li>
+              <li><a href="coaches" class="transition-opacity hover:opacity-60">Coaches</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Club">
+            <h2 class="text-[14.5px] text-muted">Club</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="membership" class="transition-opacity hover:opacity-60">Membership</a></li>
+              <li><a href="studio" class="transition-opacity hover:opacity-60">The studio</a></li>
+              <li><a href="journal" class="transition-opacity hover:opacity-60">Journal</a></li>
+              <li><a href="visit" class="transition-opacity hover:opacity-60">Visit</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow">
+            <h2 class="text-[14.5px] text-muted">Follow</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="#" class="transition-opacity hover:opacity-60">Instagram</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">Strava</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">YouTube</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Small print">
+            <h2 class="text-[14.5px] text-muted">Small print</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="privacy" class="transition-opacity hover:opacity-60">Privacy</a></li>
+              <li><a href="terms" class="transition-opacity hover:opacity-60">Terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="@container mt-10 overflow-hidden lg:mt-6" aria-hidden="true"><span class="-ml-[0.029em] block text-[43.2cqw] leading-[0.78] font-medium tracking-[-0.075em] whitespace-nowrap text-ink">Thres</span></p>
+      <div class="mt-10 flex flex-col justify-between gap-2 border-t border-line pt-5 text-[13.5px] text-muted sm:flex-row">
+        <p>© <span data-year>2026</span> Thres Training Club</p>
+        <p>Thres, a Framer template by Ajoy</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

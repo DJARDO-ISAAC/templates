@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("../assets/fonts/chakra-petch-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("../assets/fonts/chakra-petch-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chakra Petch";
+  src: url("../assets/fonts/chakra-petch-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Chakra Petch", "Poppins", ui-sans-serif, sans-serif;
+
+  --color-canvas: #f2f5fb;
+  --color-paper: #ffffff;
+  --color-navy: #1d3960;
+  --color-navy-2: #2a446a;
+  --color-navy-3: #334c70;
+  --color-band: #243f65;
+  --color-slate: #27303f;
+  --color-mist: #e1e6ee;
+  --color-ink: #1d2635;
+  --color-body: #566375;
+  --color-rule: #dbe1ea;
+  --color-map: #4b6286;
+  --color-brand-blue: #3b7ddd;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-canvas);
+  }
+
+  /* The four-column guide lines that run behind every light section */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--color-rule), var(--color-rule)) 25% 0 / 1px 100% no-repeat,
+      linear-gradient(var(--color-rule), var(--color-rule)) 50% 0 / 1px 100% no-repeat,
+      linear-gradient(var(--color-rule), var(--color-rule)) 75% 0 / 1px 100% no-repeat;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-ink);
+    line-height: 1.1;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-blue);
+    outline-offset: 3px;
+  }
+
+  input, textarea {
+    font: inherit;
+  }
+}
+
+@layer components {
+  /* Cut-corner shapes: --cut sets the size of the diagonal */
+  .cut-tl { clip-path: polygon(var(--cut, 60px) 0, 100% 0, 100% 100%, 0 100%, 0 var(--cut, 60px)); }
+  .cut-tr { clip-path: polygon(0 0, calc(100% - var(--cut, 60px)) 0, 100% var(--cut, 60px), 100% 100%, 0 100%); }
+  .cut-br { clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--cut, 60px)), calc(100% - var(--cut, 60px)) 100%, 0 100%); }
+  .cut-bl { clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut, 60px) 100%, 0 calc(100% - var(--cut, 60px))); }
+
+  /* Active nav item: small square bullet */
+  .nav-link[aria-current="page"] {
+    opacity: 0.6;
+  }
+  .nav-link[aria-current="page"]::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: currentColor;
+  }
+
+  /* Horizontal carousels */
+  .scroller {
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+  }
+  .scroller::-webkit-scrollbar {
+    display: none;
+  }
+  .scroller > * {
+    scroll-snap-align: start;
+  }
+
+  /* Logo strip on the About page */
+  .marquee-track {
+    --gap: 64px;
+    display: flex;
+    width: max-content;
+    gap: var(--gap);
+  }
+  .marquee-track.is-running {
+    animation: marquee 32s linear infinite;
+  }
+
+  /* Tabs, testimonial slides and accordion panels share [data-active] */
+  .slide:not([data-active]) {
+    display: none;
+  }
+
+  /* Map tooltips appear on hover or focus */
+  .map-pin .map-label {
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .map-pin:hover .map-label,
+  .map-pin:focus-visible .map-label {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Scroll reveal: main.js adds .reveal-pending only to elements below the fold */
+  [data-reveal] {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-pending {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - var(--gap) / 2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal],
+  .map-pin .map-label {
+    transition: none !important;
+  }
+}

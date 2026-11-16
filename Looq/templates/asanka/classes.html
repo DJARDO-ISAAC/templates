@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes &amp; suppers | Asanka</title>
+  <meta name="description" content="Cooking classes and supper nights in the Asanka yard: pound fufu, vote on jollof, and eat the food of northern Ghana.">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/big-shoulders-display-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/onest-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="wrap relative">
+      <div class="bar">
+        <a href="./" class="logo" aria-label="Asanka home"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="24" fill="#c8401c"/><path d="M9 23h30a15 13 0 0 1-30 0Z" fill="#f7eedc"/><path d="M13.500 26.500c3 5 18 5 21 0M16 31c3 2.600 13 2.600 16 0" fill="none" stroke="#c8401c" stroke-width="1.600" stroke-linecap="round"/><rect x="26.500" y="8" width="5" height="18" rx="2.500" transform="rotate(28 29 17)" fill="#f2b134"/><path d="M15 18c-1.600-2 1.600-3.500 0-5.500M20 17.500c-1.600-2 1.600-3.500 0-5.500" fill="none" stroke="#f7eedc" stroke-width="1.800" stroke-linecap="round"/></svg><span>Asanka</span></a>
+        <nav class="hidden lg:block" aria-label="Main"><ul class="flex items-center"><li><a class="nav-item" href="menu">Menu</a></li><li><a class="nav-item" href="recipes">Recipes</a></li><li><a class="nav-item" href="pantry">Pantry</a></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false" data-current>Visit<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="dropdown"><ul><li><a href="book">Book a table</a></li><li><a href="classes">Classes & suppers</a></li><li><a href="catering">Catering</a></li><li><a href="gift-cards">Gift cards</a></li><li><a href="contact">Find us</a></li></ul></div></li><li class="relative" data-dropdown><button type="button" class="nav-item" aria-expanded="false">Our story<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="dropdown"><ul><li><a href="about">About Asanka</a></li><li><a href="food-guide">Ghanaian food guide</a></li><li><a href="careers">Careers</a></li><li><a href="faq">Questions</a></li></ul></div></li></ul></nav>
+        <div class="flex items-center gap-2">
+          <p class="open-pill hidden xl:inline-flex" data-open-status><i></i><span>Open daily from 07:00</span></p>
+          <button type="button" class="round-btn" data-open-search aria-label="Search the site"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m20 20-4.200-4.200M17 10.500a6.500 6.500 0 1 1-13 0 6.500 6.500 0 0 1 13 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button type="button" class="round-btn" data-open-cart aria-label="Open your order"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6.500a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="cart-count" data-cart-count hidden>0</span></button>
+          <a href="menu" class="btn btn-palm btn-sm hidden sm:inline-flex"><span>Order now</span></a>
+          <button type="button" class="round-btn lg:hidden" data-menu-button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="burger"><i></i><i></i></span></button>
+        </div>
+      </div>
+      <div class="mobile-panel lg:hidden" id="mobile-menu">
+        <nav aria-label="Mobile">
+          <ul><li><a class="m-link" href="menu"><span class="m-num">01</span>Menu</a></li><li><a class="m-link" href="recipes"><span class="m-num">02</span>Recipes</a></li><li><a class="m-link" href="pantry"><span class="m-num">03</span>Pantry</a></li><li class="m-group"><p class="m-label">Visit</p><ul class="grid grid-cols-2 gap-x-4"><li><a class="m-sub" href="book">Book a table</a></li><li><a class="m-sub" href="classes">Classes & suppers</a></li><li><a class="m-sub" href="catering">Catering</a></li><li><a class="m-sub" href="gift-cards">Gift cards</a></li><li><a class="m-sub" href="contact">Find us</a></li></ul></li><li class="m-group"><p class="m-label">Our story</p><ul class="grid grid-cols-2 gap-x-4"><li><a class="m-sub" href="about">About Asanka</a></li><li><a class="m-sub" href="food-guide">Ghanaian food guide</a></li><li><a class="m-sub" href="careers">Careers</a></li><li><a class="m-sub" href="faq">Questions</a></li></ul></li></ul>
+          <div class="mt-5 grid grid-cols-2 gap-2"><a href="menu" class="btn btn-palm btn-sm"><span>Order now</span></a><a href="book" class="btn btn-line btn-sm"><span>Book a table</span></a></div>
+          <p class="open-pill mt-4" data-open-status><i></i><span>Open daily from 07:00</span></p>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+<section class="on-dark page-hero">
+  <div class="wrap relative grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
+    <div class="relative z-[2]">
+      <nav aria-label="Breadcrumb" class="hero-line text-[.94rem] text-cream/70"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-gold" href="./">Home</a></li><li aria-hidden="true">/</li><li><span aria-current="page">Classes & suppers</span></li></ol></nav>
+      <p class="eyebrow hero-line mt-6" style="--i:1">In the yard, twice a month</p>
+      <h1 class="d-xl hero-line mt-4" style="--i:1">Classes & suppers</h1>
+      <p class="lede hero-line mt-6 max-w-[58ch] text-cream/80" style="--i:2">Learn to pound fufu, judge five jollofs, or eat your way through the food of Tamale. Small groups, long tables, plenty of food.</p>
+      
+    </div>
+    <div class="hero-line relative mx-auto w-full max-w-[400px]" style="--i:2"><div class="bowl aspect-[4/5]" data-parallax="0.04"><img src="./assets/images/grill-accra.jpg" alt="Street cooks grilling meat in the smoke of an Accra night" width="1400" height="933" decoding="async" fetchpriority="high" loading="eager"></div><span class="hero-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="5"><circle cx="32" cy="32" r="28"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="8"/></g></svg></span></div>
+  </div>
+  <div class="kente absolute inset-x-0 bottom-0" aria-hidden="true"></div>
+</section>
+<section class="sec"><div class="wrap grid gap-6"><div data-reveal style="--d:0ms"><article class="card relative sm:!flex-row">
+  <div class="card-img !aspect-[16/10] sm:!aspect-auto sm:w-[42%] sm:flex-none"><img src="./assets/images/fufu-pounding.jpg" alt="Fufu being pounded with wooden pestles in a large mortar" width="1400" height="933" loading="lazy" decoding="async"></div>
+  <div class="flex flex-1 flex-col p-6 md:p-8">
+    <div class="flex items-start gap-4"><p class="date-block"><span>21</span>Nov</p><div><p class="text-[.86rem] font-bold uppercase tracking-[.12em] text-palm">Class · Saturday</p><h3 class="d-sm mt-1"><a class="stretched" href="fufu-and-light-soup-class">Fufu & light soup class</a></h3></div></div>
+    <p class="mt-4 flex-1 text-muted">Pound fufu in the yard with Efua, make light soup from scratch and eat what you made.</p>
+    <p class="mt-5 flex flex-wrap items-center justify-between gap-3 text-[.95rem]"><span class="font-semibold">10:00 to 13:30 · GH₵ 450</span><span class="seats is-low">4 of 12 seats left</span></p>
+  </div></article></div><div data-reveal style="--d:80ms"><article class="card relative sm:!flex-row">
+  <div class="card-img !aspect-[16/10] sm:!aspect-auto sm:w-[42%] sm:flex-none"><img src="./assets/images/jollof-tray.jpg" alt="A tray of smoky orange-red jollof rice" width="1400" height="933" loading="lazy" decoding="async"></div>
+  <div class="flex flex-1 flex-col p-6 md:p-8">
+    <div class="flex items-start gap-4"><p class="date-block"><span>4</span>Dec</p><div><p class="text-[.86rem] font-bold uppercase tracking-[.12em] text-palm">Supper · Friday</p><h3 class="d-sm mt-1"><a class="stretched" href="jollof-night">Jollof Night supper</a></h3></div></div>
+    <p class="mt-4 flex-1 text-muted">Five jollofs side by side, from party pot to smoky firewood rice. You vote on the winner.</p>
+    <p class="mt-5 flex flex-wrap items-center justify-between gap-3 text-[.95rem]"><span class="font-semibold">19:00 to 22:00 · GH₵ 380</span><span class="seats ">15 of 40 seats left</span></p>
+  </div></article></div><div data-reveal style="--d:160ms"><article class="card relative sm:!flex-row">
+  <div class="card-img !aspect-[16/10] sm:!aspect-auto sm:w-[42%] sm:flex-none"><img src="./assets/images/tz-stirring.jpg" alt="A woman in a pink dress stirring a pot of tuo zaafi with a bundle of sticks" width="1400" height="933" loading="lazy" decoding="async"></div>
+  <div class="flex flex-1 flex-col p-6 md:p-8">
+    <div class="flex items-start gap-4"><p class="date-block"><span>12</span>Dec</p><div><p class="text-[.86rem] font-bold uppercase tracking-[.12em] text-palm">Supper · Saturday</p><h3 class="d-sm mt-1"><a class="stretched" href="northern-supper">Northern supper</a></h3></div></div>
+    <p class="mt-4 flex-1 text-muted">Abdul-Rahman cooks the food of Tamale: TZ, guinea fowl, wasawasa and koko.</p>
+    <p class="mt-5 flex flex-wrap items-center justify-between gap-3 text-[.95rem]"><span class="font-semibold">18:30 to 21:30 · GH₵ 420</span><span class="seats ">9 of 30 seats left</span></p>
+  </div></article></div></div></section>
+<section class="pb-[clamp(72px,9vw,128px)]"><div class="wrap"><div class="tip-card md:flex md:items-center md:justify-between md:gap-8" data-reveal><div><p class="script text-[1.9rem] leading-none text-palm">Private classes</p><p class="mt-3 max-w-[56ch]">For a team day or a family visiting from abroad, we run private classes for 6 to 16 people on weekday mornings.</p></div><a href="contact?topic=classes" class="btn btn-cocoa mt-5 md:mt-0"><span>Ask about dates</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div></section>
+
+  </main>
+  <footer class="on-dark relative overflow-hidden bg-cocoa text-cream">
+    <div class="kente " aria-hidden="true"></div>
+    <div class="wrap pt-16 md:pt-24">
+      <div class="grid items-end gap-10 lg:grid-cols-[1.2fr_1fr]">
+        <div data-reveal><p class="d-lg">Hungry? <span class="text-gold">The pot is on.</span></p><p class="mt-4 max-w-[46ch] text-cream/75">One short email a month: the next supper, the new pot of the day, and a recipe from the kitchen.</p></div>
+        <form class="lg:justify-self-end lg:w-full lg:max-w-[460px]" data-form="reset" novalidate data-reveal>
+          <label class="sr-only" for="news-email">Email address</label>
+          <div class="field"><div class="news-field"><input id="news-email" name="email" class="input" type="email" required placeholder="you@example.com" autocomplete="email"><button class="btn btn-gold btn-sm" type="submit"><span>Sign up</span></button></div></div>
+          <p class="note mt-3" data-form-msg hidden role="status">Medaase! Thank you. Your first email comes at the start of next month.</p>
+        </form>
+      </div>
+      <div class="mt-16 grid gap-10 border-t border-cream/15 pt-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.25fr]">
+        <div>
+          <p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Find us</p>
+          <address class="mt-3 not-italic text-cream/85">18 Akwaaba Lane, off Oxford Street<br>Osu, Accra, Ghana<br><span class="text-cream/60">GhanaPost GA-018-0000</span></address>
+          <p class="mt-4 grid gap-1"><a class="foot-link" href="tel:+233300000000">+233 30 000 0000</a><a class="foot-link" href="mailto:hello@asanka.example">hello@asanka.example</a></p>
+          <ul class="mt-5 flex gap-2"><li><a class="social" href="https://instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM12 15.500a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7ZM17 7h.01" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://tiktok.com" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3v11.500a3.500 3.500 0 1 1-3.500-3.500M14 3c.5 2.800 2.300 4.500 5 4.700" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a class="social" href="https://wa.me/233200000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1.200-4A8 8 0 1 1 8 18.800L4 20Zm5-11c0 3.500 2.500 6 6 6l1-1.800-2-1-1 1c-1-.4-2-1.400-2.300-2.300l1-1-1-2L9 9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li></ul>
+        </div>
+        <div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Eat</p><ul class="mt-3 grid gap-1"><li><a class="foot-link" href="menu">Menu</a></li><li><a class="foot-link" href="menu">Order for pickup</a></li><li><a class="foot-link" href="pantry">Pantry</a></li><li><a class="foot-link" href="gift-cards">Gift cards</a></li></ul></div><div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Visit</p><ul class="mt-3 grid gap-1"><li><a class="foot-link" href="book">Book a table</a></li><li><a class="foot-link" href="classes">Classes & suppers</a></li><li><a class="foot-link" href="catering">Catering</a></li><li><a class="foot-link" href="contact">Contact</a></li></ul></div>
+        <div><p class="font-display text-[1.25rem] font-extrabold uppercase tracking-wide text-gold">Opening hours</p><ul class="hours mt-3" data-hours><li data-day="1"><span>Monday</span><span>07:00 to 22:00</span></li><li data-day="2"><span>Tuesday</span><span>07:00 to 22:00</span></li><li data-day="3"><span>Wednesday</span><span>07:00 to 22:00</span></li><li data-day="4"><span>Thursday</span><span>07:00 to 22:00</span></li><li data-day="5"><span>Friday</span><span>07:00 to 23:00</span></li><li data-day="6"><span>Saturday</span><span>07:00 to 23:00</span></li><li data-day="0"><span>Sunday</span><span>12:00 to 21:00</span></li></ul><p class="mt-3 text-[.9rem] text-cream/60">Accra time. The kitchen closes 30 minutes earlier.</p></div>
+      </div>
+      <div class="foot-word" aria-hidden="true"><span>Asanka</span><span class="foot-mark"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="5"><circle cx="32" cy="32" r="28"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="8"/></g></svg></span></div>
+      <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-cream/15 py-6 text-[.92rem] text-cream/65">
+        <p>© 2026 Asanka Kitchen. Pounded in Osu.</p>
+        <p class="flex flex-wrap gap-x-5 gap-y-1"><a class="foot-link" href="about">About</a><a class="foot-link" href="faq">Questions</a><a class="foot-link" href="careers">Careers</a><a class="foot-link" href="credits">Photo credits</a><a class="foot-link" href="privacy">Privacy</a><a class="foot-link" href="terms">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+  <div class="order-bar" data-order-bar><a href="menu" class="btn btn-palm w-full"><span>Order for pickup or delivery</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6.500a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+  <div class="scrim" data-search-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-box">
+      <div class="flex items-center gap-2"><label class="sr-only" for="site-search">Search the site</label><input id="site-search" class="input flex-1" type="search" placeholder="Search dishes, recipes, the food guide..." data-search-input autocomplete="off"><button type="button" class="round-btn" data-close-layer aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      <div class="mt-3" data-search-results aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="scrim" data-cart-layer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Your order">
+    <div class="drawer">
+      <div class="flex items-center justify-between gap-4 border-b border-line p-5"><h2 class="d-sm">Your order</h2><button type="button" class="round-btn" data-close-layer aria-label="Close your order"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      <div class="flex-1 overflow-y-auto px-5" data-cart-lines></div>
+      <div class="border-t border-line p-5" data-cart-actions hidden>
+        <div data-cart-totals></div>
+        <a class="btn btn-palm mt-4 w-full" href="order"><span>Go to checkout</span><span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

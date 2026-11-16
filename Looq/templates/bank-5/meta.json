@@ -1,0 +1,27 @@
+{
+  "slug": "bank-5",
+  "name": "Bank 5",
+  "industry": "banking",
+  "type": "website",
+  "tags": [
+    "bank",
+    "rural-bank",
+    "community-bank",
+    "ghana",
+    "finance",
+    "loans",
+    "savings",
+    "branch-finder",
+    "calculator",
+    "investors",
+    "accessible",
+    "multi-page",
+    "client",
+    "fintech",
+    "animated",
+    "dark-hero",
+    "bento"
+  ],
+  "description": "Bank 5: a fintech-style redesign of the full Manya Krobo Rural Bank website (same content and 95 pages as the manya-krobo template). Floating glass pill navigation with a sliding hover indicator and animated mega panels, a dark mesh-gradient hero with live product mockups and parallax, partner marquee, bento grid with count-up figures, an inline salary-loan calculator, a U-Connect phone mockup, a draggable community-story scroller and a giant-wordmark footer. Motion: split-word heading reveals, scroll reveals, magnetic buttons, cursor spotlight on cards, hide-on-scroll header and a scroll progress bar, all switched off for reduced-motion visitors. Bank facts live in _build/bank.mjs; run node templates/bank-5/_build/gen.mjs to regenerate pages. ?review=1 highlights figures still to confirm.",
+  "tailwindVersion": "4.x"
+}

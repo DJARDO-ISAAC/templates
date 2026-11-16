@@ -1,0 +1,9 @@
+{
+  "slug": "lawcase",
+  "name": "Lawcase",
+  "industry": "legal",
+  "type": "website",
+  "tags": ["law-firm", "legal", "corporate", "multi-page", "light", "peach-accent", "dark-green", "blog", "services"],
+  "description": "Multi-page law firm site in deep green and soft peach with a photo hero, sticky about section, service list, process cards, testimonials, FAQ, blog and service detail pages.",
+  "tailwindVersion": "4.x"
+}

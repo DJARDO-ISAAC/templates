@@ -1,0 +1,16 @@
+{
+  "name": "looq-templates",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "new": "node scripts/new.mjs",
+    "ds": "node scripts/design-system.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  }
+}

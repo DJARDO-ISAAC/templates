@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t2">
+  <title id="t2">Engineering setting-out plan for an industrial warehouse with column grid and coordinates</title>
+  <defs>
+    <pattern id="grid2" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#1b3a2c" stroke-width=".5" opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#f4eddf"/>
+  <rect width="800" height="600" fill="url(#grid2)"/>
+
+  <!-- coordinate frame -->
+  <path d="M60 60h680v480H60z" fill="none" stroke="#1b3a2c" stroke-width="1.2" opacity=".5"/>
+  <g fill="#6c7a6f" font-family="ui-monospace, monospace" font-size="8">
+    <text x="62" y="54">N 637 250</text><text x="330" y="54">N 637 300</text><text x="620" y="54">N 637 350</text>
+    <text x="24" y="66">E 402 100</text><text x="24" y="330">E 402 150</text><text x="24" y="536">E 402 200</text>
+  </g>
+
+  <!-- site boundary -->
+  <path d="M120 130h560v360H120z" fill="none" stroke="#1b3a2c" stroke-width="2.2" stroke-dasharray="16 6"/>
+
+  <!-- building footprint -->
+  <rect x="196" y="210" width="408" height="208" fill="#efe7d6" stroke="#1b3a2c" stroke-width="2.4"/>
+  <rect x="216" y="230" width="368" height="168" fill="none" stroke="#1b3a2c" stroke-width="1" opacity=".55"/>
+
+  <!-- internal column grid -->
+  <g stroke="#b08d57" stroke-width="1.2" opacity=".9">
+    <path d="M216 230v168M284 230v168M352 230v168M420 230v168M488 230v168M556 230v168"/>
+    <path d="M216 230h368M216 286h368M216 342h368M216 398h368"/>
+  </g>
+  <g fill="#b08d57">
+    <circle cx="216" cy="230" r="3.5"/><circle cx="284" cy="230" r="3.5"/><circle cx="352" cy="230" r="3.5"/><circle cx="420" cy="230" r="3.5"/><circle cx="488" cy="230" r="3.5"/><circle cx="556" cy="230" r="3.5"/>
+    <circle cx="216" cy="286" r="3.5"/><circle cx="284" cy="286" r="3.5"/><circle cx="352" cy="286" r="3.5"/><circle cx="420" cy="286" r="3.5"/><circle cx="488" cy="286" r="3.5"/><circle cx="556" cy="286" r="3.5"/>
+    <circle cx="216" cy="342" r="3.5"/><circle cx="284" cy="342" r="3.5"/><circle cx="352" cy="342" r="3.5"/><circle cx="420" cy="342" r="3.5"/><circle cx="488" cy="342" r="3.5"/><circle cx="556" cy="342" r="3.5"/>
+    <circle cx="216" cy="398" r="3.5"/><circle cx="284" cy="398" r="3.5"/><circle cx="352" cy="398" r="3.5"/><circle cx="420" cy="398" r="3.5"/><circle cx="488" cy="398" r="3.5"/><circle cx="556" cy="398" r="3.5"/>
+  </g>
+
+  <!-- dimension lines -->
+  <g stroke="#1b3a2c" stroke-width="1">
+    <path d="M196 190h408M196 184v12M604 184v12"/>
+    <path d="M652 210v208M646 210h12M646 418h12"/>
+  </g>
+  <g fill="#1b3a2c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600">
+    <text x="400" y="182" text-anchor="middle">48.00 m</text>
+    <text x="670" y="318" transform="rotate(90 670 318)" text-anchor="middle">24.00 m</text>
+  </g>
+
+  <!-- setting-out points -->
+  <g stroke="#b4542a" stroke-width="1.8" fill="none">
+    <path d="M182 196h28M196 182v28"/><path d="M590 196h28M604 182v28"/>
+    <path d="M182 424h28M196 410v28"/><path d="M590 424h28M604 410v28"/>
+  </g>
+  <g fill="#b4542a" font-family="ui-monospace, monospace" font-size="8">
+    <text x="168" y="176">P1</text><text x="616" y="176">P2</text><text x="168" y="446">P4</text><text x="616" y="446">P3</text>
+  </g>
+
+  <!-- access road and gate -->
+  <path d="M120 130v-40M680 130v-40" stroke="#1b3a2c" stroke-width="1" opacity=".4"/>
+  <path d="M356 130h128" stroke="#efe7d6" stroke-width="34"/>
+  <path d="M356 130h128" stroke="#1b3a2c" stroke-width="1" stroke-dasharray="10 8"/>
+  <text x="420" y="118" text-anchor="middle" fill="#6c7a6f" font-family="ui-sans-serif, system-ui, sans-serif" font-size="9" letter-spacing="1.5">ACCESS</text>
+
+  <!-- north arrow -->
+  <g transform="translate(718 92)">
+    <circle r="23" fill="none" stroke="#1b3a2c" stroke-width="1"/>
+    <path d="M0-16 6.5 8 0 3-6.5 8Z" fill="#1b3a2c"/>
+    <text y="-29" text-anchor="middle" fill="#1b3a2c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="700">N</text>
+  </g>
+
+  <!-- title block -->
+  <g transform="translate(470 505)" font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect width="244" height="76" fill="#f4eddf" stroke="#1b3a2c" stroke-width="1.2"/>
+    <text x="14" y="23" fill="#1b3a2c" font-size="11" font-weight="700" letter-spacing="1.4">SETTING-OUT PLAN</text>
+    <text x="14" y="40" fill="#1b3a2c" font-size="10">Tema Free Zone · Warehouse C4</text>
+    <text x="14" y="55" fill="#6c7a6f" font-size="9">Scale 1:500 · Grid 8 × 4</text>
+    <text x="14" y="68" fill="#6c7a6f" font-size="9">Osei-Bonsu Geomatics · 2024</text>
+  </g>
+</svg>

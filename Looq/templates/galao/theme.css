@@ -1,0 +1,725 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/satoshi-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "The Nautigal";
+  src: url("../assets/fonts/the-nautigal-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@theme {
+  /* Breakpoints match the original: tablet from 810px, desktop from 1200px */
+  --breakpoint-md: 50.625rem;
+  --breakpoint-lg: 75rem;
+
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script: "The Nautigal", "Snell Roundhand", cursive;
+
+  --color-green: #374a34;
+  --color-lime: #f0ff8b;
+  --color-burgundy: #451930;
+  --color-midnight: #202633;
+
+  /* The spring the original uses for its big state changes, sampled into linear(): ~1.4s, no overshoot */
+  --ease-spring: linear(0, 0.1 4.4%, 0.32 9.5%, 0.5 14%, 0.6 18.6%, 0.7 23%, 0.78 27.5%, 0.837 32%, 0.87 36.4%, 0.9 40.8%, 0.93 45.2%, 0.958 54.2%, 0.977 63.4%, 0.987 72.2%, 0.994 85.6%, 1);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 120px;
+    -webkit-text-size-adjust: 100%;
+  }
+  /* The page colour shifts between green, burgundy and midnight as section markers pass mid-screen */
+  body {
+    background-color: var(--page-bg, var(--color-green));
+    transition: background-color 0.8s ease;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-lime);
+    outline-offset: 3px;
+  }
+  .bg-lime :focus-visible {
+    outline-color: #000;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+}
+
+/* Type scale measured from the original (phone sizes step down) */
+@utility t-mega {
+  font-size: 64px;
+  line-height: 1;
+  @variant md { font-size: 96px; }
+  @variant lg { font-size: 120px; }
+}
+@utility t-h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  @variant md { font-size: 52px; }
+  @variant lg { font-size: 64px; }
+}
+@utility t-h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  @variant md { font-size: 38px; }
+  @variant lg { font-size: 44px; }
+}
+@utility t-h3 {
+  font-size: 24px;
+  line-height: 1.3;
+  @variant md { font-size: 30px; }
+}
+@utility t-body {
+  font-size: 16px;
+  line-height: 1.4;
+  @variant md { font-size: 18px; }
+}
+@utility t-label {
+  font-size: 14px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+@layer components {
+  .wrap {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-inline: 20px;
+    @variant md { padding-inline: 40px; }
+    @variant lg { padding-inline: 80px; }
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    padding: 20px 20px 0;
+    pointer-events: none;
+    @variant md { padding-inline: 40px; }
+    @variant lg { padding-inline: 80px; }
+  }
+  /* Phone: always the floating pill. From 810px: open bar that tightens into the pill on scroll */
+  .header-bar {
+    pointer-events: auto;
+    position: relative;
+    margin-inline: auto;
+    max-width: 1280px;
+    border-radius: 40px;
+    border: 1px solid rgb(240 255 139 / 0.4);
+    background: rgb(0 0 0 / 0.2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 11px 11px 11px 23px;
+    transition: max-width 0.9s var(--ease-spring), padding 0.9s var(--ease-spring), background-color 0.4s ease, border-color 0.4s ease;
+    @variant md {
+      border-color: transparent;
+      background: transparent;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      padding: 20px 0 0;
+    }
+  }
+  @variant md {
+    .is-scrolled .header-bar {
+      max-width: 780px;
+      border-color: rgb(240 255 139 / 0.4);
+      background: rgb(0 0 0 / 0.2);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      padding: 11px 11px 11px 23px;
+    }
+    .is-scrolled .header-logo { width: 40px; height: 40px; transform: rotate(20deg); }
+    .is-scrolled .header-nav { gap: 32px; padding-inline: 16px; }
+  }
+  .header-logo {
+    width: 40px;
+    height: 40px;
+    transition: width 0.6s var(--ease-spring), height 0.6s var(--ease-spring), transform 0.9s var(--ease-spring);
+    @variant md { width: 48px; height: 48px; }
+  }
+  .menu-open .header-bar {
+    background: rgb(0 0 0 / 0.75);
+  }
+  .menu-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s var(--ease-spring);
+  }
+  .menu-open .menu-panel {
+    grid-template-rows: 1fr;
+  }
+  .menu-toggle {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .menu-open .menu-toggle {
+    background: var(--color-lime);
+    border-color: var(--color-lime);
+    color: #000;
+  }
+  .menu-toggle span {
+    transition: transform 0.35s ease, width 0.35s ease;
+  }
+  .menu-open .menu-toggle span { background: #000; }
+  .menu-open .menu-toggle span:first-child { width: 18px; transform: translateY(3px) rotate(45deg); }
+  .menu-open .menu-toggle span:last-child { width: 18px; transform: translateY(-3px) rotate(-45deg); }
+
+  .nav-link {
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    color: var(--color-lime);
+  }
+
+  /* ---------- Buttons ---------- */
+  /* Outline pill that fills lime */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 50px;
+    padding: 0 26px;
+    border: 1px solid var(--color-lime);
+    border-radius: 32px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn:hover,
+  .btn:focus-visible {
+    background: var(--color-lime);
+    color: #000;
+  }
+  .btn-dark {
+    border-color: #000;
+    color: #000;
+  }
+  .btn-dark:hover,
+  .btn-dark:focus-visible {
+    background: #000;
+    color: var(--color-lime);
+  }
+  /* Button with a lime dot holding a ↗ arrow; on hover the dot dissolves and the arrow turns → */
+  .btn-arrow {
+    padding: 0 16px 0 26px;
+  }
+  .btn-arrow .arrow-dot {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background: var(--color-lime);
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+  .btn-arrow .arrow-dot svg {
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+  .btn-arrow:hover .arrow-dot,
+  .btn-arrow:focus-visible .arrow-dot {
+    background: transparent;
+  }
+  .btn-arrow:hover .arrow-dot svg,
+  .btn-arrow:focus-visible .arrow-dot svg {
+    transform: rotate(0deg);
+  }
+
+  /* Tag pill */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 25px;
+    border: 1px solid var(--color-lime);
+    border-radius: 32px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.3;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  a.tag:hover,
+  a.tag:focus-visible {
+    background: var(--color-lime);
+    color: #000;
+  }
+  .tag-glass {
+    background: rgb(0 0 0 / 0.15);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Round icon buttons (social, plus, arrow) */
+  .icon-link {
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  .icon-link:hover,
+  .icon-link:focus-visible {
+    color: var(--color-lime);
+  }
+  .bg-lime .icon-link:hover,
+  .bg-lime .icon-link:focus-visible {
+    color: var(--color-burgundy);
+  }
+
+  /* ---------- Cards ---------- */
+  /* Bento cards glow on hover */
+  .glow {
+    transition: box-shadow 0.4s ease;
+  }
+  .glow:hover,
+  .glow:focus-visible {
+    box-shadow: 0 0 28px 2px rgb(240 255 139 / 0.55);
+  }
+
+  /* Article card: the lime info strip turns midnight with a lime outline */
+  .post-info {
+    border: 1px solid transparent;
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+  .post-info .avatar-bg,
+  .person-card .avatar-bg {
+    transition: background-color 0.35s ease;
+  }
+  .post-info h3,
+  .post-info .post-date {
+    transition: color 0.35s ease;
+  }
+  .post-card:hover .post-info,
+  .post-card:focus-visible .post-info {
+    background: var(--color-midnight);
+    border-color: var(--color-lime);
+  }
+  .post-card:hover .post-info h3,
+  .post-card:focus-visible .post-info h3 {
+    color: var(--color-lime);
+  }
+  .post-card:hover .post-date,
+  .post-card:focus-visible .post-date {
+    color: #fff;
+  }
+  .post-card:hover .avatar-bg,
+  .post-card:focus-visible .avatar-bg,
+  .person-card:hover .avatar-bg,
+  .person-card:focus-within .avatar-bg {
+    background-color: transparent;
+  }
+  .post-card img.cover,
+  .row-card img.cover {
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .post-card:hover img.cover,
+  .row-card:hover img.cover {
+    transform: scale(1.04);
+  }
+
+  /* Author card: lime turns midnight, name turns lime */
+  .person-card {
+    border: 1px solid transparent;
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  }
+  .person-card .person-name {
+    transition: color 0.35s ease;
+  }
+  .person-card:hover,
+  .person-card:focus-within {
+    background: var(--color-midnight);
+    border-color: var(--color-lime);
+    color: #fff;
+  }
+  .person-card:hover .person-name,
+  .person-card:focus-within .person-name {
+    color: var(--color-lime);
+  }
+  .person-card:hover .icon-link:hover,
+  .person-card:focus-within .icon-link:hover {
+    color: var(--color-lime);
+  }
+
+  /* Category card: lime turns burgundy */
+  .cat-card {
+    border: 1px solid transparent;
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  }
+  .cat-card:hover,
+  .cat-card:focus-visible {
+    background: var(--color-burgundy);
+    border-color: var(--color-lime);
+    color: #fff;
+  }
+
+  /* Testimonial lifts */
+  .quote-card {
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .quote-card:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Pricing card: on desktop hover the price gives way to the feature list and the card takes its
+     colour; on touch screens and below 1200px the full card shows all the time */
+  .plan {
+    --plan: var(--color-green);
+    border: 1px solid transparent;
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+  }
+  .plan-price,
+  .plan-list {
+    transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .plan-btn {
+    background: var(--plan);
+    border: 1px solid var(--plan);
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+  .plan-btn svg {
+    transform: rotate(-45deg);
+    transition: transform 0.35s ease;
+  }
+  .plan-badge {
+    border-color: currentColor;
+  }
+  .plan-open {
+    background: var(--plan);
+    border-color: var(--color-lime);
+    color: #fff;
+  }
+  .plan-open .plan-btn {
+    background: transparent;
+    border-color: var(--color-lime);
+  }
+  .plan-open .plan-btn svg {
+    transform: rotate(0deg);
+  }
+  @variant lg {
+    @media (hover: hover) {
+      .plan-list {
+        position: absolute;
+        inset: 96px 24px auto;
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      .plan:not(:hover):not(:focus-within) {
+        background: var(--color-lime);
+        border-color: transparent;
+        color: #000;
+      }
+      .plan:not(:hover):not(:focus-within) .plan-btn {
+        background: var(--plan);
+        border-color: var(--plan);
+      }
+      .plan:not(:hover):not(:focus-within) .plan-btn svg {
+        transform: rotate(-45deg);
+      }
+      .plan:hover .plan-price,
+      .plan:focus-within .plan-price {
+        opacity: 0;
+        transform: translateY(-12px);
+      }
+      .plan:hover .plan-list,
+      .plan:focus-within .plan-list {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+
+  /* Monthly / annually switch */
+  .seg button {
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+  .seg button[aria-pressed="true"] {
+    background: var(--color-lime);
+    color: #000;
+  }
+
+  /* ---------- Accordion ---------- */
+  .acc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s var(--ease-spring);
+  }
+  [data-open] > .acc-panel {
+    grid-template-rows: 1fr;
+  }
+  .acc-icon {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .acc-icon svg {
+    transition: transform 0.4s ease;
+  }
+  [data-acc-item] button:hover .acc-icon,
+  [data-acc-item] button:focus-visible .acc-icon,
+  [data-open] .acc-icon {
+    background: var(--color-lime);
+    color: #000;
+  }
+  [data-open] .acc-icon svg {
+    transform: rotate(45deg);
+  }
+
+  /* ---------- Forms ---------- */
+  .field {
+    width: 100%;
+    min-height: 57px;
+    padding: 0 26px;
+    border: 1px solid rgb(255 255 255 / 0.7);
+    border-radius: 32px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  textarea.field {
+    min-height: 130px;
+    padding-block: 16px;
+    border-radius: 20px;
+    resize: vertical;
+  }
+  .field::placeholder {
+    color: rgb(255 255 255 / 0.55);
+  }
+  .field:hover {
+    border-color: #fff;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-lime);
+  }
+  .select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none' stroke='%23ffffff' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-position: right 22px center;
+    background-repeat: no-repeat;
+    padding-right: 52px;
+  }
+  .select option {
+    background: var(--color-green);
+    color: #fff;
+  }
+  .field-lime {
+    border-color: var(--color-lime);
+  }
+
+  /* ---------- Marquee ---------- */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+  .marquee-track.is-running {
+    animation: marquee var(--speed, 40s) linear infinite;
+  }
+
+  /* ---------- Home hero ---------- */
+  /* Below 810px the hero is a plain centred block. From 810px it is a sticky stage that switches to
+     its second state once the page scrolls past half a screen (main.js toggles .is-alt). */
+  .hero-photo,
+  .hero-line,
+  .hero-search,
+  .hero-author {
+    transition-property: transform, opacity;
+    transition-duration: 1.4s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-timing-function: var(--ease-spring);
+  }
+  @variant md {
+    .hero-photo {
+      position: absolute;
+      left: calc(50% + var(--x));
+      top: calc(50% + var(--y));
+      width: var(--w);
+      height: var(--h, var(--w));
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .is-alt .hero-photo {
+      transform: translate(var(--dx), var(--dy)) rotate(var(--r));
+    }
+    .hero-line {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: max-content;
+      white-space: nowrap;
+      transform: translate(-50%, calc(-50% + var(--y)));
+    }
+    .is-alt .hero-line:nth-child(1) { transform: translate(-50%, calc(-50% - 148px)) scale(1.5625); }
+    .is-alt .hero-line:nth-child(2) { transform: translate(calc(-50% - 1608px), calc(-50% - 120px)); opacity: 0; }
+    .is-alt .hero-line:nth-child(3) { transform: translate(calc(-50% + 1510px), calc(-50% - 98px)); opacity: 0; }
+    .is-alt .hero-line:nth-child(4) { transform: translate(-50%, calc(-50% - 28px)) scale(1.5625); }
+    .hero-search {
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 161px);
+      transform: translateX(-50%);
+    }
+    .is-alt .hero-search {
+      transform: translate(-50%, 110vh);
+    }
+    .hero-author {
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 42px);
+      transform: translate(-50%, 602px);
+      opacity: 0;
+    }
+    .is-alt .hero-author {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  }
+
+  /* ---------- Article body ---------- */
+  .prose-galao {
+    color: rgb(255 255 255 / 0.9);
+    font-size: 16px;
+    line-height: 1.5;
+    @variant md { font-size: 18px; }
+  }
+  .prose-galao h5 {
+    margin: 60px 0 32px;
+    color: #fff;
+    font-size: 26px;
+    line-height: 1.3;
+    @variant md { font-size: 30px; }
+  }
+  .prose-galao > :first-child {
+    margin-top: 0;
+  }
+  .prose-galao p + p {
+    margin-top: 18px;
+  }
+
+  /* Spinner for the articles feed */
+  .spinner {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: conic-gradient(from 0deg, transparent, var(--color-lime));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+    animation: spin 0.8s linear infinite;
+  }
+
+  /* Become-a-creator steps slide sideways */
+  .steps-track {
+    display: flex;
+    transition: transform 0.9s var(--ease-spring);
+  }
+
+  /* Search dialog */
+  .search-dialog {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+  }
+  .search-dialog::backdrop {
+    background: rgb(0 0 0 / 0.6);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .search-dialog[open] .search-box {
+    animation: drop-in 0.5s var(--ease-spring);
+  }
+}
+
+/* Scroll-linked parallax and spin are driven from main.js through --par and --spin */
+[data-par] {
+  transform: translate3d(0, var(--par, 0px), 0);
+}
+[data-spin] {
+  transform: rotate(var(--spin, 0deg));
+}
+
+/* Appear: content slides up (--rise, default 100px) when it enters the view */
+[data-reveal] {
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 1.4s var(--ease-spring);
+}
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not(.is-revealed) {
+    transform: translateY(var(--rise, 100px));
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .header-bar,
+  .header-logo,
+  .menu-panel,
+  .hero-photo,
+  .hero-line,
+  .hero-search,
+  .hero-author,
+  .steps-track,
+  .acc-panel,
+  .plan,
+  .plan-price,
+  .plan-list,
+  .quote-card,
+  .post-card img.cover,
+  .row-card img.cover {
+    transition: none !important;
+  }
+  .marquee-track.is-running,
+  .search-dialog[open] .search-box {
+    animation: none;
+  }
+}

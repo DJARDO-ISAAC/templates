@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GH" class="no-js">
+<head>
+<!-- include:head.html title="Catering" description="Abusua Pot caters funerals, outdoorings, weddings, church harvests and office lunches across Accra: fufu, jollof, banku and tilapia for 20 to 500 guests." -->
+</head>
+<body>
+<!-- include:icons.html -->
+<!-- include:header.html variant="" -->
+
+  <main id="main">
+<!-- include:page-hero.html crumb="Catering" hand="Catering" title="We feed the whole family." lead="Hot Ghanaian food, served on time, for the moments that bring everyone together. We bring the pots, the servers and the serving tables." -->
+
+    <section class="tpl-section pt-4" aria-labelledby="occTitle">
+      <div class="container">
+        <h2 class="visually-hidden" id="occTitle">Occasions</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-3">
+          <div class="col"><div class="tpl-occasion" data-reveal><span>01</span><h3>Funerals</h3><p>Respectful service for one-week, burial and thanksgiving.</p></div></div>
+          <div class="col"><div class="tpl-occasion tpl-d-1" data-reveal><span>02</span><h3>Outdoorings</h3><p>Naming ceremonies with waakye, kelewele and sobolo.</p></div></div>
+          <div class="col"><div class="tpl-occasion tpl-d-2" data-reveal><span>03</span><h3>Weddings</h3><p>Engagements, traditional marriages and receptions.</p></div></div>
+          <div class="col"><div class="tpl-occasion tpl-d-3" data-reveal><span>04</span><h3>Church &amp; harvest</h3><p>Big-pot jollof and banku for the whole congregation.</p></div></div>
+          <div class="col"><div class="tpl-occasion" data-reveal><span>05</span><h3>Office lunch</h3><p>Weekly lunch packs delivered across Osu and Airport.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tpl-section tpl-section--paper" aria-labelledby="packsTitle">
+      <div class="container">
+        <div class="text-center mx-auto tpl-maxw mb-5">
+          <p class="tpl-hand" data-reveal>Simple per-head pricing</p>
+          <h2 class="tpl-h2" id="packsTitle" data-reveal>Choose a pack</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <article class="tpl-pack" data-reveal>
+              <h3>Small chop</h3>
+              <p class="tpl-pack-price"><strong>GH₵60</strong> per guest</p>
+              <ul class="list-unstyled">
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Jollof or fried rice</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Chicken &amp; kelewele</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sobolo or water</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Packed in boxes, from 20 guests</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tpl-pack tpl-pack--featured tpl-d-1" data-reveal>
+              <span class="tpl-pack-badge">Most booked</span>
+              <h3>Family pot</h3>
+              <p class="tpl-pack-price"><strong>GH₵95</strong> per guest</p>
+              <ul class="list-unstyled">
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Fufu or banku with two soups</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Jollof &amp; plantain</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Goat, chicken or tilapia</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Servers &amp; serving tables, from 50 guests</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tpl-pack tpl-d-2" data-reveal>
+              <h3>Grand durbar</h3>
+              <p class="tpl-pack-price"><strong>GH₵140</strong> per guest</p>
+              <ul class="list-unstyled">
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Full chop bar spread, live fufu pounding</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Grilled tilapia &amp; chichinga station</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sobolo, asaana &amp; fresh coconut bar</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Full service team, from 100 guests</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <p class="tpl-menu-foot text-center mx-auto" data-reveal>Prices are a guide. Transport outside Greater Accra and canopies are quoted separately.</p>
+      </div>
+    </section>
+
+    <section class="tpl-section" id="enquire" aria-labelledby="enqTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-5">
+            <p class="tpl-hand" data-reveal>Tell us about your event</p>
+            <h2 class="tpl-h2" id="enqTitle" data-reveal>Get a quote</h2>
+            <p class="tpl-lead" data-reveal>We reply within one working day with a menu and a price. For events this week, call or WhatsApp us directly.</p>
+            <a class="btn tpl-btn tpl-btn--green" href="https://wa.me/{{ site.whatsappHref }}?text=Hello%2C%20I%27d%20like%20a%20catering%20quote." target="_blank" rel="noopener" data-reveal><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp the catering team</a>
+          </div>
+          <div class="col-lg-7">
+            <div class="tpl-form-card" data-reveal>
+              <form class="needs-validation" action="{{ site.forms.catering }}" method="POST" novalidate data-form data-success="#cateringSuccess">
+                <input type="hidden" name="_subject" value="Catering enquiry">
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cName">Your name</label>
+                    <input class="form-control" id="cName" name="name" type="text" autocomplete="name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cPhone">Phone / WhatsApp</label>
+                    <input class="form-control" id="cPhone" name="phone" type="tel" autocomplete="tel" pattern="[0-9+ ()-]{9,}" required>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cEvent">Occasion</label>
+                    <select class="form-select" id="cEvent" name="occasion" required>
+                      <option value="">Choose…</option><option>Funeral</option><option>Outdooring / naming</option><option>Wedding / engagement</option><option>Church event</option><option>Office lunch</option><option>Birthday / other</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose an occasion.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cDate">Date</label>
+                    <input class="form-control" id="cDate" name="date" type="date" required data-min-today>
+                    <div class="invalid-feedback">Please choose a date from today onwards.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cGuests">Number of guests</label>
+                    <input class="form-control" id="cGuests" name="guests" type="number" min="20" max="2000" step="1" required>
+                    <div class="invalid-feedback">We cater from 20 guests.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="cPack">Pack</label>
+                    <select class="form-select" id="cPack" name="pack">
+                      <option>Not sure yet</option><option>Small chop</option><option>Family pot</option><option>Grand durbar</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="cWhere">Location &amp; anything else</label>
+                    <textarea class="form-control" id="cWhere" name="details" rows="4" placeholder="Venue or area, favourite dishes, dietary needs…"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn tpl-btn tpl-btn--red" type="submit">Send enquiry <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                    <p class="tpl-form-error" data-form-error hidden role="alert">Sorry, that didn't send. Please try again or WhatsApp us on {{ site.whatsapp }}.</p>
+                  </div>
+                </div>
+              </form>
+              <div class="tpl-form-success" id="cateringSuccess" hidden tabindex="-1">
+                <span class="tpl-success-icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+                <h3 class="tpl-h3">Medaase! We've got it.</h3>
+                <p class="mb-0">Our catering team will call you within one working day with a menu and a quote.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- include:footer.html -->
+</body>
+</html>

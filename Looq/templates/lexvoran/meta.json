@@ -1,0 +1,9 @@
+{
+  "slug": "lexvoran",
+  "name": "Lexvoran",
+  "industry": "legal",
+  "type": "website",
+  "tags": ["law firm", "attorneys", "practice areas", "case studies", "blog", "serif", "editorial", "multi-page"],
+  "description": "Editorial law-firm website in cream and olive with a Bodoni Moda display face: practice areas, case studies with a category filter, attorney profiles, blog, careers, FAQs, contact and legal pages, with spring-eased reveals and scroll-linked hero insets.",
+  "tailwindVersion": "4.x"
+}

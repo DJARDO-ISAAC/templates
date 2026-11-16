@@ -1,0 +1,23 @@
+<!-- @dsCard group="Navigation" height=150 subtitle=".site-header · .bar · .nav-item · data-header · data-menu-button" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Header — preview</title></head>
+<body>
+<div class="pv" style="background:var(--canvas)">
+<header class="site-header" data-header>
+  <div class="bar">
+    <a href="#" class="logo">Looq</a>
+    <ul class="nav" aria-label="Main"><li><a class="nav-item" href="#" aria-current="page">Home</a></li><li><a class="nav-item" href="#">Services</a></li><li><a class="nav-item" href="#">About</a></li><li><a class="nav-item" href="#">Journal</a></li></ul>
+    <div class="pv-row" style="gap:8px">
+      <button type="button" class="round-btn" aria-label="Search the site"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m20 20-4.2-4.2M17 10.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <a href="#" class="btn btn-brand btn-sm">Get in touch</a>
+      <button type="button" class="round-btn" data-menu-button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span class="burger"><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
+</div>
+<script>
+var b = document.querySelector('[data-menu-button]'); b.addEventListener('click', function () { var o = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', String(!o)); b.setAttribute('aria-label', o ? 'Open menu' : 'Close menu') })
+</script>
+</body>
+</html>

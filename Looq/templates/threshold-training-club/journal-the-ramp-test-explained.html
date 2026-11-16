@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The ramp test, explained without the jargon — Thres</title>
+  <meta name="description" content="Eight minutes on a bike that tell us where your five zones really are. No, it is not as bad as it sounds.">
+  <link rel="preload" href="./assets/fonts/switzer-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip bg-canvas font-sans text-[15.5px] leading-[1.45] text-body antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-[18px] pt-[18px]">
+    <div class="flex items-start justify-between gap-3">
+      <a href="./" class="flex h-[56px] items-center gap-[10px] rounded-full bg-card px-5 text-[22px] font-medium tracking-[-0.03em] text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)]" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+      <nav class="absolute left-1/2 hidden h-[56px] -translate-x-1/2 items-center rounded-full bg-card px-6 shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:flex" aria-label="Main">
+        <ul class="flex items-center gap-[34px] text-[16px] tracking-[-0.01em] text-ink">
+          <li><a href="timetable" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Timetable</a></li>
+          <li><a href="classes" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Classes</a></li>
+          <li><a href="coaches" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Coaches</a></li>
+          <li><a href="membership" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Membership</a></li>
+          <li><a href="journal" class="transition-opacity hover:opacity-60 aria-[current=page]:text-live">Journal</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="./#book" class="flex h-[56px] items-center gap-[14px] rounded-full bg-ink pr-[6px] pl-5 text-[15px] font-medium text-white max-sm:hidden">First class free<span class="grid size-[42px] place-items-center rounded-full bg-live text-ink"><svg class="size-[14px]" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 10 4M5 4h5v5" /></svg></span></a>
+        <button type="button" class="grid size-[56px] place-items-center rounded-full bg-card text-ink shadow-[0_6px_24px_rgb(13_13_14/0.08)] lg:hidden" aria-controls="mobile-menu" aria-expanded="false" data-menu-button>
+          <span class="sr-only">Open menu</span>
+          <svg class="size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-open><path d="M3 7h14M3 13h14" /></svg>
+          <svg class="hidden size-5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" data-menu-close><path d="M5 5l10 10M15 5 5 15" /></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="mt-2 hidden rounded-[26px] bg-card p-3 shadow-[0_16px_40px_rgb(13_13_14/0.12)] lg:hidden" aria-label="Mobile">
+      <ul class="flex flex-col text-[18px] tracking-[-0.02em] text-ink">
+        <li><a href="timetable" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Timetable</a></li>
+        <li><a href="classes" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Classes</a></li>
+        <li><a href="coaches" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Coaches</a></li>
+        <li><a href="membership" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Membership</a></li>
+        <li><a href="journal" class="block rounded-[16px] px-4 py-3 hover:bg-canvas">Journal</a></li>
+        <li class="pt-2"><a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95 w-full">First class free</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pt-[110px] lg:pt-[140px]">
+    <article aria-labelledby="article-title">
+      <header class="mx-auto max-w-[1000px] px-4 sm:px-[36px] lg:px-0">
+        <p class="text-[14.5px]"><span class="text-ink">First visit</span> <span class="mx-2 text-faint">·</span> <span class="text-muted">August 25, 2026</span> <span class="mx-2 text-faint">·</span> <span class="text-muted">3 min read</span></p>
+        <h1 id="article-title" class="mt-5 max-w-[800px] text-[40px] leading-[1.02] font-medium tracking-[-0.06em] text-ink sm:text-[56px] lg:text-[64px]">The ramp test, explained without the jargon</h1>
+        <p class="mt-6 max-w-[620px] text-[17px] leading-[1.42] text-body lg:text-[19px]">Eight minutes on a bike that tell us where your five zones really are. No, it is not as bad as it sounds.</p>
+      </header>
+      <div class="mx-auto mt-10 max-w-[1200px] px-[18px]">
+        <div class="tint overflow-hidden rounded-[26px]"><img src="./assets/images/class-engine.webp" alt="Bikes and weights on a quiet training floor" width="1200" height="540" fetchpriority="high" class="photo h-[280px] w-full object-cover sm:h-[540px]"></div>
+        <div class="prose-thres mt-3 rounded-[26px] bg-card px-6 py-12 text-[16.5px] leading-[1.55] text-body sm:px-12 sm:py-14">
+          <div class="mx-auto max-w-[650px]">
+            <p>The formula says your maximum heart rate is 220 minus your age. The formula is wrong for about one person in three, sometimes by fifteen beats. So before your first class we find your real number.</p>
+            <h2>What you actually do</h2>
+            <p>You pedal. Every minute the bike gets slightly harder. You keep going until you cannot hold the cadence, which for most people takes between seven and ten minutes. The last sixty seconds are unpleasant. The rest is fine.</p>
+            <h2>What we get from it</h2>
+            <ul>
+              <li>Your true maximum heart rate.</li>
+              <li>The point where your breathing changes, which marks your Thres.</li>
+              <li>Five zones that belong to you rather than to an average.</li>
+            </ul>
+            <h2>How often</h2>
+            <p>Every eight weeks. As you get fitter your zones move, and training by old numbers is like wearing last year's glasses. The re-test is also the most honest progress report you will ever get.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="pt-[100px] lg:pt-[120px]" aria-labelledby="more-title">
+      <div class="px-4 sm:px-[36px] grid items-end gap-6 lg:grid-cols-[1fr_330px] lg:gap-16" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-muted">Keep reading</p>
+          <h2 id="more-title" class="mt-5 text-ink text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px]">More from<br><span class="text-faint">the floor.</span></h2>
+        </div>
+        <span></span>
+      </div>
+      <ul class="px-[18px] mt-10 grid gap-3 lg:mt-12 lg:grid-cols-3">
+        <li data-reveal>
+          <a href="journal-zone-two-feels-too-easy" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-run.webp" alt="A runner in motion on a road" width="680" height="320" loading="lazy" class="photo h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[320px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-10">
+              <span class="text-[14.5px]"><span class="text-ink">Training</span> <span class="mx-2 text-faint">·</span> <span class="text-muted">5 min read</span></span>
+              <h3 class="mt-4 text-[28px] leading-[1.12] font-medium tracking-[-0.04em] text-ink">Zone 2 feels too easy. That is the point.</h3>
+              <span class="mt-4 block text-[16px] leading-[1.45] text-body">Most people train their easy days too hard and their hard days too easy. Here is how to tell, and what to do about it.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="journal-what-your-resting-heart-rate-is-telling-you" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/class-mobility.webp" alt="A woman stretching on the floor" width="680" height="320" loading="lazy" class="photo h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[320px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-10">
+              <span class="text-[14.5px]"><span class="text-ink">Recovery</span> <span class="mx-2 text-faint">·</span> <span class="text-muted">4 min read</span></span>
+              <h3 class="mt-4 text-[28px] leading-[1.12] font-medium tracking-[-0.04em] text-ink">What your resting heart rate is telling you</h3>
+              <span class="mt-4 block text-[16px] leading-[1.45] text-body">One number, taken before you get out of bed, says more about your week than any workout summary.</span>
+            </span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="journal-five-signs-you-are-training-too-hard" class="group flex h-full flex-col rounded-[26px] bg-card p-[9px] transition-shadow hover:shadow-[0_12px_32px_rgb(13_13_14/0.08)]">
+            <span class="block overflow-hidden rounded-[20px]"><img src="./assets/images/inside-class.webp" alt="Members working the battle ropes" width="680" height="320" loading="lazy" class="photo h-[240px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-[320px]"></span>
+            <span class="flex flex-1 flex-col px-[16px] pt-5 pb-10">
+              <span class="text-[14.5px]"><span class="text-ink">Recovery</span> <span class="mx-2 text-faint">·</span> <span class="text-muted">4 min read</span></span>
+              <h3 class="mt-4 text-[28px] leading-[1.12] font-medium tracking-[-0.04em] text-ink">Five signs you are training too hard, too often</h3>
+              <span class="mt-4 block text-[16px] leading-[1.45] text-body">More is not always more. If these sound familiar, the fix is not another session.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+<section class="px-[18px] pt-[100px] pb-[18px] lg:pt-[120px]" aria-labelledby="cta-title">
+      <div class="glow on-dark flex flex-col justify-between gap-10 rounded-[26px] px-6 py-12 sm:px-[48px] sm:py-[56px] lg:flex-row lg:items-end" data-reveal>
+        <div>
+          <p class="text-[14.5px] text-white/60">First class</p>
+          <h2 id="cta-title" class="mt-5 text-[40px] leading-[1] font-medium tracking-[-0.06em] sm:text-[52px] lg:text-[64px] text-white">Your first class<br><span class="text-white/40">is on us.</span></h2>
+          <p class="mt-6 max-w-[420px] text-[17px] leading-[1.45] text-white/70 lg:text-[19px]">Come fifteen minutes early. We fit a strap, find your maximum with a short ramp test and show you round. Then you train.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a href="./#book" class="inline-flex h-[42px] items-center justify-center rounded-full bg-live px-5 text-[14.5px] font-medium text-ink transition-[filter] hover:brightness-95">Book a free first class</a>
+          <a href="timetable" class="inline-flex h-[42px] items-center justify-center rounded-full border border-white/20 px-5 text-[14.5px] font-medium text-white transition-colors hover:bg-white/10">See the timetable</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-[18px] pb-[18px]">
+    <div class="rounded-[26px] bg-card px-6 pt-12 pb-6 sm:px-[48px]">
+      <div class="grid gap-12 lg:grid-cols-[1fr_auto]">
+        <div>
+          <a href="./" class="inline-flex items-center gap-[10px] text-[22px] font-medium tracking-[-0.03em] text-ink" aria-label="Thres home"><svg class="h-[16px] w-[27px]" viewBox="0 0 27 16" aria-hidden="true"><rect x="0" y="10" width="3.2" height="6" rx="1" fill="#0d0d0e" /><rect x="5.6" y="7" width="3.2" height="9" rx="1" fill="#0d0d0e" /><rect x="11.2" y="4" width="3.2" height="12" rx="1" fill="#0d0d0e" /><rect x="16.8" y="1.5" width="3.2" height="14.5" rx="1" fill="#ff4a33" /><rect x="22.4" y="0" width="3.2" height="16" rx="1" fill="#ff9c8f" /></svg>Thres</a>
+          <p class="mt-4 max-w-[330px] text-[15.5px] leading-[1.45] text-body">A heart-rate training club in a tannery warehouse by the water. Coaching the number on the wall since 2019.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-4 sm:gap-x-[52px]">
+          <nav aria-label="Train">
+            <h2 class="text-[14.5px] text-muted">Train</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="timetable" class="transition-opacity hover:opacity-60">Timetable</a></li>
+              <li><a href="classes#zones" class="transition-opacity hover:opacity-60">The five zones</a></li>
+              <li><a href="classes" class="transition-opacity hover:opacity-60">Classes</a></li>
+              <li><a href="coaches" class="transition-opacity hover:opacity-60">Coaches</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Club">
+            <h2 class="text-[14.5px] text-muted">Club</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="membership" class="transition-opacity hover:opacity-60">Membership</a></li>
+              <li><a href="studio" class="transition-opacity hover:opacity-60">The studio</a></li>
+              <li><a href="journal" class="transition-opacity hover:opacity-60">Journal</a></li>
+              <li><a href="visit" class="transition-opacity hover:opacity-60">Visit</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Follow">
+            <h2 class="text-[14.5px] text-muted">Follow</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="#" class="transition-opacity hover:opacity-60">Instagram</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">Strava</a></li>
+              <li><a href="#" class="transition-opacity hover:opacity-60">YouTube</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Small print">
+            <h2 class="text-[14.5px] text-muted">Small print</h2>
+            <ul class="mt-4 flex flex-col gap-[14px] text-[16px] tracking-[-0.01em] text-ink">
+              <li><a href="privacy" class="transition-opacity hover:opacity-60">Privacy</a></li>
+              <li><a href="terms" class="transition-opacity hover:opacity-60">Terms</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="@container mt-10 overflow-hidden lg:mt-6" aria-hidden="true"><span class="-ml-[0.029em] block text-[43.2cqw] leading-[0.78] font-medium tracking-[-0.075em] whitespace-nowrap text-ink">Thres</span></p>
+      <div class="mt-10 flex flex-col justify-between gap-2 border-t border-line pt-5 text-[13.5px] text-muted sm:flex-row">
+        <p>© <span data-year>2026</span> Thres Training Club</p>
+        <p>Thres, a Framer template by Ajoy</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

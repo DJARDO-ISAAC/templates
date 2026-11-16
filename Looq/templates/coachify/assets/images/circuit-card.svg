@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="250" viewBox="0 0 390 250">
+<defs>
+  <linearGradient id="hl" gradientUnits="userSpaceOnUse" x1="148" y1="0" x2="21.7" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="hr" gradientUnits="userSpaceOnUse" x1="242" y1="0" x2="368.3" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="v" cx=".5" cy=".5" r=".55"><stop offset=".15" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="beam" cx=".42" cy="0" r="0.7"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <mask id="m"><rect width="390" height="250" fill="url(#v)"/></mask>
+</defs>
+<rect width="390" height="250" fill="url(#beam)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.2" stroke-linejoin="round" mask="url(#m)"><path d="M144 110.5H21.7" stroke="url(#hl)"/><path d="M246 110.5H368.3" stroke="url(#hr)"/><path d="M144 125H21.7" stroke="url(#hl)"/><path d="M246 125H368.3" stroke="url(#hr)"/><path d="M144 139.5H21.7" stroke="url(#hl)"/><path d="M246 139.5H368.3" stroke="url(#hr)"/><path d="M169 76V47.1L135.7 13.800000000000004V-10"/><path d="M186.3 76V25.4L186.3 25.4V-10"/><path d="M203.7 76V25.4L203.7 25.4V-10"/><path d="M221 76V47.1L254.3 13.800000000000004V-10"/><path d="M153.1 76V63L73.6 -16.5H-10"/><path d="M236.9 76V63L316.4 -16.5H400"/><path d="M169 174V202.9L135.7 236.2V260"/><path d="M186.3 174V224.6L186.3 224.6V260"/><path d="M203.7 174V224.6L203.7 224.6V260"/><path d="M221 174V202.9L254.3 236.2V260"/><path d="M153.1 174V187L73.6 266.5H-10"/><path d="M236.9 174V187L316.4 266.5H400"/></g>
+</svg>

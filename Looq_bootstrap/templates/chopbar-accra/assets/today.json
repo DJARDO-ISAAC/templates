@@ -1,0 +1,12 @@
+{
+  "updated": "2026-11-06T09:30:00Z",
+  "note": "Akrantie is back! Fresh grasscutter in palm nut soup today.",
+  "pots": [
+    { "name": "Light soup with goat", "detail": "Spicy tomato and pepper broth", "status": "available" },
+    { "name": "Palm nut soup", "detail": "With akrantie and smoked fish", "status": "few" },
+    { "name": "Groundnut soup", "detail": "With chicken", "status": "available" },
+    { "name": "Abunuabunu", "detail": "Kontomire and snails", "status": "finished" },
+    { "name": "Okro stew", "detail": "For banku lovers", "status": "available" },
+    { "name": "Fried tilapia & pepper", "detail": "Whole fish, shito on the side", "status": "few" }
+  ]
+}

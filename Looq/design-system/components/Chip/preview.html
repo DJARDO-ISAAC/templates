@@ -1,0 +1,16 @@
+<!-- @dsCard group="Actions" height=90 subtitle=".chip · aria-pressed" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Chip — preview</title></head>
+<body>
+<div class="pv pv-row" role="group" aria-label="Filter by category">
+  <button type="button" class="chip" aria-pressed="true">All <span class="count">24</span></button>
+  <button type="button" class="chip" aria-pressed="false">Soups <span class="count">6</span></button>
+  <button type="button" class="chip" aria-pressed="false">Rice <span class="count">4</span></button>
+  <button type="button" class="chip" aria-pressed="false">Vegetarian <span class="count">9</span></button>
+</div>
+<script>
+document.querySelectorAll('.chip').forEach(function (c) { c.addEventListener('click', function () { document.querySelectorAll('.chip').forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)) }) }) })
+</script>
+</body>
+</html>

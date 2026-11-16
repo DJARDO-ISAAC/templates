@@ -1,0 +1,21 @@
+{
+  "slug": "tamarind",
+  "name": "Tamarind",
+  "industry": "nonprofit",
+  "type": "website",
+  "tags": [
+    "charity",
+    "nonprofit",
+    "children",
+    "donations",
+    "campaigns",
+    "volunteers",
+    "events",
+    "shop",
+    "capsule",
+    "warm",
+    "multi-page"
+  ],
+  "description": "Warm, optimistic children's charity site built around tilted capsule photos and self-drawing doodles. Includes a live gift calculator, campaign pages with budgets, a three-step donate form, matched appeal countdown, events with add-to-calendar, site search and a working shop bag.",
+  "tailwindVersion": "4.x"
+}

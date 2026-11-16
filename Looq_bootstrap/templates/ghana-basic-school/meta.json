@@ -1,0 +1,8 @@
+{
+  "slug": "ghana-basic-school",
+  "name": "Nyansa Hill Academy",
+  "industry": "education",
+  "tags": ["school", "ghana", "kg-to-jhs", "light", "photo-led", "scroll-animations", "interactive"],
+  "description": "A warm, editorial site for a Ghanaian KG–JHS basic school. Forest green and harvest gold, a kente-inspired accent stripe, a pinned horizontal learning journey, a class-finder quiz and odometer-style BECE results.",
+  "bootstrapVersion": "5.3.x"
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "asanka",
+  "name": "Asanka",
+  "industry": "restaurant",
+  "type": "website",
+  "tags": [
+    "restaurant",
+    "ghanaian",
+    "west-african",
+    "chop-bar",
+    "food",
+    "ordering",
+    "recipes",
+    "catering",
+    "reservations",
+    "kente",
+    "bold",
+    "multi-page"
+  ],
+  "description": "Bold Ghanaian chop bar and kitchen site with condensed type, kente bands and bowl-shaped photos. Includes a filterable menu with heat ratings, dish pages with options, an order bag and checkout with Mobile Money, a daily pot board, scalable recipes with step timers, table booking, a catering estimator, classes, gift cards and a Ghanaian food guide.",
+  "tailwindVersion": "4.x"
+}

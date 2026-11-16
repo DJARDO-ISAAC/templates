@@ -1,0 +1,28 @@
+{
+  "slug": "single-page/homecare",
+  "name": "HomeCare",
+  "industry": "banking",
+  "type": "landing-page",
+  "pages": [
+    "index.html"
+  ],
+  "tags": [
+    "one-page",
+    "fintech",
+    "banking",
+    "diaspora",
+    "care",
+    "ghana",
+    "waitlist",
+    "navy",
+    "cream",
+    "coral",
+    "pricing",
+    "calculator",
+    "faq",
+    "dialog",
+    "form"
+  ],
+  "description": "Pre-launch diaspora care account for Sankofa Bank: navy, cream and coral, a caregiver portrait with floating payment cards, escrow and verification storytelling, a bank letter, three pricing tiers with a monthly/yearly toggle, a funding-fee calculator, FAQ and waitlist forms.",
+  "tailwindVersion": "4.x"
+}

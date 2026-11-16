@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* Paths are relative to the compiled css/styles.css, hence ../assets */
+@font-face {
+  font-family: "Switzer";
+  src: url("../assets/fonts/switzer-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Switzer";
+  src: url("../assets/fonts/switzer-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Switzer";
+  src: url("../assets/fonts/switzer-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Switzer", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #eeeeeb;
+  --color-card: #ffffff;
+  --color-ink: #0d0d0e;
+  --color-body: #4a4c50;
+  --color-muted: #74767a;
+  --color-faint: #a9abae;
+  --color-line: #0d0d0e17;
+  --color-night: #0a0a0b;
+  --color-night-2: #19191b;
+  --color-live: #ff4a33;
+  --color-live-soft: #ffdcd6;
+  --color-zone-1: #9faab8;
+  --color-zone-2: #4c86ff;
+  --color-zone-3: #1fc47f;
+  --color-zone-4: #ffb21f;
+  --color-zone-5: #ff4a33;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-canvas);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: #fff;
+  }
+
+  input, select, textarea, button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  /* Every photo is shown in black and white */
+  .photo {
+    filter: grayscale(1) contrast(1.05);
+  }
+
+  /* Large photos also get the red wash rising from the bottom left */
+  .tint {
+    position: relative;
+    isolation: isolate;
+  }
+  .tint::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(20deg, var(--color-live) 0%, rgb(255 74 51 / 0.55) 30%, transparent 62%);
+    mix-blend-mode: color;
+    pointer-events: none;
+  }
+
+  /* Dark call-to-action panels: a red glow in the bottom right corner */
+  .glow {
+    background:
+      radial-gradient(60% 90% at 100% 100%, rgb(255 74 51 / 0.24), transparent 70%),
+      var(--color-night);
+  }
+  .glow-left {
+    background:
+      radial-gradient(55% 80% at 0% 100%, rgb(255 74 51 / 0.24), transparent 70%),
+      var(--color-night);
+  }
+
+  /* Week picker: one open day, the rest are narrow columns */
+  .week {
+    --gap: 10px;
+    display: flex;
+    gap: var(--gap);
+    height: 450px;
+  }
+  .day {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 26px;
+    background: var(--color-night);
+    color: #fff;
+    transition: flex-grow 0.82s cubic-bezier(0.28, 0.36, 0.15, 1);
+  }
+  .day[data-open] {
+    flex-grow: 5.2;
+  }
+  .day-shut,
+  .day-body {
+    transition: opacity 0.35s ease;
+  }
+  .day[data-open] .day-shut,
+  .day:not([data-open]) .day-body {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .day[data-open] .day-body {
+    transition-delay: 0.3s;
+  }
+  .day-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  .day[data-rest] {
+    background: var(--color-card);
+    color: var(--color-ink);
+  }
+
+  /* Zone calculator track */
+  .zone-fill {
+    transition: width 0.5s cubic-bezier(0.2, 0, 0, 1);
+  }
+  .zone-dot {
+    transition: left 0.5s cubic-bezier(0.2, 0, 0, 1);
+  }
+  .zone-col:not([aria-pressed="true"]) {
+    color: rgb(255 255 255 / 0.4);
+  }
+
+  /* "Inside a class" step cards light up in turn */
+  .step {
+    outline: 3px solid transparent;
+    outline-offset: -3px;
+    transition: outline-color 0.3s ease;
+  }
+  .step[data-active] {
+    outline-color: var(--color-live);
+  }
+
+  /* FAQ accordion */
+  .faq-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.2, 0, 0, 1);
+  }
+  [data-open] > .faq-panel {
+    grid-template-rows: 1fr;
+  }
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  [data-open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Article and legal body copy */
+  .prose-thres h2 {
+    margin-top: 44px;
+    margin-bottom: 14px;
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
+  }
+  .prose-thres h2:first-child {
+    margin-top: 0;
+  }
+  .prose-thres p + p {
+    margin-top: 16px;
+  }
+  .prose-thres ul {
+    list-style: disc;
+    padding-left: 18px;
+  }
+  .prose-thres blockquote {
+    margin-top: 32px;
+    padding-left: 20px;
+    border-left: 3px solid var(--color-live);
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+
+  /* Scroll reveal: main.js adds .reveal-pending only to elements below the fold */
+  [data-reveal] {
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .reveal-pending {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* Phones: the week becomes a tab row above one open card */
+@media (max-width: 809px) {
+  .week {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .day {
+    flex: 1 1 0;
+    height: 64px;
+    border-radius: 16px;
+    transition: none;
+  }
+  .day[data-open] {
+    order: 2;
+    flex: 1 0 100%;
+    height: 430px;
+    border-radius: 22px;
+  }
+  .day:not([data-open]) > .day-photo,
+  .day:not([data-open]) > .day-shade,
+  .day .day-shut .day-title,
+  .day .day-shut .day-time {
+    display: none;
+  }
+  .day .day-shut {
+    padding: 13px 2px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .day,
+  .day-shut,
+  .day-body,
+  .zone-fill,
+  .zone-dot,
+  .faq-panel,
+  .faq-icon,
+  [data-reveal] {
+    transition: none !important;
+  }
+}

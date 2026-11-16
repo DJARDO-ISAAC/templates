@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galao — A world-class reading, watching and listening experience</title>
+  <meta name="description" content="Galao is a technology magazine with articles, tutorials and reviews from writers around the world.">
+  <meta name="theme-color" content="#374a34">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body class="overflow-x-clip font-sans text-white antialiased " style="--page-bg: var(--color-green)" data-bg="green">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-lime focus:px-5 focus:py-3 focus:text-[14px] focus:text-black">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="header-bar">
+      <div class="flex items-center justify-between gap-4">
+        <a href="./" class="shrink-0 rounded-full" aria-label="Galao home"><svg class="header-logo text-lime" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5C25.5 15.8 32.2 22.5 43 24 32.2 25.5 25.5 32.2 24 43 22.5 32.2 15.8 25.5 5 24 15.8 22.5 22.5 15.8 24 5Z" fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></a>
+        <nav class="header-nav flex items-center gap-8 text-[18px] leading-[1.4] text-white transition-[gap,padding] duration-700 max-md:hidden lg:gap-12 lg:px-10" aria-label="Main"><a href="articles" class="nav-link ">Articles</a><a href="authors" class="nav-link ">Authors</a><a href="./#pricing" class="nav-link ">Pricing</a><a href="./#contact" class="nav-link ">Contact Us</a></nav>
+        <div class="flex items-center gap-[10px]">
+          <a href="become-a-creator" class="btn min-h-[50px] max-md:hidden">Become a creator</a>
+          <a href="become-a-creator" class="btn min-h-[44px] px-[18px] md:hidden">Join us</a>
+          <button type="button" class="menu-toggle flex size-[50px] flex-col items-center justify-center gap-[6px] rounded-full border border-white/50 text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-button>
+            <span class="block h-px w-[18px] bg-current"></span>
+            <span class="block h-px w-[12px] translate-x-[3px] bg-current"></span>
+          </button>
+        </div>
+      </div>
+      <div class="menu-panel md:hidden">
+        <div id="mobile-menu" class="overflow-hidden">
+          <nav class="flex flex-col items-center gap-6 pt-10 pb-12 text-[22px] text-white" aria-label="Mobile"><a href="articles" class="nav-link ">Articles</a><a href="authors" class="nav-link ">Authors</a><a href="./#pricing" class="nav-link ">Pricing</a><a href="./#contact" class="nav-link ">Contact Us</a></nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="relative md:h-[200vh]" aria-labelledby="hero-title" data-hero>
+      <div class="flex min-h-[100svh] flex-col items-center justify-center gap-8 px-5 pt-[94px] pb-10 text-center md:sticky md:top-0 md:block md:h-screen md:min-h-[640px] md:overflow-hidden md:p-0">
+        <div class="max-md:hidden" aria-hidden="true">
+          <div class="hero-photo" style="--x:-1040px;--y:-294px;--w:300px;--h:620px;--dx:-130px;--dy:-64px;--r:0deg"><img src="./assets/images/hero-l5.webp" alt="" width="600" height="1240" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:-720px;--y:6px;--w:250px;--h:250px;--dx:-110px;--dy:-53px;--r:-6deg"><img src="./assets/images/hero-l4.webp" alt="" width="500" height="500" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:-720px;--y:-214px;--w:200px;--h:200px;--dx:-110px;--dy:-73px;--r:6deg"><img src="./assets/images/hero-l3.webp" alt="" width="400" height="400" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:-500px;--y:-114px;--w:100px;--h:100px;--dx:-100px;--dy:-73px;--r:7deg"><img src="./assets/images/hero-l2.webp" alt="" width="200" height="200" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:-450px;--y:6px;--w:120px;--h:120px;--dx:-100px;--dy:-53px;--r:-7deg"><img src="./assets/images/hero-l1.webp" alt="" width="240" height="240" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:330px;--y:6px;--w:120px;--h:120px;--dx:100px;--dy:-53px;--r:7deg"><img src="./assets/images/hero-r1.webp" alt="" width="240" height="240" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:400px;--y:-114px;--w:100px;--h:100px;--dx:100px;--dy:-73px;--r:-7deg"><img src="./assets/images/hero-r2.webp" alt="" width="200" height="200" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:520px;--y:-214px;--w:200px;--h:200px;--dx:110px;--dy:-73px;--r:-6deg"><img src="./assets/images/hero-r3.webp" alt="" width="400" height="400" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:470px;--y:6px;--w:250px;--h:250px;--dx:110px;--dy:-53px;--r:6deg"><img src="./assets/images/hero-r4.webp" alt="" width="500" height="500" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+          <div class="hero-photo" style="--x:740px;--y:-294px;--w:300px;--h:620px;--dx:130px;--dy:-64px;--r:0deg"><img src="./assets/images/hero-r5.webp" alt="" width="600" height="1240" fetchpriority="high" decoding="async" class="size-full object-cover"></div>
+        </div>
+        <h1 id="hero-title" class="text-[30px] leading-[1.2] text-lime uppercase md:absolute md:inset-0 md:text-[64px]">
+          <span class="hero-line block" style="--y:-141px">A world-class</span>
+          <span class="hero-line block" style="--y:-64px">reading, watching,</span>
+          <span class="hero-line block" style="--y:16px">and listening</span>
+          <span class="hero-line block" style="--y:90px">experience</span>
+        </h1>
+        <button type="button" class="hero-search flex h-[57px] w-[350px] max-w-full items-center justify-between rounded-[32px] border border-lime px-[26px] text-[18px] text-white transition-colors hover:bg-white/10" data-search-open>
+          <span>Search…</span><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <figure class="hero-author flex w-[1000px] max-w-[100vw] flex-col items-center gap-6 text-center max-md:hidden" aria-hidden="true">
+          <svg class="text-lime" width="44" height="47" viewBox="0 0 44 47" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 4.5h15v17c0 10.5-4.5 18-14.5 21"/><path d="M3 4.5v17h15"/><path d="M26 4.5h15v17c0 10.5-4.5 18-14.5 21"/><path d="M26 4.5v17h15"/></svg>
+          <figcaption class="flex flex-col gap-4">
+            <span class="block font-script text-[84px] leading-[1.2] text-white">Isabella Marlowe</span>
+            <span class="t-label block text-lime">CEO, Galao founder</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap py-20 lg:py-[120px]" aria-labelledby="meet-title">
+      <div class="grid grid-cols-2 gap-[10px] md:grid-cols-3 lg:grid-cols-6 lg:items-start">
+        <div class="col-span-2 flex flex-col justify-center gap-[10px] pb-10 max-md:items-center max-md:text-center md:col-span-3 lg:col-start-4 lg:row-start-1 lg:h-[230px] lg:p-6" data-par="50">
+          <p class="t-label text-lime ">Meet Galao</p>
+          <h2 id="meet-title" class="t-h2">Empowering thoughts<br class="max-md:hidden"> and stories for inspired living</h2>
+        </div>
+        <a href="authors" class="glow flex h-[200px] flex-col gap-[10px] rounded-[10px] bg-lime px-5 py-8 text-black md:h-[230px] lg:col-start-1 lg:row-start-1" data-par="50">
+          <h3 class="t-h3">Authors</h3>
+          <p class="text-[14px] leading-[1.3] text-green">Our talented team of writers</p>
+          <span class="mt-auto flex pt-[10px]"><span class=" grid size-14 place-items-center rounded-full bg-white p-[2px]"><span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full " style="width:52px;height:52px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-andrii-shevchenko.webp" alt="" width="52" height="52" loading="lazy" decoding="async" class="size-full object-cover"></span></span><span class="-ml-[21px] grid size-14 place-items-center rounded-full bg-white p-[2px]"><span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full " style="width:52px;height:52px;background-color:var(--color-burgundy)"><img src="./assets/images/avatar-liam-thompson.webp" alt="" width="52" height="52" loading="lazy" decoding="async" class="size-full object-cover"></span></span><span class="-ml-[21px] grid size-14 place-items-center rounded-full bg-white p-[2px]"><span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full " style="width:52px;height:52px;background-color:var(--color-burgundy)"><img src="./assets/images/avatar-sarah-o-brien.webp" alt="" width="52" height="52" loading="lazy" decoding="async" class="size-full object-cover"></span></span></span>
+        </a>
+        <a href="articles" class="glow grid h-[200px] grid-cols-[1fr_1.1fr] items-center gap-2 overflow-hidden rounded-[10px] bg-lime p-5 text-black md:col-span-2 md:h-[230px] md:p-8 lg:col-span-2 lg:row-start-1" data-par="50">
+          <span class="relative block size-full max-md:hidden"><img data-spin src="./assets/images/icon-flame.svg" alt="" width="206" height="206" loading="lazy" decoding="async" class="absolute top-1/2 left-1/2 size-[206px] max-w-none -translate-x-1/2 -translate-y-1/2"></span>
+          <span class="flex flex-col gap-[10px] max-md:col-span-2"><span class="t-h3 block">Articles</span><span class="block text-[14px] leading-[1.3] text-green">Explore our most recent articles and fresh perspectives</span></span>
+        </a>
+        <a href="./#contact" class="glow col-span-2 flex h-[300px] flex-col items-center justify-end gap-5 overflow-hidden rounded-[10px] bg-lime p-8 text-center text-black md:h-[330px] lg:row-start-2" data-par="100">
+          <img data-spin src="./assets/images/icon-envelope.svg" alt="" width="206" height="206" loading="lazy" decoding="async" class="size-[170px] md:size-[206px] -mt-4">
+          <span class="flex flex-col gap-[10px]"><span class="t-h3 block">Weekly Updates</span><span class="block text-[14px] leading-[1.3] text-green">Stay informed with our<br>latest news and stories</span></span>
+        </a>
+        <div class="contents lg:col-start-3 lg:row-start-2 lg:flex lg:flex-col lg:gap-[10px]">
+          <a href="articles" class="glow flex h-[200px] flex-col gap-[10px] rounded-[10px] bg-lime px-6 py-8 text-black md:h-[230px]" data-par="100">
+            <span class="t-h2 block">10+</span>
+            <span class="block text-[14px] leading-[1.3] text-green">Explore our diverse range of categories</span>
+          </a>
+          <a href="authors" class="glow flex h-[200px] flex-col items-center justify-end gap-5 overflow-hidden rounded-[10px] bg-lime px-6 py-8 text-center text-black md:h-[230px]" data-par="150">
+            <img data-spin src="./assets/images/icon-pin.svg" alt="" width="139" height="139" loading="lazy" decoding="async" class="size-[110px] md:size-[139px] -mt-2">
+            <span class="block text-[14px] leading-[1.3] text-green">Voices from around the World</span>
+          </a>
+        </div>
+        <figure class="col-span-2 flex min-h-[300px] flex-col items-center justify-center gap-6 rounded-[10px] bg-lime p-8 text-center text-black md:h-[330px] lg:col-start-4 lg:row-start-2" data-par="100">
+          <svg class="text-green" width="40" height="43" viewBox="0 0 44 47" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M3 4.5h15v17c0 10.5-4.5 18-14.5 21"/><path d="M3 4.5v17h15"/><path d="M26 4.5h15v17c0 10.5-4.5 18-14.5 21"/><path d="M26 4.5v17h15"/></svg>
+          <blockquote class="t-body text-green">“A world-class reading,<br>watching, and listening experience”</blockquote>
+          <figcaption class="flex w-full flex-col items-center gap-[10px] border-t border-green/30 pt-6"><span class="t-h3 block">Isabella Marlowe</span><span class="block text-[14px] text-green">CEO, Galao Founder</span></figcaption>
+        </figure>
+        <a href="become-a-creator" class="glow flex h-[200px] flex-col items-center justify-end gap-5 overflow-hidden rounded-[10px] bg-lime px-6 py-8 text-center text-black max-md:col-span-2 md:h-[230px] lg:col-start-6 lg:row-start-2" data-par="100">
+          <img data-spin src="./assets/images/icon-bolt.svg" alt="" width="151" height="151" loading="lazy" decoding="async" class="size-[110px] md:size-[151px] -mt-4">
+          <span class="block text-[14px] leading-[1.3] text-green">Become a creator and<br>write your stories</span>
+        </a>
+      </div>
+    </section>
+
+    <div data-bg-marker="burgundy" aria-hidden="true"></div>
+    <section class="wrap py-20 lg:py-[120px]" aria-labelledby="recent-title">
+      <div class="flex flex-col gap-10 max-md:items-center max-md:text-center md:flex-row md:items-end md:justify-between">
+        <div class="flex max-w-[560px] flex-col gap-6">
+          <p class="t-label text-lime ">Recent articles</p>
+          <h2 id="recent-title" class="t-h2">Explore our most recent articles and fresh perspectives</h2>
+        </div>
+        <div class="flex max-w-[420px] flex-col gap-6 max-md:items-center">
+          <p class="t-body">Stay in the loop with our latest posts, featuring thought-provoking articles, fresh ideas, and creative insights. Whether you’re looking for inspiration, practical tips, or stories that spark curiosity.</p>
+          <a href="articles" class="btn btn-arrow w-fit">Read more<span class="arrow-dot"><svg class="" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a>
+        </div>
+      </div>
+      <div class="mt-16 grid gap-[10px] md:grid-cols-2 lg:mt-[120px]">
+        <article class="relative">
+    <a href="key-strategies-for-effective-software-reviews" class="post-card group relative flex h-[420px] md:h-[500px] flex-col justify-between overflow-hidden rounded-[12px] p-[10px] md:p-5">
+      <img src="./assets/images/article-key-strategies-for-effective-software-reviews.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="cover absolute inset-0 size-full object-cover">
+      <ul class="relative flex flex-wrap justify-end gap-[6px] md:gap-[10px]" aria-label="Topics"><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">AI Innovations</li><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Coding Tutorials</li></ul>
+      <div class="post-info relative flex items-center gap-4 rounded-[10px] bg-lime p-[14px] md:gap-5 md:p-5">
+        <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full max-md:!size-16" style="width:100px;height:100px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-fatima-al-sayed.webp" alt="" width="100" height="100" loading="lazy" decoding="async" class="size-full object-cover"></span>
+        <div class="flex flex-col gap-2">
+          <p class="post-date t-label text-black"><time datetime="2025-05-07">May 7, 2025</time></p>
+          <h3 class="text-[17px] leading-[1.3] font-medium text-black md:text-[20px]">Key Strategies for Effective Software Reviews</h3>
+        </div>
+      </div>
+    </a>
+  </article>
+        <article class="relative">
+    <a href="innovations-in-iot-transforming-everyday-life" class="post-card group relative flex h-[420px] md:h-[500px] flex-col justify-between overflow-hidden rounded-[12px] p-[10px] md:p-5">
+      <img src="./assets/images/article-innovations-in-iot-transforming-everyday-life.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="cover absolute inset-0 size-full object-cover">
+      <ul class="relative flex flex-wrap justify-end gap-[6px] md:gap-[10px]" aria-label="Topics"><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Mobile Technology</li><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Gadgets</li></ul>
+      <div class="post-info relative flex items-center gap-4 rounded-[10px] bg-lime p-[14px] md:gap-5 md:p-5">
+        <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full max-md:!size-16" style="width:100px;height:100px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-andrii-shevchenko.webp" alt="" width="100" height="100" loading="lazy" decoding="async" class="size-full object-cover"></span>
+        <div class="flex flex-col gap-2">
+          <p class="post-date t-label text-black"><time datetime="2025-04-21">April 21, 2025</time></p>
+          <h3 class="text-[17px] leading-[1.3] font-medium text-black md:text-[20px]">Innovations in IoT: Transforming Everyday Life</h3>
+        </div>
+      </div>
+    </a>
+  </article>
+        <article class="relative">
+    <a href="navigating-the-latest-trends-in-internet-of-things" class="post-card group relative flex h-[420px] md:h-[500px] flex-col justify-between overflow-hidden rounded-[12px] p-[10px] md:p-5">
+      <img src="./assets/images/article-navigating-the-latest-trends-in-internet-of-things.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="cover absolute inset-0 size-full object-cover">
+      <ul class="relative flex flex-wrap justify-end gap-[6px] md:gap-[10px]" aria-label="Topics"><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Gadgets</li><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Mobile Technology</li></ul>
+      <div class="post-info relative flex items-center gap-4 rounded-[10px] bg-lime p-[14px] md:gap-5 md:p-5">
+        <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full max-md:!size-16" style="width:100px;height:100px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-david-mccormick.webp" alt="" width="100" height="100" loading="lazy" decoding="async" class="size-full object-cover"></span>
+        <div class="flex flex-col gap-2">
+          <p class="post-date t-label text-black"><time datetime="2025-03-11">March 11, 2025</time></p>
+          <h3 class="text-[17px] leading-[1.3] font-medium text-black md:text-[20px]">Navigating the latest trends in internet of things</h3>
+        </div>
+      </div>
+    </a>
+  </article>
+        <article class="relative">
+    <a href="trends-in-graphic-design-what-to-watch" class="post-card group relative flex h-[420px] md:h-[500px] flex-col justify-between overflow-hidden rounded-[12px] p-[10px] md:p-5">
+      <img src="./assets/images/article-trends-in-graphic-design-what-to-watch.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="cover absolute inset-0 size-full object-cover">
+      <ul class="relative flex flex-wrap justify-end gap-[6px] md:gap-[10px]" aria-label="Topics"><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Graphic Design</li><li class="tag tag-glass min-h-[44px] px-4 md:min-h-[50px] md:px-[25px]">Design Tools</li></ul>
+      <div class="post-info relative flex items-center gap-4 rounded-[10px] bg-lime p-[14px] md:gap-5 md:p-5">
+        <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full max-md:!size-16" style="width:100px;height:100px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-fatima-al-sayed.webp" alt="" width="100" height="100" loading="lazy" decoding="async" class="size-full object-cover"></span>
+        <div class="flex flex-col gap-2">
+          <p class="post-date t-label text-black"><time datetime="2025-03-08">March 8, 2025</time></p>
+          <h3 class="text-[17px] leading-[1.3] font-medium text-black md:text-[20px]">Trends in Graphic Design: What to Watch</h3>
+        </div>
+      </div>
+    </a>
+  </article>
+      </div>
+    </section>
+
+    <section class="wrap py-20 lg:py-[120px]" aria-labelledby="cat-title">
+      <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 text-center">
+        <p class="t-label text-lime ">Categories</p>
+        <h2 id="cat-title" class="t-h2">More than 10 categories</h2>
+        <p class="t-body max-w-[580px]">Explore our diverse range of categories, carefully curated to help you find exactly what you’re looking for. Whether you’re interested in lifestyle, creativity, personal growth, or something else.</p>
+      </div>
+      <ul class="mt-16 grid gap-[10px] md:grid-cols-3 lg:mt-24" data-cat-list>
+        <li class="contents"><ul class="flex flex-col gap-[10px] "><li><a href="articles?category=web-design" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg><span class="text-[18px] leading-[1.4] uppercase">Web Design</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=graphic-design" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="text-[18px] leading-[1.4] uppercase">Graphic Design</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=blockchain" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.29 4.26m5.908 1.042.348-1.97M7.48 20.364l3.126-17.727"/></svg><span class="text-[18px] leading-[1.4] uppercase">Blockchain</span></a></li></ul></li>
+        <li class="contents"><ul class="flex flex-col gap-[10px] md:-mt-11"><li><a href="articles?category=branding" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-3-3c-1.66 0-3 1-3 3s1 2 1 3.5V13"/></svg><span class="text-[18px] leading-[1.4] uppercase">Branding</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=coding-tutorials" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span class="text-[18px] leading-[1.4] uppercase">Coding Tutorials</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=mobile-technology" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></svg><span class="text-[18px] leading-[1.4] uppercase">Mobile Technology</span></a></li></ul></li>
+        <li class="contents"><ul class="flex flex-col gap-[10px] "><li><a href="articles?category=design-tools" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg><span class="text-[18px] leading-[1.4] uppercase">Design Tools</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=cybersecurity" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><span class="text-[18px] leading-[1.4] uppercase">Cybersecurity</span></a></li><li class="max-md:hidden" data-cat-extra><a href="articles?category=ai-innovations" class="cat-card flex h-[118px] flex-col justify-between rounded-[10px] bg-lime px-6 py-7 text-black md:h-[129px] md:py-8"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg><span class="text-[18px] leading-[1.4] uppercase">AI Innovations</span></a></li></ul></li>
+      </ul>
+      <div class="mt-6 flex justify-center md:hidden"><button type="button" class="btn" data-cat-more aria-expanded="false">View more</button></div>
+    </section>
+
+    <section class="wrap flex flex-col gap-14 py-20 lg:flex-row lg:items-center lg:justify-between lg:py-[120px]" aria-labelledby="authors-title">
+      <div class="flex max-w-[480px] flex-col gap-8 max-lg:mx-auto max-lg:items-center max-lg:text-center">
+        <div class="flex flex-col gap-6">
+          <p class="t-label text-lime ">Our authors</p>
+          <h2 id="authors-title" class="t-h2">Our talented team of writers and creators</h2>
+          <p class="t-body">Get to know the voices behind the words. Our talented team of authors brings a wealth of experience, creativity, and passion to every article.</p>
+        </div>
+        <a href="authors" class="btn btn-arrow w-fit">View all<span class="arrow-dot"><svg class="" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a>
+      </div>
+      <div class="grid gap-[10px] md:grid-cols-2 lg:w-[740px]">
+        <article class="person-card relative flex flex-col rounded-[10px] bg-lime p-5 text-black min-h-[440px] lg:h-[470px]">
+    <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full " style="width:160px;height:160px;background-color:var(--color-midnight)"><img src="./assets/images/avatar-andrii-shevchenko.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="size-full object-cover"></span>
+    <p class="mt-auto pt-8 text-[14px] leading-[1.3]">Ukraine, Kyiv</p>
+    <h3 class="person-name mt-[6px] text-[24px] leading-[1.4]"><a href="andrii-shevchenko" class="after:absolute after:inset-0 after:rounded-[10px] focus-visible:outline-none">Andrii Shevchenko</a></h3>
+    <p class="t-body max-w-[300px] pt-10 pb-5">Exploring the latest in technology to inspire innovation and safeguard our digital world.</p>
+    <div class="relative z-10"><ul class="flex flex-wrap items-center gap-[14px]"><li><a href="#" class="icon-link grid size-8 place-items-center text-current" aria-label="Instagram"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-current" aria-label="X"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4.6L20 20h-4.6zM19.6 4l-6.4 7M4.4 20l6.4-7"/></svg></a></li></ul></div>
+  </article>
+        <article class="person-card relative flex flex-col rounded-[10px] bg-lime p-5 text-black min-h-[440px] lg:h-[470px]">
+    <span class="avatar-bg grid shrink-0 place-items-center overflow-hidden rounded-full " style="width:160px;height:160px;background-color:var(--color-burgundy)"><img src="./assets/images/avatar-liam-thompson.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="size-full object-cover"></span>
+    <p class="mt-auto pt-8 text-[14px] leading-[1.3]">USA, New York</p>
+    <h3 class="person-name mt-[6px] text-[24px] leading-[1.4]"><a href="liam-thompson" class="after:absolute after:inset-0 after:rounded-[10px] focus-visible:outline-none">Liam Thompson</a></h3>
+    <p class="t-body max-w-[300px] pt-10 pb-5">Unlocking the power of technology through insightful reviews and tutorials.</p>
+    <div class="relative z-10"><ul class="flex flex-wrap items-center gap-[14px]"><li><a href="#" class="icon-link grid size-8 place-items-center text-current" aria-label="Instagram"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-current" aria-label="Threads"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.6 11.3c-.4-2.6-2-4-4.4-4-2.7 0-4.4 1.9-4.4 4.7s1.7 4.7 4.2 4.7c2.2 0 3.6-1.3 3.6-3.1 0-2.7-3.8-3.1-5.3-2-1.3 1-.9 3.2 1.1 3.2 2.4 0 3.6-2 3.6-5.2C15 5.5 12.7 3 9.8 3 5.6 3 3.5 6.6 3.5 12s2.4 9 8 9c3.4 0 6-1.6 7.2-4.2"/></svg></a></li></ul></div>
+  </article>
+      </div>
+    </section>
+
+    <div data-bg-marker="midnight" aria-hidden="true"></div>
+    <section id="pricing" class="wrap py-20 lg:py-[120px]" aria-labelledby="pricing-title">
+      <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 text-center">
+        <p class="t-label text-lime ">Pricing</p>
+        <h2 id="pricing-title" class="t-h2">Affordable plans to unlock premium content and features</h2>
+        <p class="t-body max-w-[580px]">Whether you’re looking for one-time access or ongoing benefits, we offer flexible pricing options to ensure you get the most value.</p>
+      </div>
+      <div class="mt-16 flex justify-center lg:mt-[100px]">
+        <div class="seg flex rounded-[32px] border border-lime text-[18px]" role="group" aria-label="Billing period" data-billing>
+          <button type="button" class="rounded-[32px] px-[30px] py-4" aria-pressed="true" data-period="monthly">Monthly</button>
+          <button type="button" class="rounded-[32px] px-[30px] py-4" aria-pressed="false" data-period="annual">Annually</button>
+        </div>
+      </div>
+      <div class="mt-12 grid gap-[10px] md:grid-cols-2 lg:grid-cols-3 lg:items-start">
+        <article class="plan plan-open relative flex flex-col gap-6 rounded-[28px] p-6 lg:h-[450px] " style="--plan: var(--color-green)">
+          <h3 class="plan-badge w-fit rounded-[32px] border px-4 py-[6px] text-[14px]">Light</h3>
+          <p class="plan-price flex flex-1 items-center justify-center text-[96px] leading-none md:text-[120px]"><span class="sr-only">Price: </span><span data-monthly="12$" data-annual="10$">12$</span><span class="sr-only"> per <span data-period-label>month</span></span></p>
+          <ul class="plan-list flex flex-col gap-[10px] text-[18px] leading-[1.4]"><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Access to all standard blog posts</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Email newsletters</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Community forum or discussion group</span></li></ul>
+          <div class="flex items-end justify-between gap-6">
+            <p class="max-w-[260px] text-[14px] leading-[1.3]">Enjoy access to a limited selection of articles and basic features, ideal for occasional visitors.</p>
+            <a href="become-a-creator" class="plan-btn grid size-14 shrink-0 place-items-center rounded-full text-lime" aria-label="Choose the Light plan"><svg class="" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+        <article class="plan plan-open relative flex flex-col gap-6 rounded-[28px] p-6 lg:h-[450px] lg:mt-[23px]" style="--plan: var(--color-burgundy)">
+          <h3 class="plan-badge w-fit rounded-[32px] border px-4 py-[6px] text-[14px]">Basic</h3>
+          <p class="plan-price flex flex-1 items-center justify-center text-[96px] leading-none md:text-[120px]"><span class="sr-only">Price: </span><span data-monthly="29$" data-annual="24$">29$</span><span class="sr-only"> per <span data-period-label>month</span></span></p>
+          <ul class="plan-list flex flex-col gap-[10px] text-[18px] leading-[1.4]"><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Access to exclusive blog posts, tutorials, and case studies</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Downloadable resources</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Monthly Q&amp;A or live webinars</span></li></ul>
+          <div class="flex items-end justify-between gap-6">
+            <p class="max-w-[260px] text-[14px] leading-[1.3]">Unlock additional content, features, and resources, perfect for users who want more access.</p>
+            <a href="become-a-creator" class="plan-btn grid size-14 shrink-0 place-items-center rounded-full text-lime" aria-label="Choose the Basic plan"><svg class="" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+        <article class="plan plan-open relative flex flex-col gap-6 rounded-[28px] p-6 lg:h-[450px] lg:mt-[45px]" style="--plan: var(--color-midnight)">
+          <h3 class="plan-badge w-fit rounded-[32px] border px-4 py-[6px] text-[14px]">Pro</h3>
+          <p class="plan-price flex flex-1 items-center justify-center text-[96px] leading-none md:text-[120px]"><span class="sr-only">Price: </span><span data-monthly="39$" data-annual="32$">39$</span><span class="sr-only"> per <span data-period-label>month</span></span></p>
+          <ul class="plan-list flex flex-col gap-[10px] text-[18px] leading-[1.4]"><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>One-on-one consultations or coaching</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Personalized content requests</span></li><li class="flex gap-3"><svg class="mt-[2px] shrink-0 text-lime" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m8 12.2 2.8 2.8L16.2 9.5"/></svg><span>Discounts on digital products</span></li></ul>
+          <div class="flex items-end justify-between gap-6">
+            <p class="max-w-[260px] text-[14px] leading-[1.3]">Get unlimited access to all content, exclusive resources, and priority support for the ultimate experience.</p>
+            <a href="become-a-creator" class="plan-btn grid size-14 shrink-0 place-items-center rounded-full text-lime" aria-label="Choose the Pro plan"><svg class="" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap py-20 lg:py-[120px]" aria-labelledby="faq-title">
+      <div class="flex flex-col gap-8 max-md:items-center max-md:text-center md:flex-row md:justify-between md:gap-20">
+        <div class="flex max-w-[420px] flex-col gap-6">
+          <p class="t-label text-lime ">FAQ</p>
+          <p class="t-body">Whether you’re new to our website or just need a quick refresh, our comprehensive FAQ section is here to provide the answers to your most common questions.</p>
+        </div>
+        <h2 id="faq-title" class="t-h2 max-w-[560px]">All the answers you need: a comprehensive FAQ for our visitors</h2>
+      </div>
+      <div class="mt-16 grid gap-16 md:grid-cols-[1fr_300px] md:gap-16 lg:grid-cols-[1fr_393px] lg:gap-[100px] lg:mt-24">
+        <ul class="flex flex-col gap-5 ">
+    <li data-acc-item>
+      <h3><button type="button" class="flex w-full items-center justify-between gap-5 py-1 text-left" aria-expanded="false" aria-controls="acc-0">
+        <span class="t-h3">About Galao</span>
+        <span class="acc-icon grid size-12 shrink-0 place-items-center rounded-full border border-lime text-lime md:size-14"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span>
+      </button></h3>
+      <div class="acc-panel" id="acc-0"><div class="overflow-hidden"><p class="t-body max-w-[640px] pt-4 pb-2 text-white/80">Galao is a vibrant blog offering insightful content on culture, lifestyle, and personal development. We aim to inspire and empower readers with practical advice, fresh ideas, and engaging stories. Whether you’re looking to grow or explore, Galao has something valuable for everyone.</p></div></div>
+    </li>
+    <li data-acc-item>
+      <h3><button type="button" class="flex w-full items-center justify-between gap-5 py-1 text-left" aria-expanded="false" aria-controls="acc-1">
+        <span class="t-h3">Subscriptions &amp; Updates</span>
+        <span class="acc-icon grid size-12 shrink-0 place-items-center rounded-full border border-lime text-lime md:size-14"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span>
+      </button></h3>
+      <div class="acc-panel" id="acc-1"><div class="overflow-hidden"><p class="t-body max-w-[640px] pt-4 pb-2 text-white/80">Stay connected with Galao by subscribing to our newsletter. Receive regular updates on new articles, exclusive content, and special offers. It’s the easiest way to stay informed and never miss a post. We respect your privacy and send only the most relevant information straight to your inbox.</p></div></div>
+    </li>
+    <li data-acc-item>
+      <h3><button type="button" class="flex w-full items-center justify-between gap-5 py-1 text-left" aria-expanded="false" aria-controls="acc-2">
+        <span class="t-h3">Contribute to Galao</span>
+        <span class="acc-icon grid size-12 shrink-0 place-items-center rounded-full border border-lime text-lime md:size-14"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span>
+      </button></h3>
+      <div class="acc-panel" id="acc-2"><div class="overflow-hidden"><p class="t-body max-w-[640px] pt-4 pb-2 text-white/80">Want to share your voice with Galao? We welcome guest posts, articles, and creative contributions. Visit our Contribute page for submission guidelines and learn how to become part of our growing community. Share your ideas and help us create meaningful content that inspires and informs.</p></div></div>
+    </li>
+    <li data-acc-item>
+      <h3><button type="button" class="flex w-full items-center justify-between gap-5 py-1 text-left" aria-expanded="false" aria-controls="acc-3">
+        <span class="t-h3">Website Help &amp; Support</span>
+        <span class="acc-icon grid size-12 shrink-0 place-items-center rounded-full border border-lime text-lime md:size-14"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span>
+      </button></h3>
+      <div class="acc-panel" id="acc-3"><div class="overflow-hidden"><p class="t-body max-w-[640px] pt-4 pb-2 text-white/80">If you need help navigating Galao, our Help &amp; Support section is here to assist. Find answers to common questions or get step-by-step guidance on using our site. If you still need assistance, don’t hesitate to reach out via our Contact page—we’re happy to help!</p></div></div>
+    </li>
+  </ul>
+        <aside class="flex flex-col gap-4">
+          <img src="./assets/images/faq.webp" alt="Clouds of blue and orange ink swirling in water" width="800" height="700" loading="lazy" decoding="async" class="mb-4 aspect-[4/3] w-full rounded-[10px] object-cover md:aspect-[393/300]">
+          <p class="t-body text-lime">Your Galao cheat sheet.</p>
+          <p class="t-body">In a rush? Find fast and clear answers to your most pressing questions about Galao.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap py-20 lg:py-[120px]" aria-labelledby="reviews-title">
+      <div class="mx-auto flex max-w-[640px] flex-col items-center gap-4 text-center">
+        <p class="t-label text-lime ">Testimonials</p>
+        <h2 id="reviews-title" class="t-h2">Real-life testimonials and reviews</h2>
+        <p class="t-body max-w-[580px]">Discover genuine stories from real people sharing their experiences. Our testimonial blog highlights the honest feedback and life-changing moments that can help you make informed decisions.</p>
+      </div>
+      <div class="mt-16 grid gap-[10px] md:grid-cols-3 md:items-start lg:mt-[100px]">
+        <ul class="flex flex-col gap-[10px] md:mt-[147px] max-md:hidden"><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-sarah-thompson.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Sarah Thompson</span><span class="text-[18px] leading-[1.4] text-green/80">Product Designer</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4.6L20 20h-4.6zM19.6 4l-6.4 7M4.4 20l6.4-7"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">Galao is my go-to resource for design inspiration. The articles on user experience help me create more intuitive products, making it essential for my workflow.</blockquote>
+        </figure></li><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-james-rodriguez.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">James Rodriguez</span><span class="text-[18px] leading-[1.4] text-green/80">Web Developer</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="3" height="8" x="13" y="2" rx="1.5"/><path d="M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5"/><rect width="3" height="8" x="8" y="14" rx="1.5"/><path d="M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5"/><rect width="8" height="3" x="14" y="13" rx="1.5"/><path d="M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5"/><rect width="8" height="3" x="2" y="8" rx="1.5"/><path d="M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">As a web developer, I rely on Galao for its clear and concise tutorials. They break down complex concepts, making it easier for me to learn and apply new technologies.</blockquote>
+        </figure></li></ul>
+        <ul class="flex flex-col gap-[10px] "><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-emily-chen.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Emily Chen</span><span class="text-[18px] leading-[1.4] text-green/80">Content Strategist</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">Galao has completely changed how I approach content strategy. The insights on storytelling and audience engagement have sparked new ideas and improved my campaigns significantly.</blockquote>
+        </figure></li><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-mark-patel.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Mark Patel</span><span class="text-[18px] leading-[1.4] text-green/80">UX Researcher</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">The in-depth analysis and case studies on Galao have enriched my understanding of user behavior. It’s a fantastic resource that every UX professional should explore!</blockquote>
+        </figure></li><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-laura-kim.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Laura Kim</span><span class="text-[18px] leading-[1.4] text-green/80">Digital Marketing Specialist</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4.6L20 20h-4.6zM19.6 4l-6.4 7M4.4 20l6.4-7"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">Galao has been instrumental in refining my digital marketing strategies. The articles on SEO and social media trends have equipped me with tools to craft impactful campaigns.</blockquote>
+        </figure></li></ul>
+        <ul class="flex flex-col gap-[10px] md:mt-[135px] max-md:hidden"><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-tim-lee.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Tim Lee</span><span class="text-[18px] leading-[1.4] text-green/80">Graphic Designer</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21l2.6-11"/><path d="M10.6 14.2c.6 1.2 1.7 1.8 3 1.8 2.6 0 4.4-2.5 4.4-5.6C18 6.9 15.4 4 11.7 4 7.6 4 5.5 6.9 5.5 9.7c0 1.4.6 2.7 1.6 3.3"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">Galao’s focus on visual storytelling inspires me every day. The design tips are practical and help me push my creative limits. A must-follow for any designer!</blockquote>
+        </figure></li><li><figure class="quote-card flex flex-col gap-8 rounded-[15px] bg-lime p-6 text-black md:p-8">
+          <figcaption class="flex items-start gap-4">
+            <img src="./assets/images/avatar-jessica-white.webp" alt="" width="126" height="126" loading="lazy" decoding="async" class="size-[63px] shrink-0 rounded-full object-cover">
+            <span class="flex flex-1 flex-col pt-1"><span class="text-[20px] leading-[1.4] font-medium">Jessica White</span><span class="text-[18px] leading-[1.4] text-green/80">Software Engineer</span></span>
+            <span class="text-black" aria-hidden="true"><svg class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.6 11.3c-.4-2.6-2-4-4.4-4-2.7 0-4.4 1.9-4.4 4.7s1.7 4.7 4.2 4.7c2.2 0 3.6-1.3 3.6-3.1 0-2.7-3.8-3.1-5.3-2-1.3 1-.9 3.2 1.1 3.2 2.4 0 3.6-2 3.6-5.2C15 5.5 12.7 3 9.8 3 5.6 3 3.5 6.6 3.5 12s2.4 9 8 9c3.4 0 6-1.6 7.2-4.2"/></svg></span>
+          </figcaption>
+          <blockquote class="t-body">I love how Galao covers both technical depth and practical advice. The insights into best practices and emerging technologies keep me motivated and informed as I navigate my projects.</blockquote>
+        </figure></li></ul>
+      </div>
+    </section>
+
+    <section id="contact" class="px-[10px] pt-20 md:px-5 lg:pt-[120px]" aria-labelledby="contact-title">
+      <div class="relative overflow-hidden rounded-[10px]">
+        <img src="./assets/images/contact-cover.webp" alt="" width="1400" height="1000" loading="lazy" decoding="async" class="absolute inset-0 size-full object-cover">
+        <div class="relative flex flex-col gap-12 px-5 py-10 md:flex-row md:items-end md:justify-between md:px-10 md:py-10 lg:px-[60px]">
+          <div class="flex max-w-[520px] flex-col gap-4 max-md:items-center max-md:text-center md:pb-10" data-reveal>
+            <p class="t-label text-lime ">Contact us</p>
+            <h2 id="contact-title" class="t-h2">Have questions?</h2>
+            <p class="t-body">We value your thoughts and feedback. Whether you have questions about our content or just want to share your experience, feel free to contact us through the form.</p>
+            <div class="pt-5"><a href="become-a-creator" class="btn btn-arrow ">Get started<span class="arrow-dot"><svg class="" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a></div>
+          </div>
+          <div class="w-full rounded-[10px] bg-black/20 p-5 backdrop-blur-md md:max-w-[530px] md:p-8">
+            <h3 class="t-h2 text-center text-lime">Let’s chat!</h3>
+            <form class="mt-10 grid gap-5 sm:grid-cols-2" data-form>
+              <div class="flex flex-col gap-2">
+            <label for="first-name" class="text-[14px] text-lime">First Name</label>
+            <input id="first-name" name="first-name" type="text" class="field" placeholder="Jane" autocomplete="given-name" required>
+          </div>
+              <div class="flex flex-col gap-2">
+            <label for="last-name" class="text-[14px] text-lime">Last Name</label>
+            <input id="last-name" name="last-name" type="text" class="field" placeholder="Smith" autocomplete="family-name">
+          </div>
+              <div class="flex flex-col gap-2">
+            <label for="email" class="text-[14px] text-lime">Email Address</label>
+            <input id="email" name="email" type="email" class="field" placeholder="jane@galao.com" autocomplete="email" required>
+          </div>
+              <div class="flex flex-col gap-2">
+            <label for="phone" class="text-[14px] text-lime">Phone</label>
+            <input id="phone" name="phone" type="tel" class="field" placeholder="+123-456-789" autocomplete="tel">
+          </div>
+              <div class="sm:col-span-2"><div class="flex flex-col gap-2">
+            <label for="message" class="text-[14px] text-lime">Message</label>
+            <textarea id="message" name="message" class="field" placeholder="Write your message here" required></textarea>
+          </div></div>
+              <div class="flex flex-col items-center gap-4 pt-5 sm:col-span-2">
+                <button type="submit" class="h-[57px] w-[250px] max-w-full rounded-[32px] border border-lime text-[18px] text-lime transition-colors hover:bg-lime hover:text-black">Submit</button>
+                <p class="text-center text-lime" role="status" data-form-success hidden>Thank you! Your message is on its way.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="p-[10px] md:p-5">
+    <div class="rounded-[20px] bg-black px-5 pt-16 pb-12 text-white md:px-10 lg:px-[60px] lg:pt-20 lg:pb-[60px]">
+      <div class="flex flex-col gap-8 max-md:items-center max-md:text-center md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col gap-[10px]">
+          <p class="t-h2 max-w-[660px] text-lime">A world-class reading, watching, and listening experience</p>
+          <p class="t-body">Start your 30-day free trial. Cancel anytime.</p>
+        </div>
+        <a href="become-a-creator" class="btn btn-arrow shrink-0">Get started<span class="arrow-dot"><svg class="" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span></a>
+      </div>
+      <div class="mt-16 flex flex-col gap-12 md:flex-row md:items-end md:justify-between lg:mt-20">
+        <div class="flex flex-col gap-8 max-md:items-center max-md:text-center">
+          <a href="./" class="w-fit rounded-full" aria-label="Galao home"><svg class="text-lime" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5C25.5 15.8 32.2 22.5 43 24 32.2 25.5 25.5 32.2 24 43 22.5 32.2 15.8 25.5 5 24 15.8 22.5 22.5 15.8 24 5Z" fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg></a>
+          <p class="t-body max-w-[300px]">Writing to inspire change and explore new ideas that shape our world.</p>
+          <nav aria-label="Footer"><ul class="flex flex-wrap gap-x-6 gap-y-3 text-[18px] max-md:justify-center">
+            <li><a href="./" class="nav-link">Home</a></li><li><a href="articles" class="nav-link">Articles</a></li><li><a href="authors" class="nav-link">Authors</a></li><li><a href="./#pricing" class="nav-link">Pricing</a></li><li><a href="./#contact" class="nav-link">Contact Us</a></li><li><a href="privacy" class="nav-link">Privacy</a></li>
+          </ul></nav>
+        </div>
+        <div class="flex flex-col gap-4 max-md:items-center md:items-end">
+          <p class="t-body">Get the Application</p>
+          <a href="#" class="rounded-lg transition-opacity hover:opacity-80"><img src="./assets/images/badge-google-play.svg" alt="Get it on Google Play" width="180" height="52" loading="lazy" decoding="async" class="h-11 w-auto md:h-[52px]"></a>
+          <a href="#" class="rounded-lg transition-opacity hover:opacity-80"><img src="./assets/images/badge-app-store.svg" alt="Download on the App Store" width="180" height="52" loading="lazy" decoding="async" class="h-11 w-auto md:h-[52px]"></a>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col-reverse items-center gap-6 md:flex-row md:justify-between lg:mt-20 lg:pt-10">
+        <p class="t-body">© <span data-year>2026</span> Galao. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center gap-5"><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="Dribbble"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="Pinterest"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21l2.6-11"/><path d="M10.6 14.2c.6 1.2 1.7 1.8 3 1.8 2.6 0 4.4-2.5 4.4-5.6C18 6.9 15.4 4 11.7 4 7.6 4 5.5 6.9 5.5 9.7c0 1.4.6 2.7 1.6 3.3"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="X"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4.6L20 20h-4.6zM19.6 4l-6.4 7M4.4 20l6.4-7"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="Threads"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.6 11.3c-.4-2.6-2-4-4.4-4-2.7 0-4.4 1.9-4.4 4.7s1.7 4.7 4.2 4.7c2.2 0 3.6-1.3 3.6-3.1 0-2.7-3.8-3.1-5.3-2-1.3 1-.9 3.2 1.1 3.2 2.4 0 3.6-2 3.6-5.2C15 5.5 12.7 3 9.8 3 5.6 3 3.5 6.6 3.5 12s2.4 9 8 9c3.4 0 6-1.6 7.2-4.2"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="Instagram"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a></li><li><a href="#" class="icon-link grid size-8 place-items-center text-lime" aria-label="Slack"><svg class="" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="3" height="8" x="13" y="2" rx="1.5"/><path d="M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5"/><rect width="3" height="8" x="8" y="14" rx="1.5"/><path d="M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5"/><rect width="8" height="3" x="14" y="13" rx="1.5"/><path d="M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5"/><rect width="8" height="3" x="2" y="8" rx="1.5"/><path d="M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5"/></svg></a></li></ul>
+      </div>
+    </div>
+  </footer>
+  <dialog class="search-dialog" aria-labelledby="search-title" data-search>
+    <div class="search-box mx-auto mt-[12vh] w-[calc(100%-40px)] max-w-[640px] rounded-[20px] border border-lime/40 bg-midnight p-5 md:p-8">
+      <div class="flex items-center justify-between gap-4">
+        <h2 id="search-title" class="text-[20px] font-medium">Search articles</h2>
+        <button type="button" class="grid size-10 place-items-center rounded-full border border-white/40 transition-colors hover:border-lime hover:text-lime" aria-label="Close search" data-search-close><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <label class="sr-only" for="search-input">Search articles</label>
+      <input id="search-input" type="search" class="field field-lime mt-6" placeholder="Search…" autocomplete="off" data-search-input>
+      <ul class="mt-4 max-h-[50vh] overflow-y-auto" data-search-results></ul>
+      <p class="mt-4 text-white/60" role="status" data-search-status></p>
+    </div>
+    <script type="application/json" data-search-index>[{"t":"The role of blockchain in cybersecurity solutions","e":"Explore how blockchain technology enhances cybersecurity by providing data integrity, secure identity management, and smart contracts for automated security processes.","u":"the-role-of-blockchain-in-cybersecurity-solutions","d":"July 27, 2024"},{"t":"Understanding the Importance of Coding Tutorials","e":"Explore the significance of coding tutorials in today's tech-driven world and their benefits for learners and professionals.","u":"understanding-the-importance-of-coding-tutorials","d":"August 25, 2024"},{"t":"Maximizing mobile performance with essential tech tips","e":"Discover essential tech tips to maximize mobile performance, enhancing speed, battery life, and user experience across various devices and applications.","u":"maximizing-mobile-performance-with-essential-tech-tips","d":"October 30, 2024"},{"t":"The future of AI: innovations reshaping our world","e":"Explore groundbreaking AI innovations reshaping industries, enhancing decision-making, and improving daily life through advanced technologies and intelligent systems.","u":"the-future-of-ai-innovations-reshaping-our-world","d":"October 31, 2024"},{"t":"Future of Cybersecurity: Trends to Watch","e":"This article explores key cybersecurity trends shaping the future, including AI, zero trust architecture, and privacy regulations.","u":"future-of-cybersecurity-trends-to-watch","d":"November 2, 2024"},{"t":"Innovative design tools transforming graphic design","e":"Uncover innovative design tools transforming graphic design, fostering collaboration, enhancing creativity, and streamlining workflows for modern designers across various industries.","u":"innovative-design-tools-transforming-graphic-design","d":"November 9, 2024"},{"t":"Essential Gadgets for Tech-Savvy Professionals","e":"Discover must-have gadgets that enhance productivity and efficiency for tech-savvy professionals in various industries.","u":"essential-gadgets-for-tech-savvy-professionals","d":"November 14, 2024"},{"t":"The Impact of Blockchain on Finance","e":"Analyze how blockchain technology is revolutionizing the financial sector and its implications for traditional banking systems.","u":"the-impact-of-blockchain-on-finance","d":"November 22, 2024"},{"t":"The Evolution of Gadgets: From Past to Present","e":"A historical perspective on how gadgets have evolved over time and their impact on modern life and work.","u":"the-evolution-of-gadgets-from-past-to-present","d":"November 30, 2024"},{"t":"Navigating the World of AI Innovations","e":"Explore the latest AI innovations transforming industries, including healthcare, customer service, and manufacturing.","u":"navigating-the-world-of-ai-innovations","d":"December 8, 2024"},{"t":"Mastering coding tutorials for aspiring developers","e":"Learn essential coding techniques through tutorials that enhance programming skills, streamline development processes, and prepare aspiring developers for successful careers.","u":"mastering-coding-tutorials-for-aspiring-developers","d":"December 13, 2024"},{"t":"Essential design principles for web and graphic designers","e":"Explore essential design principles that guide web and graphic designers in creating visually appealing, user-friendly, and effective designs across various platforms.","u":"essential-design-principles-for-web-and-graphic-designers","d":"January 15, 2025"},{"t":"Mobile Technology: Trends Reshaping User Experience","e":"Uncover key trends in mobile technology enhancing user experience, including 5G, AR, and security advancements.","u":"mobile-technology-trends-reshaping-user-experience","d":"February 12, 2025"},{"t":"The impact of tech trends on software development","e":"Understand the impact of tech trends on software development, including agile methodologies and DevOps practices, improving collaboration and efficiency in projects.","u":"the-impact-of-tech-trends-on-software-development","d":"February 13, 2025"},{"t":"Trends in Graphic Design: What to Watch","e":"Explore the latest trends in graphic design that are shaping visual communication, including minimalism and sustainability.","u":"trends-in-graphic-design-what-to-watch","d":"March 8, 2025"},{"t":"Navigating the latest trends in internet of things","e":"Delve into the latest IoT trends, exploring their applications in smart homes and industries, improving connectivity and efficiency in daily life.","u":"navigating-the-latest-trends-in-internet-of-things","d":"March 11, 2025"},{"t":"Innovations in IoT: Transforming Everyday Life","e":"Investigate how IoT innovations are changing daily life, from smart homes to connected health devices.","u":"innovations-in-iot-transforming-everyday-life","d":"April 21, 2025"},{"t":"Key Strategies for Effective Software Reviews","e":"Learn essential strategies for conducting thorough and effective software reviews to ensure quality and performance.","u":"key-strategies-for-effective-software-reviews","d":"May 7, 2025"}]</script>
+  </dialog>
+</body>
+</html>

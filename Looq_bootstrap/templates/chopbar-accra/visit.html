@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GH" class="no-js">
+<head>
+<!-- include:head.html title="Visit us" description="Find Abusua Pot chop bar in Osu, Accra: opening hours, directions, parking, delivery on Bolt Food and Glovo, payment options and answers to common questions." -->
+</head>
+<body>
+<!-- include:icons.html -->
+<!-- include:header.html variant="" -->
+
+  <main id="main">
+<!-- include:page-hero.html crumb="Visit" hand="Visit" title="Find the pot" lead="We're in a shady yard in Osu, a short walk from Oxford Street. Look for the big neem tree and the smoke." -->
+
+    <section class="tpl-section pt-4" aria-label="Hours and location">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="tpl-hours" data-reveal>
+              <h2 class="tpl-h3">Opening hours</h2>
+              <p class="tpl-status tpl-status--card" data-status data-open="{{ site.hours.open }}" data-close="{{ site.hours.close }}" data-sun-open="{{ site.hours.sunOpen }}" data-sun-close="{{ site.hours.sunClose }}" data-fufu="{{ site.hours.fufuFrom }}">
+                <span class="tpl-status-dot" aria-hidden="true"></span><span data-status-text>{{ site.hours.weekdays }}</span>
+              </p>
+              <table class="table tpl-hours-table mb-3">
+                <caption class="visually-hidden">Opening hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>7:00am – 9:00pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>12:00pm – 8:00pm</td></tr>
+                </tbody>
+              </table>
+              <p class="tpl-hand mb-0">{{ site.hours.fufu }}</p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="tpl-map" data-reveal>
+              <iframe src="{{ site.map.embed }}" title="Map showing the location of {{ site.name }}" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-md-6 col-lg-3"><div class="tpl-info" data-reveal><svg aria-hidden="true"><use href="#i-pin"/></svg><h3>Address</h3><p>{{ site.address }}<br>GPS: {{ site.gps }}<br><a href="{{ site.map.link }}" target="_blank" rel="noopener">Open in maps</a></p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="tpl-info tpl-d-1" data-reveal><svg aria-hidden="true"><use href="#i-users"/></svg><h3>Ask anybody</h3><p>{{ site.landmark }}. Every taxi driver in Osu knows the neem tree.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="tpl-info tpl-d-2" data-reveal><svg aria-hidden="true"><use href="#i-bike"/></svg><h3>Delivery</h3><p>Order on <a href="{{ site.delivery.bolt }}" target="_blank" rel="noopener">Bolt Food</a> or <a href="{{ site.delivery.glovo }}" target="_blank" rel="noopener">Glovo</a>, or WhatsApp us for Osu and nearby.</p></div></div>
+          <div class="col-md-6 col-lg-3"><div class="tpl-info tpl-d-3" data-reveal><svg aria-hidden="true"><use href="#i-wallet"/></svg><h3>Paying</h3><p>MoMo ({{ site.payments.momoName }}, ID {{ site.payments.momoMerchantId }}), cash or card.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tpl-section tpl-section--paper" id="faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-4">
+            <p class="tpl-hand" data-reveal>Good questions</p>
+            <h2 class="tpl-h2" id="faqTitle" data-reveal>Before you come</h2>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion tpl-accordion" id="faqList" data-reveal>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">When is the fufu ready?</button></h3>
+                <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">We start pounding at 11am and keep going until the cassava runs out, usually around 7pm. Lunchtime is busiest, so come before 12:30 or after 2pm for a quicker table.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">Do you take reservations?</button></h3>
+                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">For groups of eight or more, yes: send us a WhatsApp message a day before. Smaller groups just walk in; tables turn over quickly.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">Is there anything without meat?</button></h3>
+                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes: red red, kelewele, ampesi, breakfast porridges and our drinks. Some soups are made with fish or meat stock, so ask at the counter and we'll guide you.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">How spicy is "Ghana hot"?</button></h3>
+                <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Very. It uses fresh scotch bonnet pepper. If it's your first time, order medium. You can always add more from the pepper bowl.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">Is there parking?</button></h3>
+                <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">There is space for about six cars in front of the yard, and street parking on the lane. Our boys will help you park.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tpl-section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-5">
+            <p class="tpl-hand" data-reveal>Not about food? Still welcome.</p>
+            <h2 class="tpl-h2" id="contactTitle" data-reveal>Send us a message</h2>
+            <ul class="tpl-contact-list list-unstyled" data-reveal>
+              <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></li>
+              <li><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><a href="https://wa.me/{{ site.whatsappHref }}" target="_blank" rel="noopener">{{ site.whatsapp }}</a></li>
+              <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <div class="tpl-form-card" data-reveal>
+              <form class="needs-validation" action="{{ site.forms.contact }}" method="POST" novalidate data-form data-success="#contactSuccess">
+                <input type="hidden" name="_subject" value="Website message">
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="mName">Name</label>
+                    <input class="form-control" id="mName" name="name" type="text" autocomplete="name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="mEmail">Email</label>
+                    <input class="form-control" id="mEmail" name="email" type="email" autocomplete="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="mMsg">Message</label>
+                    <textarea class="form-control" id="mMsg" name="message" rows="4" minlength="10" required></textarea>
+                    <div class="invalid-feedback">Please write a short message.</div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn tpl-btn tpl-btn--red" type="submit">Send <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                    <p class="tpl-form-error" data-form-error hidden role="alert">Sorry, that didn't send. Please try again or call {{ site.phone }}.</p>
+                  </div>
+                </div>
+              </form>
+              <div class="tpl-form-success" id="contactSuccess" hidden tabindex="-1">
+                <span class="tpl-success-icon"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+                <h3 class="tpl-h3">Medaase! Message received.</h3>
+                <p class="mb-0">We'll reply within one working day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- include:footer.html -->
+</body>
+</html>

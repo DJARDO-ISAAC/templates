@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-GH" class="no-js">
+<head>
+<!-- include:head.html title="Admissions" description="Apply to Nyansa Hill Academy for KG 1 to JHS 3: admission steps, age guide, documents, fees and Mobile Money payment, and the online application form." -->
+</head>
+<body>
+<!-- include:icons.html -->
+<!-- include:header.html -->
+
+  <main id="main">
+<!-- include:page-hero.html crumb="Admissions" eyebrow="Admissions {{ site.academicYear }}" title="Joining us in <em>four steps.</em>" lead="We welcome applications all year for KG 1 to JHS 2, as long as there is space. KG 1 and JHS 1 places fill first, so apply early." -->
+
+    <!-- ============ STEPS + AGE GUIDE ============ -->
+    <section class="tpl-section pt-4" aria-labelledby="stepsTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-6">
+            <h2 class="tpl-h3 mb-4" id="stepsTitle" data-reveal>How admission works</h2>
+            <ol class="tpl-steps list-unstyled mt-0" data-reveal>
+              <li><span>1</span><div><strong>Apply online</strong><p>Complete the form below. It takes about five minutes.</p></div></li>
+              <li><span>2</span><div><strong>Visit</strong><p>Tour the school with your child and meet the phase lead.</p></div></li>
+              <li><span>3</span><div><strong>Assessment</strong><p>A play visit for KG, or a friendly literacy and numeracy check from Basic 1.</p></div></li>
+              <li><span>4</span><div><strong>Offer &amp; welcome</strong><p>Get your offer letter, pay the acceptance fee, then receive the uniform and book lists.</p></div></li>
+            </ol>
+          </div>
+          <div class="col-lg-6">
+            <div class="tpl-panel" data-reveal>
+              <h2 class="tpl-h3">Age guide for {{ site.academicYear }}</h2>
+              <p class="tpl-text-mute">Based on your child's age on 1 September, in line with GES guidance. Not sure? Try the <a href="#finder">class finder</a>.</p>
+              <div class="table-responsive">
+                <table class="table tpl-table align-middle mb-0">
+                  <caption class="visually-hidden">Class by age on 1 September</caption>
+                  <thead><tr><th scope="col">Age</th><th scope="col">Class</th><th scope="col">Phase</th></tr></thead>
+                  <tbody>
+                    <tr><td>4</td><td>KG 1</td><td>Kindergarten</td></tr>
+                    <tr><td>5</td><td>KG 2</td><td>Kindergarten</td></tr>
+                    <tr><td>6–8</td><td>Basic 1–3</td><td>Lower Primary</td></tr>
+                    <tr><td>9–11</td><td>Basic 4–6</td><td>Upper Primary</td></tr>
+                    <tr><td>12–14</td><td>JHS 1–3 (Basic 7–9)</td><td>Junior High</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tpl-panel mt-4" data-reveal>
+              <h2 class="tpl-h3">What to bring to the assessment</h2>
+              <ul class="tpl-checklist tpl-checklist--sm mb-0">
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Birth certificate (original and a copy)</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Two recent passport-size photographs</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Latest terminal report and a transfer letter, if moving schools</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Child health record or immunisation card</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ghana Card (or other ID) of the parent or guardian</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- include:class-finder.html -->
+
+    <!-- ============ APPLICATION FORM ============ -->
+    <section class="tpl-section" id="apply" aria-labelledby="applyTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-4">
+            <div class="tpl-sticky-side">
+              <span class="tpl-eyebrow" data-reveal>Apply online</span>
+              <h2 class="tpl-h2" id="applyTitle" data-reveal>Start your <em>application.</em></h2>
+              <p class="tpl-text-mute" data-reveal>Our admissions team will contact you within two working days to arrange a visit and assessment.</p>
+              <div class="tpl-info-card mt-4" data-reveal><svg aria-hidden="true"><use href="#i-phone"/></svg><div><strong>Prefer to talk?</strong><p>Call <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a> or <a href="https://wa.me/{{ site.whatsappHref }}" target="_blank" rel="noopener">message us on WhatsApp</a>.</p></div></div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="tpl-form-card" data-reveal>
+              <form class="needs-validation" action="{{ site.forms.application }}" method="POST" novalidate data-form data-success="#applySuccess">
+                <input type="hidden" name="_subject" value="New admission application">
+                <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <fieldset class="tpl-fieldset">
+                  <legend><span>1</span>About your child</legend>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childFirst">First name</label>
+                      <input class="form-control" id="childFirst" name="child_first_name" type="text" required>
+                      <div class="invalid-feedback">Please enter your child's first name.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childLast">Surname</label>
+                      <input class="form-control" id="childLast" name="child_surname" type="text" required>
+                      <div class="invalid-feedback">Please enter your child's surname.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childDob">Date of birth</label>
+                      <input class="form-control" id="childDob" name="child_date_of_birth" type="date" required>
+                      <div class="invalid-feedback">Please enter a date of birth.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childGender">Gender</label>
+                      <select class="form-select" id="childGender" name="child_gender" required>
+                        <option value="">Choose…</option><option>Female</option><option>Male</option>
+                      </select>
+                      <div class="invalid-feedback">Please choose an option.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childClass">Class applying for</label>
+                      <select class="form-select" id="childClass" name="class_applying_for" required>
+                        <option value="">Choose…</option>
+                        <!-- include:class-options.html -->
+                      </select>
+                      <div class="invalid-feedback">Please choose a class.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="childStart">Preferred start</label>
+                      <select class="form-select" id="childStart" name="preferred_start" required>
+                        <option value="">Choose…</option><option>Term 1 (September)</option><option>Term 2 (January)</option><option>Term 3 (April)</option><option>As soon as possible</option>
+                      </select>
+                      <div class="invalid-feedback">Please choose a start date.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="childSchool">Current or previous school <span class="tpl-text-mute">(if any)</span></label>
+                      <input class="form-control" id="childSchool" name="current_school" type="text">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="tpl-fieldset">
+                  <legend><span>2</span>Parent or guardian</legend>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentName">Full name</label>
+                      <input class="form-control" id="parentName" name="parent_name" type="text" autocomplete="name" required>
+                      <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentRelation">Relationship to child</label>
+                      <select class="form-select" id="parentRelation" name="relationship" required>
+                        <option value="">Choose…</option><option>Mother</option><option>Father</option><option>Guardian</option><option>Other relative</option>
+                      </select>
+                      <div class="invalid-feedback">Please choose an option.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentPhone">Phone number</label>
+                      <input class="form-control" id="parentPhone" name="phone" type="tel" autocomplete="tel" placeholder="024 000 0000" pattern="[0-9+ ()-]{9,}" required>
+                      <div class="invalid-feedback">Please enter a valid phone number.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentWhatsapp">WhatsApp number <span class="tpl-text-mute">(if different)</span></label>
+                      <input class="form-control" id="parentWhatsapp" name="whatsapp" type="tel" pattern="[0-9+ ()-]{9,}">
+                      <div class="invalid-feedback">Please check this number.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentEmail">Email</label>
+                      <input class="form-control" id="parentEmail" name="email" type="email" autocomplete="email" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="parentArea">Area of residence</label>
+                      <input class="form-control" id="parentArea" name="area" type="text" placeholder="e.g. Spintex, East Legon" required>
+                      <div class="invalid-feedback">Please tell us where you live.</div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="tpl-fieldset">
+                  <legend><span>3</span>A little more</legend>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label" for="childNeeds">Medical or learning needs we should know about <span class="tpl-text-mute">(optional)</span></label>
+                      <textarea class="form-control" id="childNeeds" name="needs" rows="3"></textarea>
+                    </div>
+                    <div class="col-sm-6">
+                      <span class="form-label d-block">Services you're interested in</span>
+                      <div class="form-check"><input class="form-check-input" type="checkbox" id="svcBus" name="services" value="School bus"><label class="form-check-label" for="svcBus">School bus</label></div>
+                      <div class="form-check"><input class="form-check-input" type="checkbox" id="svcCare" name="services" value="After-school care"><label class="form-check-label" for="svcCare">After-school care</label></div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label" for="heardFrom">How did you hear about us?</label>
+                      <select class="form-select" id="heardFrom" name="heard_from">
+                        <option value="">Choose…</option><option>Friend or family</option><option>Church or mosque</option><option>Social media</option><option>Google search</option><option>Passing by the school</option><option>Other</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="consent" name="consent" value="yes" required>
+                        <label class="form-check-label" for="consent">I agree that {{ site.name }} may use these details to process this application, as described in the <a href="./privacy.html">privacy policy</a>.</label>
+                        <div class="invalid-feedback">Please agree so we can process your application.</div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <button class="btn btn-primary btn-lg tpl-btn-arrow" type="submit">Submit application <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <p class="tpl-form-error" data-form-error hidden role="alert">Sorry, we couldn't send your application. Please check your connection and try again, or call {{ site.phone }}.</p>
+              </form>
+              <div class="tpl-form-success" id="applySuccess" hidden tabindex="-1">
+                <span class="tpl-float-icon tpl-bg-primary"><svg aria-hidden="true"><use href="#i-check"/></svg></span>
+                <h3 class="tpl-h3">Application received. Thank you!</h3>
+                <p class="tpl-text-mute">We'll contact you within two working days to arrange a visit and assessment. A copy has been sent to the email you gave us.</p>
+                <a class="btn btn-outline-dark" href="./index.html">Back to home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEES & PAYMENT ============ -->
+    <section class="tpl-section tpl-bg-paper" id="fees" aria-labelledby="feesTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-7">
+            <span class="tpl-eyebrow" data-reveal>Fees &amp; payment</span>
+            <h2 class="tpl-h2" id="feesTitle" data-reveal>Clear fees, <em>no surprises.</em></h2>
+            <p class="tpl-text-mute" data-reveal>Fees are charged per term and include tuition, textbooks, a hot lunch every day and most clubs. Ask for the full {{ site.academicYear }} fee schedule, which also lists optional services.</p>
+            <div class="table-responsive" data-reveal>
+              <table class="table tpl-table align-middle">
+                <caption class="visually-hidden">Fees per term by phase</caption>
+                <thead><tr><th scope="col">Phase</th><th scope="col">Classes</th><th scope="col" class="text-end">Per term</th></tr></thead>
+                <tbody>
+                  <tr><td>Kindergarten</td><td>KG 1–2</td><td class="text-end">GH₵ 0,000</td></tr>
+                  <tr><td>Lower Primary</td><td>Basic 1–3</td><td class="text-end">GH₵ 0,000</td></tr>
+                  <tr><td>Upper Primary</td><td>Basic 4–6</td><td class="text-end">GH₵ 0,000</td></tr>
+                  <tr><td>Junior High</td><td>JHS 1–3</td><td class="text-end">GH₵ 0,000</td></tr>
+                  <tr><td colspan="2">One-off admission &amp; acceptance fee</td><td class="text-end">GH₵ 000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small tpl-text-mute" data-reveal>Optional extras: school bus, after-school care and uniforms. Sibling discount of 10% from the second child.</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="tpl-pay" data-reveal>
+              <h3 class="tpl-h3 text-white">How to pay</h3>
+              <div class="tpl-pay-method">
+                <svg aria-hidden="true"><use href="#i-wallet"/></svg>
+                <div><strong>Mobile Money</strong><p>MTN MoMo, Telecel Cash or AT Money<br>Merchant: {{ site.payments.momoName }}<br>Merchant ID: <span class="tpl-mono">{{ site.payments.momoMerchantId }}</span></p></div>
+              </div>
+              <div class="tpl-pay-method">
+                <svg aria-hidden="true"><use href="#i-file"/></svg>
+                <div><strong>Bank transfer or deposit</strong><p>{{ site.payments.bankName }}, {{ site.payments.bankBranch }}<br>Account: <span class="tpl-mono">{{ site.payments.bankAccount }}</span></p></div>
+              </div>
+              <p class="tpl-pay-note">Use your child's <strong>full name and class</strong> as the payment reference, then send the receipt to the school office on WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="tpl-section" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="row gy-5 gx-xl-5">
+          <div class="col-lg-4">
+            <span class="tpl-eyebrow" data-reveal>FAQ</span>
+            <h2 class="tpl-h2" id="faqTitle" data-reveal>Questions parents <em>ask us.</em></h2>
+            <p class="tpl-text-mute" data-reveal>Can't find your answer? <a href="./contact.html">Contact the admissions office</a>.</p>
+          </div>
+          <div class="col-lg-8">
+<div class="accordion tpl-accordion" id="faq" data-reveal>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">What age can my child start KG 1?</button></h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Children join KG 1 if they are 4 by 1 September of the school year, and KG 2 at 5. Basic 1 starts at age 6, in line with GES guidance.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Do you follow the GES / NaCCA curriculum?</button></h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. We teach the Standards-Based Curriculum from KG to Basic 6 and the Common Core Programme in JHS (Basic 7–9). We add enrichment in French, coding and the arts.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">How do you prepare learners for the BECE?</button></h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">From Basic 8 we run full mock exams each term, Saturday revision clinics and one-to-one target setting. After results are released, our team helps every family choose schools on the CSSPS portal.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Can my child join in the middle of the year?</button></h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes, from KG 1 to JHS 2 when there is space. Entry into JHS 3 is limited because BECE registration closes early in the school year.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">What do the school fees cover?</button></h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Fees cover tuition, textbooks, a hot lunch every day and most clubs. Uniforms, transport and after-school care are optional extras. Ask the admissions office for this year's fee schedule.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">Is school transport available?</button></h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. Supervised buses run on set routes across East Legon, Adenta, Spintex and Tema, with a trained attendant on every bus.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">Can I pay fees by Mobile Money?</button></h3>
+                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. You can pay by MTN MoMo, Telecel Cash or AT Money to our merchant account, or by bank transfer. Always use your child's full name and class as the reference, and keep the receipt.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">Do you support children with special educational needs?</button></h3>
+                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">We welcome children with a range of learning needs. Please tell us about your child's needs on the application form so we can talk with you about the support we can offer.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- include:footer.html -->
+</body>
+</html>

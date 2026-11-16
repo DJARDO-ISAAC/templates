@@ -1,0 +1,42 @@
+{
+  "name": "Nyansa Hill Academy",
+  "shortName": "Nyansa Hill",
+  "tagline": "Rooted in wisdom, ready for the world.",
+  "city": "Accra",
+  "address": "14 Nyansa Close, off Spintex Road, Accra",
+  "gps": "GA-000-0000",
+  "phone": "+233 00 000 0000",
+  "phoneHref": "+233000000000",
+  "whatsapp": "+233 00 000 0000",
+  "whatsappHref": "233000000000",
+  "email": "admissions@nyansahill.edu.gh",
+  "officeHours": "Mon–Fri, 7:30am–4:30pm",
+  "gesReg": "GES Reg. No. GA/XXX/0000",
+  "membership": "Member, GNAPS",
+  "academicYear": "2026/27",
+  "term1Start": "Tue 8 Sept 2026",
+  "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "x": "https://x.com/",
+    "youtube": "https://youtube.com/",
+    "linkedin": "https://linkedin.com/"
+  },
+  "forms": {
+    "tour": "https://formspree.io/f/YOUR_FORM_ID",
+    "application": "https://formspree.io/f/YOUR_FORM_ID",
+    "contact": "https://formspree.io/f/YOUR_FORM_ID",
+    "newsletter": "https://formspree.io/f/YOUR_FORM_ID"
+  },
+  "payments": {
+    "momoName": "Nyansa Hill Academy",
+    "momoMerchantId": "000000",
+    "bankName": "Your Bank Ghana Ltd",
+    "bankBranch": "Spintex Branch",
+    "bankAccount": "0000000000000"
+  },
+  "map": {
+    "embed": "https://www.openstreetmap.org/export/embed.html?bbox=-0.1450%2C5.6220%2C-0.1150%2C5.6420&layer=mapnik&marker=5.6320%2C-0.1300",
+    "link": "https://www.openstreetmap.org/?mlat=5.6320&mlon=-0.1300#map=16/5.6320/-0.1300"
+  }
+}

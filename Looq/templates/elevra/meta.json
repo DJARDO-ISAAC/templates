@@ -1,0 +1,9 @@
+{
+  "slug": "elevra",
+  "name": "Elevra",
+  "industry": "consulting",
+  "type": "website",
+  "tags": ["consulting", "business", "strategy", "finance", "light", "blue-sky", "case-studies", "insights", "multi-page", "stacked-cards"],
+  "description": "Business consulting site in soft grey and deep slate with teal-sky photography: stacking service cards, auto-rotating process steps, counters, industry ticker, case studies, a filterable insights library, careers and a detailed contact form.",
+  "tailwindVersion": "4.x"
+}
