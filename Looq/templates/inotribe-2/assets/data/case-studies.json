@@ -1,0 +1,52 @@
+[
+  {
+    "id": "data-warehouse",
+    "title": "Data Warehouse Migration",
+    "sector": "Financial Services",
+    "summary": "Consolidating financial data behind one API.",
+    "challenge": "Financial data lived in an ageing warehouse on SQL Server and Microgen, and every team that needed it had to reach into several databases separately.",
+    "built": "We migrated the warehouse to PostgreSQL and built a Data Access Manager that exposes multiple databases through a single API, so applications ask one place for the data they need.",
+    "impact": "One trusted access point means fewer one-off integrations, consistent data across the organisation and a platform that is easier to maintain and extend.",
+    "systems": ["SQL Server", "Microgen", "PostgreSQL", "Data Access Manager", "Single API"],
+    "image": "./assets/images/case-data-warehouse.jpg",
+    "imageAlt": "Rows of server racks lit in teal in a data centre"
+  },
+  {
+    "id": "geospatial-monitoring",
+    "title": "Cross-Border Monitoring",
+    "sector": "Government / Geospatial",
+    "summary": "Tracking activity across political boundaries with satellite and geodata.",
+    "challenge": "Illegal activity does not stop at political boundaries, and the people tracking it needed one picture built from imagery and map data held by different providers.",
+    "built": "A geospatial monitoring system that brings together satellite and geodata from Google, Planet.com and OpenStreetMap, so activity can be followed across territory and boundaries.",
+    "impact": "Monitoring teams work from one consistent view of the ground instead of piecing sources together by hand.",
+    "systems": ["Google", "Planet.com", "OpenStreetMap", "Satellite imagery", "Geodata"],
+    "image": "./assets/images/case-geospatial.jpg",
+    "imageAlt": "Earth seen from space with Africa in view",
+    "graphic": "geo"
+  },
+  {
+    "id": "distributed-systems",
+    "title": "Distributed Balance Computation",
+    "sector": "Financial Services",
+    "summary": "Computing balances and notifications for millions — automated or on demand.",
+    "challenge": "Balances had to be computed and customers notified across millions of records, on a schedule and on demand, without one slow job holding up the rest.",
+    "built": "A distributed system that splits balance computation across workers and sends notifications to millions of customers, run automatically or triggered on demand.",
+    "impact": "Customers hear about their balances reliably, and the institution can run the process whenever it needs to without waiting on a single machine.",
+    "systems": ["Distributed workers", "Balance computation", "Customer notifications", "Scheduled and on-demand runs"],
+    "image": "./assets/images/case-distributed.jpg",
+    "imageAlt": "Glowing teal fibre-optic strands",
+    "graphic": "network"
+  },
+  {
+    "id": "id-verification",
+    "title": "Real-Time ID Verification",
+    "sector": "Identity & Compliance",
+    "summary": "Validating identity across passport, license, and national ID records.",
+    "challenge": "Onboarding and compliance teams needed to confirm who a person is against more than one official source, quickly and in the moment.",
+    "built": "A multi-source identity verification system that validates details in real time against Passport, Driver's License and SSNIT records.",
+    "impact": "Identity checks happen during onboarding rather than days later, with every source checked through one process.",
+    "systems": ["Passport", "Driver's License", "SSNIT", "Real-time validation"],
+    "image": "./assets/images/case-identity.jpg",
+    "imageAlt": "A finger on a fingerprint scanner at an office entrance"
+  }
+]

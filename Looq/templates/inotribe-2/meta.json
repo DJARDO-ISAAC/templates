@@ -1,0 +1,42 @@
+{
+  "slug": "inotribe-2",
+  "name": "Inotribe (version B)",
+  "industry": "technology",
+  "type": "website",
+  "archetype": [
+    "A",
+    "B"
+  ],
+  "pages": [
+    "index.html",
+    "about.html",
+    "services.html",
+    "work.html",
+    "contact.html"
+  ],
+  "tags": [
+    "multi-page",
+    "software-company",
+    "engineering",
+    "b2b",
+    "fintech",
+    "government",
+    "case-studies",
+    "dark",
+    "teal",
+    "gold",
+    "bento",
+    "pills",
+    "json-content",
+    "web3forms",
+    "ghana",
+    "accra",
+    "route-map",
+    "timeline",
+    "version-b",
+    "split-rail-navbar"
+  ],
+  "description": "Version B of the five-page Inotribe site, built from the same requirements and copy as version A so the two can be compared. Dark warm-neutral interface with petrol teal and gold, Google Sans and Google Sans Flex, a full-width split-rail navbar (Accra clock, links in a pill track with a sliding highlight) and pill controls, drawn as a 'control room': faint column guides behind every page, bracketed section numbers, lighter and larger headings. Home has a dotted world map with animated routes out of Accra, numbered capabilities on fading pills, stat pills, a labelled data-pipeline graph for the warehouse migration, duotone case cards, a CSS tech marquee and a hairline client table. About has a staggered photo collage, mission quote over the route map, differentiators, a process timeline that fills on scroll, a JSON testimonial slider and a capabilities bento. Services has the diagonal case-study bento and capability panel. Work renders each case study from JSON as challenge, what we built and why it matters with a case index. Contact posts to Web3Forms. Navbar, numbered mobile menu, footer privacy notice, footer and a scroll-progress top button are injected from main.js.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

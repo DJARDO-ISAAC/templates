@@ -326,7 +326,7 @@
             </div>
             <div class="footer-cols">
               <div><p class="footer-head">Navigation</p>${LINKS.map((l) => `<a class="footer-link" href="${l.href}">${l.label}</a>`).join('')}</div>
-              <div><p class="footer-head">Company</p><a class="footer-link" href="about">About</a><a class="footer-link" href="contact">Contact</a></div>
+              <div><p class="footer-head">Company</p><a class="footer-link" href="about#process">How we work</a><a class="footer-link" href="./#clients">Clients</a><button class="footer-link" type="button" data-footer-privacy>Privacy notice</button><a class="footer-link" href="mailto:${SITE.email}">${SITE.email}</a></div>
             </div>
           </div>
           <div class="footer-bottom">
@@ -336,6 +336,20 @@
         </div>
       </footer>`
   }
+
+  // Privacy notice from the footer: reuse the Contact page dialog, or add the same notice on other pages
+  let privacy = document.getElementById('privacy')
+  if (!privacy) {
+    privacy = document.createElement('dialog')
+    privacy.className = 'dialog'
+    privacy.id = 'privacy'
+    privacy.setAttribute('aria-labelledby', 'privacy-title')
+    privacy.innerHTML = `<div class="dialog-body"><h2 id="privacy-title">Privacy notice</h2><p>When you send a message, we receive your name, email address and what you wrote. We use them only to reply to your enquiry and to keep a record of our conversation.</p><p>Messages are delivered to us through Web3Forms, a form relay service. We do not use analytics, advertising cookies or trackers on this website.</p><p>You can ask us to see, correct or delete the details you sent at any time by writing to ${SITE.email}. We handle personal data in line with Ghana's Data Protection Act, 2012 (Act 843).</p><button class="btn btn-outline btn-sm mt-6" type="button" data-close-dialog>Close</button></div>`
+    document.body.appendChild(privacy)
+    $('[data-close-dialog]', privacy).addEventListener('click', () => privacy.close())
+    privacy.addEventListener('click', (e) => { if (e.target === privacy) privacy.close() })
+  }
+  $('[data-footer-privacy]')?.addEventListener('click', () => { if (typeof privacy.showModal === 'function') privacy.showModal() })
 
   // Scroll-to-top button; the ring fills with scrollY / (scrollHeight - innerHeight)
   const toTop = document.createElement('button')

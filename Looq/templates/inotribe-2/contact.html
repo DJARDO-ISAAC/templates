@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Inotribe</title>
+  <meta name="description" content="Start a conversation with Inotribe about the system you need built, migrated or made reliable.">
+  <meta name="theme-color" content="#221c1e">
+  <link rel="icon" type="image/png" href="./assets/images/logo-color.png">
+  <link rel="preload" href="./assets/fonts/google-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/google-sans-flex-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body data-page="contact">
+  <div class="guides" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <div data-component="navbar" data-header></div>
+
+  <main id="main">
+    <section class="pb-sec pt-[150px] md:pt-[180px]" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="grid gap-8 lg:grid-cols-[2fr_1fr] lg:items-end">
+          <div class="grid gap-6"><p class="label-idx"><b>00</b>Contact</p><h1 class="h-page" id="contact-title">Let's Talk About<br><span class="gold">What You're Building</span></h1></div>
+          <p class="lede lg:text-right">Whether it's a new system or one that's outgrown what it was built on — we're ready to listen.</p>
+        </div>
+        <div class="tile mt-12 h-[clamp(240px,42vw,560px)]"><img src="./assets/images/contact-hero.jpg" alt="Colleagues talking through a project together in an office" width="2000" height="1333"></div>
+      </div>
+    </section>
+
+    <section class="pb-sec" id="contact" aria-labelledby="form-section-title">
+      <div class="wrap grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+        <div class="grid content-start gap-6">
+          <p class="label-idx"><b>01</b>Contact us</p>
+          <h2 class="h-section" id="form-section-title">Contact Us</h2>
+          <p class="lede">We'd love to hear from you. Send us a message and we'll reply soon.</p>
+          <div class="mt-4">
+            <div class="contact-row">
+              <span class="contact-ic"><i class="ti ti-mail" aria-hidden="true"></i></span>
+              <div class="grid gap-1"><h3 class="h-card text-lg">Email</h3><p>Contact us by email, and we'll respond shortly.</p><a class="mt-1 w-fit font-semibold text-[var(--color-text-primary)] underline decoration-[var(--color-accent)] underline-offset-4" href="mailto:team@inotribe.com">team@inotribe.com</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-ic"><i class="ti ti-phone" aria-hidden="true"></i></span>
+              <div class="grid gap-1"><h3 class="h-card text-lg">Phone</h3><p>Call us on weekdays from 9 AM to 5 PM.</p><p class="mt-1 font-semibold text-[var(--color-text-primary)]" data-site-phone>Ask for a call in your message and we will ring you.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel p-6 md:p-10">
+          <div class="flex flex-wrap items-center justify-between gap-3"><h2 class="h-card text-3xl">Write us a message</h2><span class="tag">Reply from an engineer</span></div>
+          <form class="mt-8 grid gap-5" data-form-relay novalidate>
+            <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="field">
+                <label class="label" for="first_name">First name</label>
+                <input class="input" id="first_name" name="first_name" type="text" autocomplete="given-name" required>
+                <p class="err" id="first_name-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter your first name.</p>
+              </div>
+              <div class="field">
+                <label class="label" for="last_name">Last name</label>
+                <input class="input" id="last_name" name="last_name" type="text" autocomplete="family-name" required>
+                <p class="err" id="last_name-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter your last name.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@institution.com" required>
+              <p class="err" id="email-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter a valid email address, like name@company.com.</p>
+            </div>
+            <div class="field">
+              <label class="label" for="message">Message</label>
+              <textarea class="input" id="message" name="message" placeholder="Tell us about the system and what it has to do." required></textarea>
+              <p class="err" id="message-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Tell us a little about your project.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <p class="text-sm">We use your details only to reply to you. <button class="cursor-pointer border-0 bg-transparent p-0 text-sm font-semibold text-[var(--color-text-primary)] underline underline-offset-4" type="button" data-open-dialog="privacy">Privacy notice</button></p>
+              <button class="btn btn-primary min-w-[150px]" type="submit">Send</button>
+            </div>
+          </form>
+          <div class="form-error mt-5" data-relay-error hidden role="alert"><i class="ti ti-alert-triangle" aria-hidden="true"></i><span data-relay-error-text></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="dialog" id="privacy" aria-labelledby="privacy-title">
+    <div class="dialog-body">
+      <h2 id="privacy-title">Privacy notice</h2>
+      <p>When you send a message, we receive your name, email address and what you wrote. We use them only to reply to your enquiry and to keep a record of our conversation.</p>
+      <p>Messages are delivered to us through Web3Forms, a form relay service. We do not use analytics, advertising cookies or trackers on this website.</p>
+      <p>You can ask us to see, correct or delete the details you sent at any time by writing to team@inotribe.com. We handle personal data in line with Ghana's Data Protection Act, 2012 (Act 843).</p>
+      <button class="btn btn-outline btn-sm mt-6" type="button" data-close-dialog>Close</button>
+    </div>
+  </dialog>
+
+  <div data-component="footer"></div>
+</body>
+</html>

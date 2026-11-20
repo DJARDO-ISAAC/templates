@@ -130,9 +130,9 @@
   .menu-overlay.is-open { opacity: 1; visibility: visible; transition: opacity var(--dur-base) var(--ease-soft); }
   .menu-top { display: flex; align-items: center; justify-content: space-between; height: 56px; }
   .menu-list { display: grid; margin-top: 3rem; }
-  .menu-item { display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); font-family: var(--font-display); font-size: 2rem; font-weight: 500; letter-spacing: -0.02em; }
+  .menu-item { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-primary); font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; }
   .menu-item[aria-current="page"] { color: var(--color-accent); }
-  .menu-item i { color: var(--color-muted); font-size: 1.4rem; }
+  .menu-item i { color: var(--color-muted); font-size: 1.15rem; }
 
   /* Footer */
   .site-footer { border-top: 1px solid var(--color-border); padding-top: 4.5rem; }
@@ -141,6 +141,7 @@
   .footer-cols { display: flex; gap: 96px; }
   .footer-head { margin-bottom: 1.1rem; color: var(--color-text-primary); font-size: 0.95rem; font-weight: 600; }
   .footer-link { display: block; padding: 0.3rem 0; color: var(--color-text-muted); transition: color var(--dur-fast); }
+  button.footer-link { border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
   .footer-link:hover { color: var(--color-accent); }
   .footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem; padding-block: 1.6rem 2.2rem; border-top: 1px solid var(--color-border); font-size: 0.92rem; }
   .social { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--color-border); border-radius: var(--radius-full); color: var(--color-text-primary); font-size: 1.2rem; transition: border-color var(--dur-fast), color var(--dur-fast); }
