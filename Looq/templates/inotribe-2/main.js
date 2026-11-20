@@ -357,7 +357,7 @@
         <div class="wrap">
           <p class="footer-line">Software engineering for institutions, <span class="gold">from Accra.</span></p>
           <div class="footer-top">
-            <a class="inline-flex w-fit" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-white.png" alt="Inotribe" width="96" height="49" style="height:48px;width:auto"></a>
+            <a class="inline-flex w-fit" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-color.png" alt="Inotribe" width="80" height="41" style="height:38px;width:auto"></a>
             <div class="footer-cols">
               <div><p class="footer-head">Navigation</p>${LINKS.map((l) => `<a class="footer-link" href="${l.href}">${l.label}</a>`).join('')}</div>
               <div><p class="footer-head">Company</p><a class="footer-link" href="about#process">How we work</a><a class="footer-link" href="./#clients">Clients</a><button class="footer-link" type="button" data-footer-privacy>Privacy notice</button><a class="footer-link" href="mailto:${SITE.email}">${SITE.email}</a></div>

@@ -321,7 +321,7 @@
         <div class="wrap">
           <div class="footer-top">
             <div>
-              <a class="inline-flex" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-white.png" alt="Inotribe" width="96" height="49" style="height:48px;width:auto"></a>
+              <a class="inline-flex" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-white.png" alt="Inotribe" width="80" height="41" style="height:40px;width:auto"></a>
               <p style="margin-top:1.2rem;max-width:30ch">We build the systems institutions can't afford to get wrong.</p>
             </div>
             <div class="footer-cols">
