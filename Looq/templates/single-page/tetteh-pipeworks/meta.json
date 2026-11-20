@@ -1,0 +1,13 @@
+{
+  "slug": "single-page/tetteh-pipeworks",
+  "name": "Tetteh Pipeworks",
+  "industry": "home-services",
+  "archetype": ["A", "B"],
+  "wave": 1,
+  "type": "landing-page",
+  "pages": ["index.html"],
+  "tags": ["one-page", "plumber", "plumbing", "home-services", "tema", "spintex", "ashaiman", "ghana", "problem-finder", "interactive-diagram", "price-guide", "polytank", "pressure-pump", "callback-form", "whatsapp", "pipe-blue", "copper", "condensed"],
+  "description": "One-page site for a plumber in Tema. Cool off-white, deep pipe blue and copper with Barlow Condensed headings. A dark sticky header with the phone number, a hero with call and WhatsApp-a-photo buttons and three promises, and an original cutaway drawing of a Ghanaian house water system (polytank on a stand, pressure pump, meter, taps, WC, water heater, soakaway): tap a numbered spot to see usual causes, a price range, what to do before the plumber arrives and a button that preselects the booking form. Also a labour price table, a section on tank-and-pump setups for days the mains is off, service areas, three steps, two reviews, FAQ and a callback form with live opening hours.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

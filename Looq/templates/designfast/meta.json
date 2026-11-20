@@ -2,6 +2,7 @@
   "slug": "designfast",
   "name": "Designfast",
   "industry": "design-agency",
+  "archetype": ["A"],
   "tags": ["dark", "agency", "subscription", "gradient-headings", "marquee", "pricing"],
   "description": "All-black design-subscription agency page with silver gradient headlines, glossy blue buttons and soft charcoal cards.",
   "tailwindVersion": "4.x"

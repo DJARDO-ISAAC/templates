@@ -1,0 +1,26 @@
+[
+  {
+    "placeholder": true,
+    "quote": "Placeholder quote. Replace with a real client's words about working with Inotribe, approved by that client before launch.",
+    "name": "Client name",
+    "title": "Role, organisation",
+    "image": "./assets/images/testimonial-1.jpg",
+    "alt": "Portrait placeholder of a man in a suit"
+  },
+  {
+    "placeholder": true,
+    "quote": "Placeholder quote. A second client describes the problem they had, what Inotribe built and what changed afterwards.",
+    "name": "Client name",
+    "title": "Role, organisation",
+    "image": "./assets/images/testimonial-2.jpg",
+    "alt": "Portrait placeholder of a woman in a black suit"
+  },
+  {
+    "placeholder": true,
+    "quote": "Placeholder quote. A third client speaks to reliability in production and support after launch.",
+    "name": "Client name",
+    "title": "Role, organisation",
+    "image": "./assets/images/testimonial-3.jpg",
+    "alt": "Portrait placeholder of a woman in formal attire"
+  }
+]

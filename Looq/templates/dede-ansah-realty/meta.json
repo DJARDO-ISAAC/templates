@@ -1,0 +1,13 @@
+{
+  "slug": "dede-ansah-realty",
+  "name": "Dede Ansah Realty",
+  "industry": "real-estate-agent",
+  "type": "website",
+  "archetype": ["A", "B"],
+  "wave": 1,
+  "pages": ["index.html", "properties.html", "services.html", "contact.html"],
+  "tags": ["multi-page", "real-estate", "estate-agent", "lettings", "land", "accra", "east-legon", "ghana", "light", "serif", "deep-green", "brass", "property-filter", "rent-advance-check", "land-due-diligence", "enquiry-form", "whatsapp"],
+  "description": "Four-page site for a licensed real estate agent in East Legon, Accra. Warm paper, deep green and brass with Instrument Serif headings and Hanken Grotesk. Built around the agency's four rules (prices in cedis, six months' advance at most, tenants pay no fee, every land document checked). Home has a hero with intent shortcuts, the rules strip, featured properties, a rent-advance check against the Rent Act's six-month limit, the six land checks, team, client quotes and a call to action. Properties has filter chips and cards with price, facts and terms. Services has four services, how it works, a fees table and FAQ. Contact has an enquiry form preselected from property links, call and WhatsApp, office and live opening hours.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

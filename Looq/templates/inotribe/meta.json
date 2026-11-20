@@ -1,0 +1,30 @@
+{
+  "slug": "inotribe",
+  "name": "Inotribe",
+  "industry": "technology",
+  "type": "website",
+  "archetype": ["A", "B"],
+  "pages": ["index.html", "about.html", "services.html", "work.html", "contact.html"],
+  "tags": [
+    "multi-page",
+    "software-company",
+    "engineering",
+    "b2b",
+    "fintech",
+    "government",
+    "case-studies",
+    "dark",
+    "teal",
+    "gold",
+    "island-navbar",
+    "bento",
+    "pills",
+    "json-content",
+    "web3forms",
+    "ghana",
+    "accra"
+  ],
+  "description": "Five-page site for Inotribe, a Ghanaian software engineering company that builds mission-critical systems for financial institutions, governments and enterprises. Dark warm-neutral interface with petrol teal and gold, Google Sans and Google Sans Flex, a floating island navbar, pill controls, bento grids and the logo's chevrons framing every label. Home has a glowing dotted world map with an Accra ping, capabilities on fading pills, count-up stats, an animated node graph, case study cards, a CSS tech marquee and client grid. About has a photo collage, mission quote, differentiators, process, a JSON testimonial slider and a capabilities bento. Services has a diagonal case-study bento and capability panel. Work renders four case studies (challenge, what we built, why it matters) from JSON with a live index. Contact posts to Web3Forms. Navbar, footer and a scroll-progress top button are injected once from main.js.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

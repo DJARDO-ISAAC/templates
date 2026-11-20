@@ -2,6 +2,7 @@
   "slug": "manya-krobo",
   "name": "Manya Krobo Rural Bank",
   "industry": "banking",
+  "archetype": ["A", "B"],
   "type": "website",
   "tags": [
     "bank",

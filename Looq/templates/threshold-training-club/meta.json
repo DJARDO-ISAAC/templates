@@ -2,6 +2,7 @@
   "slug": "threshold-training-club",
   "name": "Thres Training Club",
   "industry": "fitness",
+  "archetype": ["A", "B", "C"],
   "type": "website",
   "tags": ["fitness", "gym", "heart-rate", "light", "black-and-white", "multi-page", "interactive"],
   "description": "Warm grey heart-rate training club site with rounded white cards, black-and-white photography, one red accent and an interactive week picker and zone calculator.",

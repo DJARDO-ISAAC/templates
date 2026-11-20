@@ -2,6 +2,7 @@
   "slug": "sunbird",
   "name": "Sunbird",
   "industry": "childrens-education",
+  "archetype": ["A", "B", "F"],
   "type": "website",
   "tags": ["education", "kids", "edutainment", "e-learning", "shows", "camps", "illustrated", "playful", "teal", "lime", "multi-page"],
   "description": "Playful children's education site in teal, lime and orange with hand-drawn SVG characters: a staged hero entrance, wave dividers, marked headings, shows and episode pages, e-learning tabs, a gallery lightbox, a book shop, camps and news.",

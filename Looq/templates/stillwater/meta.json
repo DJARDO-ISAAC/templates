@@ -2,6 +2,7 @@
   "slug": "stillwater",
   "name": "Stillwater Church",
   "industry": "church",
+  "archetype": ["A", "B", "F"],
   "type": "website",
   "tags": ["church", "faith", "nonprofit", "community", "sermons", "events", "giving", "serif", "stained-glass", "arches", "multi-page"],
   "description": "Warm, editorial church site that opens before dawn with a glowing stained-glass window, scrolls through a sunrise into limestone paper, and closes at dusk. Includes a live next-service countdown, plan-your-visit guide, searchable sermon library, events with add-to-calendar, group finder, prayer wall and giving page.",

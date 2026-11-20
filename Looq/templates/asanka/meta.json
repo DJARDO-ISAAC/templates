@@ -2,6 +2,7 @@
   "slug": "asanka",
   "name": "Asanka",
   "industry": "restaurant",
+  "archetype": ["A", "B", "C", "D", "E"],
   "type": "website",
   "tags": [
     "restaurant",

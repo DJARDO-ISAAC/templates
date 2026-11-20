@@ -2,6 +2,7 @@
   "slug": "single-page/osei-bonsu-geomatics",
   "name": "Osei-Bonsu Geomatics",
   "industry": "land-surveying",
+  "archetype": ["A", "B"],
   "type": "landing-page",
   "pages": ["index.html"],
   "tags": [

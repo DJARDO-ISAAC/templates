@@ -1,0 +1,13 @@
+{
+  "slug": "single-page/ewurabena-chop-bar",
+  "name": "Ewurabena's Chop Bar",
+  "industry": "restaurant",
+  "archetype": ["A", "B", "D"],
+  "wave": 1,
+  "type": "landing-page",
+  "pages": ["index.html"],
+  "tags": ["one-page", "restaurant", "chop-bar", "ghanaian-food", "fufu", "kumasi", "asafo", "ghana", "menu", "daily-specials", "whatsapp-order", "catering", "funerals", "cream", "palm-red", "turmeric", "serif"],
+  "description": "One-page site for a chop bar behind Asafo market in Kumasi. Warm cream, palm-oil red and turmeric with Young Serif headings. A hero with a live open/closed pill, the week of soups with today's pair highlighted by Ghana-time weekday, a menu board with dotted leaders and GH₵ prices where + adds plates to an order panel that writes the order out and opens it on WhatsApp with total, pickup time and name, a food gallery, a funeral and party catering quote form, and a visit section with directions and hours.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

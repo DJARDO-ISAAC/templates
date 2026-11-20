@@ -2,6 +2,7 @@
   "slug": "coachify",
   "name": "Coachify",
   "industry": "coaching",
+  "archetype": ["A", "B"],
   "tags": ["dark", "personal-brand", "coach", "minimal", "carousel", "timeline", "pricing"],
   "description": "Near-black personal-brand coaching page with fading grey headlines, outlined cards, circuit-chip graphics and white pill buttons.",
   "tailwindVersion": "4.x"

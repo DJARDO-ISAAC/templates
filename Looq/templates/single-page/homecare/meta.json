@@ -2,6 +2,7 @@
   "slug": "single-page/homecare",
   "name": "HomeCare",
   "industry": "banking",
+  "archetype": ["A", "B"],
   "type": "landing-page",
   "pages": [
     "index.html"

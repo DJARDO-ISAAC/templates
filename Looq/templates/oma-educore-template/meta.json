@@ -2,6 +2,7 @@
   "slug": "oma-educore-template",
   "name": "Educore",
   "industry": "education",
+  "archetype": ["A", "B"],
   "type": "landing-page",
   "pages": ["index.html", "privacy-policy.html", "terms-and-conditions.html", "404.html"],
   "tags": ["online-course", "ui-ux", "education", "landing-page", "purple-accent", "black-and-grey", "carousel", "marquee"],

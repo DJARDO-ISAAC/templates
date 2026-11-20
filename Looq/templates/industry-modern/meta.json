@@ -2,6 +2,7 @@
   "slug": "industry-modern",
   "name": "Industry Modern",
   "industry": "manufacturing",
+  "archetype": ["A", "B"],
   "type": "website",
   "pages": ["index.html", "about.html", "services.html", "service-detail.html", "projects.html", "project-detail.html", "contact.html", "error-404.html"],
   "tags": ["light", "corporate", "industrial", "engineering", "manufacturing", "minimal", "orange-accent", "multi-page"],

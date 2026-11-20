@@ -2,6 +2,7 @@
   "slug": "galao",
   "name": "Galao",
   "industry": "media",
+  "archetype": ["A", "F"],
   "type": "website",
   "tags": ["blog", "magazine", "tech", "authors", "pricing", "dark", "green", "lime", "multi-page", "scroll-animation"],
   "description": "Tech magazine and blog in deep green, burgundy and midnight with lime accents: a sticky hero that transforms on scroll, a page colour that shifts by section, bento cards, article feed with filters and infinite loading, article and author pages with marquees, pricing, FAQ, testimonials and a three-step creator application.",

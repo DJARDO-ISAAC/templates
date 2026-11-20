@@ -2,6 +2,7 @@
   "slug": "single-page/aya-savings",
   "name": "Aya Savings & Loans",
   "industry": "banking",
+  "archetype": ["A", "B"],
   "type": "landing-page",
   "pages": [
     "index.html"

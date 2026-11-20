@@ -2,6 +2,7 @@
   "slug": "bank-5",
   "name": "Bank 5",
   "industry": "banking",
+  "archetype": ["A", "B"],
   "type": "website",
   "tags": [
     "bank",
