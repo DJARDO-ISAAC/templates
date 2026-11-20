@@ -1,0 +1,23 @@
+{
+  "slug": "mako-grill",
+  "name": "Mako Grill",
+  "industry": "restaurant",
+  "type": "website",
+  "archetype": ["A", "B"],
+  "pages": [
+    "index.html",
+    "menu.html",
+    "catering.html",
+    "about.html",
+    "contact.html",
+    "credits.html",
+    "error-404.html"
+  ],
+  "tags": ["restaurant", "fast-casual", "grill", "chicken", "jollof", "khebab", "menu", "catering", "delivery", "whatsapp", "ghana", "accra", "bold", "condensed", "red", "charcoal", "amber", "multi-page"],
+  "description": "Charcoal chicken, jollof and khebab grill with two Accra branches, in charcoal, pepper red and amber on cream with heavy condensed Archivo headings. Home has a hero plate inside a rotating text ring with a price stamp, weekly deals as perforated order tickets, round dish photos, a tabbed menu board with spice meters and allergen codes, a scrolling word band, a weekend deal with a live countdown to Sunday 22:00 Accra time, three ways to order, Google reviews and a catering band. Menu is a full HTML menu in GH₵ with sticky section links and filters (vegetarian, mild, no groundnut). Catering has priced party packs and an event enquiry form. About, Contact (two branches with open-now status and hours) and a photo credits page. An order dialog hands off to WhatsApp, Bolt Food, Glovo or a call; no cart. Layout ideas from a fast-food theme; reference screenshots in inspiration/.",
+  "designSystem": {
+    "version": "0.2.0",
+    "theme": "base"
+  },
+  "tailwindVersion": "4.x"
+}
