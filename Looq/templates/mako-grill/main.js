@@ -401,6 +401,26 @@
         const color = el.dataset.color
         const zone = $(`[data-zone="${k}"]`, form)
         if (zone) zone.setAttribute('fill', color || '#3a2c26')
+        const label = $(`[data-label="${k}"]`, form)
+        if (label) {
+          const short = el.dataset.short || ''
+          const empty = !short
+          const lines = empty ? [k === 'drink' ? '' : `+ ${k}`] : short.split('|')
+          label.textContent = ''
+          lines.forEach((t, n) => {
+            const span = document.createElementNS('http://www.w3.org/2000/svg', 'tspan')
+            span.setAttribute('x', label.getAttribute('x'))
+            span.setAttribute('dy', n === 0 ? `${-(lines.length - 1) * 5.5}` : '11')
+            span.textContent = t
+            label.appendChild(span)
+          })
+          // dark text on light fills, light text on dark fills and on empty (charcoal) zones
+          const hex = (color || '#3a2c26').replace('#', '')
+          const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
+          const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+          label.setAttribute('fill', k === 'drink' ? '#c9b8a5' : lum > 0.5 ? '#1d1512' : '#f8f0e4')
+          label.classList.toggle('is-empty', empty)
+        }
         if (k === 'drink') $('[data-zone-wrap="drink"]', form).style.opacity = color ? '1' : '.3'
         if (price) { sum += price; items.push({ name: el.value, price }) }
       })
@@ -412,7 +432,7 @@
       total.textContent = `GH₵ ${sum}`
       if (miniTotal) miniTotal.textContent = `GH₵ ${sum}`
       if (miniCount) miniCount.textContent = `${items.length} ${items.length === 1 ? 'item' : 'items'}`
-      desc.textContent = `Plate with ${items.map((i) => i.name.toLowerCase()).join(', ')}`
+      desc.setAttribute('aria-label', items.length ? `Plate with ${items.map((i) => i.name.toLowerCase()).join(', ')}` : 'Empty plate')
       const text = [
         `Hello Mako Grill ${branch.value}, I'd like to order (ticket #${ticketNo}):`,
         ...items.map((i) => `- ${i.name} (GH₵ ${i.price})`),
@@ -463,4 +483,65 @@
     set(Number(range.value), false)
     range.addEventListener('input', () => set(Number(range.value), true))
   }
+})();
+
+
+/* Swipe rows ([data-snap]): on small screens the card stacks scroll sideways. While a row actually
+   scrolls it gets tabindex="0" so keyboard users can reach it and scroll it with the arrow keys. */
+;(() => {
+  'use strict'
+  const rows = Array.from(document.querySelectorAll('[data-snap]'))
+  if (!rows.length) return
+  const sync = () => rows.forEach((row) => {
+    if (row.scrollWidth > row.clientWidth + 1) row.setAttribute('tabindex', '0')
+    else row.removeAttribute('tabindex')
+  })
+  sync()
+  window.addEventListener('resize', sync)
+})();
+
+
+/* Crowd calculator ([data-crowd], Home): pack + guest slider give a live estimate and a quote link that
+   carries ?guests=&pack= to the catering form, which pre-fills from them. */
+;(() => {
+  'use strict'
+  const $ = (s, r = document) => r.querySelector(s)
+  const money = (n) => `GH₵ ${n.toLocaleString('en-GB')}`
+
+  const calc = $('[data-crowd]')
+  if (calc) {
+    const range = $('input[type="range"]', calc)
+    const num = $('[data-crowd-num]', calc)
+    const price = $('[data-crowd-price]', calc)
+    const note = $('[data-crowd-note]', calc)
+    const quote = $('[data-crowd-quote]', calc)
+    const packs = {
+      boxes: (g) => ({ total: g * 85, note: `${g} lunch boxes at GH₵ 85, labelled per person` }),
+      khebab: (g) => { const trays = Math.ceil((g * 3) / 50); return { total: trays * 700, note: `${trays} ${trays === 1 ? 'tray' : 'trays'}, ${trays * 50} sticks (about 3 a guest)` } },
+      grill: (g) => g < 100 ? { total: 0, note: 'Our live grill starts at 100 guests. Try lunch boxes or khebab trays.' } : { total: g * 120, note: `Grill and two cooks on site for ${g} guests, setup included` },
+    }
+    const update = () => {
+      const g = Number(range.value)
+      const pack = $('input[name="crowd-pack"]:checked', calc).value
+      const r = packs[pack](g)
+      num.textContent = g
+      range.setAttribute('aria-valuetext', `${g} guests`)
+      range.style.setProperty('--p', `${((g - 20) / 280) * 100}%`)
+      price.textContent = r.total ? `≈ ${money(r.total)}` : 'From 100 guests'
+      note.textContent = r.note
+      quote.href = `catering?guests=${g}&pack=${pack}#enquiry`
+      quote.textContent = `Get a quote for ${g} guests`
+    }
+    calc.addEventListener('input', update)
+    calc.addEventListener('change', update)
+    update()
+  }
+
+  // Catering form: pre-fill from the calculator's link
+  const params = new URLSearchParams(location.search)
+  const guests = $('#guests')
+  if (guests && /^\d{2,3}$/.test(params.get('guests') || '')) guests.value = params.get('guests')
+  const names = { boxes: 'Office lunch boxes', khebab: 'Khebab party trays', grill: 'Live grill at our event' }
+  const message = $('#message')
+  if (message && guests && names[params.get('pack')] && !message.value) message.value = `Interested in: ${names[params.get('pack')]}.`
 })();

@@ -35,6 +35,8 @@ Nothing is copied from it: the copy, colours, type, photos, logo and code are ou
 
 All photos are from Wikimedia Commons. Authors and licences are listed on the site's Photo credits page (`credits.html`), which CC BY and CC BY-SA require. Photos were resized to 1600 px and re-encoded; that is the only change.
 
+The footer corner photos (`lime.webp`, `pepper-*.webp`) are transparent cut-outs from Wikimedia Commons, shown unchanged and dimmed with CSS; they are credited on the Photo credits page. The logo was drawn for this template.
+
 ## Fonts and icons
 
 - Archivo (variable, width 62–125%, weight 100–900), SIL Open Font License, self-hosted from Google Fonts in `assets/fonts/` (Latin and Latin Extended, for the cedi sign ₵)

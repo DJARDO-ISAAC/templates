@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Inotribe</title>
+  <meta name="description" content="Start a conversation with Inotribe about the system you need built, migrated or made reliable.">
+  <meta name="theme-color" content="#141414">
+  <link rel="icon" type="image/png" href="./assets/images/logo-color.png">
+  <link rel="preload" href="./assets/fonts/satoshi-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip" href="#main">Skip to content</a>
+  <div data-component="navbar" data-header></div>
+
+  <main id="main">
+
+    <section class="contact-hero" aria-labelledby="page-title">
+      <div class="wrap contact-hero-grid">
+        <div class="contact-hero-copy">
+          <h1 class="contact-hero-title" id="page-title">Let's Talk About <span class="mark">What You're Building</span></h1>
+          <p class="lede">Whether it's a new system or one that's outgrown what it was built on — we're ready to listen.</p>
+          <a class="link w-fit" href="#form-section-title">Write us a message <i class="ti ti-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <ul class="reach" aria-label="Ways to reach Inotribe">
+          <li><span class="reach-k"><i class="ti ti-mail" aria-hidden="true"></i>Email</span><div><a class="reach-v" href="mailto:team@inotribe.com">team@inotribe.com</a><p>Contact us by email, and we'll respond shortly.</p></div></li>
+          <li><span class="reach-k"><i class="ti ti-phone" aria-hidden="true"></i>Phone</span><div><p class="reach-v" data-site-phone>Ask for a call in your message</p><p>Call us on weekdays from 9 AM to 5 PM.</p></div></li>
+          <li><span class="reach-k"><i class="ti ti-map-pin" aria-hidden="true"></i>Accra</span><div><p class="reach-v"><span class="dot" aria-hidden="true"></span><time data-accra-time>GMT</time></p><p>Local time in Accra (GMT, no daylight saving).</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec !pt-14" id="contact" aria-labelledby="form-section-title">
+      <div class="wrap contact2">
+        <div class="panel">
+          <h2 class="sr-only">Contact Us</h2>
+          <h3 class="h-section text-[clamp(1.8rem,3vw,2.6rem)]" id="form-section-title">Write us a message</h3>
+          <p class="panel-intro">We'd love to hear from you. Send us a message and we'll reply soon.</p>
+          <form class="mt-8 grid gap-8 sm:grid-cols-2" data-form-relay novalidate>
+            <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="field"><label class="label" for="first_name">First name</label><input class="input" id="first_name" name="first_name" type="text" placeholder="e.g. Ama" required autocomplete="given-name"><p class="err" id="first_name-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter your first name.</p></div>
+            <div class="field"><label class="label" for="last_name">Last name</label><input class="input" id="last_name" name="last_name" type="text" placeholder="e.g. Mensah" required autocomplete="family-name"><p class="err" id="last_name-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter your last name.</p></div>
+            <div class="field sm:col-span-2"><label class="label" for="email">Email</label><input class="input" id="email" name="email" type="email" placeholder="e.g. ama@institution.com" required autocomplete="email"><p class="err" id="email-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Enter an email like name@institution.com.</p></div>
+            <div class="field sm:col-span-2"><label class="label" for="message">Message</label><textarea class="input" id="message" name="message" placeholder="e.g. We need to move our warehouse off SQL Server without downtime." required></textarea><p class="err" id="message-error" hidden><i class="ti ti-alert-circle" aria-hidden="true"></i>Write a short message.</p></div>
+            <div class="sm:col-span-2 flex flex-wrap items-center justify-between gap-4">
+              <p class="muted text-sm">We use your details only to reply. <button type="button" class="text-link" data-open-dialog="privacy">Privacy notice</button></p>
+              <button class="btn btn-primary" type="submit">Send <i class="ti ti-send" aria-hidden="true"></i></button>
+            </div>
+          </form>
+          <div class="form-error mt-5" data-relay-error hidden><i class="ti ti-alert-triangle" aria-hidden="true"></i><span data-relay-error-text></span></div>
+        </div>
+        <aside class="contact2-side next" aria-labelledby="next-title">
+          <h3 class="shipped-head" id="next-title">What happens next</h3>
+          <ol class="next-steps">
+            <li><span class="next-n">01</span><div><b>You send a message</b><p>Tell us what you're building, or what has outgrown what it was built on.</p></div></li>
+            <li><span class="next-n">02</span><div><b>We reply by email</b><p>From team@inotribe.com, to arrange a first conversation.</p></div></li>
+            <li><span class="next-n">03</span><div><b>Discover</b><p>Understanding the data and operational reality before writing code.</p></div></li>
+            <li><span class="next-n">04</span><div><b>Design, research, build, deliver</b><p>Architected and tested against real constraints, then built and supported in production.</p></div></li>
+          </ol>
+          <div class="next-trust">
+            <h3 class="shipped-head">Trusted by</h3>
+            <p>Solis Microfinance · Liquid Financial · GlobalPayEx · Neebal Technologies · Petra · Bsystems · Hanfie Technologies · Government of Ghana</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <dialog class="dialog" id="privacy" aria-labelledby="privacy-title">
+      <div class="dialog-body"><h2 id="privacy-title">Privacy notice</h2><p>When you send a message, we receive your name, email address and what you wrote. We use them only to reply to your enquiry and to keep a record of our conversation.</p><p>Messages are delivered to us through Web3Forms, a form relay service. We do not use analytics, advertising cookies or trackers on this website.</p><p>You can ask us to see, correct or delete the details you sent at any time by writing to team@inotribe.com. We handle personal data in line with Ghana's Data Protection Act, 2012 (Act 843).</p><button class="btn btn-outline btn-sm mt-4 w-fit" type="button" data-close-dialog>Close</button></div>
+    </dialog>
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+</html>

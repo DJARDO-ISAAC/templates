@@ -2,7 +2,7 @@
 
 **Archetype A: Brochure · Archetype B: Lead generation**
 
-This is a practical reference of genuine, commonly used website sections, components, content blocks and behaviours found on real business websites. It merges the Wave 1 component reference (`Wave_1_Launch_A_B_Website_Components_Reference.docx`, 12 Nov 2026) with Looq's research on industry patterns, Ghana-specific requirements and live Ghanaian websites.
+This is a practical reference of genuine, commonly used website sections, components, content blocks and behaviours found on real business websites. It merges the Wave 1 component reference (`Looq_Website_Components_Reference.docx`, first issued 12 Nov 2026) with Looq's research on industry patterns, Ghana-specific requirements and live Ghanaian websites.
 
 Updated 13 November 2026. Scope is Wave 1 only, archetypes A and B; other archetypes are left out on purpose.
 

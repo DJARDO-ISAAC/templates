@@ -1,0 +1,44 @@
+{
+  "slug": "inotribe-3",
+  "name": "Inotribe (version C)",
+  "industry": "technology",
+  "type": "website",
+  "archetype": [
+    "A",
+    "B"
+  ],
+  "pages": [
+    "index.html",
+    "about.html",
+    "services.html",
+    "work.html",
+    "contact.html"
+  ],
+  "tags": [
+    "multi-page",
+    "software-company",
+    "engineering",
+    "b2b",
+    "fintech",
+    "government",
+    "case-studies",
+    "dark",
+    "charcoal",
+    "teal",
+    "gold",
+    "editorial",
+    "grain",
+    "hover-lists",
+    "sticky-split",
+    "tab-navbar",
+    "json-content",
+    "web3forms",
+    "ghana",
+    "accra",
+    "version-c",
+    "gold-accents"
+  ],
+  "description": "Version C of the five-page Inotribe site, built from the same requirements and copy as versions A and B so all three can be compared. Charcoal (#141414) with a fine film grain; the logo's teal and gold as the only colours, used as blocks. One signature move: large Satoshi headlines where the key phrase turns gold. Switzer for reading, Plex Mono for small labels, hairline rules and square edges. Home: a case-study kicker, headline and proof points beside an annotated photo (callouts pinned by leader lines, a live Accra clock, gentle parallax), the shipped systems as linked tiles, capabilities as cards beside a sticky column with the numbers, a full-width split with an illustrative one-API request on a teal half, case studies as hover list rows, the stack as a big-type marquee, clients in a ruled grid and a centred gold call to action with a round button. About: photo mosaic, mission quote beside the client column, four differentiators in a row, process as stacked steps beside a sticky heading, a centred testimonial slider and a four-cell partner grid. Services: photo with an overlapping statement, four tall project columns, services list beside a sticky photo, and a ruled principles table. Work: spec sheets from JSON beside a sticky contents list. Contact: form first with the photo and details in a side column. Navbar, menu, footer, privacy notice and scroll ring are injected from main.js.",
+  "designSystem": "looq",
+  "tailwindVersion": "4.x"
+}

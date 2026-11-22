@@ -59,7 +59,7 @@
     </section>
 
     <section class="sec" aria-labelledby="story-title">
-      <div class="wrap split">
+      <div class="wrap split" data-reveal>
         <div class="grid gap-6">
           <p class="eyebrow">Our story</p>
           <h2 id="story-title" class="d-lg">Same coals, more seats</h2>
@@ -73,8 +73,8 @@
 
     <section class="sec on-dark" aria-labelledby="numbers-title">
       <div class="wrap">
-        <div class="sec-head"><p class="eyebrow">In numbers</p><h2 id="numbers-title" class="d-lg">A normal week at Mako</h2></div>
-        <div class="stats">
+        <div data-reveal class="sec-head"><p class="eyebrow">In numbers</p><h2 id="numbers-title" class="d-lg">A normal week at Mako</h2></div>
+        <div class="stats" data-reveal>
           <p class="stat"><b data-count="3200">3,200</b><span>pieces of chicken grilled</span></p>
           <p class="stat"><b data-count="1400">1,400</b><span>plates of jollof served</span></p>
           <p class="stat"><b data-count="2600">2,600</b><span>sticks of khebab</span></p>
@@ -84,7 +84,7 @@
     </section>
 
     <section class="sec" aria-labelledby="cook-title">
-      <div class="wrap person">
+      <div class="wrap person" data-reveal>
         <div class="person-img justify-self-center"><img src="./assets/images/cook.jpg" alt="Esi Mensah, head cook, plating rice in the kitchen" width="1600" height="1067" loading="lazy" decoding="async"></div>
         <div class="grid gap-6">
           <p class="eyebrow">Head cook</p>
@@ -98,14 +98,14 @@
 
     <section class="sec" aria-labelledby="standards-title">
       <div class="wrap">
-        <div class="sec-head sec-head-split">
+        <div data-reveal class="sec-head sec-head-split">
           <div class="grid gap-4"><p class="eyebrow">Kitchen standards</p><h2 id="standards-title" class="d-lg">What we promise<br>on every plate</h2></div>
           <p class="lede text-[var(--color-muted)]">Both kitchens hold a Food and Drugs Authority food hygiene permit, which is on display at the counter.</p>
         </div>
-        <ul class="routes">
-          <li class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-egg" aria-hidden="true"></i></span><h3>Local and fresh</h3><p>Chicken from two farms in the Eastern Region, tilapia from the Volta, vegetables from Agbogbloshie market every morning.</p></li>
-          <li class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-temperature" aria-hidden="true"></i></span><h3>Nothing under a lamp</h3><p>Food is cooked when you order it. Rice and stews are made in the morning and kept at serving temperature, never reheated the next day.</p></li>
-          <li class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-list-check" aria-hidden="true"></i></span><h3>Allergens on the menu</h3><p>Every dish lists its allergens. Ask the counter and we will show you the recipe card.</p></li>
+        <ul class="routes snap-row" data-snap data-reveal aria-label="Kitchen standards">
+          <li data-reveal class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-egg" aria-hidden="true"></i></span><h3>Local and fresh</h3><p>Chicken from two farms in the Eastern Region, tilapia from the Volta, vegetables from Agbogbloshie market every morning.</p></li>
+          <li data-reveal class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-temperature" aria-hidden="true"></i></span><h3>Nothing under a lamp</h3><p>Food is cooked when you order it. Rice and stews are made in the morning and kept at serving temperature, never reheated the next day.</p></li>
+          <li data-reveal class="route !border-[var(--color-line-strong)]"><span class="route-n !text-[var(--color-brand)]"><i class="ti ti-list-check" aria-hidden="true"></i></span><h3>Allergens on the menu</h3><p>Every dish lists its allergens. Ask the counter and we will show you the recipe card.</p></li>
         </ul>
       </div>
     </section>
@@ -117,12 +117,35 @@
       </div>
     </section>
   </main>
-  <section class="info-band" aria-label="Find us">
-    <a href="https://www.google.com/maps/search/?api=1&query=Oxford+Street+Osu+Accra"><i class="ti ti-map-pin" aria-hidden="true"></i><span><small>Find us</small><b>Oxford Street, Osu, Accra</b></span></a>
-    <div><i class="ti ti-clock" aria-hidden="true"></i><span><small>Open every day</small><b>11:00 – 22:00, Fri &amp; Sat till 23:30</b></span></div>
-    <a href="tel:+233550000101"><i class="ti ti-phone" aria-hidden="true"></i><span><small>Call or WhatsApp</small><b>055 000 0101</b></span></a>
+  <section class="stub" aria-label="Find us">
+    <div class="wrap stub-grid">
+      <div class="stub-cell">
+        <p class="stub-k"><i class="ti ti-map-pin" aria-hidden="true"></i>Find us</p>
+        <p class="stub-v">Oxford Street, Osu</p>
+        <p class="stub-s">Takeaway kitchen on Spintex Road</p>
+        <a class="stub-a" href="https://www.google.com/maps/search/?api=1&query=Oxford+Street+Osu+Accra">Directions<i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="stub-cell">
+        <p class="stub-k"><i class="ti ti-clock" aria-hidden="true"></i>Hours <span class="status" data-hours='{&quot;0&quot;:[&quot;12:00&quot;,&quot;22:00&quot;],&quot;1&quot;:[&quot;11:00&quot;,&quot;22:00&quot;],&quot;2&quot;:[&quot;11:00&quot;,&quot;22:00&quot;],&quot;3&quot;:[&quot;11:00&quot;,&quot;22:00&quot;],&quot;4&quot;:[&quot;11:00&quot;,&quot;22:00&quot;],&quot;5&quot;:[&quot;11:00&quot;,&quot;23:30&quot;],&quot;6&quot;:[&quot;11:00&quot;,&quot;23:30&quot;]}'>Open daily</span></p>
+        <p class="stub-v">11:00 – 22:00</p>
+        <p class="stub-s">Fri &amp; Sat till 23:30 · Sun from 12:00</p>
+        <a class="stub-a" href="menu">See the menu<i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="stub-cell">
+        <p class="stub-k"><i class="ti ti-phone" aria-hidden="true"></i>Call or WhatsApp</p>
+        <p class="stub-v"><a href="tel:+233550000101">055 000 0101</a></p>
+        <p class="stub-s">Spintex 055 000 0202</p>
+        <a class="stub-a" href="https://wa.me/233550000101?text=Hello%20Mako%20Grill%20Osu%2C%20I%27d%20like%20to%20order%3A%20">WhatsApp us<i class="ti ti-brand-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
   </section>
   <footer class="site-footer">
+    <div class="footer-art" aria-hidden="true">
+      <img class="fa fa-lime" src="./assets/images/lime.webp" alt="" width="831" height="1255" loading="lazy" decoding="async">
+      <img class="fa fa-red" src="./assets/images/pepper-red.webp" alt="" width="952" height="551" loading="lazy" decoding="async">
+      <img class="fa fa-yellow" src="./assets/images/pepper-yellow.webp" alt="" width="960" height="519" loading="lazy" decoding="async">
+      <img class="fa fa-ghost" src="./assets/images/pepper-ghost.webp" alt="" width="393" height="835" loading="lazy" decoding="async">
+    </div>
     <div class="wrap">
       <div class="footer-grid">
         <div class="grid content-start gap-5">

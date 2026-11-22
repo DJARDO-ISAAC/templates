@@ -243,10 +243,10 @@
     email: 'team@inotribe.com',
     // Profile URLs. An empty href keeps the icon and links to #.
     social: [
-      { label: 'Inotribe on LinkedIn', icon: 'ti-brand-linkedin', href: '' },
-      { label: 'Inotribe on X', icon: 'ti-brand-x', href: '' },
-      { label: 'Inotribe on GitHub', icon: 'ti-brand-github', href: '' },
-      { label: 'Email Inotribe', icon: 'ti-mail', href: 'mailto:team@inotribe.com' },
+      { label: 'Inotribe on LinkedIn', name: 'LinkedIn', icon: 'ti-brand-linkedin', href: '' },
+      { label: 'Inotribe on X', name: 'X', icon: 'ti-brand-x', href: '' },
+      { label: 'Inotribe on GitHub', name: 'GitHub', icon: 'ti-brand-github', href: '' },
+      { label: 'Email Inotribe', name: 'Email', icon: 'ti-mail', href: 'mailto:team@inotribe.com' },
     ],
     // Phone shown on the Contact page, e.g. '+233 30 000 0000'. Empty shows a call-back note instead.
     phone: '',
@@ -275,7 +275,7 @@
   ]
   const current = (id) => (id === page ? ' aria-current="page"' : '')
 
-  // Navbar and full-screen numbered menu
+  // Navbar and full-screen menu
   const navSlot = $('[data-component="navbar"]')
   if (navSlot) {
     navSlot.innerHTML = `
@@ -283,9 +283,8 @@
         <nav class="rail-inner" aria-label="Main">
           <div class="rail-left">
             <a class="nav-logo" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-color.png" alt="Inotribe" width="80" height="41"></a>
-            <p class="rail-clock">Accra<time data-accra-time>GMT</time></p>
           </div>
-          <div class="nav-links"><span class="nav-ind" aria-hidden="true"></span>${LINKS.map((l) => `<a class="nav-link" href="${l.href}"${current(l.id)}>${l.label}</a>`).join('')}</div>
+          <div class="nav-links">${LINKS.map((l) => `<a class="nav-link" href="${l.href}"${current(l.id)}>${l.label}</a>`).join('')}</div>
           <div class="rail-right">
             <a class="btn btn-primary btn-sm nav-cta" href="contact">Contact Us</a>
             <button class="nav-burger" type="button" data-menu-open aria-controls="menu-overlay" aria-expanded="false" aria-label="Open menu"><i class="ti ti-menu-2" aria-hidden="true"></i></button>
@@ -303,31 +302,6 @@
           <a class="text-center font-semibold text-[var(--color-text-primary)]" href="mailto:${SITE.email}">${SITE.email}</a>
         </div>
       </div>`
-  }
-
-  // Accra clock (Ghana time, GMT all year) and the highlight that slides between nav links
-  const clock = $('[data-accra-time]')
-  if (clock) {
-    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Africa/Accra', hour: '2-digit', minute: '2-digit', hour12: false })
-    const tick = () => { clock.textContent = `${fmt.format(new Date())} GMT` }
-    tick()
-    setInterval(tick, 20000)
-  }
-  const track = $('.nav-links')
-  const ind = track && $('.nav-ind', track)
-  if (track && ind) {
-    const moveTo = (link) => {
-      if (!link) { ind.style.opacity = '0'; return }
-      ind.style.width = `${link.offsetWidth}px`
-      ind.style.transform = `translateX(${link.offsetLeft}px)`
-      ind.style.opacity = '1'
-    }
-    const home = () => moveTo($('.nav-link[aria-current="page"]', track))
-    $$('.nav-link', track).forEach((l) => { l.addEventListener('mouseenter', () => moveTo(l)); l.addEventListener('focus', () => moveTo(l)) })
-    track.addEventListener('mouseleave', home)
-    track.addEventListener('focusout', (e) => { if (!track.contains(e.relatedTarget)) home() })
-    window.addEventListener('resize', home)
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(home); else home()
   }
 
   const overlay = $('#menu-overlay')
@@ -349,23 +323,25 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay?.classList.contains('is-open')) setMenu(false) })
   window.addEventListener('resize', () => { if (window.innerWidth >= 768 && overlay?.classList.contains('is-open')) setMenu(false) })
 
-  // Footer
+  // Footer: brand + email, pages, company, follow, then the copyright line
   const footSlot = $('[data-component="footer"]')
   if (footSlot) {
+    const follow = SITE.social.filter((s) => s.icon !== 'ti-mail')
     footSlot.innerHTML = `
       <footer class="site-footer">
         <div class="wrap">
-          <p class="footer-line">Software engineering for institutions, <span class="gold">from Accra.</span></p>
-          <div class="footer-top">
-            <a class="inline-flex w-fit" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-color.png" alt="Inotribe" width="80" height="41" style="height:38px;width:auto"></a>
-            <div class="footer-cols">
-              <div><p class="footer-head">Navigation</p>${LINKS.map((l) => `<a class="footer-link" href="${l.href}">${l.label}</a>`).join('')}</div>
-              <div><p class="footer-head">Company</p><a class="footer-link" href="about#process">How we work</a><a class="footer-link" href="./#clients">Clients</a><button class="footer-link" type="button" data-footer-privacy>Privacy notice</button><a class="footer-link" href="mailto:${SITE.email}">${SITE.email}</a></div>
+          <div class="ft-grid">
+            <div class="ft-cell ft-brand">
+              <a class="ft-logo" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-color.png" alt="Inotribe" width="80" height="41"></a>
+              <p class="ft-line">Software engineering for institutions, <span class="gold">from Accra.</span></p>
+              <a class="ft-mail" href="mailto:${SITE.email}"><span>${SITE.email}</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
             </div>
+            <div class="ft-cell"><p class="footer-head">Pages</p>${LINKS.map((l) => `<a class="footer-link" href="${l.href}"${l.id === page ? ' aria-current="page"' : ''}>${l.label}</a>`).join('')}</div>
+            <div class="ft-cell"><p class="footer-head">Company</p><a class="footer-link" href="about#process">How we work</a><a class="footer-link" href="./#clients">Clients</a><a class="footer-link" href="work">Case studies</a><button class="footer-link" type="button" data-footer-privacy>Privacy notice</button></div>
+            <div class="ft-cell ft-follow"><p class="footer-head">Follow</p>${follow.map((s) => `<a class="footer-link ft-social" href="${esc(s.href || '#')}" aria-label="${esc(s.label)}"${(s.href || '').startsWith('http') ? ' target="_blank" rel="noopener"' : ''}><i class="ti ${s.icon}" aria-hidden="true"></i>${esc(s.name)}</a>`).join('')}</div>
           </div>
           <div class="footer-bottom">
             <p>© ${new Date().getFullYear()} Inotribe. All rights reserved.</p>
-            <div style="display:flex;gap:10px">${SITE.social.map((s) => `<a class="social" href="${esc(s.href || '#')}" aria-label="${esc(s.label)}"${s.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}><i class="ti ${s.icon}" aria-hidden="true"></i></a>`).join('')}</div>
           </div>
         </div>
       </footer>`
@@ -451,8 +427,8 @@
 
   // Work page: case index cards and one challenge → built → impact flow per study
   const graphics = {
-    network: `<svg viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="g-dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#423739"/></pattern></defs><rect width="800" height="320" fill="url(#g-dots)"/><g stroke="#423739" stroke-width="1.5" fill="none"><path d="M120 160 L300 70 L500 70 L680 160 L500 250 L300 250 Z"/><path d="M300 70 L300 250M500 70 L500 250M120 160 L680 160"/></g><g fill="#2b2325" stroke="#6cbccc" stroke-width="2"><circle cx="300" cy="70" r="14"/><circle cx="300" cy="250" r="14"/><circle cx="500" cy="70" r="14"/><circle cx="500" cy="250" r="14"/></g><circle cx="120" cy="160" r="22" fill="#1f7a8c"/><circle cx="680" cy="160" r="22" fill="#e3a857"/><circle r="5" fill="#e3a857" class="packet" style="offset-path:path('M120 160 L300 70 L500 70 L680 160')"/><circle r="5" fill="#6cbccc" class="packet" style="offset-path:path('M120 160 L300 250 L500 250 L680 160');animation-delay:-2s"/><circle r="4" fill="#e3a857" class="packet" style="offset-path:path('M120 160 L680 160');animation-duration:3s"/></svg>`,
-    geo: `<svg viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="geo-dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#423739"/></pattern></defs><rect width="800" height="320" fill="url(#geo-dots)"/><path d="M60 280 C160 230 220 250 300 190 S420 120 480 150 S600 90 760 50" fill="none" stroke="#e3a857" stroke-width="2" stroke-dasharray="8 7"/><g fill="none" stroke="#1f7a8c" stroke-width="1.5" opacity=".7"><path d="M0 40 L800 210"/><path d="M0 120 L800 290"/></g><g fill="#6cbccc"><circle cx="250" cy="160" r="5"/><circle cx="410" cy="205" r="5"/><circle cx="540" cy="110" r="5"/></g><g fill="none" stroke="#6cbccc" stroke-width="1.5"><circle cx="410" cy="205" r="16"/><circle cx="410" cy="205" r="30" opacity=".5"/></g><text x="660" y="74" fill="#a39496" font-size="12" font-family="Google Sans, sans-serif">boundary</text><text x="40" y="74" fill="#a39496" font-size="12" font-family="Google Sans, sans-serif">satellite pass</text></svg>`,
+    network: `<svg viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="g-dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#303030"/></pattern></defs><rect width="800" height="320" fill="url(#g-dots)"/><g stroke="#303030" stroke-width="1.5" fill="none"><path d="M120 160 L300 70 L500 70 L680 160 L500 250 L300 250 Z"/><path d="M300 70 L300 250M500 70 L500 250M120 160 L680 160"/></g><g fill="#1c1c1c" stroke="#6cbccc" stroke-width="2"><circle cx="300" cy="70" r="14"/><circle cx="300" cy="250" r="14"/><circle cx="500" cy="70" r="14"/><circle cx="500" cy="250" r="14"/></g><circle cx="120" cy="160" r="22" fill="#1f7a8c"/><circle cx="680" cy="160" r="22" fill="#e3a857"/><circle r="5" fill="#e3a857" class="packet" style="offset-path:path('M120 160 L300 70 L500 70 L680 160')"/><circle r="5" fill="#6cbccc" class="packet" style="offset-path:path('M120 160 L300 250 L500 250 L680 160');animation-delay:-2s"/><circle r="4" fill="#e3a857" class="packet" style="offset-path:path('M120 160 L680 160');animation-duration:3s"/></svg>`,
+    geo: `<svg viewBox="0 0 800 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="geo-dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="#303030"/></pattern></defs><rect width="800" height="320" fill="url(#geo-dots)"/><path d="M60 280 C160 230 220 250 300 190 S420 120 480 150 S600 90 760 50" fill="none" stroke="#e3a857" stroke-width="2" stroke-dasharray="8 7"/><g fill="none" stroke="#1f7a8c" stroke-width="1.5" opacity=".7"><path d="M0 40 L800 210"/><path d="M0 120 L800 290"/></g><g fill="#6cbccc"><circle cx="250" cy="160" r="5"/><circle cx="410" cy="205" r="5"/><circle cx="540" cy="110" r="5"/></g><g fill="none" stroke="#6cbccc" stroke-width="1.5"><circle cx="410" cy="205" r="16"/><circle cx="410" cy="205" r="30" opacity=".5"/></g><text x="660" y="74" fill="#a3a29c" font-size="12" font-family="Google Sans, sans-serif">boundary</text><text x="40" y="74" fill="#a3a29c" font-size="12" font-family="Google Sans, sans-serif">satellite pass</text></svg>`,
   }
   const list = $('[data-case-studies]')
   const index = $('[data-case-index]')
@@ -472,7 +448,7 @@
           <article class="cs" id="${esc(s.id)}" aria-labelledby="${esc(s.id)}-title">
             <div class="cs-head">
               <div class="grid gap-4">
-                <div class="case-meta"><span class="cs-id">CS-${num(n)}</span><span class="tag">${esc(s.sector)}</span></div>
+                <div class="case-meta"><span class="tag">${esc(s.sector)}</span></div>
                 <h2 class="h-section" id="${esc(s.id)}-title" style="font-size:clamp(1.9rem,3.6vw,2.9rem)">${esc(s.title)}</h2>
               </div>
               <p class="lede lg:text-right">${esc(s.summary)}</p>
@@ -487,7 +463,7 @@
             </div>
           </article>`
         }).join('')
-        if (index) index.innerHTML = studies.map((s, n) => `<a href="#${esc(s.id)}"><span class="cs-id">CS-${num(n)}</span><strong>${esc(s.title)}</strong><small>${esc(s.sector)}</small></a>`).join('')
+        if (index) index.innerHTML = studies.map((s, n) => `<a href="#${esc(s.id)}"><strong>${esc(s.title)}</strong><small>${esc(s.sector)}</small></a>`).join('')
         if (location.hash) { const target = document.getElementById(location.hash.slice(1)); if (target) setTimeout(() => target.scrollIntoView(), 60) }
         if (index && 'IntersectionObserver' in window) {
           const links = new Map($$('a', index).map((a) => [a.hash.slice(1), a]))

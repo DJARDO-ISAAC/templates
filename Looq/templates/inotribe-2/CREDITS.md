@@ -23,7 +23,7 @@ The site is a Looq template, so it uses the Looq build instead of its own toolch
 | `data/*.json` | `assets/data/*.json` | Looq copies `assets/` into the build. |
 | Links to `about.html`, `work.html` … | Clean URLs (`about`, `work`) | Looq convention. Cloudflare Pages, Netlify and Vercel serve them automatically. |
 | Fonts from Google Fonts | Same Google Sans and Google Sans Flex files, self-hosted in `assets/fonts/` | Faster, no third-party request, and the template works as a single zip. |
-| Feature icons from 3dicons.co | Used: computer, folder, tools, map pin, shield, flash (colour style), resized to 128 px | — |
+| Feature icons from 3dicons.co | Icons8 3D Fluency icons (`assets/icons/cap-*.png`), shown above each capability | The client asked for more realistic icons. Icons8's free licence needs a link to icons8.com; it sits in the footer copyright line on every page. |
 | World map from FreeSVG | Generated with the open-source `dotted-map` library into `assets/images/world-map-dots.svg` | The FreeSVG download could not be confirmed (doc §9 flags this). The generated file is our own. |
 | No privacy checkbox or privacy page | Still none; a short privacy notice opens in a dialog from the form | Looq requires a privacy link next to every form, and it addresses open item 7 without adding a page. |
 
@@ -33,7 +33,8 @@ Open item 6 (heading colour mismatch) is resolved: all headings use the near-whi
 
 - **Typefaces:** Google Sans and Google Sans Flex, SIL Open Font License 1.1 (confirmed on Fontsource/Google Fonts, Nov 2026). This settles the doc's open licensing question.
 - **UI icons:** Tabler Icons webfont 3.31 from jsDelivr, MIT.
-- **Feature icons:** 3dicons.co, CC0.
+- **Capability icons (Home):** Icons8, 3D Fluency style, 188 px: laptop-coding, data-configuration, api-settings, satellite, fingerprint, server (https://icons8.com/icons/3d-fluency). Free licence: the "Icons by Icons8" link in the footer must stay, unless Inotribe buys an Icons8 licence, which removes that requirement.
+- **Tech stack logos (Home marquee):** official logos as SVGs from Devicon (https://devicon.dev, MIT), saved in `assets/logos/`. Each sits on a light circle so the dark marks (Django, Next.js) stay visible. The logos are trademarks of their owners and are used only to name the tools Inotribe works with.
 - **Logo:** supplied by Inotribe (`logo-color.png`); `logo-white.png` is the same mark recoloured white.
 - **World map:** generated with `dotted-map` (MIT).
 - **Photos:** Pexels License. All are placeholders; replace them with real team and office photography.
