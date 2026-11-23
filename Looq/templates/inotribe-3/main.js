@@ -326,15 +326,16 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay?.classList.contains('is-open')) setMenu(false) })
   window.addEventListener('resize', () => { if (window.innerWidth >= 768 && overlay?.classList.contains('is-open')) setMenu(false) })
 
-  // FR-01 Footer: white logo, Navigation and Company columns, socials
+  // FR-01 Footer: logo, Navigation and Company columns, socials, over a photo of Accra at dusk
   const footSlot = $('[data-component="footer"]')
   if (footSlot) {
     footSlot.innerHTML = `
       <footer class="site-footer">
+        <img class="footer-bg" src="./assets/images/footer-accra.jpg" alt="" width="2000" height="972" loading="lazy" decoding="async">
         <div class="wrap">
           <div class="footer-top">
             <div class="footer-brand">
-              <a class="inline-flex w-fit" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-white.png" alt="Inotribe" width="80" height="41"></a>
+              <a class="inline-flex w-fit" href="./" aria-label="Inotribe home"><img src="./assets/images/logo-color.png" alt="Inotribe" width="80" height="41"></a>
               <p class="footer-line">Software engineering for institutions, from Accra.</p>
             </div>
             <div class="footer-cols">

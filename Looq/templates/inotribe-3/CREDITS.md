@@ -41,11 +41,12 @@ Build conventions are the same as version B: the Looq root build (Tailwind v4) c
 - **Typefaces:** Satoshi and Switzer (Fontshare Free Font License) and IBM Plex Mono (SIL Open Font License 1.1), all self-hosted in `assets/fonts/` from the Looq design system and Google Fonts.
 - **UI icons:** Tabler Icons webfont 3.31 from jsDelivr, MIT.
 - **Capability icons (Home):** Tabler Icons line icons (MIT, already loaded for the UI): devices, database, plug-connected, satellite, fingerprint, topology-star-3. They replaced the 3D icons, which clashed with the flat style and did not match each subject.
-- **Logo:** supplied by Inotribe (`logo-color.png`); `logo-white.png` is the same mark in white, used in the footer as the brief specifies.
+- **Logo:** supplied by Inotribe (`logo-color.png`), used in both the navbar and the footer at the same size. `logo-white.png` (the same mark in white) is kept in `assets/images/` but is not currently used.
 - **Photos:** Pexels License, the same placeholders as version B. Replace them with real team and office photography.
 
 | File | Pexels photo |
 |---|---|
+| footer-accra.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/nw3yDem7SdM (@seyiram, "Accra from my Balcony") |
 | about-team.jpg | https://www.pexels.com/photo/30677714/ |
 | about-build.jpg | https://www.pexels.com/photo/19805876/ |
 | about-review.jpg | https://www.pexels.com/photo/9301248/ |

@@ -162,8 +162,8 @@
   .menu-overlay.is-open { opacity: 1; visibility: visible; transition-delay: 0s; }
   .menu-top { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); }
   .menu-list { display: grid; margin-top: 12px; }
-  .menu-item { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 0; color: var(--color-ink); font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; letter-spacing: -0.03em; }
-  .menu-item i { color: var(--color-accent); font-size: 22px; }
+  .menu-item { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 0; color: var(--color-ink); font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
+  .menu-item i { color: var(--color-accent); font-size: 20px; }
   .menu-item[aria-current="page"] { color: var(--color-accent); }
   .menu-foot { display: grid; gap: 14px; margin-top: auto; }
 
@@ -274,12 +274,13 @@
   .round-cta:hover i { transform: rotate(45deg); }
   .cta2 :focus-visible { outline-color: #141414; }
 
-  /* About hero: centred headline over a filmstrip of four team photos; the hovered/focused panel widens */
+  /* About hero: one filmstrip; the headline is its first panel, then four team photos (the hovered/focused one widens) */
   .about-hero { padding-block: clamp(48px, 6vw, 88px) clamp(56px, 7vw, 104px); }
-  .fs-head { display: grid; gap: 24px; justify-items: center; max-width: 46rem; margin-inline: auto; text-align: center; }
-  .fs-title { font-size: clamp(2.6rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -0.05em; }
-  .fs-head .lede { max-width: 34rem; }
-  .fs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: clamp(40px, 5vw, 72px); }
+  .fs-frame { display: grid; gap: 8px; }
+  .fs-intro { display: grid; gap: 32px; align-content: center; padding: clamp(28px, 3.4vw, 48px); border-radius: var(--radius-lg); background: var(--color-surface-2); }
+  .fs-title { font-size: clamp(2.6rem, 4.4vw, 4.6rem); line-height: .98; letter-spacing: -0.05em; }
+  .fs-intro-foot { display: grid; gap: 24px; justify-items: start; }
+  .fs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .fs-panel { position: relative; overflow: hidden; aspect-ratio: 3 / 4; border-radius: var(--radius-lg); background: var(--color-surface-2); outline-offset: 3px; }
   .fs-panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.2); transition: filter var(--dur-slow) var(--ease-soft), transform var(--dur-slow) var(--ease-soft); }
   .fs-cap { position: absolute; left: 0; bottom: 0; display: grid; gap: 4px; max-width: calc(100% - 16px); margin: 8px; padding: 12px 14px; border-radius: var(--radius-md); background: var(--color-canvas); }
@@ -287,13 +288,14 @@
   .fs-cap b { color: var(--color-ink); font-family: var(--font-display); font-size: 1.15rem; line-height: 1.1; letter-spacing: -0.02em; }
   .fs-cap > span { display: none; color: var(--color-body); font-size: 14px; line-height: 1.4; }
   @media (min-width: 900px) {
-    .fs { display: flex; height: clamp(380px, 38vw, 560px); }
+    .fs-frame { grid-template-columns: minmax(0, 37%) minmax(0, 1fr); height: clamp(480px, 46vw, 640px); }
+    .fs { display: flex; gap: 8px; height: 100%; }
     .fs-panel { flex: 1 1 0; aspect-ratio: auto; transition: flex-grow var(--dur-slow) var(--ease-soft); }
     .fs-panel img { filter: grayscale(1); }
     .fs:not(:hover):not(:focus-within) .fs-panel.is-open img { filter: grayscale(.2); }
     .fs-cap { margin: 14px; padding: 16px 18px; opacity: 0; transform: translateY(8px); transition: opacity var(--dur-base) var(--ease-soft), transform var(--dur-base) var(--ease-soft); }
-    .fs-cap b { font-size: 1.5rem; }
-    .fs-cap > span { display: block; white-space: nowrap; }
+    .fs-cap b { font-size: 1.35rem; }
+    .fs-cap > span { display: block; max-width: 20rem; }
     /* one panel is always open: the first by default, or whichever is hovered/focused */
     .fs-panel:hover, .fs-panel:focus-visible, .fs:not(:hover):not(:focus-within) .fs-panel.is-open { flex-grow: 3.2; }
     .fs-panel:hover .fs-cap, .fs-panel:focus-visible .fs-cap, .fs:not(:hover):not(:focus-within) .fs-panel.is-open .fs-cap { opacity: 1; transform: none; }
@@ -481,11 +483,14 @@
   .text-link { color: var(--color-ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 4px; cursor: pointer; }
 
   /* ========== Footer (injected) ========== */
-  .site-footer { padding-block: 80px 32px; background: #0f0f0f; color: var(--color-muted); }
+  .site-footer { position: relative; isolation: isolate; overflow: hidden; padding-block: 80px 32px; background: #0f0f0f; color: var(--color-muted); }
+  /* Accra at dusk: solid dark at the top for the text, the city lights showing through toward the bottom */
+  .footer-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; }
+  .site-footer::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #0f0f0f 0%, rgb(15 15 15 / .9) 38%, rgb(15 15 15 / .55) 100%); }
   .footer-top { display: grid; gap: 48px; padding-bottom: 48px; }
   @media (min-width: 900px) { .footer-top { grid-template-columns: 1fr auto; } }
   .footer-brand { display: grid; gap: 22px; align-content: start; }
-  .footer-brand img { height: 40px; width: auto; }
+  .footer-brand img { height: 34px; width: auto; }
   .footer-line { max-width: 20ch; color: var(--color-ink); font-family: var(--font-display); font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.05; font-weight: 700; letter-spacing: -0.04em; }
   .footer-cols { display: grid; grid-template-columns: repeat(2, minmax(0, auto)); gap: 32px 96px; }
   .footer-head { margin-bottom: 14px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent); }
