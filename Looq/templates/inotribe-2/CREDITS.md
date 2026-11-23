@@ -35,6 +35,7 @@ Open item 6 (heading colour mismatch) is resolved: all headings use the near-whi
 - **UI icons:** Tabler Icons webfont 3.31 from jsDelivr, MIT.
 - **Capability icons (Home):** Icons8, 3D Fluency style, 188 px: laptop-coding, data-configuration, api-settings, satellite, fingerprint, server (https://icons8.com/icons/3d-fluency). Free licence: the "Icons by Icons8" link in the footer must stay, unless Inotribe buys an Icons8 licence, which removes that requirement.
 - **Tech stack logos (Home marquee):** official logos as SVGs from Devicon (https://devicon.dev, MIT), saved in `assets/logos/`. Each sits on a light circle so the dark marks (Django, Next.js) stay visible. The logos are trademarks of their owners and are used only to name the tools Inotribe works with.
+- **Client logos (Home "Institutions that build with Inotribe", About client strip):** supplied by Inotribe in `assets/logos/companies/`. Cleaned copies (white background removed, trimmed, plain file names) are in `assets/logos/clients/`, and the pages use those. Each tile links to the client's site in a new tab: Solis (solisfinance.com), GlobalPayEx (globalpayex.com, same logo as the site), Petra (petraonline.com), Bsystems (bsystemslimited.com), Government of Ghana (ghana.gov.gh). Neebal Technologies, Hanfie Technologies and Liquid Financial have no logo yet and show their name in type.
 - **Logo:** supplied by Inotribe (`logo-color.png`); `logo-white.png` is the same mark recoloured white.
 - **World map:** generated with `dotted-map` (MIT).
 - **Photos:** Pexels License. All are placeholders; replace them with real team and office photography.
@@ -49,13 +50,14 @@ Open item 6 (heading colour mismatch) is resolved: all headings use the near-whi
 | services-hero.jpg | https://www.pexels.com/photo/6804068/ |
 | services-offered.jpg | https://www.pexels.com/photo/1181243/ |
 | contact-hero.jpg | https://www.pexels.com/photo/3869649/ |
-| case-data-warehouse.jpg | https://www.pexels.com/photo/37730212/ |
-| case-geospatial.jpg | https://www.pexels.com/photo/30596229/ |
+| case-data-warehouse.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/lVZjvw-u9V8 (@ismailenesayhan) |
+| case-geospatial.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/VBNb52J8Trk (SpaceX (@spacex)) |
 | case-identity.jpg | https://www.pexels.com/photo/17155842/ |
-| case-distributed.jpg | https://www.pexels.com/photo/8640331/ |
+| case-distributed.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/PSpf_XgOM5w (Scott Rodgerson (@scottrodgerson)) |
 | testimonial-1.jpg | https://www.pexels.com/photo/36053652/ |
 | testimonial-2.jpg | https://www.pexels.com/photo/29852895/ |
 | testimonial-3.jpg | https://www.pexels.com/photo/38670854/ |
+
 
 The doc's mismatched file names for the warehouse and identity images (Home vs Services) are fixed: both pages use `case-data-warehouse.jpg` and `case-identity.jpg`.
 
@@ -72,3 +74,4 @@ The doc's mismatched file names for the warehouse and identity images (Home vs S
 - [ ] **Buzzword copy changes:** "mission-critical" was replaced on Home (hero line: "the software institutions depend on"; capabilities heading: "Engineered for systems people depend on"), and About's "handled end to end" now reads "one team designs, builds and supports it". Confirm with Inotribe.
 - [ ] **Contact intro (copy change):** the doc's line "We'd love to hear from you. Send us a message and we'll reply soon." was replaced with "Tell us what the system has to do and what happens if it fails. One of our engineers will reply." because the original is a stock phrase. Confirm with Inotribe.
 - [ ] **Privacy notice:** check the dialog text on the Contact page with Inotribe.
+- [ ] **Client links and logos:** confirm neebal.com and hanfie.com are the right sites (the names match, but neither could be fully checked), send a website for Liquid Financial (its tile has no link for now), and send logos for Neebal, Hanfie and Liquid.

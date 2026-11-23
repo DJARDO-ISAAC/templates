@@ -19,31 +19,27 @@
   <div data-component="navbar" data-header></div>
 
   <main id="main">
-    <section class="pb-20 pt-[150px] md:pt-[180px]" aria-labelledby="about-title">
-      <div class="wrap grid items-center gap-14 lg:grid-cols-[1fr_1.1fr]">
+    <section class="flex items-center pb-20 pt-[150px] md:pt-[170px] lg:min-h-[100svh]" aria-labelledby="about-title">
+      <div class="wrap grid items-center gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
         <div class="grid gap-7">
-          <p class="label-idx">About Inotribe</p>
-          <h1 class="h-page leading-[1.18]" id="about-title">Software engineering<br class="hidden lg:block"> and <span class="title-pill">beyond</span></h1>
+          <h1 class="h-page about-title leading-[1.12]" id="about-title">Software engineering<br class="hidden lg:block"> and <span class="title-pill">beyond</span></h1>
           <p class="lede max-w-[42ch]">The team behind the systems institutions run on — engineers who take reliability seriously.</p>
           <a class="btn btn-primary w-fit" href="contact">Get in Touch <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="grid grid-cols-3 items-start gap-3 md:gap-4">
-          <img class="mt-16 aspect-[3/5] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-1.jpg" alt="An engineer writing code across a desktop monitor and a laptop" width="900" height="1125">
+          <img class="mt-20 aspect-[1/2] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-1.jpg" alt="An engineer writing code across a desktop monitor and a laptop" width="900" height="1125">
           <div class="grid gap-3 md:gap-4">
-            <img class="aspect-square w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-2.jpg" alt="A team meeting around a long table with laptops" width="900" height="675">
-            <img class="aspect-[4/5] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-3.jpg" alt="A colleague presenting at a whiteboard to the team" width="900" height="675">
+            <img class="aspect-[4/5] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-2.jpg" alt="A team meeting around a long table with laptops" width="900" height="675">
+            <img class="aspect-[3/4] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-3.jpg" alt="A colleague presenting at a whiteboard to the team" width="900" height="675">
           </div>
-          <img class="mt-28 aspect-[3/5] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-4.jpg" alt="An engineer working on a laptop in a dim room" width="900" height="1125">
+          <img class="mt-36 aspect-[1/2] w-full rounded-[var(--radius-lg)] object-cover" src="./assets/images/about-hero-4.jpg" alt="An engineer working on a laptop in a dim room" width="900" height="1125">
         </div>
       </div>
     </section>
 
     <section class="pb-sec" aria-labelledby="mission-title">
       <div class="wrap">
-        <ul class="flex list-none flex-wrap items-center justify-center gap-x-5 gap-y-3 p-0 text-center font-[family-name:var(--font-display)] text-lg text-[var(--color-text-muted)]" aria-label="Clients">
-          <li>Solis Microfinance</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Liquid Financial</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>GlobalPayEx</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Neebal Technologies</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Petra</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Bsystems</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Hanfie Technologies</li><li aria-hidden="true" class="text-[var(--color-line-strong)]">/</li><li>Government of Ghana</li>
-        </ul>
-        <div class="relative isolate mt-14 grid justify-items-center gap-7 py-20 text-center" data-reveal>
+        <div class="relative isolate grid justify-items-center gap-7 py-20 text-center" data-reveal>
           <div class="glow-map" aria-hidden="true"><div class="map-dots"><img src="./assets/images/world-map-dots.svg" alt="" width="1350" height="640"><svg class="routes" viewBox="0 0 135 64" preserveAspectRatio="none" aria-hidden="true"><path class="route" pathLength="1" d="M67.43 36.35 Q67.44 22.11 67.45 15.86" style="animation-delay:0.50s"/><circle class="city" cx="67.45" cy="15.86" r=".32" style="animation-delay:1.60s"/><path class="route route-gold" pathLength="1" d="M67.43 36.35 Q53.59 19.08 39.75 21.7" style="animation-delay:0.85s"/><circle class="city" cx="39.75" cy="21.7" r=".32" style="animation-delay:1.95s"/><path class="route" pathLength="1" d="M67.43 36.35 Q77.84 25.53 88.24 28.67" style="animation-delay:1.20s"/><circle class="city" cx="88.24" cy="28.67" r=".32" style="animation-delay:2.30s"/><path class="route route-gold" pathLength="1" d="M67.43 36.35 Q74.37 33.37 81.3 38.94" style="animation-delay:1.55s"/><circle class="city" cx="81.3" cy="38.94" r=".32" style="animation-delay:2.65s"/><path class="route" pathLength="1" d="M67.43 36.35 Q72.72 37.69 78.0 48.64" style="animation-delay:1.90s"/><circle class="city" cx="78.0" cy="48.64" r=".32" style="animation-delay:3.00s"/><circle class="hub-ring" cx="67.43" cy="36.35" r="1"/><circle class="hub" cx="67.43" cy="36.35" r=".6"/></svg></div></div>
           <p class="label-idx" id="mission-title">Our mission</p>
           <blockquote class="m-0 max-w-[22ch] font-[family-name:var(--font-display)] text-[clamp(2rem,4.4vw,3.5rem)] font-[420] leading-[1.08] tracking-[-0.04em] text-[var(--color-text-primary)]">“Inotribe brings together engineers who build the systems institutions <span class="gold">can't afford to get wrong.</span>”</blockquote>
@@ -94,7 +90,7 @@
         </div>
         <div class="mt-12 grid md:grid-cols-[1.4fr_1fr]" aria-live="polite">
           <figure class="t-quote m-0 flex flex-col justify-between gap-10 p-8 md:p-12">
-            <div class="flex items-center justify-between gap-4"><i class="ti ti-quote text-5xl text-[var(--color-accent)]" aria-hidden="true"></i><span class="num text-sm font-semibold tracking-[0.12em] text-[var(--color-brand-strong)]" data-t-count></span></div>
+            <i class="ti ti-quote text-5xl text-[var(--color-accent)]" aria-hidden="true"></i>
             <blockquote class="m-0 font-[family-name:var(--font-display)] text-[clamp(1.35rem,2.4vw,1.95rem)] font-[420] leading-[1.3] tracking-[-0.015em] text-[var(--color-text-primary)]" data-t-quote>Loading testimonials…</blockquote>
             <figcaption class="flex flex-wrap items-end justify-between gap-4">
               <span><span class="block text-lg font-semibold text-[var(--color-text-primary)]" data-t-name></span><span class="block" data-t-title></span></span>
@@ -106,6 +102,10 @@
         <div class="mt-6 flex gap-3 md:hidden">
           <button class="arrow-btn" type="button" data-t-prev aria-label="Previous testimonial"><i class="ti ti-arrow-left" aria-hidden="true"></i></button>
           <button class="arrow-btn" type="button" data-t-next aria-label="Next testimonial"><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="clientline mt-16" data-reveal>
+          <p class="clientline-head">Institutions that have trusted us with their systems</p>
+          <ul class="client-grid client-grid-sm" aria-label="Clients"><li><a class="client" href="https://www.solisfinance.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/solis.svg" alt="Solis Microfinance" width="184" height="67" loading="lazy" style="--h:34px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><span class="client"><span class="client-word">Liquid Financial</span></span></li><li><a class="client" href="https://globalpayex.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/globalpayex.png" alt="GlobalPayEx" width="460" height="343" loading="lazy" style="--h:56px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://www.neebal.com" target="_blank" rel="noopener"><span class="client-word">Neebal Technologies</span><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://petraonline.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/petra.png" alt="Petra" width="146" height="28" loading="lazy" style="--h:24px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://bsystemslimited.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/bsystems.png" alt="Bsystems" width="596" height="191" loading="lazy" style="--h:42px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://hanfie.com" target="_blank" rel="noopener"><span class="client-word">Hanfie Technologies</span><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://www.ghana.gov.gh" target="_blank" rel="noopener"><img src="./assets/logos/clients/government-of-ghana.png" alt="" width="190" height="148" loading="lazy" style="--h:50px"><span class="client-cap">Government<br>of Ghana</span><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li></ul>
         </div>
       </div>
     </section>

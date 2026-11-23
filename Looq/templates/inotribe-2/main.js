@@ -338,7 +338,7 @@
             </div>
             <div class="ft-cell"><p class="footer-head">Pages</p>${LINKS.map((l) => `<a class="footer-link" href="${l.href}"${l.id === page ? ' aria-current="page"' : ''}>${l.label}</a>`).join('')}</div>
             <div class="ft-cell"><p class="footer-head">Company</p><a class="footer-link" href="about#process">How we work</a><a class="footer-link" href="./#clients">Clients</a><a class="footer-link" href="work">Case studies</a><button class="footer-link" type="button" data-footer-privacy>Privacy notice</button></div>
-            <div class="ft-cell ft-follow"><p class="footer-head">Follow</p>${follow.map((s) => `<a class="footer-link ft-social" href="${esc(s.href || '#')}" aria-label="${esc(s.label)}"${(s.href || '').startsWith('http') ? ' target="_blank" rel="noopener"' : ''}><i class="ti ${s.icon}" aria-hidden="true"></i>${esc(s.name)}</a>`).join('')}</div>
+            <div class="ft-cell ft-follow"><p class="footer-head">Follow</p><div class="ft-socials">${follow.map((s) => `<a class="ft-social" href="${esc(s.href || '#')}" aria-label="${esc(s.label)}"${(s.href || '').startsWith('http') ? ' target="_blank" rel="noopener"' : ''}><i class="ti ${s.icon}" aria-hidden="true"></i></a>`).join('')}</div></div>
           </div>
           <div class="footer-bottom">
             <p>© ${new Date().getFullYear()} Inotribe. All rights reserved.</p>
@@ -400,7 +400,6 @@
     const name = $('[data-t-name]', slider)
     const title = $('[data-t-title]', slider)
     const photo = $('[data-t-photo]', slider)
-    const count = $('[data-t-count]', slider)
     const bars = $('[data-t-bars]', slider)
     let items = []
     let i = 0
@@ -413,7 +412,6 @@
       title.textContent = t.title
       photo.src = t.image
       photo.alt = t.alt || `Portrait of ${t.name}`
-      if (count) count.textContent = `${String(i + 1).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`
       if (bars) bars.innerHTML = items.map((_, k) => `<span${k === i ? ' aria-current="true"' : ''}></span>`).join('')
       ;[quote.parentElement, photo.parentElement].forEach((el) => { el.classList.remove('t-fade'); void el.offsetWidth; el.classList.add('t-fade') })
     }

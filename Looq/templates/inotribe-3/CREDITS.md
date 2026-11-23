@@ -39,26 +39,24 @@ Build conventions are the same as version B: the Looq root build (Tailwind v4) c
 ## Sources and licences
 
 - **Typefaces:** Satoshi and Switzer (Fontshare Free Font License) and IBM Plex Mono (SIL Open Font License 1.1), all self-hosted in `assets/fonts/` from the Looq design system and Google Fonts.
-- **Feature icons:** the 3dicons PNGs had their white backgrounds made transparent for the dark page; no other change.
 - **UI icons:** Tabler Icons webfont 3.31 from jsDelivr, MIT.
-- **Feature icons:** 3dicons.co, CC0.
+- **Capability icons (Home):** Tabler Icons line icons (MIT, already loaded for the UI): devices, database, plug-connected, satellite, fingerprint, topology-star-3. They replaced the 3D icons, which clashed with the flat style and did not match each subject.
 - **Logo:** supplied by Inotribe (`logo-color.png`); `logo-white.png` is the same mark in white, used in the footer as the brief specifies.
 - **Photos:** Pexels License, the same placeholders as version B. Replace them with real team and office photography.
 
 | File | Pexels photo |
 |---|---|
-| about-hero-1.jpg | https://www.pexels.com/photo/19805876/ |
-| about-hero-2.jpg | https://www.pexels.com/photo/30677714/ |
-| about-hero-3.jpg | https://www.pexels.com/photo/9301248/ |
-| about-hero-4.jpg | https://www.pexels.com/photo/1181330/ |
+| about-team.jpg | https://www.pexels.com/photo/30677714/ |
+| about-build.jpg | https://www.pexels.com/photo/19805876/ |
+| about-review.jpg | https://www.pexels.com/photo/9301248/ |
+| about-support.jpg | https://www.pexels.com/photo/1181330/ |
 | about-capability.jpg | https://www.pexels.com/photo/5483158/ |
-| services-hero.jpg | https://www.pexels.com/photo/6804068/ |
 | services-offered.jpg | https://www.pexels.com/photo/1181243/ |
 | contact-hero.jpg | https://www.pexels.com/photo/3869649/ |
-| case-data-warehouse.jpg | https://www.pexels.com/photo/37730212/ |
-| case-geospatial.jpg | https://www.pexels.com/photo/30596229/ |
+| case-data-warehouse.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/lVZjvw-u9V8 (@ismailenesayhan) |
+| case-geospatial.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/VBNb52J8Trk (SpaceX (@spacex)) |
 | case-identity.jpg | https://www.pexels.com/photo/17155842/ |
-| case-distributed.jpg | https://www.pexels.com/photo/8640331/ |
+| case-distributed.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/PSpf_XgOM5w (Scott Rodgerson (@scottrodgerson)) |
 | testimonial-1.jpg | https://www.pexels.com/photo/36053652/ |
 | testimonial-2.jpg | https://www.pexels.com/photo/29852895/ |
 | testimonial-3.jpg | https://www.pexels.com/photo/38670854/ |
@@ -75,3 +73,8 @@ Build conventions are the same as version B: the Looq root build (Tailwind v4) c
 - [ ] **Sector tag (open item 3):** "Government / Geospatial" on the cross-border case study.
 - [ ] **Client names (open item 4):** written permission to show all eight, including the Government of Ghana.
 - [ ] **Photography:** replace every Pexels placeholder.
+
+## Logos
+
+- **Client logos** (Home "Institutions that build with Inotribe" tiles, About "Trusted by" chips): supplied by Inotribe; cleaned copies in `assets/logos/clients/`. Tiles link to each client's site in a new tab: solisfinance.com, globalpayex.com, petraonline.com, bsystemslimited.com, ghana.gov.gh, neebal.com, hanfie.com. neebal.com and hanfie.com still need confirming; Liquid Financial has no site link, and Neebal, Hanfie and Liquid have no logo yet, so they show their name.
+- **Tech stack logos** (Home marquee): official logos from Devicon (https://devicon.dev, MIT) in `assets/logos/`. They are trademarks of their owners, used only to name the tools Inotribe works with.

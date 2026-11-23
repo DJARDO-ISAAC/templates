@@ -48,10 +48,10 @@ Open item 6 (heading colour mismatch) is resolved: all headings use the near-whi
 | services-hero.jpg | https://www.pexels.com/photo/6804068/ |
 | services-offered.jpg | https://www.pexels.com/photo/1181243/ |
 | contact-hero.jpg | https://www.pexels.com/photo/3869649/ |
-| case-data-warehouse.jpg | https://www.pexels.com/photo/37730212/ |
-| case-geospatial.jpg | https://www.pexels.com/photo/30596229/ |
+| case-data-warehouse.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/lVZjvw-u9V8 (@ismailenesayhan) |
+| case-geospatial.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/VBNb52J8Trk (SpaceX (@spacex)) |
 | case-identity.jpg | https://www.pexels.com/photo/17155842/ |
-| case-distributed.jpg | https://www.pexels.com/photo/8640331/ |
+| case-distributed.jpg | Unsplash, Unsplash License: https://unsplash.com/photos/PSpf_XgOM5w (Scott Rodgerson (@scottrodgerson)) |
 | testimonial-1.jpg | https://www.pexels.com/photo/36053652/ |
 | testimonial-2.jpg | https://www.pexels.com/photo/29852895/ |
 | testimonial-3.jpg | https://www.pexels.com/photo/38670854/ |

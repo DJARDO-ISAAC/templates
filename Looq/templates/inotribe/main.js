@@ -378,7 +378,6 @@
     const name = $('[data-t-name]', slider)
     const title = $('[data-t-title]', slider)
     const photo = $('[data-t-photo]', slider)
-    const count = $('[data-t-count]', slider)
     let items = []
     let i = 0
     const show = (n) => {
@@ -390,7 +389,6 @@
       title.textContent = t.title
       photo.src = t.image
       photo.alt = t.alt || `Portrait of ${t.name}`
-      if (count) count.textContent = `${String(i + 1).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}`
       ;[quote.parentElement, photo.parentElement].forEach((el) => { el.classList.remove('t-fade'); void el.offsetWidth; el.classList.add('t-fade') })
     }
     fetch('./assets/data/testimonials.json')

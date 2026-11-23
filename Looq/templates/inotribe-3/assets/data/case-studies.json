@@ -9,7 +9,7 @@
     "impact": "One trusted access point means fewer one-off integrations, consistent data across the organisation and a platform that is easier to maintain and extend.",
     "systems": ["SQL Server", "Microgen", "PostgreSQL", "Data Access Manager", "Single API"],
     "image": "./assets/images/case-data-warehouse.jpg",
-    "imageAlt": "Rows of server racks lit in teal in a data centre"
+    "imageAlt": "Long rows of server cabinets in a warehouse-scale data hall"
   },
   {
     "id": "geospatial-monitoring",
@@ -21,7 +21,7 @@
     "impact": "Monitoring teams work from one consistent view of the ground instead of piecing sources together by hand.",
     "systems": ["Google", "Planet.com", "OpenStreetMap", "Satellite imagery", "Geodata"],
     "image": "./assets/images/case-geospatial.jpg",
-    "imageAlt": "Earth seen from space with Africa in view",
+    "imageAlt": "A satellite passing over a coastline seen from orbit",
     "graphic": "geo"
   },
   {
@@ -34,7 +34,7 @@
     "impact": "Customers hear about their balances reliably, and the institution can run the process whenever it needs to without waiting on a single machine.",
     "systems": ["Distributed workers", "Balance computation", "Customer notifications", "Scheduled and on-demand runs"],
     "image": "./assets/images/case-distributed.jpg",
-    "imageAlt": "Glowing teal fibre-optic strands",
+    "imageAlt": "Dozens of network cables fanning out from a switch",
     "graphic": "network"
   },
   {
