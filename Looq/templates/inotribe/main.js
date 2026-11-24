@@ -9,6 +9,8 @@
    data-menu-button + aria-controls   opens/closes the [data-menu-panel]; Escape closes; focus returns
    data-reveal                        fades in when scrolled into view (only below-the-fold elements start hidden)
    data-count="1234"                  counts up once when visible (keep the final number as the text)
+   data-capx                          capabilities index: .capx-item > .capx-tab + .capx-panel, one open at a time
+   data-assemble                      on a list: its items start scattered and glide into place when it scrolls into view
    data-nav                           in-page nav link that gets aria-current="true" for the section in view
    data-faq-group                     on a wrapper of <details>: only one open at a time
    data-form                          validated enquiry form (see below)
@@ -77,6 +79,32 @@
     reveals.forEach((el) => {
       if (el.getBoundingClientRect().top > fold) { el.classList.add('reveal-pending'); io.observe(el) }
     })
+  }
+
+  // Capabilities index: one capability open at a time (accordion on phones; list + panel on desktop, where hover also picks)
+  $$('[data-capx]').forEach((root) => {
+    const items = $$('.capx-item', root)
+    const open = (item) => items.forEach((it) => {
+      const on = it === item
+      it.classList.toggle('is-active', on)
+      $('.capx-tab', it).setAttribute('aria-expanded', String(on))
+    })
+    items.forEach((item) => {
+      const tab = $('.capx-tab', item)
+      tab.addEventListener('click', () => open(item))
+      tab.addEventListener('mouseenter', () => { if (window.matchMedia('(hover: hover) and (min-width: 64rem)').matches) open(item) })
+    })
+    root.classList.add('is-ready')
+  })
+
+  // Tech logos: scatter them while the grid is below the fold, then let them glide into place once it is in view
+  const assemble = $('[data-assemble]')
+  if (assemble && !reduceMotion && 'IntersectionObserver' in window && assemble.getBoundingClientRect().top > window.innerHeight) {
+    assemble.classList.add('is-scattered')
+    const io = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) { assemble.classList.remove('is-scattered'); io.disconnect() }
+    }), { threshold: 0.35 })
+    io.observe(assemble)
   }
 
   // Counters
@@ -233,7 +261,7 @@
    [data-component="navbar"] and [data-component="footer"] on every page; <body data-page> marks the
    current page. The mobile menu uses event delegation because its markup is inserted after load.
    Case studies and testimonials are read from assets/data/*.json. The contact form
-   ([data-form-relay]) posts JSON to Web3Forms. Contact details and social links live in SITE. */
+   ([data-form-relay]) posts to Web3Forms. Contact details and social links live in SITE. */
 ;(() => {
   'use strict'
 
@@ -248,8 +276,8 @@
     ],
     // Phone shown on the Contact page, e.g. '+233 30 000 0000'. Empty shows a call-back note instead.
     phone: '',
-    // Web3Forms access key for team@inotribe.com (FR-09). While empty, sending shows the error message.
-    WEB3FORMS_ACCESS_KEY: '',
+    // Web3Forms access key for team@inotribe.com (FR-09). Public by design; lock it to the site's domain in the Web3Forms dashboard.
+    WEB3FORMS_ACCESS_KEY: 'd077fe8b-91ef-426a-bf84-443e747c6ac9',
   }
 
   const $ = (s, r = document) => r.querySelector(s)
@@ -444,6 +472,26 @@
       .catch(() => { list.innerHTML = '<p class="form-error">Case studies could not be loaded. Please refresh the page.</p>' })
   }
 
+  // "Message sent" pop-up, built once and reused; the sender's name and email are set as text, never as HTML
+  const showSent = (name, email) => {
+    let dlg = document.getElementById('sent-dialog')
+    if (!dlg) {
+      dlg = document.createElement('dialog')
+      dlg.className = 'dialog'
+      dlg.id = 'sent-dialog'
+      dlg.setAttribute('aria-labelledby', 'sent-title')
+      dlg.setAttribute('aria-describedby', 'sent-text')
+      dlg.innerHTML = '<div class="dialog-body sent-body"><span class="sent-ic" aria-hidden="true"><i class="ti ti-check"></i></span><h2 id="sent-title">Message sent</h2><p id="sent-text"></p><button class="btn btn-primary" type="button" data-close-dialog>Done</button></div>'
+      document.body.appendChild(dlg)
+      dlg.querySelector('[data-close-dialog]').addEventListener('click', () => dlg.close())
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close() })
+    }
+    const first = (name || '').trim()
+    dlg.querySelector('#sent-text').textContent = `${first ? `Thanks, ${first}.` : 'Thanks.'} We've received your message and will reply to ${email} soon.`
+    if (typeof dlg.showModal !== 'function') return false
+    dlg.showModal()
+    return true
+  }
   // Contact form: validate, send to Web3Forms, then show sent or error
   $$('[data-form-relay]').forEach((form) => {
     const button = $('[type="submit"]', form)
@@ -479,13 +527,16 @@
       }
       try {
         if (!SITE.WEB3FORMS_ACCESS_KEY) throw new Error('Web3Forms access key not set')
-        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+        // Sent as form data, not JSON: a plain form post needs no CORS preflight, which Web3Forms' firewall can refuse
+        const body = new FormData()
+        Object.entries(payload).forEach(([k, v]) => body.append(k, v))
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body })
         const json = await res.json().catch(() => ({}))
         if (!res.ok || json.success === false) throw new Error(json.message || `Request failed (${res.status})`)
         form.reset()
         fields.forEach((f) => f.removeAttribute('aria-invalid'))
-        button.textContent = 'Message sent'
-        setTimeout(() => { button.textContent = label; button.disabled = false }, 3000)
+        if (showSent(data.first_name, data.email)) { button.textContent = label; button.disabled = false }
+        else { button.textContent = 'Message sent'; setTimeout(() => { button.textContent = label; button.disabled = false }, 3000) }
       } catch (err) {
         button.textContent = label
         button.disabled = false

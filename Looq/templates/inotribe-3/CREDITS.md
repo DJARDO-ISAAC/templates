@@ -64,7 +64,7 @@ Build conventions are the same as version B: the Looq root build (Tailwind v4) c
 
 ## Before launch (brief sections 9 and 11)
 
-- [ ] **Web3Forms key:** request it with team@inotribe.com and set `SITE.WEB3FORMS_ACCESS_KEY` in `main.js`. While it is empty, sending shows the error message (FR-08 behaviour).
+- [x] **Web3Forms key:** set in `SITE.WEB3FORMS_ACCESS_KEY` in `main.js`. Messages go to the inbox the key was created with. Optional: in the Web3Forms dashboard, restrict the key to the live domain so it cannot be used from other sites.
 - [ ] **Contact details:** confirm team@inotribe.com is the public address; set `SITE.phone` to show a number.
 - [ ] **Social links:** set the LinkedIn, X and GitHub URLs in `SITE.social` (they point to `#` until then).
 - [ ] **Testimonials:** replace the three placeholders in `assets/data/testimonials.json` with approved client quotes.
@@ -77,5 +77,5 @@ Build conventions are the same as version B: the Looq root build (Tailwind v4) c
 
 ## Logos
 
-- **Client logos** (Home "Institutions that build with Inotribe" tiles, About "Trusted by" chips): supplied by Inotribe; cleaned copies in `assets/logos/clients/`. Tiles link to each client's site in a new tab: solisfinance.com, globalpayex.com, petraonline.com, bsystemslimited.com, ghana.gov.gh, neebal.com, hanfie.com. neebal.com and hanfie.com still need confirming; Liquid Financial has no site link, and Neebal, Hanfie and Liquid have no logo yet, so they show their name.
+- **Client logos** (Home "Institutions that build with Inotribe" tiles, About "Trusted by" chips): supplied by Inotribe; cleaned copies in `assets/logos/clients/`. Tiles link to each client's site in a new tab: solisfinance.com, globalpayex.com, petraonline.com, bsystemslimited.com, ghana.gov.gh, neebal.com, app.dev.hanfie.com (the link Inotribe gave). neebal.com still needs confirming; Liquid Financial has no site link, Neebal uses the logo Inotribe supplied (white; `neebal.png` is a near-black copy for the light chips). Liquid uses the logo Inotribe supplied (cut out from its grey background as `liquid.png`). Hanfie uses the logo Inotribe supplied (`hanfie.png`, trimmed).
 - **Tech stack logos** (Home marquee): official logos from Devicon (https://devicon.dev, MIT) in `assets/logos/`. They are trademarks of their owners, used only to name the tools Inotribe works with.

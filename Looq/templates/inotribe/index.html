@@ -26,7 +26,6 @@
         <div class="map-dots"><img src="./assets/images/world-map-dots.svg" alt="" width="1350" height="640"><span class="map-ping" style="left:50%;top:56.8%"></span></div>
       </div>
       <div class="wrap grid justify-items-center gap-7">
-        <p class="eyebrow">Software engineering for institutions</p>
         <h1 class="h-display max-w-[16ch]" id="hero-title">We build the systems institutions can't afford to <span class="gold">get wrong.</span></h1>
         <p class="lede max-w-[62ch]">Inotribe designs and engineers the software institutions depend on — data infrastructure, identity verification, and monitoring systems — for financial institutions, governments, and enterprises operating at scale.</p>
         <div class="mt-2 flex flex-wrap justify-center gap-3">
@@ -42,41 +41,73 @@
           <p class="eyebrow">Our capabilities</p>
           <h2 class="h-section" id="capabilities-title">Engineered for<br><span class="gold">systems people depend on</span></h2>
         </div>
-        <div class="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/custom-software.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Custom software development</h3><p class="mt-2">Web and mobile applications built around how your institution actually works, not a generic template.</p></div>
-          </article>
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/data-engineering.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Data engineering &amp; warehousing</h3><p class="mt-2">Migrating, consolidating and structuring data so it is trustworthy and usable across your organization.</p></div>
-          </article>
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/systems-integration.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Systems integration &amp; APIs</h3><p class="mt-2">Turning fragmented data sources into a single, reliable access point.</p></div>
-          </article>
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/geospatial.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Geospatial &amp; monitoring systems</h3><p class="mt-2">Satellite and geodata platforms for tracking activity across territory and political boundaries.</p></div>
-          </article>
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/identity-verification.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Identity verification</h3><p class="mt-2">Real-time validation against official identity data sources.</p></div>
-          </article>
-          <article class="cap" data-reveal>
-            <span class="cap-pill"><img src="./assets/icons/distributed-systems.png" alt="" width="54" height="54" loading="lazy"></span>
-            <div><h3 class="h-card">Distributed &amp; high-scale systems</h3><p class="mt-2">Infrastructure built to compute and deliver reliably across millions of records.</p></div>
-          </article>
+        <div class="capx mt-16" data-capx data-reveal>
+          <div class="capx-item is-active">
+            <button class="capx-tab" type="button" id="capx-tab-1" aria-expanded="true" aria-controls="capx-panel-1"><span class="capx-n">01</span><span class="capx-t">Custom software development</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-1" role="region" aria-labelledby="capx-tab-1">
+              <img class="capx-bg" src="./assets/images/cap-software.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
+              <i class="ti ti-devices capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">01</span>
+              <div class="capx-copy"><h3 class="h-card">Custom software development</h3><p>Web and mobile applications built around how your institution actually works, not a generic template.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="capx-item">
+            <button class="capx-tab" type="button" id="capx-tab-2" aria-expanded="false" aria-controls="capx-panel-2"><span class="capx-n">02</span><span class="capx-t">Data engineering &amp; warehousing</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-2" role="region" aria-labelledby="capx-tab-2">
+              <img class="capx-bg" src="./assets/images/cap-data.jpg" alt="" width="1200" height="1320" loading="lazy" decoding="async">
+              <i class="ti ti-database capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">02</span>
+              <div class="capx-copy"><h3 class="h-card">Data engineering &amp; warehousing</h3><p>Migrating, consolidating and structuring data so it is trustworthy and usable across your organization.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="capx-item">
+            <button class="capx-tab" type="button" id="capx-tab-3" aria-expanded="false" aria-controls="capx-panel-3"><span class="capx-n">03</span><span class="capx-t">Systems integration &amp; APIs</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-3" role="region" aria-labelledby="capx-tab-3">
+              <img class="capx-bg" src="./assets/images/cap-integration.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
+              <i class="ti ti-plug-connected capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">03</span>
+              <div class="capx-copy"><h3 class="h-card">Systems integration &amp; APIs</h3><p>Turning fragmented data sources into a single, reliable access point.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="capx-item">
+            <button class="capx-tab" type="button" id="capx-tab-4" aria-expanded="false" aria-controls="capx-panel-4"><span class="capx-n">04</span><span class="capx-t">Geospatial &amp; monitoring systems</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-4" role="region" aria-labelledby="capx-tab-4">
+              <img class="capx-bg" src="./assets/images/cap-geospatial.jpg" alt="" width="1200" height="1239" loading="lazy" decoding="async">
+              <i class="ti ti-satellite capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">04</span>
+              <div class="capx-copy"><h3 class="h-card">Geospatial &amp; monitoring systems</h3><p>Satellite and geodata platforms for tracking activity across territory and political boundaries.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="capx-item">
+            <button class="capx-tab" type="button" id="capx-tab-5" aria-expanded="false" aria-controls="capx-panel-5"><span class="capx-n">05</span><span class="capx-t">Identity verification</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-5" role="region" aria-labelledby="capx-tab-5">
+              <img class="capx-bg" src="./assets/images/cap-identity.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async">
+              <i class="ti ti-fingerprint capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">05</span>
+              <div class="capx-copy"><h3 class="h-card">Identity verification</h3><p>Real-time validation against official identity data sources.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
+          <div class="capx-item">
+            <button class="capx-tab" type="button" id="capx-tab-6" aria-expanded="false" aria-controls="capx-panel-6"><span class="capx-n">06</span><span class="capx-t">Distributed &amp; high-scale systems</span><i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+            <div class="capx-panel" id="capx-panel-6" role="region" aria-labelledby="capx-tab-6">
+              <img class="capx-bg" src="./assets/images/cap-distributed.jpg" alt="" width="1200" height="1320" loading="lazy" decoding="async">
+              <i class="ti ti-topology-star-3 capx-ic" aria-hidden="true"></i>
+              <span class="capx-big" aria-hidden="true">06</span>
+              <div class="capx-copy"><h3 class="h-card">Distributed &amp; high-scale systems</h3><p>Infrastructure built to compute and deliver reliably across millions of records.</p><a class="btn btn-outline btn-sm w-fit" href="contact">Discuss a project <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section aria-label="Inotribe in numbers">
-      <div class="wrap grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="stat-pill" data-reveal><span class="stat-num" data-count="4">4</span><span class="stat-label">Core Solution<br>Areas</span></div>
-        <div class="stat-pill" data-reveal><span class="stat-num" data-count="8">8</span><span class="stat-label">Institutional<br>Clients</span></div>
-        <div class="stat-pill" data-reveal><span class="stat-num"><span data-count="12">12</span>+</span><span class="stat-label">Technologies</span></div>
-        <div class="stat-pill" data-reveal><span class="stat-num" data-count="1">1</span><span class="stat-label">National-Scale<br>Deployment</span></div>
+      <div class="wrap">
+        <ul class="tally">
+          <li class="tally-item" data-reveal><span class="tally-dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i></span><p class="tally-num"><span data-count="4">4</span></p><p class="tally-label">Core solution areas</p></li>
+          <li class="tally-item" data-reveal><span class="tally-dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i></span><p class="tally-num"><span data-count="8">8</span></p><p class="tally-label">Institutional clients</p></li>
+          <li class="tally-item" data-reveal><span class="tally-dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i class="tally-more" style="--i:12"></i></span><p class="tally-num"><span data-count="12">12</span><span class="tally-plus">+</span></p><p class="tally-label">Technologies</p></li>
+          <li class="tally-item tally-one" data-reveal><span class="tally-dots" aria-hidden="true"><i style="--i:0"></i></span><p class="tally-num"><span data-count="1">1</span></p><p class="tally-label">National-scale deployment</p></li>
+        </ul>
       </div>
     </section>
 
@@ -113,7 +144,7 @@
     <section class="pb-[clamp(4.5rem,9vw,7.5rem)]" aria-labelledby="cases-title">
       <div class="wrap">
         <div class="flex flex-wrap items-end justify-between gap-6" data-reveal>
-          <div class="grid gap-4"><p class="eyebrow">Selected projects</p><h2 class="h-section" id="cases-title">Case Studies</h2></div>
+          <div class="grid gap-4"><h2 class="h-section" id="cases-title">Case Studies</h2></div>
           <a class="btn btn-outline btn-sm" href="work">All case studies <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="mt-12 grid gap-5 md:grid-cols-3">
@@ -139,38 +170,26 @@
       </div>
     </section>
 
-    <section class="pb-[clamp(4.5rem,9vw,7.5rem)]" aria-label="Technologies we work with">
-      <div class="marquee">
-        <div class="marquee-track">
-          <ul class="marquee-group m-0 list-none p-0">
-            <li class="tech-pill"><i class="ti ti-brand-javascript" aria-hidden="true"></i>JavaScript</li>
-            <li class="tech-pill"><i class="ti ti-brand-typescript" aria-hidden="true"></i>TypeScript</li>
-            <li class="tech-pill"><i class="ti ti-brand-python" aria-hidden="true"></i>Python</li>
-            <li class="tech-pill"><i class="ti ti-brand-django" aria-hidden="true"></i>Django</li>
-            <li class="tech-pill"><i class="ti ti-brand-php" aria-hidden="true"></i>PHP</li>
-            <li class="tech-pill"><i class="ti ti-brand-laravel" aria-hidden="true"></i>Laravel</li>
-            <li class="tech-pill"><i class="ti ti-brand-angular" aria-hidden="true"></i>Angular</li>
-            <li class="tech-pill"><i class="ti ti-brand-nextjs" aria-hidden="true"></i>Next.js</li>
-            <li class="tech-pill"><i class="ti ti-brand-react" aria-hidden="true"></i>React</li>
-            <li class="tech-pill"><i class="ti ti-brand-flutter" aria-hidden="true"></i>Flutter</li>
-            <li class="tech-pill"><i class="ti ti-code" aria-hidden="true"></i>Dart</li>
-            <li class="tech-pill"><i class="ti ti-brand-wordpress" aria-hidden="true"></i>WordPress</li>
-          </ul>
-          <ul class="marquee-group m-0 list-none p-0" aria-hidden="true">
-            <li class="tech-pill"><i class="ti ti-brand-javascript"></i>JavaScript</li>
-            <li class="tech-pill"><i class="ti ti-brand-typescript"></i>TypeScript</li>
-            <li class="tech-pill"><i class="ti ti-brand-python"></i>Python</li>
-            <li class="tech-pill"><i class="ti ti-brand-django"></i>Django</li>
-            <li class="tech-pill"><i class="ti ti-brand-php"></i>PHP</li>
-            <li class="tech-pill"><i class="ti ti-brand-laravel"></i>Laravel</li>
-            <li class="tech-pill"><i class="ti ti-brand-angular"></i>Angular</li>
-            <li class="tech-pill"><i class="ti ti-brand-nextjs"></i>Next.js</li>
-            <li class="tech-pill"><i class="ti ti-brand-react"></i>React</li>
-            <li class="tech-pill"><i class="ti ti-brand-flutter"></i>Flutter</li>
-            <li class="tech-pill"><i class="ti ti-code"></i>Dart</li>
-            <li class="tech-pill"><i class="ti ti-brand-wordpress"></i>WordPress</li>
-          </ul>
+    <section class="tech-sec pb-[clamp(4.5rem,9vw,7.5rem)]" aria-labelledby="tech-title">
+      <div class="wrap tech-row">
+        <div class="tech-intro">
+          <p class="eyebrow" id="tech-title">Tools we build with</p>
+          <p class="tech-note">From the database to the app store, one team.</p>
         </div>
+        <ul class="tech-bar" data-assemble>
+            <li class="tech-tile" style="--i:0;--x:183px;--y:87px;--r:-15deg"><img src="./assets/logos/javascript.svg" alt="JavaScript" title="JavaScript" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:1;--x:201px;--y:-42px;--r:19deg"><img src="./assets/logos/typescript.svg" alt="TypeScript" title="TypeScript" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:2;--x:-63px;--y:-106px;--r:24deg"><img src="./assets/logos/python.svg" alt="Python" title="Python" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile tech-tile-invert" style="--i:3;--x:-199px;--y:-97px;--r:-11deg"><img src="./assets/logos/django.svg" alt="Django" title="Django" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:4;--x:-88px;--y:-106px;--r:-34deg"><img src="./assets/logos/php.svg" alt="PHP" title="PHP" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:5;--x:123px;--y:105px;--r:-26deg"><img src="./assets/logos/laravel.svg" alt="Laravel" title="Laravel" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:6;--x:-203px;--y:93px;--r:-31deg"><img src="./assets/logos/angular.svg" alt="Angular" title="Angular" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile tech-tile-invert" style="--i:7;--x:-157px;--y:82px;--r:-32deg"><img src="./assets/logos/nextjs.svg" alt="Next.js" title="Next.js" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:8;--x:120px;--y:-95px;--r:10deg"><img src="./assets/logos/react.svg" alt="React" title="React" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:9;--x:-184px;--y:-81px;--r:-19deg"><img src="./assets/logos/flutter.svg" alt="Flutter" title="Flutter" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile" style="--i:10;--x:57px;--y:-30px;--r:-16deg"><img src="./assets/logos/dart.svg" alt="Dart" title="Dart" width="32" height="32" loading="lazy"></li>
+            <li class="tech-tile tech-tile-invert" style="--i:11;--x:-160px;--y:80px;--r:12deg"><img src="./assets/logos/wordpress.svg" alt="WordPress" title="WordPress" width="32" height="32" loading="lazy"></li>
+        </ul>
       </div>
     </section>
 
@@ -180,16 +199,7 @@
           <p class="eyebrow">Trusted by</p>
           <h2 class="h-section" id="trusted-title">Institutions that build with Inotribe</h2>
         </div>
-        <ul class="mt-12 grid list-none grid-cols-2 gap-3 p-0 md:grid-cols-4" data-reveal>
-          <li class="client-cell">Solis Microfinance</li>
-          <li class="client-cell">Liquid Financial</li>
-          <li class="client-cell">GlobalPayEx</li>
-          <li class="client-cell">Neebal Technologies</li>
-          <li class="client-cell">Petra</li>
-          <li class="client-cell">Bsystems</li>
-          <li class="client-cell">Hanfie Technologies</li>
-          <li class="client-cell">Government of Ghana</li>
-        </ul>
+        <ul class="client-grid client-grid-lg mt-12" data-reveal><li><a class="client" href="https://www.solisfinance.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/solis.svg" alt="Solis Microfinance" width="184" height="67" loading="lazy" style="--h:34px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><span class="client"><img src="./assets/logos/clients/liquid.png" alt="Liquid Financial" width="304" height="95" loading="lazy" style="--h:30px"></span></li><li><a class="client" href="https://globalpayex.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/globalpayex.png" alt="GlobalPayEx" width="460" height="343" loading="lazy" style="--h:56px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://www.neebal.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/neebal.png" alt="Neebal Technologies" width="308" height="95" loading="lazy" style="--h:28px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://petraonline.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/petra.png" alt="Petra" width="146" height="28" loading="lazy" style="--h:24px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://bsystemslimited.com" target="_blank" rel="noopener"><img src="./assets/logos/clients/bsystems.png" alt="Bsystems" width="596" height="191" loading="lazy" style="--h:42px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://app.dev.hanfie.com/" target="_blank" rel="noopener"><img src="./assets/logos/clients/hanfie.png" alt="Hanfie Technologies" width="180" height="43" loading="lazy" style="--h:28px"><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li><li><a class="client" href="https://www.ghana.gov.gh" target="_blank" rel="noopener"><img src="./assets/logos/clients/government-of-ghana.png" alt="" width="190" height="148" loading="lazy" style="--h:50px"><span class="client-cap">Government<br>of Ghana</span><span class="sr-only"> (opens in a new tab)</span><i class="ti ti-arrow-up-right" aria-hidden="true"></i></a></li></ul>
       </div>
     </section>
 

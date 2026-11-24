@@ -236,7 +236,7 @@
    FR-03  scroll-to-top ring fills with scrollY / (scrollHeight - innerHeight), shown after 300px.
    FR-04  Work renders spec sheets from assets/data/case-studies.json (add an object, get a sheet).
    FR-05  testimonial slider reads assets/data/testimonials.json; prev/next wrap; desktop and mobile arrow groups.
-   FR-07/08  [data-form-relay] validates, posts JSON to Web3Forms, shows Sending... / Message sent / an error.
+   FR-07/08  [data-form-relay] validates, posts to Web3Forms, shows Sending... / Message sent / an error.
    [data-term] hero terminal types the shipped systems once (all at once with reduced motion).
    Contact details and the Web3Forms key live in SITE. */
 ;(() => {
@@ -253,8 +253,8 @@
     ],
     // Phone shown on the Contact page, e.g. '+233 30 000 0000'. Empty shows a call-back note instead.
     phone: '',
-    // Web3Forms access key for team@inotribe.com (FR-09). While empty, sending shows the error message.
-    WEB3FORMS_ACCESS_KEY: '',
+    // Web3Forms access key for team@inotribe.com (FR-09). Public by design; lock it to the site's domain in the Web3Forms dashboard.
+    WEB3FORMS_ACCESS_KEY: 'd077fe8b-91ef-426a-bf84-443e747c6ac9',
   }
 
   const $ = (s, r = document) => r.querySelector(s)
@@ -507,6 +507,26 @@
       .catch(() => { list.innerHTML = '<p class="form-error">Case studies could not be loaded. Please refresh the page.</p>' })
   }
 
+  // "Message sent" pop-up, built once and reused; the sender's name and email are set as text, never as HTML
+  const showSent = (name, email) => {
+    let dlg = document.getElementById('sent-dialog')
+    if (!dlg) {
+      dlg = document.createElement('dialog')
+      dlg.className = 'dialog'
+      dlg.id = 'sent-dialog'
+      dlg.setAttribute('aria-labelledby', 'sent-title')
+      dlg.setAttribute('aria-describedby', 'sent-text')
+      dlg.innerHTML = '<div class="dialog-body sent-body"><span class="sent-ic" aria-hidden="true"><i class="ti ti-check"></i></span><h2 id="sent-title">Message sent</h2><p id="sent-text"></p><button class="btn btn-primary" type="button" data-close-dialog>Done</button></div>'
+      document.body.appendChild(dlg)
+      dlg.querySelector('[data-close-dialog]').addEventListener('click', () => dlg.close())
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close() })
+    }
+    const first = (name || '').trim()
+    dlg.querySelector('#sent-text').textContent = `${first ? `Thanks, ${first}.` : 'Thanks.'} We've received your message and will reply to ${email} soon.`
+    if (typeof dlg.showModal !== 'function') return false
+    dlg.showModal()
+    return true
+  }
   // FR-07/08 Contact form: validate, send to Web3Forms, then show sent or error
   $$('[data-form-relay]').forEach((form) => {
     const button = $('[type="submit"]', form)
@@ -542,13 +562,16 @@
       }
       try {
         if (!SITE.WEB3FORMS_ACCESS_KEY) throw new Error('Web3Forms access key not set')
-        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+        // Sent as form data, not JSON: a plain form post needs no CORS preflight, which Web3Forms' firewall can refuse
+        const body = new FormData()
+        Object.entries(payload).forEach(([k, v]) => body.append(k, v))
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body })
         const json = await res.json().catch(() => ({}))
         if (!res.ok || json.success === false) throw new Error(json.message || `Request failed (${res.status})`)
         form.reset()
         fields.forEach((f) => f.removeAttribute('aria-invalid'))
-        button.textContent = 'Message sent'
-        setTimeout(() => { button.innerHTML = label; button.disabled = false }, 3000)
+        if (showSent(data.first_name, data.email)) { button.innerHTML = label; button.disabled = false }
+        else { button.textContent = 'Message sent'; setTimeout(() => { button.innerHTML = label; button.disabled = false }, 3000) }
       } catch (err) {
         button.innerHTML = label
         button.disabled = false
