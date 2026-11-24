@@ -219,12 +219,11 @@
   /* Capabilities: numbered items, icon on a tall pill that fades out downward, no card border */
   /* Capabilities: 3D icon on top, then the title and description */
   .cap { position: relative; display: grid; align-content: start; gap: 1.1rem; padding: 1.6rem 1.5rem 1.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: rgb(28 28 28 / 0.45); transition: border-color var(--dur-fast), background-color var(--dur-base); }
-  .cap-n { position: absolute; top: 1.4rem; right: 1.4rem; color: var(--color-line-strong); font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; transition: color var(--dur-fast); }
   .cap-icon { display: block; width: 64px; height: 64px; }
   .cap-icon img { width: 64px; height: 64px; object-fit: contain; transition: transform var(--dur-base) var(--ease-soft); }
   .cap h3 { transition: color var(--dur-fast); }
   .cap:hover { border-color: rgb(31 122 140 / 0.7); background: rgb(28 28 28 / 0.8); }
-  .cap:hover h3, .cap:hover .cap-n { color: var(--color-accent); }
+  .cap:hover h3 { color: var(--color-accent); }
   .cap:hover .cap-icon img { transform: translateY(-4px) scale(1.06); }
   .icon-credit { opacity: 0.8; }
   .icon-credit a { color: var(--color-text-muted); text-decoration: underline; text-underline-offset: 3px; }
